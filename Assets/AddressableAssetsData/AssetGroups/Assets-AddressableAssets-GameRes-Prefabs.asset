@@ -1,0 +1,55 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bbb281ee3bf0b054c82ac2347e9e782c, type: 3}
+  m_Name: Assets-AddressableAssets-GameRes-Prefabs
+  m_EditorClassIdentifier: 
+  m_GroupName: Assets-AddressableAssets-GameRes-Prefabs
+  m_Data:
+    m_SerializedData: []
+  m_GUID: 1fd8f7eb01a5cd4418636438138e9c5c
+  m_SerializeEntries:
+  - m_GUID: ff8fbbfeb0860c743b21fd5a45812cb5
+    m_Address: Camera
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Assets-AddressableAssets-GameRes-Prefabs
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 87694925c8571634894079a4219dd22b
+    m_Address: PlayerRenderer
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Assets-AddressableAssets-GameRes-Prefabs
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 7058fd9947fe45e4a8a294a2cafccd97
+    m_Address: SceneEffectManager
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Assets-AddressableAssets-GameRes-Prefabs
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: d14f5251e26ff7048a1bae25c204f41c
+    m_Address: Trail
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Assets-AddressableAssets-GameRes-Prefabs
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 442cc696cb66b31468920a273554189b
+    m_Address: TrailSprite
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Assets-AddressableAssets-GameRes-Prefabs
+    FlaggedDuringContentUpdateRestriction: 0
+  m_ReadOnly: 0
+  m_Settings: {fileID: 11400000, guid: ad10e3e3d61658a438828e6ebf91fd51, type: 2}
+  m_SchemaSet:
+    m_Schemas:
+    - {fileID: 11400000, guid: 7fc0fc866f1680c4988dd81b1e220bc2, type: 2}
+    - {fileID: 11400000, guid: d5b7c9a937a707347a56830860b39e4d, type: 2}

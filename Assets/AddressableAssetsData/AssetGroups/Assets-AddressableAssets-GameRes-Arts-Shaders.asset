@@ -1,0 +1,61 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bbb281ee3bf0b054c82ac2347e9e782c, type: 3}
+  m_Name: Assets-AddressableAssets-GameRes-Arts-Shaders
+  m_EditorClassIdentifier: 
+  m_GroupName: Assets-AddressableAssets-GameRes-Arts-Shaders
+  m_Data:
+    m_SerializedData: []
+  m_GUID: 194cb16f319ac81478dac37527568fef
+  m_SerializeEntries:
+  - m_GUID: 551f3c07bc61329429119d723ab5496b
+    m_Address: Player
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Assets-AddressableAssets-GameRes-Arts-Shaders
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: fb1e73f25e55e0144a0795e3e348b596
+    m_Address: PostEffects
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Assets-AddressableAssets-GameRes-Arts-Shaders
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: ba4e2a4fb04e9044c88da0cea0f5821a
+    m_Address: PostFXMask
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Assets-AddressableAssets-GameRes-Arts-Shaders
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 6e10db1a6a8f05b4298ea3eb7b4233d5
+    m_Address: Shader Graphs_ShockWaveScreen
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Assets-AddressableAssets-GameRes-Arts-Shaders
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: d803b5a6a11c76a4dade66189a00a1de
+    m_Address: ShockWaveScreen
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Assets-AddressableAssets-GameRes-Arts-Shaders
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 5d3b99358dc599343a9b2ba705c53745
+    m_Address: ShockWaveSprite
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Assets-AddressableAssets-GameRes-Arts-Shaders
+    FlaggedDuringContentUpdateRestriction: 0
+  m_ReadOnly: 0
+  m_Settings: {fileID: 11400000, guid: ad10e3e3d61658a438828e6ebf91fd51, type: 2}
+  m_SchemaSet:
+    m_Schemas:
+    - {fileID: 11400000, guid: 03822a7ac4895594cb24367d692cbb3f, type: 2}
+    - {fileID: 11400000, guid: 7d6a100810339bc42a7a412dc0fadf92, type: 2}

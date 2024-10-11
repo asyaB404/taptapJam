@@ -1,0 +1,155 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 468a46d0ae32c3544b7d98094e6448a9, type: 3}
+  m_Name: AddressableAssetSettings
+  m_EditorClassIdentifier: 
+  m_DefaultGroup: 213a6682df0145c45bc96b848cbe754e
+  m_currentHash:
+    serializedVersion: 2
+    Hash: 00000000000000000000000000000000
+  m_OptimizeCatalogSize: 0
+  m_BuildRemoteCatalog: 0
+  m_BundleLocalCatalog: 0
+  m_CatalogRequestsTimeout: 0
+  m_DisableCatalogUpdateOnStart: 0
+  m_IgnoreUnsupportedFilesInBuild: 0
+  m_UniqueBundleIds: 0
+  m_NonRecursiveBuilding: 1
+  m_CCDEnabled: 0
+  m_maxConcurrentWebRequests: 3
+  m_ContiguousBundles: 1
+  m_StripUnityVersionFromBundleBuild: 0
+  m_DisableVisibleSubAssetRepresentations: 0
+  m_ShaderBundleNaming: 0
+  m_ShaderBundleCustomNaming: 
+  m_MonoScriptBundleNaming: 0
+  m_CheckForContentUpdateRestrictionsOption: 0
+  m_MonoScriptBundleCustomNaming: 
+  m_RemoteCatalogBuildPath:
+    m_Id: 
+  m_RemoteCatalogLoadPath:
+    m_Id: 
+  m_ContentStateBuildPathProfileVariableName: 
+  m_CustomContentStateBuildPath: 
+  m_ContentStateBuildPath: 
+  m_BuildAddressablesWithPlayerBuild: 0
+  m_overridePlayerVersion: '[UnityEditor.PlayerSettings.bundleVersion]'
+  m_GroupAssets:
+  - {fileID: 11400000, guid: 84f3cdc68e004414987072754a0b4bf1, type: 2}
+  - {fileID: 11400000, guid: 48dee0acdc9518047ac57d37c06c792c, type: 2}
+  - {fileID: 11400000, guid: 26237e6a3609c2c4b996714a7d0f5614, type: 2}
+  - {fileID: 11400000, guid: 8eb92377f541faa43a23cf3a993eaf31, type: 2}
+  - {fileID: 11400000, guid: 13549ec19820eac469176aa436c58e01, type: 2}
+  - {fileID: 11400000, guid: 9c223c8b49c5dae41ab283da6d82a70b, type: 2}
+  - {fileID: 11400000, guid: 76ba88b912b12af4a88753729189edcc, type: 2}
+  - {fileID: 11400000, guid: b0c5d29ce8c93d94297733cd354f2779, type: 2}
+  - {fileID: 11400000, guid: b2875a3a5efdca2469bf976a5addc1ca, type: 2}
+  - {fileID: 11400000, guid: 19742571c6931c447b55c8784895c7a7, type: 2}
+  - {fileID: 11400000, guid: 6ac52a08fc5df7c48b27ed53af4af3f1, type: 2}
+  - {fileID: 11400000, guid: b271d918b0b56c143b57c89e2aeb8b60, type: 2}
+  - {fileID: 11400000, guid: 1a91870ff921dc547a66a6fe9243eb50, type: 2}
+  - {fileID: 11400000, guid: 3ee454fb56c4e2a49b293e43a37d8dba, type: 2}
+  - {fileID: 11400000, guid: 3c379644e42d7804682eaea5267f2c0d, type: 2}
+  - {fileID: 11400000, guid: c34c8ade66fa011429b1997a130acb8b, type: 2}
+  - {fileID: 11400000, guid: 598b0534339d207459dd827bd464f88c, type: 2}
+  - {fileID: 11400000, guid: 4a36f6b5213170d4b9fcb4e119cfc7ba, type: 2}
+  m_BuildSettings:
+    m_CompileScriptsInVirtualMode: 0
+    m_CleanupStreamingAssetsAfterBuilds: 1
+    m_LogResourceManagerExceptions: 1
+    m_BundleBuildPath: Temp/com.unity.addressables/AssetBundles
+  m_ProfileSettings:
+    m_Profiles:
+    - m_InheritedParent: 
+      m_Id: 69361df9f26b90845b2c713bafb6a332
+      m_ProfileName: Default
+      m_Values:
+      - m_Id: 6d0c896a80561e14897a8c2f9168da06
+        m_Value: '[UnityEditor.EditorUserBuildSettings.activeBuildTarget]'
+      - m_Id: 2ee736b5c73e1f64ea308a91e0f2dd94
+        m_Value: '[UnityEngine.AddressableAssets.Addressables.BuildPath]/[BuildTarget]'
+      - m_Id: 88edc2e098e73ef4e9a98ae40311a9c9
+        m_Value: '{UnityEngine.AddressableAssets.Addressables.RuntimePath}/[BuildTarget]'
+      - m_Id: 292d31a36246f954da8df1d0a5dae032
+        m_Value: ServerData/[BuildTarget]
+      - m_Id: 83707867e7826ca4d8dbeec3c5bf0939
+        m_Value: http://[PrivateIpAddress]:[HostingServicePort]
+    m_ProfileEntryNames:
+    - m_Id: 6d0c896a80561e14897a8c2f9168da06
+      m_Name: BuildTarget
+      m_InlineUsage: 0
+    - m_Id: 2ee736b5c73e1f64ea308a91e0f2dd94
+      m_Name: Local.BuildPath
+      m_InlineUsage: 0
+    - m_Id: 88edc2e098e73ef4e9a98ae40311a9c9
+      m_Name: Local.LoadPath
+      m_InlineUsage: 0
+    - m_Id: 292d31a36246f954da8df1d0a5dae032
+      m_Name: Remote.BuildPath
+      m_InlineUsage: 0
+    - m_Id: 83707867e7826ca4d8dbeec3c5bf0939
+      m_Name: Remote.LoadPath
+      m_InlineUsage: 0
+    m_ProfileVersion: 1
+  m_LabelTable:
+    m_LabelNames:
+    - default
+    - Assets
+    - Assets-AddressableAssets-Layers
+    - Assets-AddressableAssets-Scenes
+    - Assets-AddressableAssets-GameRes-_Prefabs
+    - Assets-AddressableAssets-GameRes-_Arts-Shaders
+    - Assets-AddressableAssets-GameRes-_Arts-Materials-Clouds
+    - Assets-AddressableAssets-GameRes-_Arts-Materials-Effects
+    - Assets-AddressableAssets-GameRes-_Arts-Textures-Effect
+    - Assets-AddressableAssets-GameRes-_Arts-Textures-Level
+    - Assets-AddressableAssets-GameRes-_Arts-Textures-Player
+    - Assets-AddressableAssets-GameRes-_Arts-Textures-Effect-keyframes
+    - Assets-AddressableAssets-GameRes-_Arts-Textures-Effect-keyframes-long_metal
+    - Assets-AddressableAssets-GameRes-_Arts-Textures-Effect-keyframes-long_wood
+    - Assets-AddressableAssets-GameRes-_Arts-Textures-Effect-keyframes-small_metal
+    - Assets-AddressableAssets-GameRes-_Arts-Textures-Effect-keyframes-small_wood
+    - Assets-AddressableAssets-GameRes-_Prefabs-Effects
+    - Assets-AddressableAssets-GameRes-Prefabs
+    - Assets-AddressableAssets-GameRes-Arts-Shaders
+    - Assets-AddressableAssets-GameRes-Arts-Materials-Clouds
+    - Assets-AddressableAssets-GameRes-Arts-Materials-Effects
+    - Assets-AddressableAssets-GameRes-Arts-Textures-Effect
+    - Assets-AddressableAssets-GameRes-Arts-Textures-Level
+    - Assets-AddressableAssets-GameRes-Arts-Textures-Player
+    - Assets-AddressableAssets-GameRes-Arts-Textures-Effect-keyframes
+    - Assets-AddressableAssets-GameRes-Arts-Textures-Effect-keyframes-long_metal
+    - Assets-AddressableAssets-GameRes-Arts-Textures-Effect-keyframes-long_wood
+    - Assets-AddressableAssets-GameRes-Arts-Textures-Effect-keyframes-small_metal
+    - Assets-AddressableAssets-GameRes-Arts-Textures-Effect-keyframes-small_wood
+    - Assets-AddressableAssets-GameRes-Audios-Sounds
+    - Assets-AddressableAssets-GameRes-Prefabs-Effects
+  m_SchemaTemplates: []
+  m_GroupTemplateObjects:
+  - {fileID: 11400000, guid: 251eb2a991560704fa667cc898137b23, type: 2}
+  m_InitializationObjects: []
+  m_CertificateHandlerType:
+    m_AssemblyName: 
+    m_ClassName: 
+  m_ActivePlayerDataBuilderIndex: 3
+  m_DataBuilders:
+  - {fileID: 11400000, guid: e3965a4dbc646764db7dc04cee85769c, type: 2}
+  - {fileID: 11400000, guid: 7a4775dc337fc144ba84ad77e9e073d0, type: 2}
+  - {fileID: 11400000, guid: 7a8c94d5869755a4e8580002c5f28b4f, type: 2}
+  - {fileID: 11400000, guid: 21830873c509e424098491c3b2aa2c3f, type: 2}
+  m_ActiveProfileId: 69361df9f26b90845b2c713bafb6a332
+  m_HostingServicesManager:
+    m_HostingServiceInfos: []
+    m_Settings: {fileID: 11400000}
+    m_NextInstanceId: 0
+    m_RegisteredServiceTypeRefs: []
+    m_PingTimeoutInMilliseconds: 5000

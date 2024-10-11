@@ -36,8 +36,8 @@ TagManager:
   - PlayerWeapon
   - EnemyWeapon
   - Camera 3
-  - 
-  - 
+  - Ground
+  - Post
   - 
   - 
   - 
@@ -71,4 +71,7 @@ TagManager:
     locked: 0
   - name: Minimap
     uniqueID: 1491282665
+    locked: 0
+  - name: CameraSortingLayer
+    uniqueID: 1626586227
     locked: 0

@@ -33,6 +33,8 @@ MonoBehaviour:
     - Assembly-CSharp
     - Assembly-CSharp-firstpass
     - Cinemachine
+    - Luban.Editor
+    - Luban.Runtime
     - PPv2URPConverters
     - PsdPlugin
     - UniTask

@@ -15,22 +15,22 @@ MonoBehaviour:
   m_GroupName: Assets-AddressableAssets-GameRes-Arts-Textures-Effect-keyframes-small_metal
   m_Data:
     m_SerializedData: []
-  m_GUID: 876ac2e887acd1848a799b47c468cd05
+  m_GUID: 7a44ca40a19cc9c4cacae0ffe5364086
   m_SerializeEntries:
   - m_GUID: 05b0d4097596daf4d82b3c0f890f8a0e
-    m_Address: small_metal_spike_01
+    m_Address: Assets/AddressableAssets/GameRes/Arts/Textures/Effect/keyframes/small_metal/small_metal_spike_01.png
     m_ReadOnly: 0
     m_SerializedLabels:
     - Assets-AddressableAssets-GameRes-Arts-Textures-Effect-keyframes-small_metal
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: d3b96933afa91b546980a94d3391a03c
-    m_Address: small_metal_spike_02
+    m_Address: Assets/AddressableAssets/GameRes/Arts/Textures/Effect/keyframes/small_metal/small_metal_spike_02.png
     m_ReadOnly: 0
     m_SerializedLabels:
     - Assets-AddressableAssets-GameRes-Arts-Textures-Effect-keyframes-small_metal
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 5a2f90c9780dd88488c3cfbb4de6e788
-    m_Address: small_metal_spike_03
+    m_Address: Assets/AddressableAssets/GameRes/Arts/Textures/Effect/keyframes/small_metal/small_metal_spike_03.png
     m_ReadOnly: 0
     m_SerializedLabels:
     - Assets-AddressableAssets-GameRes-Arts-Textures-Effect-keyframes-small_metal

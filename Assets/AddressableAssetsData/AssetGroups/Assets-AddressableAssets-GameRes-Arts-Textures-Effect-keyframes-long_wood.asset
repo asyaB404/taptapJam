@@ -15,34 +15,34 @@ MonoBehaviour:
   m_GroupName: Assets-AddressableAssets-GameRes-Arts-Textures-Effect-keyframes-long_wood
   m_Data:
     m_SerializedData: []
-  m_GUID: b80cfc65d8360144c89bdf0d77b70b87
+  m_GUID: d3a85a19d1b18f34b8c946c2b6e0b54c
   m_SerializeEntries:
   - m_GUID: 18c2714cdeb655149a1fe1e16c7281df
-    m_Address: long_wood_spike_01
+    m_Address: Assets/AddressableAssets/GameRes/Arts/Textures/Effect/keyframes/long_wood/long_wood_spike_01.png
     m_ReadOnly: 0
     m_SerializedLabels:
     - Assets-AddressableAssets-GameRes-Arts-Textures-Effect-keyframes-long_wood
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 46e7c9ed5d872ff49bac87c11aeadb11
-    m_Address: long_wood_spike_02
+    m_Address: Assets/AddressableAssets/GameRes/Arts/Textures/Effect/keyframes/long_wood/long_wood_spike_02.png
     m_ReadOnly: 0
     m_SerializedLabels:
     - Assets-AddressableAssets-GameRes-Arts-Textures-Effect-keyframes-long_wood
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 0692fe0dce9cff64c8b38d968d76b91d
-    m_Address: long_wood_spike_03
+    m_Address: Assets/AddressableAssets/GameRes/Arts/Textures/Effect/keyframes/long_wood/long_wood_spike_03.png
     m_ReadOnly: 0
     m_SerializedLabels:
     - Assets-AddressableAssets-GameRes-Arts-Textures-Effect-keyframes-long_wood
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 983eec7c49de24e42861fd97d90eae24
-    m_Address: long_wood_spike_04
+    m_Address: Assets/AddressableAssets/GameRes/Arts/Textures/Effect/keyframes/long_wood/long_wood_spike_04.png
     m_ReadOnly: 0
     m_SerializedLabels:
     - Assets-AddressableAssets-GameRes-Arts-Textures-Effect-keyframes-long_wood
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: c56d4409d39320843be375bbc7059235
-    m_Address: long_wood_spike_05
+    m_Address: Assets/AddressableAssets/GameRes/Arts/Textures/Effect/keyframes/long_wood/long_wood_spike_05.png
     m_ReadOnly: 0
     m_SerializedLabels:
     - Assets-AddressableAssets-GameRes-Arts-Textures-Effect-keyframes-long_wood

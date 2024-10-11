@@ -15,52 +15,52 @@ MonoBehaviour:
   m_GroupName: Assets-AddressableAssets-GameRes-Arts-Materials-Clouds
   m_Data:
     m_SerializedData: []
-  m_GUID: 8f7f00b3054c98c47adda46542725839
+  m_GUID: 67b0c46fdfab2e043ae72c80b728d131
   m_SerializeEntries:
   - m_GUID: 642935fefeb39414eb8a00e2ccc983a5
-    m_Address: cloud
+    m_Address: Assets/AddressableAssets/GameRes/Arts/Materials/Clouds/cloud.mat
     m_ReadOnly: 0
     m_SerializedLabels:
     - Assets-AddressableAssets-GameRes-Arts-Materials-Clouds
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: d386c5d9fb941e845b73fe6da5491ef2
-    m_Address: cloud_2x2_hard
+    m_Address: Assets/AddressableAssets/GameRes/Arts/Materials/Clouds/cloud_2x2_hard.mat
     m_ReadOnly: 0
     m_SerializedLabels:
     - Assets-AddressableAssets-GameRes-Arts-Materials-Clouds
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: d47abdfc41b22554698658a7b569e039
-    m_Address: cloud_2x2_hardshadow
+    m_Address: Assets/AddressableAssets/GameRes/Arts/Materials/Clouds/cloud_2x2_hardshadow.mat
     m_ReadOnly: 0
     m_SerializedLabels:
     - Assets-AddressableAssets-GameRes-Arts-Materials-Clouds
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 719f8d52fe2e6b444b41c2f7a8fe587b
-    m_Address: cloud_2x2_soft
+    m_Address: Assets/AddressableAssets/GameRes/Arts/Materials/Clouds/cloud_2x2_soft.mat
     m_ReadOnly: 0
     m_SerializedLabels:
     - Assets-AddressableAssets-GameRes-Arts-Materials-Clouds
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 99d9ee837f624b148ab1ef0bde5f16a7
-    m_Address: cloud_2x2_softshadow
+    m_Address: Assets/AddressableAssets/GameRes/Arts/Materials/Clouds/cloud_2x2_softshadow.mat
     m_ReadOnly: 0
     m_SerializedLabels:
     - Assets-AddressableAssets-GameRes-Arts-Materials-Clouds
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 826ea3d1669996d4e8a0165518ed9f97
-    m_Address: cloud_magic
+    m_Address: Assets/AddressableAssets/GameRes/Arts/Materials/Clouds/cloud_magic.mat
     m_ReadOnly: 0
     m_SerializedLabels:
     - Assets-AddressableAssets-GameRes-Arts-Materials-Clouds
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: c1254d407233159489f0bfdd68ac2975
-    m_Address: cloud_soft
+    m_Address: Assets/AddressableAssets/GameRes/Arts/Materials/Clouds/cloud_soft.mat
     m_ReadOnly: 0
     m_SerializedLabels:
     - Assets-AddressableAssets-GameRes-Arts-Materials-Clouds
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: e362f217b65ffb242bb256dce35409c9
-    m_Address: Dust
+    m_Address: Assets/AddressableAssets/GameRes/Arts/Materials/Clouds/Dust.mat
     m_ReadOnly: 0
     m_SerializedLabels:
     - Assets-AddressableAssets-GameRes-Arts-Materials-Clouds

@@ -15,64 +15,64 @@ MonoBehaviour:
   m_GroupName: Assets-AddressableAssets-GameRes-Arts-Textures-Player
   m_Data:
     m_SerializedData: []
-  m_GUID: 1bae5dc514c228f46af76baa26d09ea0
+  m_GUID: 03a6dcd1dbf93f940b093b5bd7217f3d
   m_SerializeEntries:
   - m_GUID: 820899af6cc7be04baf67e0100bdb547
-    m_Address: Ex05
+    m_Address: Assets/AddressableAssets/GameRes/Arts/Textures/Player/Ex05.png
     m_ReadOnly: 0
     m_SerializedLabels:
     - Assets-AddressableAssets-GameRes-Arts-Textures-Player
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 91c0a4ce7609609439d8c8af87c06407
-    m_Address: Ex06
+    m_Address: Assets/AddressableAssets/GameRes/Arts/Textures/Player/Ex06.png
     m_ReadOnly: 0
     m_SerializedLabels:
     - Assets-AddressableAssets-GameRes-Arts-Textures-Player
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: f61303ac0f1eea644841cc1408068433
-    m_Address: Hair01
+    m_Address: Assets/AddressableAssets/GameRes/Arts/Textures/Player/Hair01.png
     m_ReadOnly: 0
     m_SerializedLabels:
     - Assets-AddressableAssets-GameRes-Arts-Textures-Player
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 85f934f2c4b6319428d5065aee5d892f
-    m_Address: Hair01_B
+    m_Address: Assets/AddressableAssets/GameRes/Arts/Textures/Player/Hair01_B.png
     m_ReadOnly: 0
     m_SerializedLabels:
     - Assets-AddressableAssets-GameRes-Arts-Textures-Player
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: c3284b3833b740c4983bea17e8b235a3
-    m_Address: Hair01_R
+    m_Address: Assets/AddressableAssets/GameRes/Arts/Textures/Player/Hair01_R.png
     m_ReadOnly: 0
     m_SerializedLabels:
     - Assets-AddressableAssets-GameRes-Arts-Textures-Player
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 67ca05615f22795439f77d8873333c34
-    m_Address: Hair01_W
+    m_Address: Assets/AddressableAssets/GameRes/Arts/Textures/Player/Hair01_W.png
     m_ReadOnly: 0
     m_SerializedLabels:
     - Assets-AddressableAssets-GameRes-Arts-Textures-Player
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 59e214c95d153dc448a358364de89d37
-    m_Address: Hair02_B
+    m_Address: Assets/AddressableAssets/GameRes/Arts/Textures/Player/Hair02_B.png
     m_ReadOnly: 0
     m_SerializedLabels:
     - Assets-AddressableAssets-GameRes-Arts-Textures-Player
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: e80151a3e2717754695bdf160d018172
-    m_Address: Hair02_R
+    m_Address: Assets/AddressableAssets/GameRes/Arts/Textures/Player/Hair02_R.png
     m_ReadOnly: 0
     m_SerializedLabels:
     - Assets-AddressableAssets-GameRes-Arts-Textures-Player
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: d384e84238294d541865e718e259f3cd
-    m_Address: Hair02_W
+    m_Address: Assets/AddressableAssets/GameRes/Arts/Textures/Player/Hair02_W.png
     m_ReadOnly: 0
     m_SerializedLabels:
     - Assets-AddressableAssets-GameRes-Arts-Textures-Player
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 313eeaaa5dbecde479dcc93acf0b0eaf
-    m_Address: Player01
+    m_Address: Assets/AddressableAssets/GameRes/Arts/Textures/Player/Player01.png
     m_ReadOnly: 0
     m_SerializedLabels:
     - Assets-AddressableAssets-GameRes-Arts-Textures-Player

@@ -30,7 +30,7 @@ namespace Myd.Platform
         {
             //this.playerRenderer = Object.Instantiate(Resources.Load<PlayerRenderer>("PlayerRenderer"));
             //this.playerRenderer = AssetHelper.Create<PlayerRenderer>("Assets/ProPlatformer/_Prefabs/PlayerRenderer.prefab");
-            var instance = AssetMgr.LoadAssetSync<GameObject>("PlayerRenderer");
+            var instance = AssetMgr.LoadAssetSync<GameObject>("Assets/AddressableAssets/GameRes/Prefabs/PlayerRenderer.prefab");
             this.playerRenderer = Object.Instantiate(instance).GetComponent<PlayerRenderer>();
             this.playerRenderer.Reload();
             //初始化

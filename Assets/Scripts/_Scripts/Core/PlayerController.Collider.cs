@@ -1,6 +1,7 @@
 ﻿using Myd.Common;
 using System;
 using System.Collections.Generic;
+using cfg;
 using UnityEngine;
 using UnityEngine.Tilemaps;
 
@@ -61,6 +62,13 @@ namespace Myd.Platform
             //使用校正
             float distance = distX;
             int correctTimes = 1;
+
+            // if (distance != 0)
+            // {
+            //     // TODO: 播放移动的音效
+            //     AudioMgr.PlaySound(EnumAudioClip.A16);
+            // }
+            
             while (true)
             {
                 float moved = MoveXStepWithCollide(distance);

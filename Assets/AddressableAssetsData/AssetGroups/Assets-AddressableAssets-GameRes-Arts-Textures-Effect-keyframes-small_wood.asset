@@ -15,28 +15,28 @@ MonoBehaviour:
   m_GroupName: Assets-AddressableAssets-GameRes-Arts-Textures-Effect-keyframes-small_wood
   m_Data:
     m_SerializedData: []
-  m_GUID: d21163df3e500fd47ba82ab32251e6ce
+  m_GUID: 1d30b6e10d390d74a825ccf95ccf31dc
   m_SerializeEntries:
   - m_GUID: 0fd7ec67f7e1ec044b79b7a43cdb6733
-    m_Address: small_wood_spike_01
+    m_Address: Assets/AddressableAssets/GameRes/Arts/Textures/Effect/keyframes/small_wood/small_wood_spike_01.png
     m_ReadOnly: 0
     m_SerializedLabels:
     - Assets-AddressableAssets-GameRes-Arts-Textures-Effect-keyframes-small_wood
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: feeed5f82f8d4144d9a64e318d3ab657
-    m_Address: small_wood_spike_02
+    m_Address: Assets/AddressableAssets/GameRes/Arts/Textures/Effect/keyframes/small_wood/small_wood_spike_02.png
     m_ReadOnly: 0
     m_SerializedLabels:
     - Assets-AddressableAssets-GameRes-Arts-Textures-Effect-keyframes-small_wood
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: ae7ed0850e0c891409dce3d1eb872152
-    m_Address: small_wood_spike_03
+    m_Address: Assets/AddressableAssets/GameRes/Arts/Textures/Effect/keyframes/small_wood/small_wood_spike_03.png
     m_ReadOnly: 0
     m_SerializedLabels:
     - Assets-AddressableAssets-GameRes-Arts-Textures-Effect-keyframes-small_wood
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 0967641684625cb48b0fc3f4d9d0d464
-    m_Address: small_wood_spike_04
+    m_Address: Assets/AddressableAssets/GameRes/Arts/Textures/Effect/keyframes/small_wood/small_wood_spike_04.png
     m_ReadOnly: 0
     m_SerializedLabels:
     - Assets-AddressableAssets-GameRes-Arts-Textures-Effect-keyframes-small_wood

@@ -90,9 +90,6 @@ namespace Myd.Platform
                 color = hit.collider.GetComponent<Ground>().GroundColor;
                 //color = Color.white;
                 EffectControl.JumpDust(position, color, forward);
-                // TODO: 播放音效
-                Debug.Log("播放音效");
-                AudioMgr.PlaySound(EnumAudioClip.主角受击);
             }
         }
 

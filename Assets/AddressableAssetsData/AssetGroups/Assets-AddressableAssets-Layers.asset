@@ -15,10 +15,10 @@ MonoBehaviour:
   m_GroupName: Assets-AddressableAssets-Layers
   m_Data:
     m_SerializedData: []
-  m_GUID: 8e7496d563aa6284fb4cfafcf3f75de6
+  m_GUID: 079232f95e12aa64fac97d7e1c1f1703
   m_SerializeEntries:
   - m_GUID: 557ff6b3392913d429119140890cf688
-    m_Address: TagManager
+    m_Address: Assets/AddressableAssets/Layers/TagManager.preset
     m_ReadOnly: 1
     m_SerializedLabels:
     - Assets-AddressableAssets-Layers

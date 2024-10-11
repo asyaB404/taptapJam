@@ -1,0 +1,14 @@
+[
+  {
+    "EnumName": 2,
+    "Volume": 1,
+    "CD": 0.35,
+    "Path": "Assets/AddressableAssets/GameRes/Audios/Sounds/主角移动.wav"
+  },
+  {
+    "EnumName": 3,
+    "Volume": 1,
+    "CD": 0,
+    "Path": "Assets/AddressableAssets/GameRes/Audios/Sounds/主角受击.wav"
+  }
+]

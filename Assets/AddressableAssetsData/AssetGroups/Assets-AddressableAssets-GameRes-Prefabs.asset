@@ -15,34 +15,34 @@ MonoBehaviour:
   m_GroupName: Assets-AddressableAssets-GameRes-Prefabs
   m_Data:
     m_SerializedData: []
-  m_GUID: 1fd8f7eb01a5cd4418636438138e9c5c
+  m_GUID: 5ecee77751eab39498dfd4960bf519a3
   m_SerializeEntries:
   - m_GUID: ff8fbbfeb0860c743b21fd5a45812cb5
-    m_Address: Camera
+    m_Address: Assets/AddressableAssets/GameRes/Prefabs/Camera.prefab
     m_ReadOnly: 0
     m_SerializedLabels:
     - Assets-AddressableAssets-GameRes-Prefabs
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 87694925c8571634894079a4219dd22b
-    m_Address: PlayerRenderer
+    m_Address: Assets/AddressableAssets/GameRes/Prefabs/PlayerRenderer.prefab
     m_ReadOnly: 0
     m_SerializedLabels:
     - Assets-AddressableAssets-GameRes-Prefabs
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 7058fd9947fe45e4a8a294a2cafccd97
-    m_Address: SceneEffectManager
+    m_Address: Assets/AddressableAssets/GameRes/Prefabs/SceneEffectManager.prefab
     m_ReadOnly: 0
     m_SerializedLabels:
     - Assets-AddressableAssets-GameRes-Prefabs
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: d14f5251e26ff7048a1bae25c204f41c
-    m_Address: Trail
+    m_Address: Assets/AddressableAssets/GameRes/Prefabs/Trail.prefab
     m_ReadOnly: 0
     m_SerializedLabels:
     - Assets-AddressableAssets-GameRes-Prefabs
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 442cc696cb66b31468920a273554189b
-    m_Address: TrailSprite
+    m_Address: Assets/AddressableAssets/GameRes/Prefabs/TrailSprite.prefab
     m_ReadOnly: 0
     m_SerializedLabels:
     - Assets-AddressableAssets-GameRes-Prefabs

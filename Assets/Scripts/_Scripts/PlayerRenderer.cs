@@ -2,6 +2,7 @@ using DG.Tweening;
 using Myd.Platform.Core;
 using System.Collections;
 using System.Collections.Generic;
+using cfg;
 using UnityEngine;
 
 namespace Myd.Platform

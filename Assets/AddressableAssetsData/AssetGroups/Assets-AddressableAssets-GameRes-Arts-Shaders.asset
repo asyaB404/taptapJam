@@ -15,40 +15,40 @@ MonoBehaviour:
   m_GroupName: Assets-AddressableAssets-GameRes-Arts-Shaders
   m_Data:
     m_SerializedData: []
-  m_GUID: 194cb16f319ac81478dac37527568fef
+  m_GUID: 4fdf6f89a4ba5c64caa5d7ed34b4671e
   m_SerializeEntries:
   - m_GUID: 551f3c07bc61329429119d723ab5496b
-    m_Address: Player
+    m_Address: Assets/AddressableAssets/GameRes/Arts/Shaders/Player.shader
     m_ReadOnly: 0
     m_SerializedLabels:
     - Assets-AddressableAssets-GameRes-Arts-Shaders
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: fb1e73f25e55e0144a0795e3e348b596
-    m_Address: PostEffects
+    m_Address: Assets/AddressableAssets/GameRes/Arts/Shaders/PostEffects.shader
     m_ReadOnly: 0
     m_SerializedLabels:
     - Assets-AddressableAssets-GameRes-Arts-Shaders
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: ba4e2a4fb04e9044c88da0cea0f5821a
-    m_Address: PostFXMask
+    m_Address: Assets/AddressableAssets/GameRes/Arts/Shaders/PostFXMask.shader
     m_ReadOnly: 0
     m_SerializedLabels:
     - Assets-AddressableAssets-GameRes-Arts-Shaders
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 6e10db1a6a8f05b4298ea3eb7b4233d5
-    m_Address: Shader Graphs_ShockWaveScreen
+    m_Address: Assets/AddressableAssets/GameRes/Arts/Shaders/Shader Graphs_ShockWaveScreen.mat
     m_ReadOnly: 0
     m_SerializedLabels:
     - Assets-AddressableAssets-GameRes-Arts-Shaders
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: d803b5a6a11c76a4dade66189a00a1de
-    m_Address: ShockWaveScreen
+    m_Address: Assets/AddressableAssets/GameRes/Arts/Shaders/ShockWaveScreen.shadergraph
     m_ReadOnly: 0
     m_SerializedLabels:
     - Assets-AddressableAssets-GameRes-Arts-Shaders
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 5d3b99358dc599343a9b2ba705c53745
-    m_Address: ShockWaveSprite
+    m_Address: Assets/AddressableAssets/GameRes/Arts/Shaders/ShockWaveSprite.shadergraph
     m_ReadOnly: 0
     m_SerializedLabels:
     - Assets-AddressableAssets-GameRes-Arts-Shaders

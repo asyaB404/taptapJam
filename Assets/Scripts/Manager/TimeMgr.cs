@@ -34,9 +34,13 @@ public class TimeMgr : MonoSingleton<TimeMgr>
     public void Update()
     {
         //获取真实的Update帧用时
+        Debug.Log("m_OldTimer:" + m_OldTime);
         m_OldTime = m_OldTime == DefaultDef.Float ? Time.realtimeSinceStartup : m_OldTime;
+        Debug.Log("m_OldTimer_new:" + m_OldTime);
         RealDeltaTime = Time.realtimeSinceStartup - m_OldTime;
+        Debug.Log("RealDeltaTime:" + RealDeltaTime);
         m_OldTime = Time.realtimeSinceStartup;
+        Debug.Log("m_OldTimer_new2:" + m_OldTime);
 
         //更新普通帧任务 普通计时任务 和不受timescale影响的计时任务  
         Timer.Update();

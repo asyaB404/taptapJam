@@ -15,28 +15,28 @@ MonoBehaviour:
   m_GroupName: Assets-AddressableAssets-GameRes-Arts-Textures-Effect-keyframes-long_metal
   m_Data:
     m_SerializedData: []
-  m_GUID: 0dc70327c80766b49a70c0e0ce400202
+  m_GUID: 602172ce006d1e34a91734a458afaecc
   m_SerializeEntries:
   - m_GUID: 35686b2bcf7ad5b4a9945d5473b584f2
-    m_Address: long_metal_spike_01
+    m_Address: Assets/AddressableAssets/GameRes/Arts/Textures/Effect/keyframes/long_metal/long_metal_spike_01.png
     m_ReadOnly: 0
     m_SerializedLabels:
     - Assets-AddressableAssets-GameRes-Arts-Textures-Effect-keyframes-long_metal
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 436b3434453f25145824bc2147542ccc
-    m_Address: long_metal_spike_02
+    m_Address: Assets/AddressableAssets/GameRes/Arts/Textures/Effect/keyframes/long_metal/long_metal_spike_02.png
     m_ReadOnly: 0
     m_SerializedLabels:
     - Assets-AddressableAssets-GameRes-Arts-Textures-Effect-keyframes-long_metal
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: a69c335c019f35945a3b74721ec7b5e2
-    m_Address: long_metal_spike_03
+    m_Address: Assets/AddressableAssets/GameRes/Arts/Textures/Effect/keyframes/long_metal/long_metal_spike_03.png
     m_ReadOnly: 0
     m_SerializedLabels:
     - Assets-AddressableAssets-GameRes-Arts-Textures-Effect-keyframes-long_metal
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 141ea228dd8013b44a76d75a8284da2d
-    m_Address: long_metal_spike_04
+    m_Address: Assets/AddressableAssets/GameRes/Arts/Textures/Effect/keyframes/long_metal/long_metal_spike_04.png
     m_ReadOnly: 0
     m_SerializedLabels:
     - Assets-AddressableAssets-GameRes-Arts-Textures-Effect-keyframes-long_metal

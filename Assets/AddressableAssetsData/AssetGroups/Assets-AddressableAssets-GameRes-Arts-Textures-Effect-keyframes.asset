@@ -15,28 +15,28 @@ MonoBehaviour:
   m_GroupName: Assets-AddressableAssets-GameRes-Arts-Textures-Effect-keyframes
   m_Data:
     m_SerializedData: []
-  m_GUID: 13bd11895396e714a8f9caf70f396565
+  m_GUID: ae942e90cdb072f4ab3f6532c76eb816
   m_SerializeEntries:
   - m_GUID: 24125eee607ba6d498a66cd27977cc9f
-    m_Address: long_metal_spike
+    m_Address: Assets/AddressableAssets/GameRes/Arts/Textures/Effect/keyframes/long_metal_spike.png
     m_ReadOnly: 0
     m_SerializedLabels:
     - Assets-AddressableAssets-GameRes-Arts-Textures-Effect-keyframes
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 0b741c9f226aa974f9fbfd15d05433d3
-    m_Address: long_wood_spike
+    m_Address: Assets/AddressableAssets/GameRes/Arts/Textures/Effect/keyframes/long_wood_spike.png
     m_ReadOnly: 0
     m_SerializedLabels:
     - Assets-AddressableAssets-GameRes-Arts-Textures-Effect-keyframes
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: f8de25fbe8aa63c46a7912d51c1ab2b7
-    m_Address: small_metal_spike
+    m_Address: Assets/AddressableAssets/GameRes/Arts/Textures/Effect/keyframes/small_metal_spike.png
     m_ReadOnly: 0
     m_SerializedLabels:
     - Assets-AddressableAssets-GameRes-Arts-Textures-Effect-keyframes
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 54a5dc2587857da4b93192a2e4cd73ff
-    m_Address: small_wood_spike
+    m_Address: Assets/AddressableAssets/GameRes/Arts/Textures/Effect/keyframes/small_wood_spike.png
     m_ReadOnly: 0
     m_SerializedLabels:
     - Assets-AddressableAssets-GameRes-Arts-Textures-Effect-keyframes

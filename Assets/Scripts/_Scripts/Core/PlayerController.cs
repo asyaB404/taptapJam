@@ -1,6 +1,7 @@
 ﻿using Myd.Common;
 using Myd.Platform.Core;
 using System;
+using cfg;
 using UnityEngine;
 
 namespace Myd.Platform
@@ -98,15 +99,15 @@ namespace Myd.Platform
 
             this.bounds = bounds;
             this.cameraPosition = CameraTarget;
-            //TODO 初始化尾巴颜色
-            //Color color = NormalHairColor;
-            //Gradient gradient = new Gradient();
-            //gradient.SetKeys(
-            //    new GradientColorKey[] { new GradientColorKey(color, 0.0f), new GradientColorKey(color, 1.0f) },
-            //    new GradientAlphaKey[] { new GradientAlphaKey(1, 0.0f), new GradientAlphaKey(1, 0.6f), new GradientAlphaKey(0, 1.0f) }
-            //);
-
-            //this.player.SetTrailColor(gradient);
+            // TODO 初始化尾巴颜色
+            // Color color = NormalHairColor;
+            // Gradient gradient = new Gradient();
+            // gradient.SetKeys(
+            //     new GradientColorKey[] { new GradientColorKey(color, 0.0f), new GradientColorKey(color, 1.0f) },
+            //     new GradientAlphaKey[] { new GradientAlphaKey(1, 0.0f), new GradientAlphaKey(1, 0.6f), new GradientAlphaKey(0, 1.0f) }
+            // );
+            //
+            // this.player.SetTrailColor(gradient);
 
         }
 
@@ -161,6 +162,7 @@ namespace Myd.Platform
                     varJumpTimer -= deltaTime;
                 }
 
+                // 玩家的移动
                 //Force Move X
                 if (ForceMoveXTimer > 0)
                 {
@@ -257,7 +259,7 @@ namespace Myd.Platform
             this.Speed.y = Constants.JumpSpeed;
             //Speed += LiftBoost;
             this.varJumpSpeed = this.Speed.y;
-            
+            AudioMgr.PlaySound(EnumAudioClip.A17);
             this.PlayJumpEffect(SpritePosition, Vector2.up);
         }
 

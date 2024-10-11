@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using cfg;
 using UnityEngine;
 /// <summary>
 /// 功能基本齐全的2D音效管理器
@@ -40,6 +41,14 @@ public class AudioMgr : MonoBehaviour
     /// 各种高频音效当前剩余CD的数组，字典不方便在遍历过程中修改值，因此需要一个list来配合使用，为了字典和list能够同步数值，这里将CD值放在了RemainCD这个类里
     /// </summary>
     private static List<RemainCD> RemainCDList = new List<RemainCD>();
+
+
+    /// <summary>
+    /// 音频资源路径配置表
+    /// </summary>
+    private static CfgAssetPath m_CfgAssetPath = DataMgr.Instance.Tables.CfgAssetPath;
+    
+    
     private class RemainCD
     {
         public float CD;
@@ -110,13 +119,13 @@ public class AudioMgr : MonoBehaviour
         }
 
         // float cd = DataMgr.AudioClipPathDic1[audioClip].cD;
-        float cd = 0f;
+        float cd = m_CfgAssetPath.Get(audioClip).CD;
         //3.如果调用的时候，这个音效的CD小于0了，那么就刷新CD以及播放音效，否则无视
         if (CurrentRemainCDDic[audioClip].CD <= 0)
         {
             //4.如果调用的时候没有传入CD，那么就用配置里的CD
             // cd = cd == 0 ? DataMgr.AudioClipPathDic1[audioClip].cD : cd;
-            cd = cd == 0 ? 0f : cd;
+            cd = cd == 0 ? m_CfgAssetPath.Get(audioClip).CD : cd;
             //更新CD 以及 播放音效
             CurrentRemainCDDic[audioClip].CD = cd;
         }
@@ -145,14 +154,12 @@ public class AudioMgr : MonoBehaviour
         //     }
         // });
         
-        AssetMgr.LoadAssetAsync<AudioClip>(audioClip.ToString(), (clip) =>
+        AssetMgr.LoadAssetAsync<AudioClip>(m_CfgAssetPath.Get(audioClip).Path, (clip) =>
         {
-            Debug.Log("clip:" + audioClip.ToString());
             //设置音频 音量 静音状态   然后播放
             audio.clip = clip;
             audio.volume = SoundVolume;
             audio.mute = GetSoundMuteState();
-            Debug.Log("Play");
             audio.Play();
             //如果需要自动回收音频组件就等待音频播放完毕之后 将其放回闲置数组复用
             if (autoRecycle)
@@ -190,7 +197,7 @@ public class AudioMgr : MonoBehaviour
         //     m_MusicAudio.Play();
         // });
         
-        AssetMgr.LoadAssetAsync<AudioClip>(audioClip.ToString(), (clip) =>
+        AssetMgr.LoadAssetAsync<AudioClip>(m_CfgAssetPath.Get(audioClip).Path, (clip) =>
         {
             //设置音频 音量 静音状态   然后播放
             m_MusicAudio.clip = clip;
@@ -257,7 +264,7 @@ public class AudioMgr : MonoBehaviour
             //     loadFinish = true;
             //     m_MusicAudio.clip = c;
             // });
-            AssetMgr.LoadAssetAsync<AudioClip>(clip.ToString(), (c) =>
+            AssetMgr.LoadAssetAsync<AudioClip>(m_CfgAssetPath.Get(clip).Path, (c) =>
             {
                 loadFinish = true;
                 m_MusicAudio.clip = c;

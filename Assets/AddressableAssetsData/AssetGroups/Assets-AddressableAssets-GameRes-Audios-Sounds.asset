@@ -15,16 +15,16 @@ MonoBehaviour:
   m_GroupName: Assets-AddressableAssets-GameRes-Audios-Sounds
   m_Data:
     m_SerializedData: []
-  m_GUID: e2b29e418b57be94897e0ce0c90a2a6b
+  m_GUID: f4152019d9198f74db67fa2a7e07710a
   m_SerializeEntries:
   - m_GUID: c4fa8a7a7409ffd4eb2526f806522f22
-    m_Address: "\u4E3B\u89D2\u53D7\u51FB"
+    m_Address: "Assets/AddressableAssets/GameRes/Audios/Sounds/\u4E3B\u89D2\u53D7\u51FB.wav"
     m_ReadOnly: 0
     m_SerializedLabels:
     - Assets-AddressableAssets-GameRes-Audios-Sounds
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 0ad172f9a5e459f4482ee7eb4ef9a49c
-    m_Address: "\u4E3B\u89D2\u79FB\u52A8"
+    m_Address: "Assets/AddressableAssets/GameRes/Audios/Sounds/\u4E3B\u89D2\u79FB\u52A8.wav"
     m_ReadOnly: 0
     m_SerializedLabels:
     - Assets-AddressableAssets-GameRes-Audios-Sounds

@@ -11,14 +11,11 @@ public class Singleton<T> where T : new()
     {
         get
         {
-            lock (m_Lock)
-            {
                 if (m_Instance == null)
                 {
                     m_Instance = new T();
                 }
                 return m_Instance;
-            }
         }
     }
 }

@@ -10,22 +10,16 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: bbb281ee3bf0b054c82ac2347e9e782c, type: 3}
-  m_Name: Assets-AddressableAssets-Layers
+  m_Name: Assets-AddressableAssets-Data
   m_EditorClassIdentifier: 
-  m_GroupName: Assets-AddressableAssets-Layers
+  m_GroupName: Assets-AddressableAssets-Data
   m_Data:
     m_SerializedData: []
-  m_GUID: bef5c882bd2f7d44a992dc5152a3d692
-  m_SerializeEntries:
-  - m_GUID: 557ff6b3392913d429119140890cf688
-    m_Address: Assets/AddressableAssets/Layers/TagManager.preset
-    m_ReadOnly: 1
-    m_SerializedLabels:
-    - Assets-AddressableAssets-Layers
-    FlaggedDuringContentUpdateRestriction: 0
+  m_GUID: deeaacc40c555d54a87a7bc15e316cd2
+  m_SerializeEntries: []
   m_ReadOnly: 0
   m_Settings: {fileID: 11400000, guid: ad10e3e3d61658a438828e6ebf91fd51, type: 2}
   m_SchemaSet:
     m_Schemas:
-    - {fileID: 11400000, guid: e957f5e9332a07a46bbff2e10c02b3c8, type: 2}
-    - {fileID: 11400000, guid: e4d683e8da801594d9c4d4d0d1fe4114, type: 2}
+    - {fileID: 11400000, guid: 756249ce3a3d90741a95af1ce737804c, type: 2}
+    - {fileID: 11400000, guid: 025aa57de0db0fb41b37c06a6c80c1f4, type: 2}

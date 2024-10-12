@@ -14,18 +14,9 @@ namespace cfg
     public enum EnumAudioClip
     {
         None = 0,
-        /// <summary>
-        /// 打字
-        /// </summary>
         A1 = 1,
-        /// <summary>
-        /// 主角移动
-        /// </summary>
-        A16 = 2,
-        /// <summary>
-        /// 主角受击
-        /// </summary>
-        A17 = 3,
+        主角移动 = 2,
+        主角受击 = 3,
     }
 
 } 

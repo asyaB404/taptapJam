@@ -15,7 +15,7 @@ MonoBehaviour:
   m_GroupName: Assets-AddressableAssets-GameRes-Arts-Textures-Effect-keyframes-long_wood
   m_Data:
     m_SerializedData: []
-  m_GUID: d3a85a19d1b18f34b8c946c2b6e0b54c
+  m_GUID: 22c82e27854f4dc4caf8b922ad314774
   m_SerializeEntries:
   - m_GUID: 18c2714cdeb655149a1fe1e16c7281df
     m_Address: Assets/AddressableAssets/GameRes/Arts/Textures/Effect/keyframes/long_wood/long_wood_spike_01.png

@@ -15,7 +15,7 @@ MonoBehaviour:
   m_GroupName: Assets-AddressableAssets-GameRes-Audios-Sounds
   m_Data:
     m_SerializedData: []
-  m_GUID: f4152019d9198f74db67fa2a7e07710a
+  m_GUID: f3ec83adefe3db341b56a7de5de84e19
   m_SerializeEntries:
   - m_GUID: c4fa8a7a7409ffd4eb2526f806522f22
     m_Address: "Assets/AddressableAssets/GameRes/Audios/Sounds/\u4E3B\u89D2\u53D7\u51FB.wav"

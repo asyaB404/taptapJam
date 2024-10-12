@@ -259,7 +259,8 @@ namespace Myd.Platform
             this.Speed.y = Constants.JumpSpeed;
             //Speed += LiftBoost;
             this.varJumpSpeed = this.Speed.y;
-            AudioMgr.PlaySound(EnumAudioClip.A17);
+            
+            AudioMgr.PlaySound(EnumAudioClip.主角受击);
             this.PlayJumpEffect(SpritePosition, Vector2.up);
         }
 

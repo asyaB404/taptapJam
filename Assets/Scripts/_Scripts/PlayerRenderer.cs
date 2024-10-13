@@ -33,11 +33,7 @@ namespace Myd.Platform
         private Vector2 currSpriteScale;
 
         public Vector3 SpritePosition { get => this.spriteRenderer.transform.position; }
-
-        [EnumName("移动音效")]
-        public EnumAudioClip move;
-        [EnumName("跳跃音效")]
-        public EnumAudioClip jump;
+         
 
         public void Reload()
         {

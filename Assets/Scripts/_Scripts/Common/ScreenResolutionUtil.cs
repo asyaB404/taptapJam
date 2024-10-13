@@ -5,6 +5,12 @@ namespace Myd.Common
     public static class ScreenResolutionUtil
     {
         public static float ScreenW = 3200, ScreenH = 1800;
+        
+        /// <summary>
+        /// 它根据当前屏幕的宽高比，调整相机的正交尺寸
+        /// </summary>
+        /// <returns></returns>
+        
         //调整摄像机，优先保证宽度
         public static float CalcOrthographicSize()
         {

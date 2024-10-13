@@ -4,6 +4,9 @@ using UnityEngine;
 
 namespace Myd.Platform
 {
+    /// <summary>
+    /// Player的参数
+    /// </summary>
     [CreateAssetMenu(fileName = "PlayerParams", menuName = "Pro Platformer/Player Param", order = 1 )]
     public class PlayerParams : ScriptableObject
     {

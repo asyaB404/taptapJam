@@ -6,6 +6,9 @@ using System.Threading.Tasks;
 
 namespace Myd.Common
 {
+    /// <summary>
+    /// 预定义了一堆缓动函数
+    /// </summary>
     public static class Ease
     {
         public static readonly Ease.Easer Linear = (Ease.Easer)(t => t);

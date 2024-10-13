@@ -24,5 +24,10 @@ namespace Core.Items
         /// 物品描述
         /// </summary>
         public string description;
+
+        /// <summary>
+        /// 在快捷栏中的最大数量，不可使用的物品请忽略
+        /// </summary>
+        [Tooltip("在快捷栏中的最大数量，不可使用的物品请忽略")] public int maxCount;
     }
 }

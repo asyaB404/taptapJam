@@ -7,5 +7,7 @@ namespace Core.Items
     {
         [SerializeField] private ItemInfo itemInfo;
         public ItemInfo ItemInfo => itemInfo;
+
+        public int count;
     }
 }

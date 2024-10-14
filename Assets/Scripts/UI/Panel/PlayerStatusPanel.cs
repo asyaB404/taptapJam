@@ -7,7 +7,20 @@ namespace UI.Panel
     public class PlayerStatusPanel : BasePanel<PlayerStatusPanel>
     {
         [SerializeField] private Toggle[] toggles;
+        [SerializeField] private GameObject[] panels;
 
+
+        public override void Init()
+        {
+            base.Init();
+            ToggleGroup toggleGroup = GetControl<ToggleGroup>("ToggleGroup");
+            toggles = toggleGroup.GetComponentsInChildren<Toggle>(true);
+            for (int i = 0; i < toggles.Length; i++)
+            {
+                int index = i;
+                toggles[index].onValueChanged.AddListener((value) => OnToggleChanged(index, value));
+            }
+        }
 
         public override void CallBack(bool flag)
         {
@@ -32,21 +45,9 @@ namespace UI.Panel
         }
 
 
-        public override void Init()
-        {
-            base.Init();
-            toggles = GetControl<ToggleGroup>("ToggleGroup").GetComponentsInChildren<Toggle>(true);
-            for (int i = 0; i < toggles.Length; i++)
-            {
-                int index = i; // 保存当前索引
-                toggles[index].onValueChanged.AddListener((value) => OnToggleChanged(index, value));
-            }
-        }
-
-
         private void OnToggleChanged(int index, bool value)
         {
-            Debug.Log($"Toggle at index {index} is now {(value ? "ON" : "OFF")}");
+            panels[index].SetActive(value);
         }
     }
 }

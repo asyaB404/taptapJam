@@ -15,7 +15,7 @@ MonoBehaviour:
   m_GroupName: Assets-AddressableAssets-GameRes-Arts-Textures-Player
   m_Data:
     m_SerializedData: []
-  m_GUID: 1698fc34710d84c47b818b910696efe7
+  m_GUID: 100b3de27d668354aa1ee45837000e2d
   m_SerializeEntries:
   - m_GUID: 820899af6cc7be04baf67e0100bdb547
     m_Address: Assets/AddressableAssets/GameRes/Arts/Textures/Player/Ex05.png

@@ -12,10 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 468a46d0ae32c3544b7d98094e6448a9, type: 3}
   m_Name: AddressableAssetSettings
   m_EditorClassIdentifier: 
-  m_DefaultGroup: cdcc21ccb7e9c4046b381517e2ba8c93
+  m_DefaultGroup: cf52dfd99e8c5b14f8f400df50611af3
   m_currentHash:
     serializedVersion: 2
-    Hash: 7d826bcb6d47eff69a227993084ee39c
+    Hash: b171d902e55c2e9088ec0834f0398034
   m_OptimizeCatalogSize: 0
   m_BuildRemoteCatalog: 0
   m_BundleLocalCatalog: 0
@@ -46,7 +46,6 @@ MonoBehaviour:
   m_GroupAssets:
   - {fileID: 11400000, guid: 84f3cdc68e004414987072754a0b4bf1, type: 2}
   - {fileID: 11400000, guid: 48dee0acdc9518047ac57d37c06c792c, type: 2}
-  - {fileID: 11400000, guid: a0e02e13d5002a141a34c8873a3e20dd, type: 2}
   - {fileID: 11400000, guid: 26237e6a3609c2c4b996714a7d0f5614, type: 2}
   - {fileID: 11400000, guid: 8eb92377f541faa43a23cf3a993eaf31, type: 2}
   - {fileID: 11400000, guid: 13549ec19820eac469176aa436c58e01, type: 2}
@@ -63,6 +62,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: c34c8ade66fa011429b1997a130acb8b, type: 2}
   - {fileID: 11400000, guid: 598b0534339d207459dd827bd464f88c, type: 2}
   - {fileID: 11400000, guid: 4a36f6b5213170d4b9fcb4e119cfc7ba, type: 2}
+  - {fileID: 11400000, guid: bacfd6732624ab24d9cd461b23b03828, type: 2}
   m_BuildSettings:
     m_CompileScriptsInVirtualMode: 0
     m_CleanupStreamingAssetsAfterBuilds: 1
@@ -136,6 +136,7 @@ MonoBehaviour:
     - Assets-AddressableAssets-GameRes-Prefabs-Effects
     - Assets-AddressableAssets-ConfigData
     - Assets-AddressableAssets-Data
+    - Assets-AddressableAssets-GameRes-Prefabs-UI
   m_SchemaTemplates: []
   m_GroupTemplateObjects:
   - {fileID: 11400000, guid: 251eb2a991560704fa667cc898137b23, type: 2}

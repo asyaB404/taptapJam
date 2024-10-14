@@ -10,16 +10,22 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: bbb281ee3bf0b054c82ac2347e9e782c, type: 3}
-  m_Name: Assets-AddressableAssets-Data
+  m_Name: Assets
   m_EditorClassIdentifier: 
-  m_GroupName: Assets-AddressableAssets-Data
+  m_GroupName: Assets
   m_Data:
     m_SerializedData: []
-  m_GUID: deeaacc40c555d54a87a7bc15e316cd2
-  m_SerializeEntries: []
+  m_GUID: def957a237a741a40a4af1633eed05e0
+  m_SerializeEntries:
+  - m_GUID: 93b439a37f63240aca3dd4e01d978a9f
+    m_Address: Assets/UniversalRenderPipelineGlobalSettings.asset
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Assets
+    FlaggedDuringContentUpdateRestriction: 0
   m_ReadOnly: 0
   m_Settings: {fileID: 11400000, guid: ad10e3e3d61658a438828e6ebf91fd51, type: 2}
   m_SchemaSet:
     m_Schemas:
-    - {fileID: 11400000, guid: 756249ce3a3d90741a95af1ce737804c, type: 2}
-    - {fileID: 11400000, guid: 025aa57de0db0fb41b37c06a6c80c1f4, type: 2}
+    - {fileID: 11400000, guid: e21ab16959985e54d93020c21af153bb, type: 2}
+    - {fileID: 11400000, guid: 43cb27c0e469e5f4096a190a0e01574c, type: 2}

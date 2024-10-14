@@ -1,0 +1,91 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bbb281ee3bf0b054c82ac2347e9e782c, type: 3}
+  m_Name: Assets-AddressableAssets-GameRes-Arts-Textures-Effect
+  m_EditorClassIdentifier: 
+  m_GroupName: Assets-AddressableAssets-GameRes-Arts-Textures-Effect
+  m_Data:
+    m_SerializedData: []
+  m_GUID: da1eb3989b0eaac419bc495d1ae05f56
+  m_SerializeEntries:
+  - m_GUID: 64f13eb4d14d52f45a75c9e741dbbf8e
+    m_Address: Assets/AddressableAssets/GameRes/Arts/Textures/Effect/dash_line.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Assets-AddressableAssets-GameRes-Arts-Textures-Effect
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 1b2970a114ab1614d99a18ce46d4f458
+    m_Address: Assets/AddressableAssets/GameRes/Arts/Textures/Effect/dash_orb.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Assets-AddressableAssets-GameRes-Arts-Textures-Effect
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: fb26623a2fcf160468d9222c25e78dc1
+    m_Address: Assets/AddressableAssets/GameRes/Arts/Textures/Effect/distort.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Assets-AddressableAssets-GameRes-Arts-Textures-Effect
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 12046b8dfeadff340a65d8849cc2f759
+    m_Address: Assets/AddressableAssets/GameRes/Arts/Textures/Effect/dust.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Assets-AddressableAssets-GameRes-Arts-Textures-Effect
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 0bc2ca3e70d16064aab475ef194132b5
+    m_Address: Assets/AddressableAssets/GameRes/Arts/Textures/Effect/dust_2x2_hard.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Assets-AddressableAssets-GameRes-Arts-Textures-Effect
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: c191bbcd4d376b54b9d57e6a123f8bcc
+    m_Address: Assets/AddressableAssets/GameRes/Arts/Textures/Effect/dust_2x2_hardshadow.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Assets-AddressableAssets-GameRes-Arts-Textures-Effect
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: d91a7ceceb48b6d4eb7da66199435d99
+    m_Address: Assets/AddressableAssets/GameRes/Arts/Textures/Effect/dust_2x2_soft.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Assets-AddressableAssets-GameRes-Arts-Textures-Effect
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 348fccf1c8952464e93c15ad28f973fd
+    m_Address: Assets/AddressableAssets/GameRes/Arts/Textures/Effect/dust_2x2_softshadow.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Assets-AddressableAssets-GameRes-Arts-Textures-Effect
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 747d716dbea89fc48b954a506c47b164
+    m_Address: Assets/AddressableAssets/GameRes/Arts/Textures/Effect/dust_magic.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Assets-AddressableAssets-GameRes-Arts-Textures-Effect
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 9cecc83887ca4cc45be4bf93b2f50c30
+    m_Address: Assets/AddressableAssets/GameRes/Arts/Textures/Effect/dust_soft.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Assets-AddressableAssets-GameRes-Arts-Textures-Effect
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 38f3a2d5e219bba4b89198b2260812f8
+    m_Address: Assets/AddressableAssets/GameRes/Arts/Textures/Effect/SpeedRing.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Assets-AddressableAssets-GameRes-Arts-Textures-Effect
+    FlaggedDuringContentUpdateRestriction: 0
+  m_ReadOnly: 0
+  m_Settings: {fileID: 11400000, guid: ad10e3e3d61658a438828e6ebf91fd51, type: 2}
+  m_SchemaSet:
+    m_Schemas:
+    - {fileID: 11400000, guid: d140fc17a9f8d68498004c01aa90fea2, type: 2}
+    - {fileID: 11400000, guid: 88e9d7a49fd34eb4d8ea18d97ef8b798, type: 2}

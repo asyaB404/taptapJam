@@ -1,12 +1,18 @@
 using System.Collections.Generic;
-using System.Linq;
 using Core.Container;
 using Core.Items;
+using UnityEngine;
 
 namespace Core
 {
-    public class PlayerInventory : IMyContainer
+    public class PlayerInventory : MonoBehaviour, IMyContainer
     {
+        private readonly Dictionary<string, ItemStack> _itemStacksDict = new();
+
+        public IReadOnlyCollection<ItemStack> GetItems => _itemStacksDict.Values;
+
+        public int Size { get; private set; }
+
         public int Count(string id)
         {
             int res = 0;
@@ -14,10 +20,6 @@ namespace Core
                 res = item.count;
             return res;
         }
-
-        private Dictionary<string, ItemStack> _itemStacksDict = new();
-        public IReadOnlyCollection<ItemStack> GetItems => _itemStacksDict.Values;
-        public int Size { get; private set; }
 
         public void AddItem(ItemStack newItemStack)
         {
@@ -50,7 +52,7 @@ namespace Core
         public bool Clear(string id)
         {
             if (!_itemStacksDict.TryGetValue(id, out ItemStack item)) return false;
-            Size -= item.count; 
+            Size -= item.count;
             _itemStacksDict.Remove(id);
             return true;
         }

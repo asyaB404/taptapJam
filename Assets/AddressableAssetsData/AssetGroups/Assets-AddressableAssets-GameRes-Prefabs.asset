@@ -15,7 +15,7 @@ MonoBehaviour:
   m_GroupName: Assets-AddressableAssets-GameRes-Prefabs
   m_Data:
     m_SerializedData: []
-  m_GUID: 1e4e86808a4ce9b42a90bd716e0f25dd
+  m_GUID: 08fc9749796c31241ab9e49c9a2e2141
   m_SerializeEntries:
   - m_GUID: ff8fbbfeb0860c743b21fd5a45812cb5
     m_Address: Assets/AddressableAssets/GameRes/Prefabs/Camera.prefab

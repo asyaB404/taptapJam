@@ -31,7 +31,7 @@ namespace UI.Panel
                 CanvasGroupInstance.interactable = true;
                 gameObject.SetActive(true);
                 Vector3 startPosition =
-                    new Vector3(-Screen.width, transform.localPosition.y, transform.localPosition.z);
+                    new Vector3(-Screen.width*3, transform.localPosition.y, transform.localPosition.z);
                 transform.localPosition = startPosition;
                 transform.DOLocalMoveX(0, UIConst.UIDuration).SetEase(Ease.OutBack);
             }
@@ -39,7 +39,7 @@ namespace UI.Panel
             {
                 CanvasGroupInstance.interactable = false;
                 transform.localPosition = new(0, transform.localPosition.y, transform.localPosition.z);
-                transform.DOLocalMoveX(-Screen.width, UIConst.UIDuration)
+                transform.DOLocalMoveX(-Screen.width*3, UIConst.UIDuration)
                     .OnComplete(() => { gameObject.SetActive(false); });
             }
         }

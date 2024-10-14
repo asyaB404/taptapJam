@@ -7,7 +7,7 @@ namespace UI.Panel
         public override void Init()
         {
             base.Init();
-            GetControl<Button>("BackpackBtn").onClick.AddListener(() => {BackpackPanel.Instance.ShowMe(); });
+            GetControl<Button>("BackpackBtn").onClick.AddListener(() => {PlayerStatusPanel.Instance.ShowMe(); });
         }
 
         public override void CallBack(bool flag)

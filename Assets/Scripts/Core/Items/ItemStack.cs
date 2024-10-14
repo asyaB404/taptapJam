@@ -9,5 +9,14 @@ namespace Core.Items
         public ItemInfo ItemInfo => itemInfo;
 
         public int count;
+
+        public ItemStack Copy()
+        {
+            return new ItemStack
+            {
+                count = this.count,
+                itemInfo = this.itemInfo
+            };
+        }
     }
 }

@@ -10,6 +10,12 @@ namespace UI.Panel
             GetControl<Button>("BackpackBtn").onClick.AddListener(() => {PlayerStatusPanel.Instance.ShowMe(); });
         }
 
+        public override void OnPressedEsc()
+        {
+            PlayerStatusPanel.Instance.ShowMe();
+        }
+        
+
         public override void CallBack(bool flag)
         {
         }

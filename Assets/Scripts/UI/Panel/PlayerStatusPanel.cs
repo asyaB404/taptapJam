@@ -118,6 +118,7 @@ namespace UI.Panel
                 selectedItemImage.sprite = null;
                 selectedItemName.text = "";
                 selectedItemDescription.text = "";
+                return;
             }
 
             selectedItemImage.sprite = info.icon;
@@ -132,7 +133,7 @@ namespace UI.Panel
                 slot.UpdateDisplay();
             }
 
-            if (Inventory.Count(selectedItemInfo.id) == 0)
+            if (!selectedItemInfo || Inventory.Count(selectedItemInfo.id) == 0)
             {
                 SetSelectedItem(null);
             }

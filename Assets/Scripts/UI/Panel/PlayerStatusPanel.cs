@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using DG.Tweening;
 using UnityEngine;
 using UnityEngine.UI;
@@ -6,20 +7,36 @@ namespace UI.Panel
 {
     public class PlayerStatusPanel : BasePanel<PlayerStatusPanel>
     {
-        [SerializeField] private Toggle[] toggles;
+        [SerializeField] private Toggle[] optionsToggles;
         [SerializeField] private GameObject[] panels;
+        [SerializeField] private List<Toggle> itemSlotsToggles;
 
 
         public override void Init()
         {
             base.Init();
             ToggleGroup toggleGroup = GetControl<ToggleGroup>("ToggleGroup");
-            toggles = toggleGroup.GetComponentsInChildren<Toggle>(true);
-            for (int i = 0; i < toggles.Length; i++)
+            optionsToggles = toggleGroup.GetComponentsInChildren<Toggle>(true);
+            for (int i = 0; i < optionsToggles.Length; i++)
             {
                 int index = i;
-                toggles[index].onValueChanged.AddListener((value) => OnToggleChanged(index, value));
+                optionsToggles[index].onValueChanged.AddListener((value) => OnToggleChanged(index, value));
             }
+            for (int i = 0; i < itemSlotsToggles.Count; i++)
+            {
+                int index = i;
+                itemSlotsToggles[index].onValueChanged.AddListener((value) => OnItemSlotToggleChanged(index, value));
+            }
+        }
+        
+        private void OnItemSlotToggleChanged(int index, bool value)
+        {
+            
+        }
+
+        private  void OnToggleChanged(int index, bool value)
+        {
+            panels[index].SetActive(value);
         }
 
         public override void CallBack(bool flag)
@@ -42,12 +59,6 @@ namespace UI.Panel
                 transform.DOLocalMoveX(-Screen.width*3, UIConst.UIDuration)
                     .OnComplete(() => { gameObject.SetActive(false); });
             }
-        }
-
-
-        private void OnToggleChanged(int index, bool value)
-        {
-            panels[index].SetActive(value);
         }
     }
 }

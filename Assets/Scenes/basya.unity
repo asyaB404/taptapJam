@@ -1812,7 +1812,7 @@ GameObject:
   - component: {fileID: 608771597}
   - component: {fileID: 608771596}
   m_Layer: 5
-  m_Name: panel (1)
+  m_Name: Items
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5611,7 +5611,7 @@ GameObject:
   - component: {fileID: 2089000310}
   - component: {fileID: 2089000309}
   m_Layer: 5
-  m_Name: playerInventory
+  m_Name: Slots
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

@@ -10,6 +10,16 @@ namespace Core.Items
 
         public int count;
 
+        public ItemStack()
+        {
+        }
+
+        public ItemStack(ItemInfo itemInfo, int count)
+        {
+            this.itemInfo = itemInfo;
+            this.count = count;
+        }
+
         public ItemStack Copy()
         {
             return new ItemStack

@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using System.Linq;
 using Core.Container;
 using Core.Items;
 using UnityEngine;
@@ -9,16 +10,27 @@ namespace Core
     {
         private readonly Dictionary<string, ItemStack> _itemStacksDict = new();
 
-        public IReadOnlyCollection<ItemStack> GetItems => _itemStacksDict.Values;
+        //用于记录物品的插入顺序
+        private readonly List<string> _insertionOrderList = new();
+
+        /// <summary>
+        /// 返回的是字典的原始集合拷贝
+        /// </summary>
+        public IReadOnlyCollection<ItemStack> GetItems => _itemStacksDict.Values.ToArray();
+        
+        /// <summary>
+        /// 返回的是根据时间顺序加入的物品序列拷贝
+        /// </summary>
+        public IReadOnlyCollection<ItemStack> GetItemsOrderByTime =>
+            _insertionOrderList.Select(id => _itemStacksDict[id]).ToArray();
+
+
 
         public int Size { get; private set; }
 
         public int Count(string id)
         {
-            int res = 0;
-            if (_itemStacksDict.TryGetValue(id, out ItemStack item))
-                res = item.count;
-            return res;
+            return _itemStacksDict.TryGetValue(id, out ItemStack item) ? item.count : 0;
         }
 
         public void AddItem(ItemStack newItemStack)
@@ -32,20 +44,41 @@ namespace Core
             }
             else
             {
+                _insertionOrderList.Add(id);
                 _itemStacksDict[id] = newItemStack;
             }
 
             Size += quantity;
         }
 
-        public bool RemoveItem(string id, int count)
+        // public bool RemoveItem(string id, int count)
+        // {
+        //     if (!_itemStacksDict.TryGetValue(id, out ItemStack itemStack)) return false;
+        //     if (itemStack.count < count) return false;
+        //     itemStack.count -= count;
+        //     Size -= count;
+        //     if (itemStack.count == 0)
+        //         _itemStacksDict.Remove(id);
+        //     return true;
+        // }
+
+        public bool TryRemoveItem(string id, int count, out ItemStack removedItemStack)
         {
-            if (!_itemStacksDict.TryGetValue(id, out ItemStack itemStack)) return false;
-            if (itemStack.count < count) return false;
+            removedItemStack = null;
+            //检查物品是否存在并且数量是否足够
+            if (!_itemStacksDict.TryGetValue(id, out ItemStack itemStack) || itemStack.count < count)
+                return false;
+            //创建要移除的 ItemStack 副本
+            removedItemStack = new ItemStack(itemStack.ItemInfo, count);
+            //更新现有的 ItemStack
             itemStack.count -= count;
             Size -= count;
+            //如果物品数量变为 0，移除该物品
             if (itemStack.count == 0)
+            {
+                _insertionOrderList.Remove(id);
                 _itemStacksDict.Remove(id);
+            }
             return true;
         }
 
@@ -54,6 +87,7 @@ namespace Core
             if (!_itemStacksDict.TryGetValue(id, out ItemStack item)) return false;
             Size -= item.count;
             _itemStacksDict.Remove(id);
+            _insertionOrderList.Remove(id);
             return true;
         }
 
@@ -61,6 +95,7 @@ namespace Core
         {
             Size = 0;
             _itemStacksDict.Clear();
+            _insertionOrderList.Clear();
         }
     }
 }

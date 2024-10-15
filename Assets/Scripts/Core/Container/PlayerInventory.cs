@@ -21,7 +21,7 @@ namespace Core
         /// <summary>
         /// 返回的是根据时间顺序加入的物品序列拷贝
         /// </summary>
-        public IReadOnlyCollection<ItemStack> GetItemsOrderByTime =>
+        public IReadOnlyList<ItemStack> GetItemsOrderByTime =>
             _insertionOrderList.Select(id => _itemStacksDict[id]).ToArray();
 
 

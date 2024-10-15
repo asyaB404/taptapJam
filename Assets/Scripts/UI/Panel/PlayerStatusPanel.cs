@@ -1,5 +1,6 @@
-using System.Collections.Generic;
+
 using DG.Tweening;
+using UI.Inventory;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -9,7 +10,7 @@ namespace UI.Panel
     {
         [SerializeField] private Toggle[] optionsToggles;
         [SerializeField] private GameObject[] panels;
-        [SerializeField] private List<Toggle> itemSlotsToggles;
+        [SerializeField] private ItemSlot[] itemSlotsToggles;
 
 
         public override void Init()
@@ -22,16 +23,10 @@ namespace UI.Panel
                 int index = i;
                 optionsToggles[index].onValueChanged.AddListener((value) => OnToggleChanged(index, value));
             }
-            for (int i = 0; i < itemSlotsToggles.Count; i++)
+            for (int i = 0; i < itemSlotsToggles.Length; i++)
             {
-                int index = i;
-                itemSlotsToggles[index].onValueChanged.AddListener((value) => OnItemSlotToggleChanged(index, value));
+                itemSlotsToggles[i].id = i;
             }
-        }
-        
-        private void OnItemSlotToggleChanged(int index, bool value)
-        {
-            
         }
 
         private  void OnToggleChanged(int index, bool value)

@@ -4,6 +4,7 @@ using Core.Container;
 using Core.Items;
 using Test;
 using TMPro;
+using UI.Panel;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -14,18 +15,16 @@ namespace UI.Inventory
         public int id = -1;
         [SerializeField] private Image image;
         [SerializeField] private TextMeshProUGUI itemCount;
-        [SerializeField] private Toggle toggle;
-        private IReadOnlyList<ItemStack> _inventory => TestForInventory.Inventory.GetItemsOrderByTime;
-
-        private void Awake()
-        {
-            toggle.onValueChanged.AddListener((flag) => { });
-        }
+        public Toggle toggle;
+        /// <summary>
+        /// 测试用属性
+        /// </summary>
+        public IReadOnlyList<ItemStack> Inventory => PlayerStatusPanel.Instance.Inventory.GetItemsOrderByTime;
 
         public void UpdateDisplay()
         {
-            if (id <= -1 || id >= _inventory.Count) return;
-            ItemStack itemStack = _inventory[id];
+            if (id <= -1 || id >= Inventory.Count) return;
+            ItemStack itemStack = Inventory[id];
             image.sprite = itemStack.ItemInfo.icon;
             itemCount.text = itemStack.count.ToString();
         }

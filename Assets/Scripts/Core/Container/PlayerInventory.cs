@@ -2,6 +2,7 @@ using System.Collections.Generic;
 using System.Linq;
 using Core.Container;
 using Core.Items;
+using UI.Panel;
 using UnityEngine;
 
 namespace Core
@@ -49,18 +50,8 @@ namespace Core
             }
 
             Size += quantity;
+            PlayerStatusPanel.Instance.UpdateInventoryDisplay();
         }
-
-        // public bool RemoveItem(string id, int count)
-        // {
-        //     if (!_itemStacksDict.TryGetValue(id, out ItemStack itemStack)) return false;
-        //     if (itemStack.count < count) return false;
-        //     itemStack.count -= count;
-        //     Size -= count;
-        //     if (itemStack.count == 0)
-        //         _itemStacksDict.Remove(id);
-        //     return true;
-        // }
 
         public bool TryRemoveItem(string id, int count, out ItemStack removedItemStack)
         {
@@ -79,6 +70,7 @@ namespace Core
                 _insertionOrderList.Remove(id);
                 _itemStacksDict.Remove(id);
             }
+            PlayerStatusPanel.Instance.UpdateInventoryDisplay();
             return true;
         }
 
@@ -88,6 +80,7 @@ namespace Core
             Size -= item.count;
             _itemStacksDict.Remove(id);
             _insertionOrderList.Remove(id);
+            PlayerStatusPanel.Instance.UpdateInventoryDisplay();
             return true;
         }
 
@@ -96,6 +89,7 @@ namespace Core
             Size = 0;
             _itemStacksDict.Clear();
             _insertionOrderList.Clear();
+            PlayerStatusPanel.Instance.UpdateInventoryDisplay();
         }
     }
 }

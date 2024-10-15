@@ -18,6 +18,26 @@ namespace Myd.Platform
     public partial class PlayerController
     {
         private readonly int GroundMask;
+        private readonly int HurtMask;
+        
+        // Player的最大生命，当前生命和灵力
+        private float playerMaxHealth;
+        private float playerHealth;
+        private float playerMaxStamina;
+        private float playerStamina;
+        public float PlayerHealth
+        {
+            get => playerHealth;
+            set => playerHealth = Mathf.Clamp(value, 0, this.playerMaxHealth);
+        }
+        
+        public float PlayerStamina
+        {
+            get => playerStamina;
+            set => playerStamina = Mathf.Clamp(value, 0, Constants.playerMaxStamina);
+        } 
+        
+
 
         float varJumpTimer;
         float varJumpSpeed; //
@@ -25,6 +45,7 @@ namespace Myd.Platform
         private float maxFall;
         private float fastMaxFall;
 
+        private float beHurtCooldownTimer; // 受伤冷却时间 为0时，可以再次受伤
         private float dashCooldownTimer;                //冲刺冷却时间计数器，为0时，可以再次冲刺
         private float dashRefillCooldownTimer;          //
         public int dashes;
@@ -66,7 +87,11 @@ namespace Myd.Platform
             this.stateMachine.AddState(new NormalState(this));
             this.stateMachine.AddState(new DashState(this));
             this.stateMachine.AddState(new ClimbState(this));
+            // 添加HurtSate
+            this.stateMachine.AddState(new HurtState(this));
             this.GroundMask = LayerMask.GetMask("Ground");
+            // 添加HurtMask
+            this.HurtMask = LayerMask.GetMask("Hurt");
 
             this.Facing  = Facings.Right;
             this.LastAim = Vector2.right;
@@ -108,8 +133,16 @@ namespace Myd.Platform
             // );
             //
             // this.player.SetTrailColor(gradient);
-
+            
+            // 最大生命值和灵力值
+            playerMaxHealth = Constants.playerMaxHealth;
+            playerMaxStamina = Constants.playerMaxStamina;
+            // 当前生命
+            playerHealth = playerMaxHealth;
+            // 当前灵力
+            playerStamina = playerMaxStamina;
         }
+        
 
         public void Update(float deltaTime)
         {
@@ -155,6 +188,13 @@ namespace Myd.Platform
                         RefillDash();
                     }
                 }
+                
+                // BeHurt
+                if (beHurtCooldownTimer > 0)
+                {
+                    beHurtCooldownTimer -= deltaTime;
+                }
+                
 
                 //Var Jump
                 if (varJumpTimer > 0)
@@ -413,6 +453,7 @@ namespace Myd.Platform
 
         public float MaxFall { get => maxFall; set => maxFall = value; }
         public float DashCooldownTimer { get => dashCooldownTimer; set => dashCooldownTimer = value; }
+        public float HurtCooldownTimer { get => beHurtCooldownTimer; set => beHurtCooldownTimer = value; }
         public float DashRefillCooldownTimer { get => dashRefillCooldownTimer; set => dashRefillCooldownTimer = value; }
         public Vector2 LastAim { get; set; }
         public Facings Facing { get; set; }  //当前朝向
@@ -428,6 +469,9 @@ namespace Myd.Platform
             this.stateMachine.State = state;
         }
 
+        /// <summary>
+        /// 是否下蹲
+        /// </summary>
         public bool Ducking
         {
             get
@@ -483,6 +527,18 @@ namespace Myd.Platform
             get
             {
                 return !this.wasOnGround && this.OnGround;
+            }
+        }
+        
+        
+        /// <summary>
+        /// 是否能受伤
+        /// </summary>
+        public bool CanBeHurt
+        {
+            get
+            {
+                return beHurtCooldownTimer <= 0;
             }
         }
     }

@@ -15,7 +15,7 @@ MonoBehaviour:
   m_GroupName: Assets-AddressableAssets-GameRes-Arts-Textures-Effect-keyframes-small_wood
   m_Data:
     m_SerializedData: []
-  m_GUID: 00a16fac51c5aa14399fd67de2e34f78
+  m_GUID: ad7f2e710685caa4eb73cec622db15a0
   m_SerializeEntries:
   - m_GUID: 0fd7ec67f7e1ec044b79b7a43cdb6733
     m_Address: Assets/AddressableAssets/GameRes/Arts/Textures/Effect/keyframes/small_wood/small_wood_spike_01.png

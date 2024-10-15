@@ -1,0 +1,55 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bbb281ee3bf0b054c82ac2347e9e782c, type: 3}
+  m_Name: Assets-AddressableAssets-GameRes-Arts-Laser Materials
+  m_EditorClassIdentifier: 
+  m_GroupName: Assets-AddressableAssets-GameRes-Arts-Laser Materials
+  m_Data:
+    m_SerializedData: []
+  m_GUID: e1e215c5aa0d6224ca4ff676e9ff3905
+  m_SerializeEntries:
+  - m_GUID: 10f90eee924daf147aacf8959fb247b6
+    m_Address: Assets/AddressableAssets/GameRes/Arts/Laser Materials/Laser.mat
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Assets-AddressableAssets-GameRes-Arts-Laser Materials
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: b8e209f4ff4ac7d429eee1117cde5edc
+    m_Address: Assets/AddressableAssets/GameRes/Arts/Laser Materials/Laser.shadergraph
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Assets-AddressableAssets-GameRes-Arts-Laser Materials
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 8f34fd6d17039cc4c9a608fceca73ce5
+    m_Address: Assets/AddressableAssets/GameRes/Arts/Laser Materials/ParticleSpark.mat
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Assets-AddressableAssets-GameRes-Arts-Laser Materials
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 02ceb42347fa7224fa6a9abaf9f4cd85
+    m_Address: Assets/AddressableAssets/GameRes/Arts/Laser Materials/ParticleStar.mat
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Assets-AddressableAssets-GameRes-Arts-Laser Materials
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 507970eea58ed734999ee3b9d2554659
+    m_Address: Assets/AddressableAssets/GameRes/Arts/Laser Materials/ShaderGraph_Particles_Lit.shadergraph
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Assets-AddressableAssets-GameRes-Arts-Laser Materials
+    FlaggedDuringContentUpdateRestriction: 0
+  m_ReadOnly: 0
+  m_Settings: {fileID: 11400000, guid: ad10e3e3d61658a438828e6ebf91fd51, type: 2}
+  m_SchemaSet:
+    m_Schemas:
+    - {fileID: 11400000, guid: 2f117118158cf794581b0b3289e85861, type: 2}
+    - {fileID: 11400000, guid: e37afbbd5ebc02e4a8f9d1a3867ef6d5, type: 2}

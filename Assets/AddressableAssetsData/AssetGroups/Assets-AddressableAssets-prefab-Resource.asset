@@ -1,0 +1,73 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bbb281ee3bf0b054c82ac2347e9e782c, type: 3}
+  m_Name: Assets-AddressableAssets-prefab-Resource
+  m_EditorClassIdentifier: 
+  m_GroupName: Assets-AddressableAssets-prefab-Resource
+  m_Data:
+    m_SerializedData: []
+  m_GUID: 8d66ba21ceffd314abff4df07c0cfa15
+  m_SerializeEntries:
+  - m_GUID: 5dc5530477259834b9c1cc5991f95c14
+    m_Address: Assets/AddressableAssets/prefab/Resource/fiddlehead.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Assets-AddressableAssets-prefab-Resource
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: dde76aa37a806a64d8d77658c8d94916
+    m_Address: Assets/AddressableAssets/prefab/Resource/fire.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Assets-AddressableAssets-prefab-Resource
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 07d77cfeec2c38f478f21a25eb822342
+    m_Address: Assets/AddressableAssets/prefab/Resource/laogane.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Assets-AddressableAssets-prefab-Resource
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: cb4b38da320623244bcd2bae5a299345
+    m_Address: Assets/AddressableAssets/prefab/Resource/notRefreshObjs.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Assets-AddressableAssets-prefab-Resource
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 2e83c644d9d35784789bced8f930b44b
+    m_Address: Assets/AddressableAssets/prefab/Resource/ordinaryRefreshObjs.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Assets-AddressableAssets-prefab-Resource
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: f6b2977b93b1c8a48bcf1a7e243a6223
+    m_Address: Assets/AddressableAssets/prefab/Resource/plum.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Assets-AddressableAssets-prefab-Resource
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: af7b2cacea6787142848e3729f6ccd4c
+    m_Address: Assets/AddressableAssets/prefab/Resource/rapidRefreshObjs.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Assets-AddressableAssets-prefab-Resource
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 81f8882f02c37b94391e4e2add02f57d
+    m_Address: Assets/AddressableAssets/prefab/Resource/ShowButton.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Assets-AddressableAssets-prefab-Resource
+    FlaggedDuringContentUpdateRestriction: 0
+  m_ReadOnly: 0
+  m_Settings: {fileID: 11400000, guid: ad10e3e3d61658a438828e6ebf91fd51, type: 2}
+  m_SchemaSet:
+    m_Schemas:
+    - {fileID: 11400000, guid: 8bc96e7576560c44e8e2a42bf9a29ddd, type: 2}
+    - {fileID: 11400000, guid: 4ed437f1b14f53b4ab413af0b2317db7, type: 2}

@@ -13,6 +13,13 @@ namespace Myd.Platform
     /// </summary>
     public class SceneCamera : MonoBehaviour, ICamera
     {
+        private bool isLookingUp = false;
+        private bool isLookingDown = false;
+        
+        private float lookUpTimer = 0f;
+        private float lookDownTimer = 0f;
+        private const float requiredHoldTime = 2f;
+        
         [SerializeField]
         private Camera mainCamera;
         [SerializeField]
@@ -34,10 +41,14 @@ namespace Myd.Platform
                 new Keyframe(1, 0, 0, 0)
             });
 
-        public void SetCameraPosition(Vector2 cameraPosition)
-        {
-            this.mainCamera.transform.position = new Vector3(cameraPosition.x+offset.x, cameraPosition.y + offset.y, -10);
-        }
+        /// <summary>
+        /// 相机跟随
+        /// </summary>
+        /// <param name="cameraPosition"></param>
+        // public void SetCameraPosition(Vector2 cameraPosition)
+        // {
+        //     this.mainCamera.transform.position = new Vector3(cameraPosition.x+offset.x, cameraPosition.y + offset.y, -10);
+        // }
 
         public void Shake(Vector2 dir, float duration)
         {
@@ -72,6 +83,56 @@ namespace Myd.Platform
                 yield return null;
             }
             offset = Vector2.zero;
+        }
+
+
+        public void Update()
+        {
+            // 检测W键的按下和松开状态
+            if (Input.GetKey(KeyCode.W))
+            {
+                lookUpTimer += Time.deltaTime;
+                if (lookUpTimer >= requiredHoldTime)
+                {
+                    isLookingUp = true;
+                }
+            }
+            else
+            {
+                lookUpTimer = 0f;
+                isLookingUp = false;
+            }
+
+            // 检测S键的按下和松开状态
+            if (Input.GetKey(KeyCode.S))
+            {
+                lookDownTimer += Time.deltaTime;
+                if (lookDownTimer >= requiredHoldTime)
+                {
+                    isLookingDown = true;
+                }
+            }
+            else
+            {
+                lookDownTimer = 0f;
+                isLookingDown = false;
+            }
+        }
+
+        public void SetCameraPosition(Vector2 cameraPosition)
+        {
+            float yOffset = 0.0f;
+            if (isLookingUp)
+            {
+                yOffset = 2.0f; // 向上看时增加的偏移量
+            }
+            else if (isLookingDown)
+            {
+                yOffset = -2.0f; // 向下看时减少的偏移量
+            }
+
+            Vector3 targetPosition = new Vector3(cameraPosition.x + offset.x, cameraPosition.y + offset.y + yOffset, -10);
+            mainCamera.transform.DOMove(targetPosition, 1.0f); // 使用 DOTween 进行缓动
         }
     }
 }

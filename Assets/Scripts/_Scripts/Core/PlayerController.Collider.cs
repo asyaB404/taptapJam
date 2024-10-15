@@ -17,13 +17,18 @@ namespace Myd.Platform
         const float STEP = 0.1f;  //碰撞检测步长，对POINT检测用
         const float DEVIATION = 0.02f;  //碰撞检测误差
 
+        /// <summary>
+        /// Box设定
+        /// </summary>
         private readonly Rect normalHitbox = new Rect(0, -0.25f, 0.8f, 1.1f);
         private readonly Rect duckHitbox = new Rect(0, -0.5f, 0.8f, 0.6f);
         private readonly Rect normalHurtbox = new Rect(0f, -0.15f, 0.8f, 0.9f);
         private readonly Rect duckHurtbox = new Rect(8f, 4f, 0.8f, 0.4f);
 
         private Rect collider;
-
+        
+        // 外界获取是否在地面上
+        public bool IsOnGround => this.onGround;
 
         public void AdjustPosition(Vector2 adjust)
         {
@@ -31,7 +36,7 @@ namespace Myd.Platform
             UpdateCollideY(adjust.y);
         }
 
-        //碰撞检测
+        //碰撞检测（用于墙壁）
         public bool CollideCheck(Vector2 position, Vector2 dir, float dist = 0)
         {
             Vector2 origion = position + collider.position;
@@ -63,11 +68,12 @@ namespace Myd.Platform
             float distance = distX;
             int correctTimes = 1;
 
-            // if (distance != 0)
-            // {
-            //     // TODO: 播放移动的音效
-            //     AudioMgr.PlaySound(EnumAudioClip.A16);
-            // }
+            // 移动距离不为0且在地面上时播放移动音效
+            if (distance != 0 && onGround)
+            {
+                // TODO: 播放移动的音效
+                AudioMgr.PlaySound(EnumAudioClip.主角移动);
+            }
             
             while (true)
             {
@@ -133,6 +139,10 @@ namespace Myd.Platform
                 }
             }
         }
+        /// <summary>
+        /// 检测地面碰撞
+        /// </summary>
+        /// <returns></returns>
         private bool CheckGround()
         {
             return CheckGround(Vector2.zero);
@@ -263,7 +273,12 @@ namespace Myd.Platform
             }
             return false;
         }
-
+        
+        /// <summary>
+        /// Y轴移动校正
+        /// </summary>
+        /// <param name="distY"></param>
+        /// <returns></returns>
         private bool CorrectY(float distY)
         {
             Vector2 origion = this.Position + collider.position;
@@ -382,5 +397,18 @@ namespace Myd.Platform
         //{
         //    CorrectY(distY);
         //}
+        
+        
+        /// <summary>
+        /// 玩家收到伤害，向当前面朝方向的后上方飞去
+        /// </summary>
+        public bool BeHurtCheck(Vector2 position, Vector2 dir, float dist = 0)
+        {
+            // 如果触碰到Hurt 建立normalHurtbox大小的检测区
+            Vector2 origin = this.Position + collider.position;
+            // 判断玩家是否蹲下，来决定使用哪个HurtBox
+            Rect hurtBox = Ducking ? duckHurtbox : normalHurtbox;
+            return Physics2D.OverlapBox(origin + dir * (dist + DEVIATION), hurtBox.size, 0, HurtMask);
+        }
     }
 }

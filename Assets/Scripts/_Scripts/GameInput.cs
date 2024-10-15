@@ -42,11 +42,19 @@ namespace Myd.Platform
             this.bufferCounter = 0f;
         }
 
+        /// <summary>
+        /// 检测指定的按键是否被按下
+        /// </summary>
+        /// <returns></returns>
         public bool Pressed()
         {
             return UnityEngine.Input.GetKeyDown(key)||(!this.consumed && (this.bufferCounter > 0f));
         }
 
+        /// <summary>
+        /// 检测指定的按键是否被按住
+        /// </summary>
+        /// <returns></returns>
         public bool Checked()
         {
             return UnityEngine.Input.GetKey(key);
@@ -75,8 +83,11 @@ namespace Myd.Platform
     }
     public static class GameInput
     {
+        // 跳跃
         public static VisualButton Jump = new VisualButton(KeyCode.Space, 0.08f);
+        // 冲刺
         public static VisualButton Dash = new VisualButton(KeyCode.K, 0.08f);
+        // 抓取
         public static VisualButton Grab = new VisualButton(KeyCode.J);
         public static VirtualJoystick Aim = new VirtualJoystick();
         public static Vector2 LastAim;

@@ -15,7 +15,7 @@ MonoBehaviour:
   m_GroupName: Assets-AddressableAssets-GameRes-Arts-Textures-Effect-keyframes-long_metal
   m_Data:
     m_SerializedData: []
-  m_GUID: a38c97ce0aabba34584a1395d7ea2af0
+  m_GUID: 12197b7ddad5955409df4b974d830c50
   m_SerializeEntries:
   - m_GUID: 35686b2bcf7ad5b4a9945d5473b584f2
     m_Address: Assets/AddressableAssets/GameRes/Arts/Textures/Effect/keyframes/long_metal/long_metal_spike_01.png

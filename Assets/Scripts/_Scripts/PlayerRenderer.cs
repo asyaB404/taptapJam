@@ -3,6 +3,7 @@ using Myd.Platform.Core;
 using System.Collections;
 using System.Collections.Generic;
 using cfg;
+using Laser;
 using UnityEngine;
 
 namespace Myd.Platform
@@ -28,6 +29,10 @@ namespace Myd.Platform
         public SpriteRenderer hairSprite01;
         [SerializeField]
         public SpriteRenderer hairSprite02;
+        
+        // 激光
+        [SerializeField]
+        public Laser2D laser;
 
         private Vector2 scale;
         private Vector2 currSpriteScale;
@@ -79,6 +84,23 @@ namespace Myd.Platform
             main.startColor = color;
             this.vfxWallSlide.Emit(1);
         }
+
+        public void SetPositions(Vector2 start, Vector2 direction)
+        {
+            this.laser.SetPositions(start, direction);
+        }
+
+        public void WithoutReflect(Vector2 start, Vector2 direction)
+        {
+            this.laser.BetterCastLaserWithoutReflect(start, direction);
+        }
+
+
+        public void SetEnable(bool enable)
+        {
+            this.laser.SetEnable(enable);
+        }
+
 
         public void DashFlux(Vector2 dir, bool play)
         {

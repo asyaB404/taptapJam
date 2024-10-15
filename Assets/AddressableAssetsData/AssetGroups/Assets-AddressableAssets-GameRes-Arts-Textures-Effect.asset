@@ -15,7 +15,7 @@ MonoBehaviour:
   m_GroupName: Assets-AddressableAssets-GameRes-Arts-Textures-Effect
   m_Data:
     m_SerializedData: []
-  m_GUID: cdc6f6bc927442840892586e07faa78a
+  m_GUID: 1f2426129c2dc634f946c49adad34132
   m_SerializeEntries:
   - m_GUID: 64f13eb4d14d52f45a75c9e741dbbf8e
     m_Address: Assets/AddressableAssets/GameRes/Arts/Textures/Effect/dash_line.png

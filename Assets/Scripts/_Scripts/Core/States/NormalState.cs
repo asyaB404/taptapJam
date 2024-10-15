@@ -2,12 +2,16 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using BehaviorDesigner.Runtime.Tasks.Unity.UnityInput;
+using Cysharp.Threading.Tasks;
 using UnityEngine;
 
 namespace Myd.Platform
 {
     public class NormalState : BaseActionState
     {
+        private bool isEnableLaser = false;
+        
         public NormalState(PlayerController controller):base(EActionState.Normal, controller)
         {
         }
@@ -36,6 +40,55 @@ namespace Myd.Platform
 
         public override EActionState Update(float deltaTime)
         {
+            // 检测到受伤
+            if (ctx.BeHurtCheck(ctx.Position, Vector2.zero) && ctx.CanBeHurt)
+            {
+                return EActionState.BeHurt;
+            }
+            
+            
+            // 检测到射击
+            if (Input.GetMouseButton(1))
+            {
+                // 先转换坐标
+                var mousePos = (Vector2)Camera.main.ScreenToWorldPoint(Input.mousePosition);
+                // 计算方向
+                var direction = (mousePos - ctx.Position).normalized;
+                
+//                Debug.Log(direction);
+                if (!isEnableLaser)
+                {
+                    // 由于不断地在Play 粒子系统，所以显示不出粒子效果
+                    ctx.SetLaserEnable(true);
+                    isEnableLaser = true;
+                    ctx.PlayerStamina -= 10;
+                    Debug.Log("角色灵力" + ctx.PlayerStamina);
+                }
+                ctx.SetLaserPosition(ctx.Position, direction);
+            }
+            else if (Input.GetMouseButton(0))
+            {
+                // 先转换坐标
+                var mousePos = (Vector2)Camera.main.ScreenToWorldPoint(Input.mousePosition);
+                // 计算方向
+                var direction = (mousePos - ctx.Position).normalized;
+                
+//                Debug.Log(direction);
+                if (!isEnableLaser)
+                {
+                    // 由于不断地在Play 粒子系统，所以显示不出粒子效果
+                    ctx.SetLaserEnable(true);
+                    isEnableLaser = true;
+                }
+                ctx.SetLaserPositionWithoutReflect(ctx.Position, direction);
+            }
+            else 
+            {
+                ctx.SetLaserEnable(false);
+                isEnableLaser = false;
+            }
+           
+            
             //Climb
             if (GameInput.Grab.Checked() && !ctx.Ducking)
             {
@@ -204,6 +257,4 @@ namespace Myd.Platform
             return state;
         }
     }
-
-
 }

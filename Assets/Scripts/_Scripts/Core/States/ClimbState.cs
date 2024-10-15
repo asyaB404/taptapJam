@@ -9,6 +9,9 @@ using UnityEngine;
 
 namespace Myd.Platform
 {
+    /// <summary>
+    /// 攀爬的状态机
+    /// </summary>
     public class ClimbState : BaseActionState
     {
         public ClimbState(PlayerController context) : base(EActionState.Climb, context)

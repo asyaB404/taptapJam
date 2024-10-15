@@ -149,6 +149,32 @@ namespace Myd.Platform
                 SpriteControl.SetSpriteScale(NORMAL_SPRITE_SCALE);
             }
         }
+        
+        
+       
+        /// <summary>
+        /// 设置激光的端点位置
+        /// </summary>
+        /// <param name="start"></param>
+        /// <param name="direction"></param>
+        public void SetLaserPosition(Vector2 start, Vector2 direction)
+        {
+            SpriteControl.SetPositions(start, direction);
+        }
+        
+        public void SetLaserPositionWithoutReflect(Vector2 start, Vector2 end)
+        {
+            SpriteControl.WithoutReflect(start, end);
+        }
+        
+        /// <summary>
+        /// 设置激光是否启用
+        /// </summary>
+        /// <param name="enable"></param>
+        public void SetLaserEnable(bool enable)
+        {
+            SpriteControl.SetEnable(enable);
+        }
 
         public Vector3 SpritePosition { get => this.SpriteControl.SpritePosition; }
         public Vector2 LeftPosition { get => this.Position + Vector2.left * 0.6f; }

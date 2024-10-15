@@ -14,6 +14,8 @@ TagManager:
   - roomTilemap
   - miniMapPlayer
   - playerWeapon
+  - DarkObject
+  - Light
   layers:
   - Default
   - TransparentFX
@@ -38,8 +40,9 @@ TagManager:
   - Camera 3
   - Ground
   - Post
-  - 
-  - 
+  - Hurt
+  - DarkObject
+  - saveArea
   - 
   - 
   - 
@@ -74,4 +77,7 @@ TagManager:
     locked: 0
   - name: CameraSortingLayer
     uniqueID: 1626586227
+    locked: 0
+  - name: Post
+    uniqueID: 2318788137
     locked: 0

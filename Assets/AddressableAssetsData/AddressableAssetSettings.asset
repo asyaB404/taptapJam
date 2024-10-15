@@ -12,10 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 468a46d0ae32c3544b7d98094e6448a9, type: 3}
   m_Name: AddressableAssetSettings
   m_EditorClassIdentifier: 
-  m_DefaultGroup: cf52dfd99e8c5b14f8f400df50611af3
+  m_DefaultGroup: f1b30ac2083a2bc448e841a79f5721d3
   m_currentHash:
     serializedVersion: 2
-    Hash: b171d902e55c2e9088ec0834f0398034
+    Hash: 00000000000000000000000000000000
   m_OptimizeCatalogSize: 0
   m_BuildRemoteCatalog: 0
   m_BundleLocalCatalog: 0
@@ -49,6 +49,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 26237e6a3609c2c4b996714a7d0f5614, type: 2}
   - {fileID: 11400000, guid: 8eb92377f541faa43a23cf3a993eaf31, type: 2}
   - {fileID: 11400000, guid: 13549ec19820eac469176aa436c58e01, type: 2}
+  - {fileID: 11400000, guid: 9f36d7f788584164b832e4252b3bd566, type: 2}
   - {fileID: 11400000, guid: 9c223c8b49c5dae41ab283da6d82a70b, type: 2}
   - {fileID: 11400000, guid: 76ba88b912b12af4a88753729189edcc, type: 2}
   - {fileID: 11400000, guid: b0c5d29ce8c93d94297733cd354f2779, type: 2}
@@ -63,6 +64,9 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 598b0534339d207459dd827bd464f88c, type: 2}
   - {fileID: 11400000, guid: 4a36f6b5213170d4b9fcb4e119cfc7ba, type: 2}
   - {fileID: 11400000, guid: bacfd6732624ab24d9cd461b23b03828, type: 2}
+  - {fileID: 11400000, guid: dab214b4107f45e46947f29dfb8a139b, type: 2}
+  - {fileID: 11400000, guid: 34155b79d91b4e14eae68ccfe97edf06, type: 2}
+  - {fileID: 11400000, guid: b3900e03fe9b209428d89ede3b5f1db2, type: 2}
   m_BuildSettings:
     m_CompileScriptsInVirtualMode: 0
     m_CleanupStreamingAssetsAfterBuilds: 1
@@ -137,6 +141,11 @@ MonoBehaviour:
     - Assets-AddressableAssets-ConfigData
     - Assets-AddressableAssets-Data
     - Assets-AddressableAssets-GameRes-Prefabs-UI
+    - Assets-AddressableAssets-GameRes-Arts-Laser Materials
+    - Assets-AddressableAssets-prefab-Resource
+    - Assets-AddressableAssets-Scenes-Main
+    - "Assets-AddressableAssets-\u7F8E\u672F-\u5730\u4EA7"
+    - "Assets-AddressableAssets-\u7F8E\u672F-\u8D44\u6E90"
   m_SchemaTemplates: []
   m_GroupTemplateObjects:
   - {fileID: 11400000, guid: 251eb2a991560704fa667cc898137b23, type: 2}

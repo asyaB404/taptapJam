@@ -17,9 +17,14 @@ namespace Myd.Platform
     {
         private PlayerRenderer playerRenderer;
         private PlayerController playerController;
-
+        
         private IGameContext gameContext;
 
+        /// <summary>
+        /// 角色是否在地面上
+        /// </summary>
+        public static bool playerIsGround;
+        
         public Player(IGameContext gameContext)
         {
             this.gameContext = gameContext;
@@ -47,6 +52,7 @@ namespace Myd.Platform
         {
             playerController.Update(deltaTime);
             Render();
+            playerIsGround = playerController.IsOnGround;
         }
 
         private void Render()
@@ -80,6 +86,34 @@ namespace Myd.Platform
                 return Vector3.zero;
             }
             return playerController.GetCameraPosition();
+        }
+        
+        /// <summary>
+        /// 增长的数值
+        /// </summary>
+        /// <param name="health"></param>
+        public void SetPlayerHealth(float health)
+        {
+            playerController.PlayerHealth += health;
+        }
+        
+        public float GetPlayerHealth()
+        {
+            return playerController.PlayerHealth;
+        }
+        
+        /// <summary>
+        /// 增长的数值
+        /// </summary>
+        /// <param name="stamina"></param>
+        public void SetPlayerStamina(float stamina)
+        {
+            playerController.PlayerStamina += stamina;
+        }
+        
+        public float GetPlayerStamina()
+        {
+            return playerController.PlayerStamina;
         }
     }
 

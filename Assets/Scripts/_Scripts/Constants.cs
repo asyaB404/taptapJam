@@ -105,5 +105,17 @@ namespace Myd.Platform
         #endregion
 
         public static float LaunchedMinSpeedSq = 196;
+
+
+        #region Hurt参数
+        public static float HurtSpeedX = 20f;
+        public static float HurtSpeedY = 8f;       
+        public static float HurtCoolDown = .5f;
+        #endregion
+
+        #region Player属性
+        public static float playerMaxHealth = 100; // 最大生命值
+        public static float playerMaxStamina = 100; // 最大灵力值
+        #endregion
     }
 }

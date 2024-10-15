@@ -7,9 +7,14 @@ using System.Threading.Tasks;
 
 namespace Myd.Platform
 {
+	/// <summary>
+	/// 管理和执行协程逻辑
+	/// </summary>
     public class Coroutine
     {
+	    // 指示协程是否完成。
 		public bool Finished { get; private set; }
+		// 指示协程是否处于活动状态
 		public bool Active { get; set; }
 		public Coroutine(IEnumerator functionCall, bool removeOnComplete = true)
 		{

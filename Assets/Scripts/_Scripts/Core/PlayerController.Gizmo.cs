@@ -36,10 +36,10 @@ namespace Myd.Platform
 
         private void DrawClimbCheck()
         {
-            //Gizmos.color = Color.blue;
-            //Vector2 origin = this.Position + 
-            //Vector2 point1 = origin + Vector2.up * (-0.4f + 0.1f);
-            //Gizmos.DrawWireSphere(point1, 0.1f);
+            Gizmos.color = Color.blue;
+            Vector2 origin = this.Position + collider.position + Vector2.up * collider.size.y / 2f + Vector2.right * (Facing == Facings.Right ? 1 : -1) * (collider.size.x / 2f + STEP);
+            Vector2 point1 = origin + Vector2.up * (-0.4f + 0.1f);
+            Gizmos.DrawWireSphere(point1, 0.1f);
         }
     }
 

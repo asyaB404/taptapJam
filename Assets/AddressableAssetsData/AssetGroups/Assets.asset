@@ -15,7 +15,7 @@ MonoBehaviour:
   m_GroupName: Assets
   m_Data:
     m_SerializedData: []
-  m_GUID: a9a7cceac1d2f62409591f1b81589765
+  m_GUID: c6a80e4e864a8014a89e6e7ba6c9ead2
   m_SerializeEntries:
   - m_GUID: 93b439a37f63240aca3dd4e01d978a9f
     m_Address: Assets/UniversalRenderPipelineGlobalSettings.asset

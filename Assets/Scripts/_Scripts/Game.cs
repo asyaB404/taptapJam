@@ -27,6 +27,8 @@ namespace Myd.Platform
         private SceneCamera gameCamera;
         //玩家
         Player player;
+        
+        public static Player Player { get => Instance.player; }
 
         EGameState gameState;
 
@@ -66,6 +68,7 @@ namespace Myd.Platform
                     player.Update(deltaTime);
                     //更新摄像机
                     gameCamera.SetCameraPosition(player.GetCameraPosition());
+                    gameCamera.Update(); // 调用 SceneCamera 的 Update 方法
                 }
             }
         }

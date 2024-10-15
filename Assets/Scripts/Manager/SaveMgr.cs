@@ -13,7 +13,9 @@ public class SaveMgr : Singleton<SaveMgr>
     /// </summary>
     public void Save()
     {
-        
+        ResourceMgr.Instance.Resource();
+        ResourceMgr.Instance.QuickResource();
+        ResourceMgr.Instance.NotRefreshObjsSave();
     }
 
     /// <summary>
@@ -21,7 +23,8 @@ public class SaveMgr : Singleton<SaveMgr>
     /// </summary>
     public void Load()
     {
-        
+        ResourceMgr.Instance.Resource();
+        ResourceMgr.Instance.QuickResource();
     }
 }
 

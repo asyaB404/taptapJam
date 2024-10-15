@@ -27,5 +27,13 @@ namespace Myd.Platform.Core
         void SetHairColor(Color color);
 
         void WallSlide(Color color, Vector2 dir);
+        
+        // 激光设置位置
+        void SetPositions(Vector2 start, Vector2 direction);
+        
+        void WithoutReflect(Vector2 start, Vector2 direction);
+        
+        // 设置激光是否启用
+        void SetEnable(bool enable);
     }
 }

@@ -22,9 +22,8 @@ namespace UI.Panel
             base.Init();
             InitializeOptionsToggles();
             InitializeItemSlots();
-            UpdateInventoryDisplay();
         }
-        
+
         private void InitializeOptionsToggles()
         {
             ToggleGroup toggleGroup = GetControl<ToggleGroup>("ToggleGroup");
@@ -61,9 +60,11 @@ namespace UI.Panel
 
         private void ShowPanel()
         {
+            UpdateInventoryDisplay();
             CanvasGroupInstance.interactable = true;
             gameObject.SetActive(true);
-            Vector3 startPosition = new Vector3(-Screen.width * 3, transform.localPosition.y, transform.localPosition.z);
+            Vector3 startPosition =
+                new Vector3(-Screen.width * 3, transform.localPosition.y, transform.localPosition.z);
             transform.localPosition = startPosition;
             transform.DOLocalMoveX(0, UIConst.UIDuration).SetEase(Ease.OutBack);
         }
@@ -118,6 +119,7 @@ namespace UI.Panel
                 selectedItemName.text = "";
                 selectedItemDescription.text = "";
             }
+
             selectedItemImage.sprite = info.icon;
             selectedItemName.text = info.itemName;
             selectedItemDescription.text = info.description;
@@ -132,7 +134,7 @@ namespace UI.Panel
 
             if (Inventory.Count(selectedItemInfo.id) == 0)
             {
-                SetSelectedItem();
+                SetSelectedItem(null);
             }
         }
 

@@ -9,6 +9,7 @@ namespace Test
         public static PlayerInventory Inventory;
 
         [SerializeField] private ItemStack wantToAddItemStack;
+        [SerializeField] private ItemStack wantToRemoveItemStack;
         private void Awake()
         {
             Inventory = GetComponent<PlayerInventory>();
@@ -17,8 +18,21 @@ namespace Test
         [ContextMenu(nameof(TestForAddItemStack))]
         private void TestForAddItemStack()
         {
-            Inventory.AddItem(wantToAddItemStack);
+            Inventory.AddItem(wantToAddItemStack.Copy());
         }
 
+        [ContextMenu(nameof(TestForRemoveItemStack))]
+        private void TestForRemoveItemStack()
+        {
+            Inventory.TryRemoveItem(wantToRemoveItemStack.ItemInfo.id,wantToRemoveItemStack.count,out var _);
+        }
+        
+        
+        [ContextMenu(nameof(TestForClearItemStack))]
+        private void TestForClearItemStack()
+        {
+            Inventory.Clear(wantToRemoveItemStack.ItemInfo.id);
+        }
+        
     }
 }

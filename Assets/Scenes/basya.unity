@@ -1683,8 +1683,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   wantToAddItemStack:
-    itemInfo: {fileID: 0}
-    count: 0
+    itemInfo: {fileID: 11400000, guid: 65d82f553d1ce26438798b123b92ce52, type: 2}
+    count: 2
+  wantToRemoveItemStack:
+    itemInfo: {fileID: 11400000, guid: 65d82f553d1ce26438798b123b92ce52, type: 2}
+    count: 1
 --- !u!114 &800260005 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 5500977423876219961, guid: 44c778034ce596346b9348c5e20a1804, type: 3}

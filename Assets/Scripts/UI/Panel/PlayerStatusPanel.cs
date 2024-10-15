@@ -105,9 +105,8 @@ namespace UI.Panel
 
             selectedSlotId = itemSlot.id;
             var inventory = itemSlot.Inventory;
-
+            SetSelectedItem(null);
             if (itemSlot.id < 0 || itemSlot.id >= inventory.Count) return;
-
             SetSelectedItem(inventory[itemSlot.id].ItemInfo);
         }
 
@@ -115,12 +114,15 @@ namespace UI.Panel
         {
             if (info == null)
             {
+                selectedItemImage.color = Color.clear;
                 selectedItemImage.sprite = null;
                 selectedItemName.text = "";
                 selectedItemDescription.text = "";
                 return;
             }
 
+            selectedItemImage.color = Color.white;
+            selectedItemInfo = info;
             selectedItemImage.sprite = info.icon;
             selectedItemName.text = info.itemName;
             selectedItemDescription.text = info.description;

@@ -12,7 +12,7 @@ public class ResourceBass : Interaction
         keyCode=KeyCode.E;
     }   
     void ResourceAdd(int nub,string name){
-
+        
     }
     protected override void _Interaction()
     {

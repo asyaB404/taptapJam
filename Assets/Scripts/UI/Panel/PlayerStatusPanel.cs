@@ -2,7 +2,6 @@ using System.Collections.Generic;
 using Core;
 using Core.Items;
 using DG.Tweening;
-using Test;
 using TMPro;
 using UI.Inventory;
 using UnityEngine;
@@ -80,7 +79,7 @@ namespace UI.Panel
 
         #region Inventory
 
-        public PlayerInventory Inventory => TestForInventory.Inventory;
+        public PlayerInventory inventory;
         [SerializeField] private int selectedSlotId = 0;
         [SerializeField] private ItemInfo selectedItemInfo;
         [SerializeField] private ItemSlot[] itemSlots;
@@ -135,7 +134,7 @@ namespace UI.Panel
                 slot.UpdateDisplay();
             }
 
-            if (!selectedItemInfo || Inventory.Count(selectedItemInfo.id) == 0)
+            if (!selectedItemInfo || inventory.Count(selectedItemInfo.id) == 0)
             {
                 SetSelectedItem(null);
             }

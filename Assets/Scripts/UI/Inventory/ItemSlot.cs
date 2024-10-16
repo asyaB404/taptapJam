@@ -1,8 +1,5 @@
 using System.Collections.Generic;
-using Core;
-using Core.Container;
 using Core.Items;
-using Test;
 using TMPro;
 using UI.Panel;
 using UnityEngine;
@@ -19,7 +16,7 @@ namespace UI.Inventory
         /// <summary>
         /// 测试用属性
         /// </summary>
-        public IReadOnlyList<ItemStack> Inventory => PlayerStatusPanel.Instance.Inventory.GetItemsOrderByTime;
+        public IReadOnlyList<ItemStack> Inventory => PlayerStatusPanel.Instance.inventory.GetItemsOrderByTime;
 
         public void UpdateDisplay()
         {

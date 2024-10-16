@@ -1506,6 +1506,17 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 044cf18aef8e17243bc332f98317f602, type: 3}
+--- !u!114 &609653497 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8962112830534816448, guid: 044cf18aef8e17243bc332f98317f602, type: 3}
+  m_PrefabInstance: {fileID: 609653496}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ebe30fb55306446f8f39d522576402a4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &727199761
 GameObject:
   m_ObjectHideFlags: 0
@@ -1882,6 +1893,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3341695535829352398, guid: b64ef45fb57eff44dbdac7f9c12d54f9, type: 3}
+      propertyPath: inventory
+      value: 
+      objectReference: {fileID: 609653497}
     - target: {fileID: 4023029712493055447, guid: b64ef45fb57eff44dbdac7f9c12d54f9, type: 3}
       propertyPath: m_VertexColorAlwaysGammaSpace
       value: 1

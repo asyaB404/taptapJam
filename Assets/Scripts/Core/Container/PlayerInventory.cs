@@ -24,16 +24,27 @@ namespace Core
         /// </summary>
         public IReadOnlyList<ItemStack> GetItemsOrderByTime =>
             _insertionOrderList.Select(id => _itemStacksDict[id]).ToArray();
-
-
-
+        
+        /// <summary>
+        /// 背包全部物品的大小
+        /// </summary>
+        /// <example>例如3个A，4个B，Size则为7；正确显示的前提为不随意更改背包内部的itemStack的count</example>
         public int Size { get; private set; }
 
+        /// <summary>
+        /// 统计背包内指定个id的物品有几个
+        /// </summary>
+        /// <param name="id">物品id</param>
+        /// <returns>背包内该id的数量</returns>
         public int Count(string id)
         {
             return _itemStacksDict.TryGetValue(id, out ItemStack item) ? item.count : 0;
         }
 
+        /// <summary>
+        /// 添加物品，注意ItemStack为引用类型，添加入背包是必须是新的ItemStack或者是拷贝
+        /// </summary>
+        /// <param name="newItemStack">需要添加的ItemStack</param>
         public void AddItem(ItemStack newItemStack)
         {
             string id = newItemStack.ItemInfo.id;
@@ -53,6 +64,14 @@ namespace Core
             PlayerStatusPanel.Instance.UpdateInventoryDisplay();
         }
 
+        /// <summary>
+        /// 删除只需要物品id和需要删除的数量即可,其中out输出参数返回被删除的物品，返回值为是否删除成功
+        /// </summary>
+        /// <param name="id">物品ID</param>
+        /// <param name="count">要删除的数量，注意不能填负数</param>
+        /// <param name="removedItemStack">输出参数，被删除的物品</param>
+        /// <returns></returns>
+        /// <example>如果要删除5个，但是背包只有4个时不会删除，返回false</example>
         public bool TryRemoveItem(string id, int count, out ItemStack removedItemStack)
         {
             removedItemStack = null;
@@ -74,6 +93,11 @@ namespace Core
             return true;
         }
 
+        /// <summary>
+        /// 清空特地id的物品
+        /// </summary>
+        /// <param name="id">物品id</param>
+        /// <returns>是否清除成功</returns>
         public bool Clear(string id)
         {
             if (!_itemStacksDict.TryGetValue(id, out ItemStack item)) return false;
@@ -84,6 +108,9 @@ namespace Core
             return true;
         }
 
+        /// <summary>
+        /// 清理背包的全部物品
+        /// </summary>
         public void Clear()
         {
             Size = 0;

@@ -2,6 +2,9 @@ using UnityEngine;
 
 namespace Core.Items
 {
+    /// <summary>
+    /// 物品的基本信息
+    /// </summary>
     [CreateAssetMenu(fileName = "ItemInfo", menuName = "Item", order = 0)]
     public class ItemInfo : ScriptableObject
     {

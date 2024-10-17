@@ -81,7 +81,7 @@ namespace Laser
                     direction = Vector2.Reflect(direction, hit2D.normal);
                     remainRange -= (hit2D.point - startPos).magnitude; // magnitude向量的模长
                     startPos = hit2D.point;
-                    points.Add(shootPos);
+                    points.Add(startPos);
                     
                     // TODO:检测是否碰撞到特殊物体
                     if (hit2D.collider.CompareTag("DarkObject"))

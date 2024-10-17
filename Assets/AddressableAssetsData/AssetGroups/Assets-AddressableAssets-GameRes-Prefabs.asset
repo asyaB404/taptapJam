@@ -15,8 +15,14 @@ MonoBehaviour:
   m_GroupName: Assets-AddressableAssets-GameRes-Prefabs
   m_Data:
     m_SerializedData: []
-  m_GUID: 942d2eed4242dcc4cb663d35d745f9c3
+  m_GUID: eb5d161f842e8a4499947d382bf7563f
   m_SerializeEntries:
+  - m_GUID: 156e33ae35655dd44bb56424e58b337f
+    m_Address: Assets/AddressableAssets/GameRes/Prefabs/Bullet.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Assets-AddressableAssets-GameRes-Prefabs
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: ff8fbbfeb0860c743b21fd5a45812cb5
     m_Address: Assets/AddressableAssets/GameRes/Prefabs/Camera.prefab
     m_ReadOnly: 0

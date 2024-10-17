@@ -26,6 +26,7 @@ namespace Myd.Platform
         private RippleEffect vfxRippleEffect;
         [SerializeField]
         private GameObject vfxSpeedRing;
+        
 
         public void Awake()
         {
@@ -126,7 +127,5 @@ namespace Myd.Platform
                 Destroy(speedRing);
             });
         }
-
     }
-
 }

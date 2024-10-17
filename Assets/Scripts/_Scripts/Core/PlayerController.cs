@@ -3,6 +3,7 @@ using Myd.Platform.Core;
 using System;
 using cfg;
 using UnityEngine;
+using Object = UnityEngine.Object;
 
 namespace Myd.Platform
 {
@@ -25,6 +26,12 @@ namespace Myd.Platform
         private float playerHealth;
         private float playerMaxStamina;
         private float playerStamina;
+        
+        
+        private static float cooldownTime = 1f; // 冷却时间为1秒
+        private static float lastFireTime = -cooldownTime; // 上次发射时间
+        
+        
         public float PlayerHealth
         {
             get => playerHealth;
@@ -540,6 +547,37 @@ namespace Myd.Platform
             {
                 return beHurtCooldownTimer <= 0;
             }
+        }
+        
+        /// <summary>
+        /// 发射子弹
+        /// </summary>
+        /// <param name="ctxPosition"></param>
+        /// <param name="direction"></param>
+        public void ShootBullet()
+        {
+            // 获取鼠标位置
+            Vector3 mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+            mousePosition.z = 0; // 确保 z 坐标为 0
+
+            // 计算发射方向
+            Vector2 direction = (mousePosition - (Vector3)this.Position).normalized;
+
+            // 发射子弹
+            FireBullet(this.Position, direction);
+        }
+        
+        private void FireBullet(Vector2 startPosition, Vector2 direction)
+        {
+            if (Time.time - lastFireTime < cooldownTime)
+            {
+                return; // 冷却时间未到，不能发射子弹
+            }
+
+            // 创建子弹实例（假设有一个 Bullet 类）
+           Object.Instantiate(AssetMgr.LoadAssetSync<GameObject>
+                ("Assets/AddressableAssets/GameRes/Prefabs/Bullet.prefab"), startPosition, Quaternion.identity);
+           lastFireTime = Time.time; // 重置上次发射时间
         }
     }
 

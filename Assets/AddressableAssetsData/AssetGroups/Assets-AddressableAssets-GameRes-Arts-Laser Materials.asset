@@ -15,7 +15,7 @@ MonoBehaviour:
   m_GroupName: Assets-AddressableAssets-GameRes-Arts-Laser Materials
   m_Data:
     m_SerializedData: []
-  m_GUID: e1e215c5aa0d6224ca4ff676e9ff3905
+  m_GUID: c423e24efddc11243b01f6c549c7a4de
   m_SerializeEntries:
   - m_GUID: 10f90eee924daf147aacf8959fb247b6
     m_Address: Assets/AddressableAssets/GameRes/Arts/Laser Materials/Laser.mat

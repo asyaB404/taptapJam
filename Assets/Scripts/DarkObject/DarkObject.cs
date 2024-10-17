@@ -13,7 +13,6 @@ public class DarkObject : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        Debug.Log("Enter");
         if (other.CompareTag("Light"))
         {
             this.gameObject.transform.GetComponent<SpriteRenderer>().DOFade(1, 1);
@@ -22,7 +21,6 @@ public class DarkObject : MonoBehaviour
     
     private void OnTriggerExit2D(Collider2D other)
     {
-        Debug.Log("Exit");
         if (other.CompareTag("Light"))
         {
             this.gameObject.transform.GetComponent<SpriteRenderer>().DOFade(0, 1);

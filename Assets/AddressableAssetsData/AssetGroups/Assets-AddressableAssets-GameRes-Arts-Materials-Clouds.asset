@@ -15,7 +15,7 @@ MonoBehaviour:
   m_GroupName: Assets-AddressableAssets-GameRes-Arts-Materials-Clouds
   m_Data:
     m_SerializedData: []
-  m_GUID: 70f8c57911ee84a4bb98ebdd6dba7a2a
+  m_GUID: 3b716ba4def247e49b498431af7d35da
   m_SerializeEntries:
   - m_GUID: 642935fefeb39414eb8a00e2ccc983a5
     m_Address: Assets/AddressableAssets/GameRes/Arts/Materials/Clouds/cloud.mat

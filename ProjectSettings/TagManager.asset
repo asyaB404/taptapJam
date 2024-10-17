@@ -16,6 +16,7 @@ TagManager:
   - playerWeapon
   - DarkObject
   - Light
+  - Ground
   layers:
   - Default
   - TransparentFX
@@ -43,7 +44,6 @@ TagManager:
   - Hurt
   - DarkObject
   - saveArea
-  - 
   - 
   - 
   - 

@@ -15,7 +15,7 @@ MonoBehaviour:
   m_GroupName: Assets-AddressableAssets-GameRes-Arts-Textures-Level
   m_Data:
     m_SerializedData: []
-  m_GUID: 801207c52263cc04ebd9866d91d90db4
+  m_GUID: 2ac6636c7ec112a4ebb4d9d92bb3cd38
   m_SerializeEntries:
   - m_GUID: 7b6e764a29a7199489033e7a48bf07a4
     m_Address: Assets/AddressableAssets/GameRes/Arts/Textures/Level/Blue.png

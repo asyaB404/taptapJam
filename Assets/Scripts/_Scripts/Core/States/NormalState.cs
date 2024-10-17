@@ -4,6 +4,7 @@ using System.Collections;
 using System.Collections.Generic;
 using BehaviorDesigner.Runtime.Tasks.Unity.UnityInput;
 using Cysharp.Threading.Tasks;
+using DG.Tweening;
 using UnityEngine;
 
 namespace Myd.Platform
@@ -11,6 +12,7 @@ namespace Myd.Platform
     public class NormalState : BaseActionState
     {
         private bool isEnableLaser = false;
+        
         
         public NormalState(PlayerController controller):base(EActionState.Normal, controller)
         {
@@ -64,23 +66,14 @@ namespace Myd.Platform
                     ctx.PlayerStamina -= 10;
                     Debug.Log("角色灵力" + ctx.PlayerStamina);
                 }
+                // 相机震动
+                Camera.main.DOShakePosition(0.1f, 0.1f, 10, 90, false);
                 ctx.SetLaserPosition(ctx.Position, direction);
             }
+            // TODO:改为发射子弹
             else if (Input.GetMouseButton(0))
             {
-                // 先转换坐标
-                var mousePos = (Vector2)Camera.main.ScreenToWorldPoint(Input.mousePosition);
-                // 计算方向
-                var direction = (mousePos - ctx.Position).normalized;
-                
-//                Debug.Log(direction);
-                if (!isEnableLaser)
-                {
-                    // 由于不断地在Play 粒子系统，所以显示不出粒子效果
-                    ctx.SetLaserEnable(true);
-                    isEnableLaser = true;
-                }
-                ctx.SetLaserPositionWithoutReflect(ctx.Position, direction);
+                ctx.ShootBullet();
             }
             else 
             {

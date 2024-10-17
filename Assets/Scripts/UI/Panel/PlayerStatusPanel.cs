@@ -103,10 +103,10 @@ namespace UI.Panel
             if (!value) return;
 
             selectedSlotId = itemSlot.id;
-            var inventory = itemSlot.Inventory;
+            var itemStacks = itemSlot.Inventory;
             SetSelectedItem(null);
-            if (itemSlot.id < 0 || itemSlot.id >= inventory.Count) return;
-            SetSelectedItem(inventory[itemSlot.id].ItemInfo);
+            if (itemSlot.id < 0 || itemSlot.id >= itemStacks.Count) return;
+            SetSelectedItem(itemStacks[itemSlot.id].ItemInfo);
         }
 
         private void SetSelectedItem(ItemInfo info)

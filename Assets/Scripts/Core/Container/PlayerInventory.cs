@@ -7,6 +7,9 @@ using UnityEngine;
 
 namespace Core
 {
+    /// <summary>
+    /// 玩家背包，底层实现使用的字典
+    /// </summary>
     public class PlayerInventory : MonoBehaviour, IMyContainer
     {
         private readonly Dictionary<string, ItemStack> _itemStacksDict = new();

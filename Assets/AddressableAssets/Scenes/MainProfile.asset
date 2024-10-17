@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: b19cefa3bf552f94390d1c272b19ea6e, type: 3}
-  m_Name: Custom Physics Shape
+  m_Name: MainProfile
   m_EditorClassIdentifier: 
   lightmapPresets:
     list:
@@ -29,20 +29,20 @@ MonoBehaviour:
           sorting: 0
   lightPresets:
     list:
-    - name: Main Light
+    - name: Default
       layerSetting:
         list:
         - layerID: 0
           type: 0
           sorting: 0
           sortingIgnore: 0
-          shadowEffect: 0
+          shadowEffect: 2
           shadowEffectLayer: 0
-          maskLit: 1
+          maskLit: 0
           maskLitDistance: 1
   eventPresets:
     list:
-    - name: 
+    - name: Disabled
       layerSetting:
         list:
         - layerID: 0
@@ -59,19 +59,20 @@ MonoBehaviour:
     coreAxis: 0
     projection: 0
   dayLightingSettings:
-    direction: 270
+    direction: 322
     ShadowColor: {r: 0, g: 0, b: 0, a: 1}
-    height: 6.38
+    height: 2.84
     bumpMap:
-      height: 1
-      strength: 1
+      height: 0.89
+      strength: 1.55
   layers:
     colliderLayers:
       names:
       - Default
     lightLayers:
       names:
-      - Default
+      - Defalut
+      - 0
     dayLayers:
       names:
       - Default

@@ -22,6 +22,7 @@ namespace UI.Inventory
         {
             image.sprite = null;
             itemCount.text = "";
+            if (Inventory == null) return;
             if (id <= -1 || id >= Inventory.Count) return;
             ItemStack itemStack = Inventory[id];
             image.sprite = itemStack.ItemInfo.icon;

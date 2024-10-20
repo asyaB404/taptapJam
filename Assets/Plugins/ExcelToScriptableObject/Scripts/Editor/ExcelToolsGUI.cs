@@ -169,6 +169,7 @@ namespace Basya
 
             strBuilder.Clear();
             strBuilder.AppendLine("using UnityEngine;");
+            strBuilder.AppendLine("using UnityEditor;");
             strBuilder.AppendLine("using System.Data;");
             strBuilder.AppendLine();
             strBuilder.AppendLine($"namespace {fileName} {{");
@@ -215,7 +216,7 @@ namespace Basya
                     case "string":
                         strBuilder.AppendLine($"\t\t\t{rowName[j]} = row[{j}].ToString();");
                         break;
-                    case "sprite":
+                    case "Sprite":
                         strBuilder.AppendLine(
                             $"\t\t\t{rowName[j]} = AssetDatabase.LoadAssetAtPath<Sprite>(row[{j}].ToString().Trim());");
                         break;
@@ -250,14 +251,14 @@ namespace Basya
                 excelReader.Close();
                 foreach (DataTable table in tableConllection)
                 {
-                    GenerateAssest(table);
+                    GenerateAsset(table);
                 }
             }
 
             AssetDatabase.Refresh();
         }
 
-        private void GenerateAssest(DataTable table)
+        private void GenerateAsset(DataTable table)
         {
             string assetPath = Application.dataPath + "/" + localAssetsPath;
             if (!Directory.Exists(assetPath))
@@ -432,6 +433,7 @@ namespace Basya
 
             strBuilder.Clear();
             strBuilder.AppendLine("using System.Data;");
+            strBuilder.AppendLine("using UnityEditor;");
             strBuilder.AppendLine();
             strBuilder.AppendLine($"namespace {namespaceName} {{");
             strBuilder.AppendLine("\t[System.Serializable]");

@@ -21,13 +21,13 @@ namespace Core
         /// 返回的是字典的原始集合拷贝
         /// </summary>
         public IReadOnlyCollection<ItemStack> GetItems => _itemStacksDict.Values.ToArray();
-        
+
         /// <summary>
         /// 返回的是根据时间顺序加入的物品序列拷贝
         /// </summary>
         public IReadOnlyList<ItemStack> GetItemsOrderByTime =>
             _insertionOrderList.Select(id => _itemStacksDict[id]).ToArray();
-        
+
         /// <summary>
         /// 背包全部物品的大小
         /// </summary>
@@ -68,6 +68,30 @@ namespace Core
         }
 
         /// <summary>
+        /// 添加物品，根据信息和数量创建新的ItemStack添加至背包
+        /// </summary>
+        /// <param name="itemInfo">物品信息</param>
+        /// <param name="count">要添加的数量</param>
+        public void AddItem(ItemInfo itemInfo, int count)
+        {
+            string id = itemInfo.id;
+            ItemStack newItemStack = new ItemStack(itemInfo, count);
+
+            if (_itemStacksDict.TryGetValue(id, out ItemStack existingItemStack))
+            {
+                existingItemStack.count += count;
+            }
+            else
+            {
+                _insertionOrderList.Add(id);
+                _itemStacksDict[id] = newItemStack;
+            }
+
+            Size += count;
+            PlayerStatusPanel.Instance.UpdateInventoryDisplay();
+        }
+
+        /// <summary>
         /// 删除只需要物品id和需要删除的数量即可,其中out输出参数返回被删除的物品，返回值为是否删除成功
         /// </summary>
         /// <param name="id">物品ID</param>
@@ -92,6 +116,7 @@ namespace Core
                 _insertionOrderList.Remove(id);
                 _itemStacksDict.Remove(id);
             }
+
             PlayerStatusPanel.Instance.UpdateInventoryDisplay();
             return true;
         }

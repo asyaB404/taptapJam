@@ -1,3 +1,5 @@
+using System.Data;
+using UnityEditor;
 using UnityEngine;
 
 namespace Core.Items
@@ -6,7 +8,7 @@ namespace Core.Items
     /// 物品的基本信息
     /// </summary>
     [CreateAssetMenu(fileName = "ItemInfo", menuName = "Item", order = 0)]
-    public class ItemInfo : ScriptableObject
+    public class ItemInfo : ExcelableScriptableObject
     {
         /// <summary>
         /// 图标，通常用于UI展示 
@@ -32,5 +34,14 @@ namespace Core.Items
         /// 在快捷栏中的最大数量，不可使用的物品请忽略
         /// </summary>
         [Tooltip("在快捷栏中的最大数量，不可使用的物品请忽略")] public int maxCount;
+        
+        public override void Init(DataRow row)
+        {
+            id = row[0].ToString();
+            itemName = row[1].ToString();
+            description = row[2].ToString();
+            maxCount = int.Parse(row[3].ToString());
+            icon = AssetDatabase.LoadAssetAtPath<Sprite>(row[4].ToString().Trim());
+        }
     }
 }

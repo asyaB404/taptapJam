@@ -16,25 +16,7 @@ MonoBehaviour:
   m_Data:
     m_SerializedData: []
   m_GUID: 6d9a11e87f282054eb9c893485425e3b
-  m_SerializeEntries:
-  - m_GUID: 88bfab3c54b19d94cab98b3c510222f3
-    m_Address: "Assets/AddressableAssets/\u7F8E\u672F/\u8D44\u6E90/\u4E00\u6346\u8568\u83DC.png"
-    m_ReadOnly: 0
-    m_SerializedLabels:
-    - "Assets-AddressableAssets-\u7F8E\u672F-\u8D44\u6E90"
-    FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: 708bc3c06686c9f4db6ee2ff1399e920
-    m_Address: "Assets/AddressableAssets/\u7F8E\u672F/\u8D44\u6E90/\u4EBA\u53C2.png"
-    m_ReadOnly: 0
-    m_SerializedLabels:
-    - "Assets-AddressableAssets-\u7F8E\u672F-\u8D44\u6E90"
-    FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: a8ef3592bf49bbb4a954589a86784e64
-    m_Address: "Assets/AddressableAssets/\u7F8E\u672F/\u8D44\u6E90/\u5C71\u6885.png"
-    m_ReadOnly: 0
-    m_SerializedLabels:
-    - "Assets-AddressableAssets-\u7F8E\u672F-\u8D44\u6E90"
-    FlaggedDuringContentUpdateRestriction: 0
+  m_SerializeEntries: []
   m_ReadOnly: 0
   m_Settings: {fileID: 11400000, guid: ad10e3e3d61658a438828e6ebf91fd51, type: 2}
   m_SchemaSet:

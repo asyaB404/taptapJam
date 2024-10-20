@@ -177,6 +177,17 @@ namespace Basya
             strBuilder.AppendLine($"\tpublic class {table.TableName} : ExcelableScriptableObject");
             strBuilder.AppendLine("\t{");
 
+            GenerateField(table, rowName, rowType);
+            GenerateInitMethod(table, rowName, rowType);
+
+            strBuilder.AppendLine("\t}");
+            strBuilder.AppendLine("}");
+
+            File.WriteAllText(Path.Combine(sobjPath, $"{table.TableName}.cs"), strBuilder.ToString());
+        }
+
+        private void GenerateField(DataTable table, DataRow rowName, DataRow rowType)
+        {
             for (int j = 0; j < table.Columns.Count; j++)
             {
                 if (rowType[j].ToString().Length >= 6 && rowType[j].ToString()[..5] == "Enum.")
@@ -188,7 +199,10 @@ namespace Basya
                     strBuilder.AppendLine($"\t\tpublic {rowType[j]} {rowName[j]};");
                 }
             }
+        }
 
+        private void GenerateInitMethod(DataTable table, DataRow rowName, DataRow rowType)
+        {
             strBuilder.AppendLine();
             strBuilder.AppendLine("\t\tpublic override void Init(DataRow row)");
             strBuilder.AppendLine("\t\t{");
@@ -196,8 +210,14 @@ namespace Basya
             {
                 switch (rowType[j].ToString())
                 {
+                    case "":
+                        break;
                     case "string":
                         strBuilder.AppendLine($"\t\t\t{rowName[j]} = row[{j}].ToString();");
+                        break;
+                    case "sprite":
+                        strBuilder.AppendLine(
+                            $"\t\t\t{rowName[j]} = AssetDatabase.LoadAssetAtPath<Sprite>(row[{j}].ToString().Trim());");
                         break;
                     case var type when type.StartsWith("Enum."):
                         strBuilder.AppendLine(
@@ -210,12 +230,7 @@ namespace Basya
             }
 
             strBuilder.AppendLine("\t\t}");
-            strBuilder.AppendLine("\t}");
-            strBuilder.AppendLine("}");
-
-            File.WriteAllText(Path.Combine(sobjPath, $"{table.TableName}.cs"), strBuilder.ToString());
         }
-
 
         private void SpawnAsset()
         {
@@ -406,14 +421,14 @@ namespace Basya
             AssetDatabase.Refresh();
         }
 
-        private void GenerateSObjInfoClass(DataTable table, string infoclassPath, string namespaceName)
+        private void GenerateSObjInfoClass(DataTable table, string infoClassPath, string namespaceName)
         {
             DataRow rowName = table.Rows[0];
             DataRow rowType = table.Rows[1];
             string className = table.TableName + "InfoClass";
 
-            if (!Directory.Exists(infoclassPath))
-                Directory.CreateDirectory(infoclassPath);
+            if (!Directory.Exists(infoClassPath))
+                Directory.CreateDirectory(infoClassPath);
 
             strBuilder.Clear();
             strBuilder.AppendLine("using System.Data;");
@@ -423,43 +438,13 @@ namespace Basya
             strBuilder.AppendLine($"\tpublic class {className}");
             strBuilder.AppendLine("\t{");
 
-            for (int j = 0; j < table.Columns.Count; j++)
-            {
-                if (rowType[j].ToString().Length >= 6 && rowType[j].ToString()[..5] == "Enum.")
-                {
-                    strBuilder.AppendLine($"\t\tpublic {rowType[j].ToString()[5..]} {rowName[j]};");
-                }
-                else
-                {
-                    strBuilder.AppendLine($"\t\tpublic {rowType[j]} {rowName[j]};");
-                }
-            }
-
-            strBuilder.AppendLine();
-            strBuilder.AppendLine("\t\tpublic void Init(DataRow row)");
-            strBuilder.AppendLine("\t\t{");
-
-            for (int j = 0; j < table.Columns.Count; j++)
-            {
-                switch (rowType[j].ToString())
-                {
-                    case "string":
-                        strBuilder.AppendLine($"\t\t\t{rowName[j]} = row[{j}].ToString();");
-                        break;
-                    case var type when type.StartsWith("Enum."):
-                        strBuilder.AppendLine(
-                            $"\t\t\t{rowName[j]} = ({type[5..]})System.Enum.Parse(typeof({type[5..]}), row[{j}].ToString());");
-                        break;
-                    default:
-                        strBuilder.AppendLine($"\t\t\t{rowName[j]} = {rowType[j]}.Parse(row[{j}].ToString());");
-                        break;
-                }
-            }
+            GenerateField(table, rowName, rowType);
+            GenerateInitMethod(table, rowName, rowType);
 
             strBuilder.AppendLine("\t\t}");
             strBuilder.AppendLine("\t}");
             strBuilder.AppendLine("}"); // 关闭命名空间
-            File.WriteAllText(Path.Combine(infoclassPath, $"{className}.cs"), strBuilder.ToString());
+            File.WriteAllText(Path.Combine(infoClassPath, $"{className}.cs"), strBuilder.ToString());
             AssetDatabase.Refresh();
         }
 
@@ -481,14 +466,14 @@ namespace Basya
                 excelReader.Close();
                 foreach (DataTable table in tableConllection)
                 {
-                    GenerateAssest1(table);
+                    GenerateAsset1(table);
                 }
             }
 
             AssetDatabase.Refresh();
         }
 
-        private void GenerateAssest1(DataTable table)
+        private void GenerateAsset1(DataTable table)
         {
             string assetPath = Application.dataPath + "/" + localAssetsPath1;
             if (!Directory.Exists(assetPath))

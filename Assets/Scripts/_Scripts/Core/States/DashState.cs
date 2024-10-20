@@ -19,6 +19,7 @@ namespace Myd.Platform
 
         public override void OnBegin()
         {
+            EventMgr.ExecuteEvent(EventTypes.PlayDashAni);
             ctx.launched = false;
             //顿帧
             ctx.EffectControl.Freeze(0.05f);

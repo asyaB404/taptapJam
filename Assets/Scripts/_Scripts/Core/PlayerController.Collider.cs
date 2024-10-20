@@ -20,10 +20,10 @@ namespace Myd.Platform
         /// <summary>
         /// Box设定
         /// </summary>
-        private readonly Rect normalHitbox = new Rect(0, -0.25f, 0.8f, 1.1f);
-        private readonly Rect duckHitbox = new Rect(0, -0.5f, 0.8f, 0.6f);
-        private readonly Rect normalHurtbox = new Rect(0f, -0.15f, 0.8f, 0.9f);
-        private readonly Rect duckHurtbox = new Rect(8f, 4f, 0.8f, 0.4f);
+        private readonly Rect normalHitbox = new Rect(0, -0f, 0.8f, 1.5f);
+        private readonly Rect duckHitbox = new Rect(0, -0.5f, 0.8f, 1f);
+        private readonly Rect normalHurtbox = new Rect(0f, -0.15f, 0.8f, 1.3f);
+        private readonly Rect duckHurtbox = new Rect(8f, 4f, 0.8f, 0.7f);
 
         private Rect collider;
         
@@ -73,6 +73,12 @@ namespace Myd.Platform
             {
                 // TODO: 播放移动的音效
                 AudioMgr.PlaySound(EnumAudioClip.主角移动);
+                // TODO:播放移动的动画
+                EventMgr.ExecuteEvent(EventTypes.PlayRunAni);
+            }
+            else if(distance == 0 && onGround)
+            {
+                EventMgr.ExecuteEvent(EventTypes.PlayIdleAni);
             }
             
             while (true)

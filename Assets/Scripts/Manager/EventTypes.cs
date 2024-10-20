@@ -9,4 +9,10 @@ public static class EventTypes
     
     public const string UnlockLaser = "UnlockLaser";
     public const string LockLaser = "LockLaser";
+    
+    public const string PlayJumpAni = "PlayJumpAni";
+    public const string PlayDashAni = "PlayDashAni";
+    public const string PlayRunAni = "PlayRunAni";
+    public const string PlayIdleAni = "PlayIdleAni";
+    public const string GetPlayerFacing = "GetPlayerFacing";
 }

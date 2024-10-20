@@ -113,6 +113,7 @@ namespace Myd.Platform
             EventMgr.RegisterEvent(EventTypes.LockLaser, LockLaser);
             EventMgr.RegisterEvent("GetlaserUnlocked", GetlaserUnlocked);
             EventMgr.RegisterEvent("GetdashUnlocked",GetdashUnlocked);
+            EventMgr.RegisterEvent(EventTypes.GetPlayerFacing, GetPlayerFacing);
 
 
         }
@@ -321,6 +322,7 @@ namespace Myd.Platform
             this.varJumpSpeed = this.Speed.y;
             
             AudioMgr.PlaySound(EnumAudioClip.主角受击);
+            EventMgr.ExecuteEvent(EventTypes.PlayJumpAni);
             this.PlayJumpEffect(SpritePosition, Vector2.up);
         }
 
@@ -454,6 +456,7 @@ namespace Myd.Platform
         public Color GroundColor => this.groundColor;
         public Vector2 Position { get; private set; }
         //表示进入爬墙状态有0.1秒时间,不发生移动，为了让玩家看清发生了爬墙的动作
+        public void SetPosition(Vector3 v){Position=v;}
         public float ClimbNoMoveTimer { get; set; }
         public float VarJumpSpeed => this.varJumpSpeed;
 
@@ -478,6 +481,7 @@ namespace Myd.Platform
         public float DashRefillCooldownTimer { get => dashRefillCooldownTimer; set => dashRefillCooldownTimer = value; }
         public Vector2 LastAim { get; set; }
         public Facings Facing { get; set; }  //当前朝向
+
         public EActionState Dash()
         {
             //wasDashB = Dashes == 2;
@@ -630,6 +634,11 @@ namespace Myd.Platform
             return  dashUnlocked;
         }private object GetlaserUnlocked(object[] args){
             return  laserUnlocked;
+        }
+
+        private object GetPlayerFacing(object[] args)
+        {
+            return Facing == Facings.Right;
         }
     }
 }

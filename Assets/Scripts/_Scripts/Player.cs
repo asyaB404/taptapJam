@@ -3,6 +3,7 @@
 using Myd.Common;
 using Myd.Platform;
 using Myd.Platform.Core;
+using Unity.Burst.Intrinsics;
 using UnityEngine;
 
 namespace Myd.Platform
@@ -114,6 +115,13 @@ namespace Myd.Platform
         public float GetPlayerStamina()
         {
             return playerController.PlayerStamina;
+        }
+        public Vector2 GetPlayerPosotion(){
+            return playerController.Position;
+        }
+        public void SetPlayerPosition(Vector2 v){
+            playerController.SetPosition(v);
+            Debug.Log(v);
         }
     }
 

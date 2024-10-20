@@ -1,3 +1,4 @@
+using System;
 using DG.Tweening;
 using Myd.Platform.Core;
 using System.Collections;
@@ -38,7 +39,30 @@ namespace Myd.Platform
         private Vector2 currSpriteScale;
 
         public Vector3 SpritePosition { get => this.spriteRenderer.transform.position; }
-         
+        
+        private Animator _animator;
+
+
+        private void Start()
+        {
+            _animator = GetComponentInChildren<Animator>();
+            Debug.Log("获取动画状态机： " + _animator!=null);
+            
+            EventMgr.RegisterEvent(EventTypes.PlayJumpAni, PlayJumpAni);
+            EventMgr.RegisterEvent(EventTypes.PlayDashAni, PlayDashAni);
+            EventMgr.RegisterEvent(EventTypes.PlayIdleAni, PlayIdleAni);
+            EventMgr.RegisterEvent(EventTypes.PlayRunAni, PlayRunAni);
+        }
+
+        private void OnDisable()
+        {
+            //注销事件
+            EventMgr.UnRegisterEvent(EventTypes.PlayJumpAni, PlayJumpAni);
+            EventMgr.UnRegisterEvent(EventTypes.PlayDashAni, PlayDashAni);
+            EventMgr.UnRegisterEvent(EventTypes.PlayIdleAni, PlayIdleAni);
+            EventMgr.UnRegisterEvent(EventTypes.PlayRunAni, PlayRunAni);
+        }
+
 
         public void Reload()
         {
@@ -127,6 +151,61 @@ namespace Myd.Platform
             this.hairSprite01.color = color;
             this.hairSprite02.color = color;
         }
+        
+        private readonly Rect normalHitbox = new Rect(0, -0.25f, 0.8f, 1.1f);
+        
+        private void OnDrawGizmos()
+        {
+            DrawRect(normalHitbox, Color.green);
+        }
+
+        private void DrawRect(Rect rect, Color color)
+        {
+            Vector2 bottomLeft = new Vector2(rect.xMin, rect.yMin);
+            Vector2 bottomRight = new Vector2(rect.xMax, rect.yMin);
+            Vector2 topLeft = new Vector2(rect.xMin, rect.yMax);
+            Vector2 topRight = new Vector2(rect.xMax, rect.yMax);
+
+            Debug.DrawLine(bottomLeft, bottomRight, color);
+            Debug.DrawLine(bottomRight, topRight, color);
+            Debug.DrawLine(topRight, topLeft, color);
+            Debug.DrawLine(topLeft, bottomLeft, color);
+        }
+        
+        
+        // 创建控制玩家动画状态机
+        private void SetAnimator(string aniName)
+        {
+            _animator.Play(aniName);
+        }
+        
+        private object PlayJumpAni(object[] arg)
+        {
+            Debug.Log("Jump");
+            SetAnimator("PlayerJump");
+            return null;
+        }
+        
+        private object PlayRunAni(object[] arg)
+        {
+            Debug.Log("Run");
+            SetAnimator("PlayerRun");
+            return null;
+        }
+
+        private object PlayIdleAni(object[] arg)
+        {
+            Debug.Log("Idle");
+            SetAnimator("PlayerIdel");
+            return null;
+        }
+
+        private object PlayDashAni(object[] arg)
+        {
+            Debug.Log("Dash");
+            SetAnimator("PlayerDash");
+            return null;
+        }
     }
 
     //测试用的绘制接口
@@ -135,4 +214,5 @@ namespace Myd.Platform
         SlipCheck,
         ClimbCheck,
     }
+    
 }

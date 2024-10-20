@@ -7,19 +7,20 @@ public class SaveMgr : Singleton<SaveMgr>
 {
     // 设置的数据
     public SettingData SettingData=new();
-    public Vector3 FirePosition=new();//火堆位置
+    public Vector3 FirePosition=new(0,0,-100);//火堆位置
     public List<bool> notRefreshObjs=new();//不刷新物品是否还存在
     public float Health=0;//生命
     public float Stamin=0;//灵力
-    public bool laserUnlocked=false;//能力1
-    public bool dashUnlocked=false;//能力2
+    public bool laserUnlocked=true;//能力1
+    public bool dashUnlocked=true;//能力2
 
-
+    public Vector2 playerPosition=new(-int.MaxValue,-int.MaxValue);
     /// <summary>
     /// 存档
     /// </summary>
     public void Save()
     {
+        Debug.Log("save");
         ResourceMgr.Instance.Resource();
         ResourceMgr.Instance.QuickResource();//刷新
 
@@ -29,17 +30,16 @@ public class SaveMgr : Singleton<SaveMgr>
         Stamin=Game.Player.GetPlayerStamina();
         laserUnlocked= (bool)EventMgr.ExecuteEvent("GetlaserUnlocked");
         dashUnlocked= (bool)EventMgr.ExecuteEvent("GetdashUnlocked");
+        playerPosition=Game.Player.GetPlayerPosotion();
 
         ES3.Save("SettingData",SettingData);
         ES3.Save("FirePosition",FirePosition);
-        Debug.Log(notRefreshObjs.Count);
-
         ES3.Save("NotRefreshObjs",notRefreshObjs);
         ES3.Save("Health",Health);
         ES3.Save("Stamin",Stamin);
         ES3.Save("GetlaserUnlocked",laserUnlocked);
         ES3.Save("GetdashUnlocked",dashUnlocked);
-        
+        ES3.Save("playerPosition",playerPosition);
     }
 
     /// <summary>
@@ -47,18 +47,21 @@ public class SaveMgr : Singleton<SaveMgr>
     /// </summary>
     public void Load()
     {
+        Debug.Log("load");
         ResourceMgr.Instance.Resource();
         ResourceMgr.Instance.QuickResource();
         // BonfireBuild.BuildFire();
-        ES3.Load("SettingData",SettingData);
-        ES3.Load("FirePosition",FirePosition);
-        ES3.Load("NotRefreshObjs",notRefreshObjs);
-        ES3.Load("Health",Health);
-        ES3.Load("Stamin",Stamin);
-        ES3.Load("GetdashUnlocked",dashUnlocked);
-        ES3.Load("GetlaserUnlocked",laserUnlocked);
+        if(ES3.KeyExists("SettingData"))SettingData= ES3.Load<SettingData>("SettingData");
+        if(FirePosition.z!=-100&&ES3.KeyExists("FirePosition"))FirePosition=ES3.Load<Vector3>("FirePosition");
+        if(ES3.KeyExists("NotRefreshObjs"))notRefreshObjs=ES3.Load<List<bool>>("NotRefreshObjs");
+        if(ES3.KeyExists("Health"))Health=ES3.Load<float>("Health");
+        if(ES3.KeyExists("Stamin"))Stamin=ES3.Load<float>("Stamin");
+        if(ES3.KeyExists("GetdashUnlocked"))dashUnlocked= ES3.Load<bool>("GetdashUnlocked");
+        if(ES3.KeyExists("GetlaserUnlocked"))laserUnlocked=ES3.Load<bool>("GetlaserUnlocked");
+        if(ES3.KeyExists("playerPosition"))playerPosition= ES3.Load<Vector2>("playerPosition");
+        Debug.Log(playerPosition);
 
-        BonfireBuild.BuildFire(FirePosition);
+         if(FirePosition.z!=-100)BonfireBuild.BuildFire(FirePosition);
         Debug.Log(notRefreshObjs.Count);
         ResourceMgr.Instance.NotRefreshObjsResource(notRefreshObjs);
         Game.Player.SetPlayerHealth(Health);
@@ -67,6 +70,36 @@ public class SaveMgr : Singleton<SaveMgr>
         else EventMgr.ExecuteEvent(EventTypes.LockDash);
         if(!laserUnlocked)EventMgr.ExecuteEvent(EventTypes.UnlockLaser);
         else EventMgr.ExecuteEvent(EventTypes.LockLaser);
+        if(playerPosition.x>-1000000)Game.Player.SetPlayerPosition(playerPosition);
+    }
+    public void Clear(){
+        ES3.DeleteFile("SettingData");
+        SettingData=new(){Current = new SettingData.Data()};
+        ES3.Save("SettingData",SettingData);
+        ES3.DeleteFile("FirePosition");
+        FirePosition=new(0,0,-100);
+        ES3.DeleteFile("NotRefreshObjs");
+        notRefreshObjs=new();
+        ES3.DeleteFile("Health");
+        Health=10;
+        ES3.DeleteFile("Stamin");
+        Stamin=10;
+        ES3.DeleteFile("GetdashUnlocked");
+        dashUnlocked=true;
+        ES3.DeleteFile("GetlaserUnlocked");
+        laserUnlocked=true;
+        ES3.DeleteFile("playerPosition");
+        playerPosition=new(-int.MaxValue,-int.MaxValue);
+        ES3.Save("SettingData",SettingData);
+        ES3.Save("FirePosition",FirePosition);
+        ES3.Save("NotRefreshObjs",notRefreshObjs);
+        ES3.Save("Health",Health);
+        ES3.Save("Stamin",Stamin);
+        ES3.Save("GetlaserUnlocked",laserUnlocked);
+        ES3.Save("GetdashUnlocked",dashUnlocked);
+        ES3.Save("playerPosition",playerPosition);
+        Debug.Log(laserUnlocked);
+        Load();        
     }
 }
 

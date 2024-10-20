@@ -27,13 +27,16 @@ public class ResourceMgr : Singleton<ResourceMgr>
     }
     public void NotRefreshObjsResource(List<bool> notRefreshsbools){
         // notRefreshsbools=SaveMgr.Instance.notRefreshObjs;
-        // Debug.Log("55555555555555555555"+notRefreshsbools+notRefreshsbools.Count);
-        if(notRefreshsbools!=null)for(int i=0;i<notRefreshObjs.transform.childCount;i++){//不可刷新物品的初始化
+        Debug.Log("55555555555555555555"+notRefreshsbools+notRefreshsbools.Count);
+        for(int i=0;i<notRefreshObjs.transform.childCount;i++){//不可刷新物品的初始化
             if(i<notRefreshsbools.Count
                 // &&notRefreshsbools[i]
                 ){
                 Debug.Log(notRefreshObjs.transform.GetChild(i).gameObject.name+notRefreshsbools[i]);
                 notRefreshObjs.transform.GetChild(i).gameObject.SetActive(notRefreshsbools[i]);
+            }
+            else{
+                notRefreshObjs.transform.GetChild(i).gameObject.SetActive(true);
             }
         }
     }

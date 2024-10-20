@@ -40,7 +40,7 @@ public class Interaction : MonoBehaviour
         }
     }
     protected virtual void onEnter(Collider2D other){
-        print(keyCode);
+        // print(keyCode);
         canInteraction=true;
     }
     protected virtual void onExit(Collider2D other){

@@ -36,6 +36,10 @@ namespace Myd.Platform
             this.UseRawDeltaTime = useRawDeltaTime;
             this.spriteRenderer.color = color;
             this.spriteRenderer.sprite = sprite;
+            // 如果当前的Dash是向右那么就是1，否则就是-1
+            // TODO:解决强制类型转换失败(已解决) UnBoxing一次
+            bool facing = Convert.ToBoolean( EventMgr.ExecuteEvent(EventTypes.GetPlayerFacing));
+            FlipSprite(facing);
             this.transform.position = position;
             this.transform.localScale = scale;
             this.onRemoved = onRemoved;
@@ -75,6 +79,11 @@ namespace Myd.Platform
         {
             onRemoved?.Invoke();
             Destroy(this.gameObject);
+        }
+        
+        public void FlipSprite(bool facingRight)
+        {
+            spriteRenderer.flipX = facingRight;
         }
     }
 }

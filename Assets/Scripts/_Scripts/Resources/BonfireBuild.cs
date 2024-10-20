@@ -6,15 +6,15 @@ using UnityEngine;
 
 public class BonfireBuild : Interaction
 {
-    public GameObject littleFire;
-    public GameObject LittleFire;
-     GameObject playerPosition;
+    public static GameObject littleFire;
+    public static GameObject LittleFire;
+    GameObject playerPosition;
     protected override void Awake()
     {
         base.Awake();
         keyCode = KeyCode.R;
-        LittleFire = AssetMgr.LoadAssetSync<GameObject>("Assets/AddressableAssets/prefab/Resource/fire.prefab");
-        needShow=false;
+        if (LittleFire == null) LittleFire = AssetMgr.LoadAssetSync<GameObject>("Assets/AddressableAssets/prefab/Resource/fire.prefab");
+        needShow = false;
     }
     protected override void onEnter(Collider2D other)
     {
@@ -24,21 +24,26 @@ public class BonfireBuild : Interaction
     protected override void _Interaction()
     {
         base._Interaction();
-        if(Player.playerIsGround&&Game.Player.GetPlayerStamina()>=10){
-            Game.Player.SetPlayerStamina(-10);
-        Animator animation;
-        if (littleFire)
+        BuildFire(playerPosition.transform.position);
+    }
+    public static void BuildFire(Vector3 v){
+        if(v.z<-50)return;
+        if (Player.playerIsGround && Game.Player.GetPlayerStamina() >= 10)
         {
+            Game.Player.SetPlayerStamina(-10);
+            Animator animation;
+            if (littleFire)
+            {
+                animation = littleFire.GetComponent<Animator>();
+                if (animation) animation.SetTrigger("vanish");
+                Destroy(littleFire);
+            }
+            littleFire = Instantiate(LittleFire);
             animation = littleFire.GetComponent<Animator>();
-            if (animation) animation.SetTrigger("vanish");
-            Destroy(littleFire);
+            if (animation) animation.SetTrigger("ignite");
+            littleFire.transform.position = v;
+            print(littleFire.transform.position);
         }
-        littleFire=Instantiate(LittleFire);
-        animation = littleFire.GetComponent<Animator>();
-        if (animation) animation.SetTrigger("ignite");
-        littleFire.transform.position = playerPosition.transform.position;
-        print(littleFire.transform.position);
-}
     }
 }
 

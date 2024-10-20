@@ -17,6 +17,8 @@ TagManager:
   - DarkObject
   - Light
   - Ground
+  - DashUnlocker
+  - LaserUnlocker
   layers:
   - Default
   - TransparentFX

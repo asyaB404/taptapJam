@@ -50,7 +50,7 @@ namespace Myd.Platform
             
             
             // 检测到射击
-            if (Input.GetMouseButton(1))
+            if (Input.GetMouseButton(1) && ctx.laserUnlocked )
             {
                 // 先转换坐标
                 var mousePos = (Vector2)Camera.main.ScreenToWorldPoint(Input.mousePosition);

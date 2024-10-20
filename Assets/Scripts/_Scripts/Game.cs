@@ -44,6 +44,7 @@ namespace Myd.Platform
             {
                 Current = new SettingData.Data()
             };
+            
         }
 
         IEnumerator Start()
@@ -53,6 +54,7 @@ namespace Myd.Platform
             //加载玩家
             player.Reload(level.Bounds, level.StartPosition);
             this.gameState = EGameState.Play;
+            SaveMgr.Instance.Load();
             yield return null;
         }
 

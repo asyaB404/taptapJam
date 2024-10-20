@@ -5,11 +5,11 @@ using UnityEngine;
 public class ResourceMgr : Singleton<ResourceMgr>
 {
     // public Dictionary<Vector3,string> notRefreshObjs,ordinaryRefreshObjs,rapidRefreshObjs;
-    List<bool> notRefreshsbools;
+    // List<bool> notRefreshsbools;
     GameObject notRefreshObjs,ordinaryRefreshObjs,quickRefreshObjs;
     GameObject RefreshObjs;
     public ResourceMgr(){
-        ES3.Save<List<bool>>("notRefreshsbools",new List<bool>(){true,true,true});
+        // ES3.Save<List<bool>>("notRefreshsbools",new List<bool>(){true,true,true});
         if(RefreshObjs==null){RefreshObjs=new GameObject("RefreshObjs");RefreshObjs.transform.position=new(0,0);}
         if(ordinaryRefreshObjs==null){
             ordinaryRefreshObjs=GameObject.Instantiate(AssetMgr.LoadAssetSync<GameObject>("Assets/AddressableAssets/prefab/Resource/ordinaryRefreshObjs.prefab"));
@@ -24,10 +24,16 @@ public class ResourceMgr : Singleton<ResourceMgr>
             quickRefreshObjs.transform.SetParent(RefreshObjs.transform);
             quickRefreshObjs.transform.position=new(0,0);
         }
-        notRefreshsbools=ES3.Load<List<bool>>("notRefreshsbools");
-        for(int i=0;i<notRefreshObjs.transform.childCount;i++){//不可刷新物品的初始化
-            if(i<notRefreshsbools.Count&&notRefreshsbools[i]){
-                notRefreshObjs.transform.GetChild(i).gameObject.SetActive(true);
+    }
+    public void NotRefreshObjsResource(List<bool> notRefreshsbools){
+        // notRefreshsbools=SaveMgr.Instance.notRefreshObjs;
+        // Debug.Log("55555555555555555555"+notRefreshsbools+notRefreshsbools.Count);
+        if(notRefreshsbools!=null)for(int i=0;i<notRefreshObjs.transform.childCount;i++){//不可刷新物品的初始化
+            if(i<notRefreshsbools.Count
+                // &&notRefreshsbools[i]
+                ){
+                Debug.Log(notRefreshObjs.transform.GetChild(i).gameObject.name+notRefreshsbools[i]);
+                notRefreshObjs.transform.GetChild(i).gameObject.SetActive(notRefreshsbools[i]);
             }
         }
     }
@@ -42,11 +48,14 @@ public class ResourceMgr : Singleton<ResourceMgr>
             quickRefreshObjs.transform.GetChild(i).gameObject.SetActive(true);
         }
     }
-    public void NotRefreshObjsSave(){
+    public List<bool> NotRefreshObjsSave(){
         List<bool> bools=new();
-        for(int i=0;i<ordinaryRefreshObjs.transform.childCount;i++){
-            bools.Add(ordinaryRefreshObjs.transform.GetChild(i).gameObject.activeSelf);
+        Debug.Log(notRefreshObjs.transform.childCount);
+        for(int i=0;i<notRefreshObjs.transform.childCount;i++){
+            bools.Add(notRefreshObjs.transform.GetChild(i).gameObject.activeSelf);
+            Debug.Log(notRefreshObjs.transform.GetChild(i).gameObject.activeSelf);
         }
-        ES3.Save("notRefreshsbools",bools);
+        // ES3.Save("notRefreshsbools",bools);
+        return bools;
     }
 }

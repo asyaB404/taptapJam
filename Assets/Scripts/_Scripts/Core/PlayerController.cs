@@ -31,6 +31,9 @@ namespace Myd.Platform
         private static float cooldownTime = 1f; // 冷却时间为1秒
         private static float lastFireTime = -cooldownTime; // 上次发射时间
         
+        // 能力锁定相关
+        private bool dashUnlocked = false;
+        public bool laserUnlocked = false;
         
         public float PlayerHealth
         {
@@ -102,6 +105,16 @@ namespace Myd.Platform
 
             this.Facing  = Facings.Right;
             this.LastAim = Vector2.right;
+            
+            // 注册事件（能力解锁相关）
+            EventMgr.RegisterEvent(EventTypes.UnlockDash, UnlockDash);
+            EventMgr.RegisterEvent(EventTypes.LockDash, LockDash);
+            EventMgr.RegisterEvent(EventTypes.UnlockLaser, UnlockLaser);
+            EventMgr.RegisterEvent(EventTypes.LockLaser, LockLaser);
+            EventMgr.RegisterEvent("GetlaserUnlocked", GetlaserUnlocked);
+            EventMgr.RegisterEvent("GetdashUnlocked",GetdashUnlocked);
+
+
         }
 
         public void RefreshAbility()
@@ -422,7 +435,8 @@ namespace Myd.Platform
         {
             get
             {
-                return GameInput.Dash.Pressed() && dashCooldownTimer <= 0 && this.dashes > 0;
+                // 增加玩家是否能Dash
+                return dashUnlocked && GameInput.Dash.Pressed() && dashCooldownTimer <= 0 && this.dashes > 0;
             }
         }
 
@@ -579,6 +593,43 @@ namespace Myd.Platform
                 ("Assets/AddressableAssets/GameRes/Prefabs/Bullet.prefab"), startPosition, Quaternion.identity);
            lastFireTime = Time.time; // 重置上次发射时间
         }
-    }
+        
+        
+        // Dash解锁相关
+        private object UnlockDash(object[] args)
+        {
+            Debug.Log("Dash Unlocked");;
+            dashUnlocked = true;
+            return null;
+        }
 
+        // Dash锁定相关
+        private object LockDash(object[] args)
+        {
+            Debug.Log("Dash Locked");
+            dashUnlocked = false;
+            return null;
+        }
+        
+        // 右键激光解锁相关
+        
+        private object UnlockLaser(object[] args)
+        {
+            Debug.Log("Laser Unlocked");
+            laserUnlocked = true;
+            return null;
+        }
+        // 右键激光锁定相关
+        private object LockLaser(object[] args)
+        {
+            Debug.Log("Laser Locked");
+            laserUnlocked = false;
+            return null;
+        }
+        private object GetdashUnlocked(object[] args){
+            return  dashUnlocked;
+        }private object GetlaserUnlocked(object[] args){
+            return  laserUnlocked;
+        }
+    }
 }

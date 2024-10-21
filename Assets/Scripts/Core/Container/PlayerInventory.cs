@@ -12,6 +12,8 @@ namespace Core
     /// </summary>
     public class PlayerInventory : MonoBehaviour, IMyContainer
     {
+        private List<ItemStack> _hoItemStacks = new(3) { null, null, null };
+
         private readonly Dictionary<string, ItemStack> _itemStacksDict = new();
 
         //用于记录物品的插入顺序
@@ -64,7 +66,7 @@ namespace Core
             }
 
             Size += quantity;
-            if(PlayerStatusPanel.Instance.IsInStack) PlayerStatusPanel.Instance.UpdateInventoryDisplay();
+            if (PlayerStatusPanel.Instance.IsInStack) PlayerStatusPanel.Instance.UpdateInventoryDisplay();
         }
 
         /// <summary>
@@ -88,7 +90,7 @@ namespace Core
             }
 
             Size += count;
-            if(PlayerStatusPanel.Instance.IsInStack) PlayerStatusPanel.Instance.UpdateInventoryDisplay();
+            if (PlayerStatusPanel.Instance.IsInStack) PlayerStatusPanel.Instance.UpdateInventoryDisplay();
         }
 
         /// <summary>
@@ -117,7 +119,7 @@ namespace Core
                 _itemStacksDict.Remove(id);
             }
 
-            if(PlayerStatusPanel.Instance.IsInStack) PlayerStatusPanel.Instance.UpdateInventoryDisplay();
+            if (PlayerStatusPanel.Instance.IsInStack) PlayerStatusPanel.Instance.UpdateInventoryDisplay();
             return true;
         }
 
@@ -132,7 +134,7 @@ namespace Core
             Size -= item.count;
             _itemStacksDict.Remove(id);
             _insertionOrderList.Remove(id);
-            if(PlayerStatusPanel.Instance.IsInStack) PlayerStatusPanel.Instance.UpdateInventoryDisplay();
+            if (PlayerStatusPanel.Instance.IsInStack) PlayerStatusPanel.Instance.UpdateInventoryDisplay();
             return true;
         }
 
@@ -144,7 +146,7 @@ namespace Core
             Size = 0;
             _itemStacksDict.Clear();
             _insertionOrderList.Clear();
-            if(PlayerStatusPanel.Instance.IsInStack) PlayerStatusPanel.Instance.UpdateInventoryDisplay();
+            if (PlayerStatusPanel.Instance.IsInStack) PlayerStatusPanel.Instance.UpdateInventoryDisplay();
         }
     }
 }

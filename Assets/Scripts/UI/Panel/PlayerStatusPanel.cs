@@ -81,7 +81,7 @@ namespace UI.Panel
 
         public PlayerInventory inventory;
         [SerializeField] private int selectedSlotId = 0;
-        [SerializeField] private int selectedHotSlotId = 0;
+        [SerializeField] private ItemSlot selectedHotSlot;
         [SerializeField] private ItemInfo selectedItemInfo;
         [SerializeField] private ItemSlot[] itemSlots;
         public IReadOnlyList<ItemSlot> ItemSlots => itemSlots;
@@ -114,16 +114,18 @@ namespace UI.Panel
             var itemStacks = itemSlot.Inventory;
             SetSelectedItem(null);
             if (itemSlot.id < 0 || itemSlot.id >= itemStacks.Count) return;
-            SetSelectedItem(itemStacks[itemSlot.id].ItemInfo);
-            if (SelectHotItemPanel.Instance.IsInStack && itemStacks[itemSlot.id].ItemInfo.maxCount > 0)
+            ItemInfo selectedItemInfo = itemStacks[itemSlot.id].ItemInfo;
+            SetSelectedItem(selectedItemInfo);
+            if (SelectHotItemPanel.Instance.IsInStack && selectedItemInfo.maxCount > 0)
             {
-                SetSelectedItem(itemStacks[itemSlot.id].ItemInfo);
+                selectedHotSlot.UpdateDisplay(selectedItemInfo);
             }
         }
 
         private void OnHotSlotToggleChanged(ItemSlot itemSlot, bool value)
         {
-            selectedHotSlotId = itemSlot.id;
+            if (!value) return;   
+            selectedHotSlot = itemSlot;
             if (!SelectHotItemPanel.Instance.IsInStack) SelectHotItemPanel.Instance.ShowMe();
         }
 

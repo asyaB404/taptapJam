@@ -15,7 +15,7 @@ MonoBehaviour:
   m_GroupName: Assets-AddressableAssets-GameRes-Prefabs-Effects
   m_Data:
     m_SerializedData: []
-  m_GUID: 067acd83df66c7c40bac1da5c20f0b0b
+  m_GUID: 2475b64d9e78edd4aa2aa397e4aab6a9
   m_SerializeEntries:
   - m_GUID: bf1436f70dfdb874390db0e420425ef8
     m_Address: Assets/AddressableAssets/GameRes/Prefabs/Effects/DashFlux.prefab

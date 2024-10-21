@@ -15,7 +15,7 @@ MonoBehaviour:
   m_GroupName: Assets-AddressableAssets-ScriptableObject-Items
   m_Data:
     m_SerializedData: []
-  m_GUID: 465b77ccb3e29c447a1d9318ec398bd4
+  m_GUID: 1a399b8a9022880419ca82ec2f971283
   m_SerializeEntries:
   - m_GUID: 0ba2f66aa13e1cb4dafbbbb07f4157ab
     m_Address: Assets/AddressableAssets/ScriptableObject/Items/fiddlehead.asset
@@ -23,20 +23,8 @@ MonoBehaviour:
     m_SerializedLabels:
     - Assets-AddressableAssets-ScriptableObject-Items
     FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: 39e809c75c74f1b41bf9fa8cd67be983
-    m_Address: Assets/AddressableAssets/ScriptableObject/Items/ItemInfo_4.asset
-    m_ReadOnly: 0
-    m_SerializedLabels:
-    - Assets-AddressableAssets-ScriptableObject-Items
-    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 0a744e77a30e8d94a9380cb22e060a63
-    m_Address: Assets/AddressableAssets/ScriptableObject/Items/ItemInfo_5.asset
-    m_ReadOnly: 0
-    m_SerializedLabels:
-    - Assets-AddressableAssets-ScriptableObject-Items
-    FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: bbac8c298a54b1e42b35ee11b69b21de
-    m_Address: Assets/AddressableAssets/ScriptableObject/Items/ItemInfo_6.asset
+    m_Address: Assets/AddressableAssets/ScriptableObject/Items/fiddleheadSoup.asset
     m_ReadOnly: 0
     m_SerializedLabels:
     - Assets-AddressableAssets-ScriptableObject-Items
@@ -47,8 +35,20 @@ MonoBehaviour:
     m_SerializedLabels:
     - Assets-AddressableAssets-ScriptableObject-Items
     FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: bbac8c298a54b1e42b35ee11b69b21de
+    m_Address: Assets/AddressableAssets/ScriptableObject/Items/laogenSoup.asset
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Assets-AddressableAssets-ScriptableObject-Items
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 02e769a8146373242b84ec037de2b440
     m_Address: Assets/AddressableAssets/ScriptableObject/Items/plum.asset
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Assets-AddressableAssets-ScriptableObject-Items
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 39e809c75c74f1b41bf9fa8cd67be983
+    m_Address: Assets/AddressableAssets/ScriptableObject/Items/plumSoup.asset
     m_ReadOnly: 0
     m_SerializedLabels:
     - Assets-AddressableAssets-ScriptableObject-Items

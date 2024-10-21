@@ -15,8 +15,20 @@ MonoBehaviour:
   m_GroupName: Assets-AddressableAssets-prefab-Resource
   m_Data:
     m_SerializedData: []
-  m_GUID: bab2b4b251f0b404ebd6f282b8d592ad
+  m_GUID: d963ff9240fe7ae4b9277ec7982bc981
   m_SerializeEntries:
+  - m_GUID: bc2ada3a2c65c414493abf04dbf7263a
+    m_Address: Assets/AddressableAssets/prefab/Resource/bottle.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Assets-AddressableAssets-prefab-Resource
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 84af32e001f24ee49abbec99ca8ac7d3
+    m_Address: Assets/AddressableAssets/prefab/Resource/Ex.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Assets-AddressableAssets-prefab-Resource
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 5dc5530477259834b9c1cc5991f95c14
     m_Address: Assets/AddressableAssets/prefab/Resource/fiddlehead.prefab
     m_ReadOnly: 0

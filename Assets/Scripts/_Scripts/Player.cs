@@ -116,7 +116,7 @@ namespace Myd.Platform
         {
             return playerController.PlayerStamina;
         }
-        public Vector2 GetPlayerPosotion(){
+        public Vector3 GetPlayerPosotion(){
             return playerController.Position;
         }
         public void SetPlayerPosition(Vector2 v){

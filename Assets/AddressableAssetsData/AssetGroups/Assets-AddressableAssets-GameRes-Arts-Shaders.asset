@@ -15,7 +15,7 @@ MonoBehaviour:
   m_GroupName: Assets-AddressableAssets-GameRes-Arts-Shaders
   m_Data:
     m_SerializedData: []
-  m_GUID: 273ee71b6d686a846a6a8413b7e3d078
+  m_GUID: 0b1d680900584e54897844a42b4aac3e
   m_SerializeEntries:
   - m_GUID: 551f3c07bc61329429119d723ab5496b
     m_Address: Assets/AddressableAssets/GameRes/Arts/Shaders/Player.shader

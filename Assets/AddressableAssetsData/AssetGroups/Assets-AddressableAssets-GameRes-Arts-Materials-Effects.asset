@@ -15,7 +15,7 @@ MonoBehaviour:
   m_GroupName: Assets-AddressableAssets-GameRes-Arts-Materials-Effects
   m_Data:
     m_SerializedData: []
-  m_GUID: 2f7a661f6a68d1c4f8a6e865cdc7f73a
+  m_GUID: ea12f8c48721ca246b9cd768390c39ef
   m_SerializeEntries:
   - m_GUID: 962588ea14a7d69488f7ce53ab616f2c
     m_Address: Assets/AddressableAssets/GameRes/Arts/Materials/Effects/DashFlux.mat

@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Core.Items;
 using Myd.Platform;
 using UnityEngine;
 
@@ -11,8 +12,9 @@ public class SaveMgr : Singleton<SaveMgr>
     public List<bool> notRefreshObjs=new();//不刷新物品是否还存在
     public float Health=0;//生命
     public float Stamin=0;//灵力
-    public bool laserUnlocked=true;//能力1
-    public bool dashUnlocked=true;//能力2
+    public bool laserUnlocked=false;//能力1
+    public bool dashUnlocked=false;//能力2
+    public List<ItemStack> inventoryItemStacks;
 
     public Vector2 playerPosition=new(-int.MaxValue,-int.MaxValue);
     /// <summary>
@@ -31,6 +33,7 @@ public class SaveMgr : Singleton<SaveMgr>
         laserUnlocked= (bool)EventMgr.ExecuteEvent("GetlaserUnlocked");
         dashUnlocked= (bool)EventMgr.ExecuteEvent("GetdashUnlocked");
         playerPosition=Game.Player.GetPlayerPosotion();
+        // inventoryItemStacks
 
         ES3.Save("SettingData",SettingData);
         ES3.Save("FirePosition",FirePosition);
@@ -38,6 +41,8 @@ public class SaveMgr : Singleton<SaveMgr>
         ES3.Save("Health",Health);
         ES3.Save("Stamin",Stamin);
         ES3.Save("GetlaserUnlocked",laserUnlocked);
+        Debug.Log(ES3.Load("GetlaserUnlocked"));
+
         ES3.Save("GetdashUnlocked",dashUnlocked);
         ES3.Save("playerPosition",playerPosition);
     }
@@ -66,9 +71,9 @@ public class SaveMgr : Singleton<SaveMgr>
         ResourceMgr.Instance.NotRefreshObjsResource(notRefreshObjs);
         Game.Player.SetPlayerHealth(Health);
         Game.Player.SetPlayerStamina(Stamin);
-        if(!dashUnlocked)EventMgr.ExecuteEvent(EventTypes.UnlockDash);
+        if(dashUnlocked)EventMgr.ExecuteEvent(EventTypes.UnlockDash);
         else EventMgr.ExecuteEvent(EventTypes.LockDash);
-        if(!laserUnlocked)EventMgr.ExecuteEvent(EventTypes.UnlockLaser);
+        if(laserUnlocked)EventMgr.ExecuteEvent(EventTypes.UnlockLaser);
         else EventMgr.ExecuteEvent(EventTypes.LockLaser);
         if(playerPosition.x>-1000000)Game.Player.SetPlayerPosition(playerPosition);
     }
@@ -85,9 +90,9 @@ public class SaveMgr : Singleton<SaveMgr>
         ES3.DeleteFile("Stamin");
         Stamin=10;
         ES3.DeleteFile("GetdashUnlocked");
-        dashUnlocked=true;
+        dashUnlocked=false;
         ES3.DeleteFile("GetlaserUnlocked");
-        laserUnlocked=true;
+        laserUnlocked=false;
         ES3.DeleteFile("playerPosition");
         playerPosition=new(-int.MaxValue,-int.MaxValue);
         ES3.Save("SettingData",SettingData);

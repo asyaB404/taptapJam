@@ -1,0 +1,79 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bbb281ee3bf0b054c82ac2347e9e782c, type: 3}
+  m_Name: "Assets-AddressableAssets-GameRes-Player-\u51B2\u523A"
+  m_EditorClassIdentifier: 
+  m_GroupName: "Assets-AddressableAssets-GameRes-Player-\u51B2\u523A"
+  m_Data:
+    m_SerializedData: []
+  m_GUID: 9a4aaeda25149ed4ebda6244b4128aca
+  m_SerializeEntries:
+  - m_GUID: a3d544c04330f95458f2e768490231ba
+    m_Address: "Assets/AddressableAssets/GameRes/Player/\u51B2\u523A/Player-dush0.png"
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - "Assets-AddressableAssets-GameRes-Player-\u51B2\u523A"
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: e05ecd67479362f45bd3551077e845b2
+    m_Address: "Assets/AddressableAssets/GameRes/Player/\u51B2\u523A/Player-dush1.png"
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - "Assets-AddressableAssets-GameRes-Player-\u51B2\u523A"
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 5086b66ba6bcb3e418f2031900344c92
+    m_Address: "Assets/AddressableAssets/GameRes/Player/\u51B2\u523A/Player-dush2.png"
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - "Assets-AddressableAssets-GameRes-Player-\u51B2\u523A"
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 3105e3b663c78b04096617da3137f421
+    m_Address: "Assets/AddressableAssets/GameRes/Player/\u51B2\u523A/Player-dush3.png"
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - "Assets-AddressableAssets-GameRes-Player-\u51B2\u523A"
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: e8a224d0c700c1a40998e5c4fb47e9fe
+    m_Address: "Assets/AddressableAssets/GameRes/Player/\u51B2\u523A/Player-dush4.png"
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - "Assets-AddressableAssets-GameRes-Player-\u51B2\u523A"
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: d6fc1328c560f674a86982b6bf964997
+    m_Address: "Assets/AddressableAssets/GameRes/Player/\u51B2\u523A/Player-dush5.png"
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - "Assets-AddressableAssets-GameRes-Player-\u51B2\u523A"
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: b8c49c031c874ce44828a6dc035c5a92
+    m_Address: "Assets/AddressableAssets/GameRes/Player/\u51B2\u523A/Player-dush6.png"
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - "Assets-AddressableAssets-GameRes-Player-\u51B2\u523A"
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 612cb28fcaee49e42994cf8b1bbe2331
+    m_Address: "Assets/AddressableAssets/GameRes/Player/\u51B2\u523A/Player-dush7.png"
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - "Assets-AddressableAssets-GameRes-Player-\u51B2\u523A"
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 30a8bf45b7a65f44c93f2413b53b6c82
+    m_Address: "Assets/AddressableAssets/GameRes/Player/\u51B2\u523A/Player-dush8.png"
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - "Assets-AddressableAssets-GameRes-Player-\u51B2\u523A"
+    FlaggedDuringContentUpdateRestriction: 0
+  m_ReadOnly: 0
+  m_Settings: {fileID: 11400000, guid: ad10e3e3d61658a438828e6ebf91fd51, type: 2}
+  m_SchemaSet:
+    m_Schemas:
+    - {fileID: 11400000, guid: a8f8b06511587dc43bf0bc1c65362248, type: 2}
+    - {fileID: 11400000, guid: 8cabc829ec389364fb57843ea1c65396, type: 2}

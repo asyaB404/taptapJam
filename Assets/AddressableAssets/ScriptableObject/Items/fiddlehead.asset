@@ -10,10 +10,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ae61453804bf46d2aefeb1a8a9465092, type: 3}
-  m_Name: ItemInfo_1
+  m_Name: fiddlehead
   m_EditorClassIdentifier: 
-  icon: {fileID: 21300000, guid: 3da9adf7813beeb408e8ecb0c22a1801, type: 3}
-  id: PR10001
-  itemName: "\u5C71\u8393\u679C"
-  description: "\u91C7\u6458\u4E0B\u6765\u7684\u5C71\u6885\u679C\u5B50"
+  icon: {fileID: 21300000, guid: f545e749e49dc954dae27c4a82d15fff, type: 3}
+  id: PR10002
+  itemName: "\u53D1\u5149\u8568\u83DC"
+  description: "\u91C7\u4E0B\u7684\u8568\u83DC"
   maxCount: 0

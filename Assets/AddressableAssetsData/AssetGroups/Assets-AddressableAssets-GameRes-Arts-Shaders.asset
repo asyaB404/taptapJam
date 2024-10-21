@@ -15,7 +15,7 @@ MonoBehaviour:
   m_GroupName: Assets-AddressableAssets-GameRes-Arts-Shaders
   m_Data:
     m_SerializedData: []
-  m_GUID: 797928c06f7dad14fabb5824e8385bc0
+  m_GUID: 273ee71b6d686a846a6a8413b7e3d078
   m_SerializeEntries:
   - m_GUID: 551f3c07bc61329429119d723ab5496b
     m_Address: Assets/AddressableAssets/GameRes/Arts/Shaders/Player.shader
@@ -41,6 +41,12 @@ MonoBehaviour:
     m_SerializedLabels:
     - Assets-AddressableAssets-GameRes-Arts-Shaders
     FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: e5d3e8680d3961f47adb4c4f2ff68b69
+    m_Address: Assets/AddressableAssets/GameRes/Arts/Shaders/Shader Graphs_TrailShader.mat
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Assets-AddressableAssets-GameRes-Arts-Shaders
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: d803b5a6a11c76a4dade66189a00a1de
     m_Address: Assets/AddressableAssets/GameRes/Arts/Shaders/ShockWaveScreen.shadergraph
     m_ReadOnly: 0
@@ -49,6 +55,12 @@ MonoBehaviour:
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 5d3b99358dc599343a9b2ba705c53745
     m_Address: Assets/AddressableAssets/GameRes/Arts/Shaders/ShockWaveSprite.shadergraph
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Assets-AddressableAssets-GameRes-Arts-Shaders
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: aba42606f72516d49bde97ec442295d4
+    m_Address: Assets/AddressableAssets/GameRes/Arts/Shaders/TrailShader.shadergraph
     m_ReadOnly: 0
     m_SerializedLabels:
     - Assets-AddressableAssets-GameRes-Arts-Shaders

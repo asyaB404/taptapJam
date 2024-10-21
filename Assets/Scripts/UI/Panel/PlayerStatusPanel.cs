@@ -23,6 +23,20 @@ namespace UI.Panel
             InitializeItemSlots();
         }
 
+        public override void OnPressedEsc()
+        {
+            base.OnPressedEsc();
+        }
+
+        public override void CallBack(bool flag)
+        {
+            transform.DOKill(true);
+            if (flag)
+                ShowPanel();
+            else
+                HidePanel();
+        }
+
         private void InitializeOptionsToggles()
         {
             ToggleGroup toggleGroup = GetControl<ToggleGroup>("ToggleGroup");
@@ -31,29 +45,15 @@ namespace UI.Panel
             for (int i = 0; i < optionsToggles.Length; i++)
             {
                 int index = i;
-                optionsToggles[index].onValueChanged.AddListener(value => OnToggleChanged(index, value));
+                optionsToggles[index].onValueChanged.AddListener(value => OnOptionsToggleChanged(index, value));
             }
         }
 
-        private void OnToggleChanged(int index, bool value)
+        private void OnOptionsToggleChanged(int index, bool value)
         {
             if (index < panels.Length)
             {
                 panels[index].SetActive(value);
-            }
-        }
-
-        public override void CallBack(bool flag)
-        {
-            transform.DOKill(true);
-
-            if (flag)
-            {
-                ShowPanel();
-            }
-            else
-            {
-                HidePanel();
             }
         }
 
@@ -81,8 +81,11 @@ namespace UI.Panel
 
         public PlayerInventory inventory;
         [SerializeField] private int selectedSlotId = 0;
+        [SerializeField] private int selectedHotSlotId = 0;
         [SerializeField] private ItemInfo selectedItemInfo;
         [SerializeField] private ItemSlot[] itemSlots;
+        public IReadOnlyList<ItemSlot> ItemSlots => itemSlots;
+        [SerializeField] private ItemSlot[] hotSlots;
         [SerializeField] private Image selectedItemImage;
         [SerializeField] private TextMeshProUGUI selectedItemName;
         [SerializeField] private TextMeshProUGUI selectedItemDescription;
@@ -93,21 +96,37 @@ namespace UI.Panel
             {
                 ItemSlot itemSlot = itemSlots[i];
                 itemSlot.id = i;
-                itemSlot.UpdateDisplay();
                 itemSlot.toggle.onValueChanged.AddListener(value => OnItemSlotToggleChanged(itemSlot, value));
+            }
+
+            for (int i = 0; i < hotSlots.Length; i++)
+            {
+                ItemSlot itemSlot = hotSlots[i];
+                itemSlot.id = i;
+                itemSlot.toggle.onValueChanged.AddListener(value => OnHotSlotToggleChanged(itemSlot, value));
             }
         }
 
         private void OnItemSlotToggleChanged(ItemSlot itemSlot, bool value)
         {
             if (!value) return;
-
             selectedSlotId = itemSlot.id;
             var itemStacks = itemSlot.Inventory;
             SetSelectedItem(null);
             if (itemSlot.id < 0 || itemSlot.id >= itemStacks.Count) return;
             SetSelectedItem(itemStacks[itemSlot.id].ItemInfo);
+            if (SelectHotItemPanel.Instance.IsInStack && itemStacks[itemSlot.id].ItemInfo.maxCount > 0)
+            {
+                SetSelectedItem(itemStacks[itemSlot.id].ItemInfo);
+            }
         }
+
+        private void OnHotSlotToggleChanged(ItemSlot itemSlot, bool value)
+        {
+            selectedHotSlotId = itemSlot.id;
+            if (!SelectHotItemPanel.Instance.IsInStack) SelectHotItemPanel.Instance.ShowMe();
+        }
+
 
         private void SetSelectedItem(ItemInfo info)
         {

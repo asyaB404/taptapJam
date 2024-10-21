@@ -1,0 +1,61 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bbb281ee3bf0b054c82ac2347e9e782c, type: 3}
+  m_Name: Assets-AddressableAssets-GameRes-Arts-Textures-Items
+  m_EditorClassIdentifier: 
+  m_GroupName: Assets-AddressableAssets-GameRes-Arts-Textures-Items
+  m_Data:
+    m_SerializedData: []
+  m_GUID: 26adba33afa9c874291d9f30de03ee7a
+  m_SerializeEntries:
+  - m_GUID: f545e749e49dc954dae27c4a82d15fff
+    m_Address: "Assets/AddressableAssets/GameRes/Arts/Textures/Items/\u4E00\u6346\u8568\u83DC.png"
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Assets-AddressableAssets-GameRes-Arts-Textures-Items
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: dc1e2f4d5ba1d964487f4920f41dac7a
+    m_Address: "Assets/AddressableAssets/GameRes/Arts/Textures/Items/\u4EBA\u53C2.png"
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Assets-AddressableAssets-GameRes-Arts-Textures-Items
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 037f8a8b929565a4cade953ebbf4f7e3
+    m_Address: "Assets/AddressableAssets/GameRes/Arts/Textures/Items/\u4EBA\u53C2\u6C64.png"
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Assets-AddressableAssets-GameRes-Arts-Textures-Items
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 3da9adf7813beeb408e8ecb0c22a1801
+    m_Address: "Assets/AddressableAssets/GameRes/Arts/Textures/Items/\u5C71\u6885.png"
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Assets-AddressableAssets-GameRes-Arts-Textures-Items
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: e0099d9bfe9b01b48bdf21f0873f7823
+    m_Address: "Assets/AddressableAssets/GameRes/Arts/Textures/Items/\u5C71\u6885\u6C64.png"
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Assets-AddressableAssets-GameRes-Arts-Textures-Items
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 2d3fb2fda4b252f479c258b3244ffb45
+    m_Address: "Assets/AddressableAssets/GameRes/Arts/Textures/Items/\u8568\u83DC\u6C64.png"
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Assets-AddressableAssets-GameRes-Arts-Textures-Items
+    FlaggedDuringContentUpdateRestriction: 0
+  m_ReadOnly: 0
+  m_Settings: {fileID: 11400000, guid: ad10e3e3d61658a438828e6ebf91fd51, type: 2}
+  m_SchemaSet:
+    m_Schemas:
+    - {fileID: 11400000, guid: 36a26b9c530d03b40878883b6275e85e, type: 2}
+    - {fileID: 11400000, guid: 2b3f73b17556a1f468352634a86f127a, type: 2}

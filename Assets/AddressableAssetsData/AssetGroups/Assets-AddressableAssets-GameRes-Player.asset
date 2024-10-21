@@ -1,0 +1,31 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bbb281ee3bf0b054c82ac2347e9e782c, type: 3}
+  m_Name: Assets-AddressableAssets-GameRes-Player
+  m_EditorClassIdentifier: 
+  m_GroupName: Assets-AddressableAssets-GameRes-Player
+  m_Data:
+    m_SerializedData: []
+  m_GUID: d1b81e70a7519ca4199e1f123cdb4fbf
+  m_SerializeEntries:
+  - m_GUID: c08748714bd2b6d4ab6e60e6e2fc985e
+    m_Address: Assets/AddressableAssets/GameRes/Player/Player.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Assets-AddressableAssets-GameRes-Player
+    FlaggedDuringContentUpdateRestriction: 0
+  m_ReadOnly: 0
+  m_Settings: {fileID: 11400000, guid: ad10e3e3d61658a438828e6ebf91fd51, type: 2}
+  m_SchemaSet:
+    m_Schemas:
+    - {fileID: 11400000, guid: d20538f287a910242afdc36b76f0c79d, type: 2}
+    - {fileID: 11400000, guid: 71345b852850dd448b066a790a7e871b, type: 2}

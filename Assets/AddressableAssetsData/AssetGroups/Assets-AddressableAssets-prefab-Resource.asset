@@ -15,7 +15,7 @@ MonoBehaviour:
   m_GroupName: Assets-AddressableAssets-prefab-Resource
   m_Data:
     m_SerializedData: []
-  m_GUID: 15e01c0bd3bd7194fa89df3e632a1bdd
+  m_GUID: bab2b4b251f0b404ebd6f282b8d592ad
   m_SerializeEntries:
   - m_GUID: 5dc5530477259834b9c1cc5991f95c14
     m_Address: Assets/AddressableAssets/prefab/Resource/fiddlehead.prefab

@@ -12,10 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 468a46d0ae32c3544b7d98094e6448a9, type: 3}
   m_Name: AddressableAssetSettings
   m_EditorClassIdentifier: 
-  m_DefaultGroup: fd0c9846d52fc7944abe8ea460d42141
+  m_DefaultGroup: 70e4408baa3df634e91cc9d6f60dd931
   m_currentHash:
     serializedVersion: 2
-    Hash: 8ddd6af4b6fd124e1b3a3926fcab9998
+    Hash: 4f0ae1fbb0cb7512cd2e064edea8c26f
   m_OptimizeCatalogSize: 0
   m_BuildRemoteCatalog: 0
   m_BundleLocalCatalog: 0
@@ -48,12 +48,15 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 48dee0acdc9518047ac57d37c06c792c, type: 2}
   - {fileID: 11400000, guid: 26237e6a3609c2c4b996714a7d0f5614, type: 2}
   - {fileID: 11400000, guid: 8eb92377f541faa43a23cf3a993eaf31, type: 2}
+  - {fileID: 11400000, guid: f3e752353d9e7404ebc54975a90ab112, type: 2}
+  - {fileID: 11400000, guid: 4b9b93accc7cb5b40b75d66dbd7ba8d6, type: 2}
   - {fileID: 11400000, guid: 13549ec19820eac469176aa436c58e01, type: 2}
   - {fileID: 11400000, guid: 9f36d7f788584164b832e4252b3bd566, type: 2}
   - {fileID: 11400000, guid: 9c223c8b49c5dae41ab283da6d82a70b, type: 2}
   - {fileID: 11400000, guid: 76ba88b912b12af4a88753729189edcc, type: 2}
   - {fileID: 11400000, guid: b0c5d29ce8c93d94297733cd354f2779, type: 2}
   - {fileID: 11400000, guid: b2875a3a5efdca2469bf976a5addc1ca, type: 2}
+  - {fileID: 11400000, guid: 1657d8b3ead3c1c4ca87e20c60cff8ca, type: 2}
   - {fileID: 11400000, guid: 19742571c6931c447b55c8784895c7a7, type: 2}
   - {fileID: 11400000, guid: 6ac52a08fc5df7c48b27ed53af4af3f1, type: 2}
   - {fileID: 11400000, guid: b271d918b0b56c143b57c89e2aeb8b60, type: 2}
@@ -62,12 +65,16 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 3c379644e42d7804682eaea5267f2c0d, type: 2}
   - {fileID: 11400000, guid: c34c8ade66fa011429b1997a130acb8b, type: 2}
   - {fileID: 11400000, guid: 598b0534339d207459dd827bd464f88c, type: 2}
+  - {fileID: 11400000, guid: 17fb0f87c6f42aa4cb9441d020578596, type: 2}
+  - {fileID: 11400000, guid: e6094758defea4746aded307406b61f6, type: 2}
+  - {fileID: 11400000, guid: 8a6f907885bbe7d4fbf9939f23cc2b14, type: 2}
+  - {fileID: 11400000, guid: df22c42da227eb84b8cb6c5a8acec9f1, type: 2}
   - {fileID: 11400000, guid: 4a36f6b5213170d4b9fcb4e119cfc7ba, type: 2}
   - {fileID: 11400000, guid: bacfd6732624ab24d9cd461b23b03828, type: 2}
   - {fileID: 11400000, guid: dab214b4107f45e46947f29dfb8a139b, type: 2}
   - {fileID: 11400000, guid: 34155b79d91b4e14eae68ccfe97edf06, type: 2}
+  - {fileID: 11400000, guid: 907de26d94f75f2429ea6daad1ac05a7, type: 2}
   - {fileID: 11400000, guid: b3900e03fe9b209428d89ede3b5f1db2, type: 2}
-  - {fileID: 11400000, guid: ee9526c6751259946b36b159c0e5cefa, type: 2}
   m_BuildSettings:
     m_CompileScriptsInVirtualMode: 0
     m_CleanupStreamingAssetsAfterBuilds: 1
@@ -147,6 +154,14 @@ MonoBehaviour:
     - Assets-AddressableAssets-Scenes-Main
     - "Assets-AddressableAssets-\u7F8E\u672F-\u5730\u4EA7"
     - "Assets-AddressableAssets-\u7F8E\u672F-\u8D44\u6E90"
+    - Assets-AddressableAssets-GameRes-Animation
+    - Assets-AddressableAssets-GameRes-Player
+    - Assets-AddressableAssets-GameRes-Arts-Textures-Items
+    - "Assets-AddressableAssets-GameRes-Player-\u4E0D\u77E5\u9053\u7528\u4E0D\u7528\u7684\u4E0A\u7684\u8D70\u8DEF"
+    - "Assets-AddressableAssets-GameRes-Player-\u51B2\u523A"
+    - "Assets-AddressableAssets-GameRes-Player-\u8DD1\u6B65"
+    - "Assets-AddressableAssets-GameRes-Player-\u8DF3\u8DC3"
+    - Assets-AddressableAssets-ScriptableObject-Items
   m_SchemaTemplates: []
   m_GroupTemplateObjects:
   - {fileID: 11400000, guid: 251eb2a991560704fa667cc898137b23, type: 2}

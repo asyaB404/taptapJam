@@ -15,10 +15,16 @@ MonoBehaviour:
   m_GroupName: Assets-AddressableAssets-Scenes
   m_Data:
     m_SerializedData: []
-  m_GUID: 1f6ff9922cc6c414e9ef0ec828ee86c8
+  m_GUID: 76b4401b96c284a4dbacf8e80d3ca413
   m_SerializeEntries:
   - m_GUID: 3bd914cd4249c8648a1f8dd7124ce6d5
     m_Address: Assets/AddressableAssets/Scenes/Main.unity
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Assets-AddressableAssets-Scenes
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 7b353c1576be3f94081ef7b4ee3d39e5
+    m_Address: Assets/AddressableAssets/Scenes/MainProfile.asset
     m_ReadOnly: 0
     m_SerializedLabels:
     - Assets-AddressableAssets-Scenes

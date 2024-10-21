@@ -16,6 +16,14 @@ namespace Core.Items
         public ItemStack()
         {
         }
+        public ItemStack(string itemInfoName, int count=1){
+            // string path="Assets/AddressableAssets/ScriptableObject/Items/"+itemInfoName+".asset";
+            string path="Assets/AddressableAssets/ScriptableObject/Items/laogane.asset";
+            Debug.Log(path);
+            ItemInfo item=AssetMgr.LoadAssetSync<ItemInfo>(path);
+            this.itemInfo = item;
+            this.count = count;
+        }
 
         public ItemStack(ItemInfo itemInfo, int count)
         {

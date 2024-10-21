@@ -15,7 +15,7 @@ MonoBehaviour:
   m_GroupName: Assets-AddressableAssets-GameRes-Prefabs
   m_Data:
     m_SerializedData: []
-  m_GUID: eb5d161f842e8a4499947d382bf7563f
+  m_GUID: d1811e9d24349904baecc76a216c4ed6
   m_SerializeEntries:
   - m_GUID: 156e33ae35655dd44bb56424e58b337f
     m_Address: Assets/AddressableAssets/GameRes/Prefabs/Bullet.prefab
@@ -25,6 +25,30 @@ MonoBehaviour:
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: ff8fbbfeb0860c743b21fd5a45812cb5
     m_Address: Assets/AddressableAssets/GameRes/Prefabs/Camera.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Assets-AddressableAssets-GameRes-Prefabs
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 2ad5c1a0f3dfb2a479c897ce5c0c6d82
+    m_Address: Assets/AddressableAssets/GameRes/Prefabs/Flash 19.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Assets-AddressableAssets-GameRes-Prefabs
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 3aa0fab185f378240b831342bde74b26
+    m_Address: Assets/AddressableAssets/GameRes/Prefabs/Hit 14.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Assets-AddressableAssets-GameRes-Prefabs
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: d7d554880214e644bbbbfc89aa884b26
+    m_Address: Assets/AddressableAssets/GameRes/Prefabs/Hit 17.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Assets-AddressableAssets-GameRes-Prefabs
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: f0855940e22dbcd4aad5ca152a089348
+    m_Address: Assets/AddressableAssets/GameRes/Prefabs/Hit 9.prefab
     m_ReadOnly: 0
     m_SerializedLabels:
     - Assets-AddressableAssets-GameRes-Prefabs

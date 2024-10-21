@@ -1,0 +1,55 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bbb281ee3bf0b054c82ac2347e9e782c, type: 3}
+  m_Name: Assets-AddressableAssets-GameRes-Animation
+  m_EditorClassIdentifier: 
+  m_GroupName: Assets-AddressableAssets-GameRes-Animation
+  m_Data:
+    m_SerializedData: []
+  m_GUID: 19cb27e4c50992d4d96f64b83a374572
+  m_SerializeEntries:
+  - m_GUID: 19eabdc5659ef8548974a1e7ed609b7a
+    m_Address: Assets/AddressableAssets/GameRes/Animation/PlayerDash.anim
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Assets-AddressableAssets-GameRes-Animation
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: de8591426b003794ca418e0087233abf
+    m_Address: Assets/AddressableAssets/GameRes/Animation/PlayerIdel.anim
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Assets-AddressableAssets-GameRes-Animation
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 042b8cfee86b3b243bbf7f15e0a304fa
+    m_Address: Assets/AddressableAssets/GameRes/Animation/playerJump.anim
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Assets-AddressableAssets-GameRes-Animation
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 5b517873bfee1fb4f83d09a853d2a0a4
+    m_Address: Assets/AddressableAssets/GameRes/Animation/PlayerRenderer.controller
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Assets-AddressableAssets-GameRes-Animation
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: d77708062cc91e34296005a8f51f1f75
+    m_Address: Assets/AddressableAssets/GameRes/Animation/PlayerRun.anim
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Assets-AddressableAssets-GameRes-Animation
+    FlaggedDuringContentUpdateRestriction: 0
+  m_ReadOnly: 0
+  m_Settings: {fileID: 11400000, guid: ad10e3e3d61658a438828e6ebf91fd51, type: 2}
+  m_SchemaSet:
+    m_Schemas:
+    - {fileID: 11400000, guid: b54280dc271e08d41a1f645018d5dccd, type: 2}
+    - {fileID: 11400000, guid: fae41ef5f377b60428a41b23c49451b9, type: 2}

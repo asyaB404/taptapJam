@@ -13,6 +13,7 @@ namespace UI.Inventory
         [SerializeField] private Image image;
         [SerializeField] private TextMeshProUGUI itemCount;
         public Toggle toggle;
+
         /// <summary>
         /// 测试用属性
         /// </summary>
@@ -27,6 +28,15 @@ namespace UI.Inventory
             ItemStack itemStack = Inventory[id];
             image.sprite = itemStack.ItemInfo.icon;
             itemCount.text = itemStack.count.ToString();
+        }
+
+        public void UpdateDisplay(ItemInfo info, int count = 0)
+        {
+            image.sprite = null;
+            itemCount.text = "";
+            if (info == null) return;
+            image.sprite = info.icon;
+            itemCount.text = count.ToString();
         }
     }
 }

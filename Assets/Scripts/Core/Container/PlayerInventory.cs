@@ -20,7 +20,7 @@ namespace Core
         /// <summary>
         /// 返回的是字典的原始集合拷贝
         /// </summary>
-        public IReadOnlyCollection<ItemStack> GetItems => _itemStacksDict.Values.ToArray();
+        public IReadOnlyCollection<ItemStack> GetItems => _itemStacksDict.Values;
 
         /// <summary>
         /// 返回的是根据时间顺序加入的物品序列拷贝

@@ -1,0 +1,61 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bbb281ee3bf0b054c82ac2347e9e782c, type: 3}
+  m_Name: Assets-AddressableAssets-ScriptableObject-Items
+  m_EditorClassIdentifier: 
+  m_GroupName: Assets-AddressableAssets-ScriptableObject-Items
+  m_Data:
+    m_SerializedData: []
+  m_GUID: 465b77ccb3e29c447a1d9318ec398bd4
+  m_SerializeEntries:
+  - m_GUID: 0ba2f66aa13e1cb4dafbbbb07f4157ab
+    m_Address: Assets/AddressableAssets/ScriptableObject/Items/fiddlehead.asset
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Assets-AddressableAssets-ScriptableObject-Items
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 39e809c75c74f1b41bf9fa8cd67be983
+    m_Address: Assets/AddressableAssets/ScriptableObject/Items/ItemInfo_4.asset
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Assets-AddressableAssets-ScriptableObject-Items
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 0a744e77a30e8d94a9380cb22e060a63
+    m_Address: Assets/AddressableAssets/ScriptableObject/Items/ItemInfo_5.asset
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Assets-AddressableAssets-ScriptableObject-Items
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: bbac8c298a54b1e42b35ee11b69b21de
+    m_Address: Assets/AddressableAssets/ScriptableObject/Items/ItemInfo_6.asset
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Assets-AddressableAssets-ScriptableObject-Items
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: c629f3c04e47e3e4ca6cf227f61d25ec
+    m_Address: Assets/AddressableAssets/ScriptableObject/Items/laogane.asset
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Assets-AddressableAssets-ScriptableObject-Items
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 02e769a8146373242b84ec037de2b440
+    m_Address: Assets/AddressableAssets/ScriptableObject/Items/plum.asset
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Assets-AddressableAssets-ScriptableObject-Items
+    FlaggedDuringContentUpdateRestriction: 0
+  m_ReadOnly: 0
+  m_Settings: {fileID: 11400000, guid: ad10e3e3d61658a438828e6ebf91fd51, type: 2}
+  m_SchemaSet:
+    m_Schemas:
+    - {fileID: 11400000, guid: a1324d9eb11eebc4ea498268e727a178, type: 2}
+    - {fileID: 11400000, guid: e63ce9c72eb0c3d45ab71e1893303c20, type: 2}

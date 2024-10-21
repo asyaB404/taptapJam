@@ -1,0 +1,61 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bbb281ee3bf0b054c82ac2347e9e782c, type: 3}
+  m_Name: "Assets-AddressableAssets-GameRes-Player-\u8DD1\u6B65"
+  m_EditorClassIdentifier: 
+  m_GroupName: "Assets-AddressableAssets-GameRes-Player-\u8DD1\u6B65"
+  m_Data:
+    m_SerializedData: []
+  m_GUID: 38e13d0a684bbf04990e030add483f7c
+  m_SerializeEntries:
+  - m_GUID: 83238a7d2a115d14f9157694aecaa0af
+    m_Address: "Assets/AddressableAssets/GameRes/Player/\u8DD1\u6B65/Player-run1.png"
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - "Assets-AddressableAssets-GameRes-Player-\u8DD1\u6B65"
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: e31dcedec44a0734d9d07227b118da88
+    m_Address: "Assets/AddressableAssets/GameRes/Player/\u8DD1\u6B65/Player-run2.png"
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - "Assets-AddressableAssets-GameRes-Player-\u8DD1\u6B65"
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: f2fd1dfdb7d5bdd4d939c77116b05e69
+    m_Address: "Assets/AddressableAssets/GameRes/Player/\u8DD1\u6B65/Player-run3.png"
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - "Assets-AddressableAssets-GameRes-Player-\u8DD1\u6B65"
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: e21710e8789b09940bfe17d960463661
+    m_Address: "Assets/AddressableAssets/GameRes/Player/\u8DD1\u6B65/Player-run4.png"
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - "Assets-AddressableAssets-GameRes-Player-\u8DD1\u6B65"
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: edab6e33c362c8841a72e358184f964d
+    m_Address: "Assets/AddressableAssets/GameRes/Player/\u8DD1\u6B65/Player-run5.png"
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - "Assets-AddressableAssets-GameRes-Player-\u8DD1\u6B65"
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: f18d87615c74ae9488353b84b19ae2db
+    m_Address: "Assets/AddressableAssets/GameRes/Player/\u8DD1\u6B65/Player-run6.png"
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - "Assets-AddressableAssets-GameRes-Player-\u8DD1\u6B65"
+    FlaggedDuringContentUpdateRestriction: 0
+  m_ReadOnly: 0
+  m_Settings: {fileID: 11400000, guid: ad10e3e3d61658a438828e6ebf91fd51, type: 2}
+  m_SchemaSet:
+    m_Schemas:
+    - {fileID: 11400000, guid: 345a2d55dcb3d6442a0499fab53b4609, type: 2}
+    - {fileID: 11400000, guid: 05a0a475a1ac84c449f396240c61c10b, type: 2}

@@ -12,7 +12,10 @@ namespace Core
     /// </summary>
     public class PlayerInventory : MonoBehaviour, IMyContainer
     {
-        private List<ItemStack> _hoItemStacks = new(3) { null, null, null };
+        /// <summary>
+        /// 快捷栏上的物品
+        /// </summary>
+        public List<ItemStack> hotItemStacks = new(3) { null, null, null };
 
         private readonly Dictionary<string, ItemStack> _itemStacksDict = new();
 

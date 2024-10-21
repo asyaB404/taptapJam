@@ -114,11 +114,11 @@ namespace UI.Panel
             var itemStacks = itemSlot.Inventory;
             SetSelectedItem(null);
             if (itemSlot.id < 0 || itemSlot.id >= itemStacks.Count) return;
-            ItemInfo selectedItemInfo = itemStacks[itemSlot.id].ItemInfo;
-            SetSelectedItem(selectedItemInfo);
-            if (SelectHotItemPanel.Instance.IsInStack && selectedItemInfo.maxCount > 0)
+            ItemInfo nowSelectedItemInfo = itemStacks[itemSlot.id].ItemInfo;
+            SetSelectedItem(nowSelectedItemInfo);
+            if (SelectHotItemPanel.Instance.IsInStack && nowSelectedItemInfo.maxCount > 0)
             {
-                selectedHotSlot.UpdateDisplay(selectedItemInfo);
+                selectedHotSlot.UpdateDisplay(nowSelectedItemInfo);
             }
         }
 

@@ -41,8 +41,7 @@ namespace Core
 
         private readonly Dictionary<string, ItemStack> _itemStacksDict = new();
 
-        //用于记录物品的插入顺序
-        private readonly List<string> _insertionOrderList = new();
+        private readonly List<ItemStack> _orderedItemStacks = new(); // 用于存储顺序列表
 
         /// <summary>
         /// 返回的是字典的原始集合拷贝
@@ -52,8 +51,7 @@ namespace Core
         /// <summary>
         /// 返回的是根据时间顺序加入的物品序列拷贝
         /// </summary>
-        public IReadOnlyList<ItemStack> GetItemsOrderByTime =>
-            _insertionOrderList.Select(id => _itemStacksDict[id]).ToArray();
+        public IReadOnlyList<ItemStack> GetItemsOrderByTime => _orderedItemStacks;
 
         /// <summary>
         /// 背包全部物品的大小
@@ -86,7 +84,7 @@ namespace Core
             }
             else
             {
-                _insertionOrderList.Add(id);
+                _orderedItemStacks.Add(newItemStack);
                 _itemStacksDict[id] = newItemStack;
             }
 
@@ -101,21 +99,8 @@ namespace Core
         /// <param name="count">要添加的数量</param>
         public void AddItem(ItemInfo itemInfo, int count)
         {
-            string id = itemInfo.id;
             ItemStack newItemStack = new ItemStack(itemInfo, count);
-
-            if (_itemStacksDict.TryGetValue(id, out ItemStack existingItemStack))
-            {
-                existingItemStack.count += count;
-            }
-            else
-            {
-                _insertionOrderList.Add(id);
-                _itemStacksDict[id] = newItemStack;
-            }
-
-            Size += count;
-            if (PlayerStatusPanel.Instance.IsInStack) PlayerStatusPanel.Instance.UpdateInventoryDisplay();
+            AddItem(newItemStack);
         }
 
         /// <summary>
@@ -140,7 +125,7 @@ namespace Core
             //如果物品数量变为 0，移除该物品
             if (itemStack.count == 0)
             {
-                _insertionOrderList.Remove(id);
+                _orderedItemStacks.Remove(itemStack);
                 _itemStacksDict.Remove(id);
             }
 
@@ -158,7 +143,7 @@ namespace Core
             if (!_itemStacksDict.TryGetValue(id, out ItemStack item)) return false;
             Size -= item.count;
             _itemStacksDict.Remove(id);
-            _insertionOrderList.Remove(id);
+            _orderedItemStacks.Remove(_itemStacksDict[id]);
             if (PlayerStatusPanel.Instance.IsInStack) PlayerStatusPanel.Instance.UpdateInventoryDisplay();
             return true;
         }
@@ -170,7 +155,7 @@ namespace Core
         {
             Size = 0;
             _itemStacksDict.Clear();
-            _insertionOrderList.Clear();
+            _orderedItemStacks.Clear();
             if (PlayerStatusPanel.Instance.IsInStack) PlayerStatusPanel.Instance.UpdateInventoryDisplay();
         }
     }

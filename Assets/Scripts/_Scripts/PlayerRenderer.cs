@@ -195,7 +195,6 @@ namespace Myd.Platform
 
         private object PlayIdleAni(object[] arg)
         {
-            Debug.Log("Idle");
             SetAnimator("PlayerIdel");
             return null;
         }

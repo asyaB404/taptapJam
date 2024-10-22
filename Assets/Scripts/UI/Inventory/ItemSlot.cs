@@ -14,18 +14,13 @@ namespace UI.Inventory
         [SerializeField] private TextMeshProUGUI itemCount;
         public Toggle toggle;
 
-        /// <summary>
-        /// 测试用属性
-        /// </summary>
-        public IReadOnlyList<ItemStack> Inventory => PlayerStatusPanel.Instance.inventory.GetItemsOrderByTime;
-
-        public void UpdateDisplay()
+        public void UpdateDisplayFromInventory(IReadOnlyList<ItemStack> inventory)
         {
             image.sprite = null;
             itemCount.text = "";
-            if (Inventory == null) return;
-            if (id <= -1 || id >= Inventory.Count) return;
-            ItemStack itemStack = Inventory[id];
+            if (inventory == null) return;
+            if (id <= -1 || id >= inventory.Count) return;
+            ItemStack itemStack = inventory[id];
             image.sprite = itemStack.ItemInfo.icon;
             itemCount.text = itemStack.count.ToString();
         }

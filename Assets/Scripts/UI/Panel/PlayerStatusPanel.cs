@@ -102,7 +102,7 @@ namespace UI.Panel
         {
             if (!value) return;
             selectedSlotId = itemSlot.id;
-            var itemStacks = itemSlot.Inventory;
+            var itemStacks = inventory.GetItemsOrderByTime;
             SetSelectedItem(null);
             
             if (itemSlot.id < 0 || itemSlot.id >= itemStacks.Count) return;
@@ -131,9 +131,10 @@ namespace UI.Panel
 
         public void UpdateInventoryDisplay()
         {
+            var inventoryGetItemsOrderByTime = inventory.GetItemsOrderByTime;
             foreach (var slot in itemSlots)
             {
-                slot.UpdateDisplay();
+                slot.UpdateDisplayFromInventory(inventoryGetItemsOrderByTime);
             }
 
             if (!selectedItemInfo || inventory.Count(selectedItemInfo.id) == 0)

@@ -13,7 +13,6 @@ using Core.Items;
 using TMPro;
 using UI.Inventory;
 using UnityEngine;
-using UnityEngine.UI;
 
 namespace UI.Panel
 {
@@ -22,12 +21,8 @@ namespace UI.Panel
         private PlayerInventory Inventory => PlayerStatusPanel.Instance.inventory;
         [SerializeField] private int selectedSlotId = 0;
         [SerializeField] private ItemSlot selectedHotSlot;
-        [SerializeField] private ItemInfo selectedItemInfo;
         [SerializeField] private ItemSlot[] itemSlots;
         [SerializeField] private ItemSlot[] hotSlots;
-        [SerializeField] private Image selectedItemImage;
-        [SerializeField] private TextMeshProUGUI selectedItemName;
-        [SerializeField] private TextMeshProUGUI selectedItemDescription;
 
         public override void Init()
         {
@@ -56,13 +51,9 @@ namespace UI.Panel
         {
             if (!value) return;
             selectedSlotId = itemSlot.id;
-            var itemStacks = itemSlot.Inventory;
-            SetSelectedItem(null);
-            
+            var itemStacks = Inventory.GetItemsOrderByTime;
             if (itemSlot.id < 0 || itemSlot.id >= itemStacks.Count) return;
             ItemInfo nowSelectedItemInfo = itemStacks[itemSlot.id].ItemInfo;
-            SetSelectedItem(nowSelectedItemInfo);
-            
             //如果处于选择快捷栏状态时点击
             if (!SelectHotItemPanel.Instance.IsInStack || nowSelectedItemInfo.maxCount <= 0) return;
             selectedHotSlot.UpdateDisplay(nowSelectedItemInfo);
@@ -76,36 +67,14 @@ namespace UI.Panel
             if (!SelectHotItemPanel.Instance.IsInStack && BonfireMenuPanel.Instance.IsInStack)
                 SelectHotItemPanel.Instance.ShowMe();
         }
-
-
-        private void SetSelectedItem(ItemInfo info)
-        {
-            if (info == null)
-            {
-                selectedItemImage.color = Color.clear;
-                selectedItemImage.sprite = null;
-                selectedItemName.text = "";
-                selectedItemDescription.text = "";
-                return;
-            }
-
-            selectedItemImage.color = Color.white;
-            selectedItemInfo = info;
-            selectedItemImage.sprite = info.icon;
-            selectedItemName.text = info.itemName;
-            selectedItemDescription.text = info.description;
-        }
+        
 
         public void UpdateInventoryDisplay()
         {
+            var inventoryGetItemsOrderByTime = Inventory.GetItemsOrderByTime;
             foreach (var slot in itemSlots)
             {
-                slot.UpdateDisplay();
-            }
-
-            if (!selectedItemInfo || Inventory.Count(selectedItemInfo.id) == 0)
-            {
-                SetSelectedItem(null);
+                slot.UpdateDisplayFromInventory(inventoryGetItemsOrderByTime);
             }
         }
     }

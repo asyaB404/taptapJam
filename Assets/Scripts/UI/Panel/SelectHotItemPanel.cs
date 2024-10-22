@@ -11,6 +11,11 @@ namespace UI.Panel
 {
     public class SelectHotItemPanel : BasePanel<SelectHotItemPanel>
     {
+        public override void OnPressedEsc()
+        {
+            HideMe(false);
+        }
+
         public override void CallBack(bool flag)
         {
             gameObject.SetActive(flag);

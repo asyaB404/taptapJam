@@ -22,7 +22,11 @@ namespace UI
         {
             Instance = this;
             var basePanels = GetComponentsInChildren<IBasePanel>(true);
-            foreach (var panel in basePanels) panel.Init();
+            foreach (var panel in basePanels)
+            {
+                panel.Init();
+                (panel as MonoBehaviour)?.gameObject.SetActive(false);
+            }
         }
 
         private void Update()

@@ -113,20 +113,23 @@ namespace UI.Panel
             selectedSlotId = itemSlot.id;
             var itemStacks = itemSlot.Inventory;
             SetSelectedItem(null);
+            
             if (itemSlot.id < 0 || itemSlot.id >= itemStacks.Count) return;
             ItemInfo nowSelectedItemInfo = itemStacks[itemSlot.id].ItemInfo;
             SetSelectedItem(nowSelectedItemInfo);
-            if (SelectHotItemPanel.Instance.IsInStack && nowSelectedItemInfo.maxCount > 0)
-            {
-                selectedHotSlot.UpdateDisplay(nowSelectedItemInfo);
-            }
+            
+            //如果处于选择快捷栏状态时点击
+            if (!SelectHotItemPanel.Instance.IsInStack || nowSelectedItemInfo.maxCount <= 0) return;
+            selectedHotSlot.UpdateDisplay(nowSelectedItemInfo);
+            inventory.SetHotItem(selectedHotSlot.id,nowSelectedItemInfo);
         }
 
         private void OnHotSlotToggleChanged(ItemSlot itemSlot, bool value)
         {
-            if (!value) return;   
+            if (!value) return;
             selectedHotSlot = itemSlot;
-            if (!SelectHotItemPanel.Instance.IsInStack) SelectHotItemPanel.Instance.ShowMe();
+            if (!SelectHotItemPanel.Instance.IsInStack && BonfireMenuPanel.Instance.IsInStack)
+                SelectHotItemPanel.Instance.ShowMe();
         }
 
 

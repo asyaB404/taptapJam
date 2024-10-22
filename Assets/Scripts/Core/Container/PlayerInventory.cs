@@ -15,7 +15,29 @@ namespace Core
         /// <summary>
         /// 快捷栏上的物品
         /// </summary>
-        public List<ItemStack> hotItemStacks = new(3) { null, null, null };
+        [SerializeField] private List<ItemStack> hotItemStacks = new(3) { null, null, null };
+
+        public void SetHotItem(int id, ItemInfo itemInfo)
+        {
+            hotItemStacks[id] = new ItemStack(itemInfo, itemInfo.maxCount);
+        }
+
+        public bool UseHotItem(int id, int count)
+        {
+            if (hotItemStacks[id] == null) return false;
+            hotItemStacks[id].count -= 1;
+            if (hotItemStacks[id].count == 0)
+            {
+                //TODO:移除
+            }
+
+            return true;
+        }
+
+        public void ResetHotItem(int id)
+        {
+            hotItemStacks[id].count = hotItemStacks[id].ItemInfo.maxCount;
+        }
 
         private readonly Dictionary<string, ItemStack> _itemStacksDict = new();
 

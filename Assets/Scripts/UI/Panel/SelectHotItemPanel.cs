@@ -14,6 +14,12 @@ namespace UI.Panel
         public override void CallBack(bool flag)
         {
             gameObject.SetActive(flag);
+            if (flag)
+            {
+            }
+            else
+            {
+            }
         }
     }
 }

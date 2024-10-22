@@ -36,7 +36,7 @@ MonoBehaviour:
     - Assets-AddressableAssets-ScriptableObject-Items
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: bbac8c298a54b1e42b35ee11b69b21de
-    m_Address: Assets/AddressableAssets/ScriptableObject/Items/laogenSoup.asset
+    m_Address: iptableObject/Items/laogenSoup.assetbject/Items/laogenSoup.asset
     m_ReadOnly: 0
     m_SerializedLabels:
     - Assets-AddressableAssets-ScriptableObject-Items

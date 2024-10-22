@@ -16,4 +16,4 @@ MonoBehaviour:
   id: UR10002
   itemName: "\u8568\u83DC\u6C64"
   description: "\u6709\u8367\u5149\u611F\u7684\u6C64\u54C1\uFF0C\u53EF\u6062\u590D\u7075\u529B"
-  maxCount: 0
+  maxCount: 3

@@ -7,14 +7,25 @@ namespace UI.Panel
         public override void Init()
         {
             base.Init();
-            GetControl<Button>("BackpackBtn").onClick.AddListener(() => {PlayerStatusPanel.Instance.ShowMe(); });
         }
 
         public override void OnPressedEsc()
         {
             PlayerStatusPanel.Instance.ShowMe();
         }
-        
+
+
+        public void UpdateStaminaDisPlay()
+        {
+        }
+
+        public void UpdateHealthDisPlay()
+        {
+        }
+
+        public void UpdateHotItemDisPlay()
+        {
+        }
 
         public override void CallBack(bool flag)
         {

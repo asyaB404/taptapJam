@@ -911,7 +911,9 @@ MonoBehaviour:
   - {fileID: 1933032200594751456}
   - {fileID: 5819848666112160888}
   - {fileID: 3354312164112228646}
+  inventory: {fileID: 0}
   selectedSlotId: 0
+  selectedHotSlot: {fileID: 0}
   selectedItemInfo: {fileID: 0}
   itemSlots:
   - {fileID: 2273254286217424093}
@@ -930,6 +932,7 @@ MonoBehaviour:
   - {fileID: 5305973721169209945}
   - {fileID: 3940003010053073414}
   - {fileID: 7010689256263224669}
+  hotSlots: []
   selectedItemImage: {fileID: 4735933517047638378}
   selectedItemName: {fileID: 8472232952801174155}
   selectedItemDescription: {fileID: 7064050879212277232}
@@ -1996,7 +1999,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 4769082631500543221}
+  m_Father: {fileID: 2495243186469865792}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &309784760414909212
 MonoBehaviour:
@@ -2064,7 +2067,6 @@ RectTransform:
   m_Children:
   - {fileID: 5466690922108313201}
   - {fileID: 2472756547809512341}
-  - {fileID: 8187048680022263345}
   m_Father: {fileID: 2495243186469865792}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
@@ -2220,6 +2222,7 @@ RectTransform:
   m_LocalScale: {x: 0, y: 0, z: 0}
   m_ConstrainProportionsScale: 0
   m_Children:
+  - {fileID: 8187048680022263345}
   - {fileID: 4769082631500543221}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}

@@ -25,12 +25,12 @@ namespace UI
         /// <summary>
         ///     ShowMe的同时会将其存入栈内
         /// </summary>
-        void ShowMe();
+        void ShowMe(bool hideLastPanel = true);
 
         /// <summary>
         ///     HideMe的同时会尝试将其弹出，注意不能调用栈顶以外面板的hideme
         /// </summary>
-        void HideMe();
+        void HideMe(bool showLastPanel = true);
 
         /// <summary>
         ///     按下ESC键时触发
@@ -101,10 +101,10 @@ namespace UI
         /// <summary>
         ///     打开当前面板，该面板进入栈内，同时标记为IsInStack = true
         /// </summary>
-        public void ShowMe()
+        public void ShowMe(bool hideLastPanel = true)
         {
             if (IsInStack) return;
-            UIManager.Instance.PushPanel(this);
+            UIManager.Instance.PushPanel(this, hideLastPanel);
             gameObject.SetActive(true);
             //设置为最后一个子物体，防止被其他已经打开的面板遮挡
             gameObject.transform.SetAsLastSibling();
@@ -114,20 +114,21 @@ namespace UI
         /// <summary>
         ///     关闭当前面板，IsInStack = false,一般只对栈顶的元素执行,若不是栈顶元素执行,将会弹出该元素之上的所有元素和他自己
         /// </summary>
-        public void HideMe()
+        public void HideMe(bool showLastPanel = true)
         {
             if (!IsInStack) return;
             if (
                 ReferenceEquals(UIManager.Instance.Peek(), this)
             )
             {
-                UIManager.Instance.PopPanel();
+                UIManager.Instance.PopPanel(showLastPanel);
                 IsInStack = false;
             }
             else
             {
                 Debug.LogWarning("注意，你关闭了栈顶以外的面板");
-                while (!ReferenceEquals(UIManager.Instance.Peek(), this)) UIManager.Instance.Peek().HideMe();
+                while (!ReferenceEquals(UIManager.Instance.Peek(), this))
+                    UIManager.Instance.Peek().HideMe(showLastPanel);
                 UIManager.Instance.PopPanel();
                 IsInStack = false;
             }
@@ -135,7 +136,7 @@ namespace UI
 
         public virtual void OnPressedEsc()
         {
-            HideMe();
+            HideMe(true);
         }
 
         public virtual void ChangeMe()

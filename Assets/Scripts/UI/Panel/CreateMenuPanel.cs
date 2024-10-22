@@ -24,6 +24,11 @@ namespace UI.Panel
         [SerializeField] private ItemSlot[] itemSlots;
         [SerializeField] private ItemSlot[] hotSlots;
 
+        public override void OnPressedEsc()
+        {
+            HideMe(false);
+        }
+
         public override void Init()
         {
             base.Init();
@@ -57,7 +62,7 @@ namespace UI.Panel
             //如果处于选择快捷栏状态时点击
             if (!SelectHotItemPanel.Instance.IsInStack || nowSelectedItemInfo.maxCount <= 0) return;
             selectedHotSlot.UpdateDisplay(nowSelectedItemInfo);
-            Inventory.SetHotItem(selectedHotSlot.id,nowSelectedItemInfo);
+            Inventory.SetHotItem(selectedHotSlot.id, nowSelectedItemInfo);
         }
 
         private void OnHotSlotToggleChanged(ItemSlot itemSlot, bool value)
@@ -65,9 +70,9 @@ namespace UI.Panel
             if (!value) return;
             selectedHotSlot = itemSlot;
             if (!SelectHotItemPanel.Instance.IsInStack && BonfireMenuPanel.Instance.IsInStack)
-                SelectHotItemPanel.Instance.ShowMe();
+                SelectHotItemPanel.Instance.ShowMe(false);
         }
-        
+
 
         public void UpdateInventoryDisplay()
         {

@@ -54,27 +54,6 @@ namespace UI
 
 
         /// <summary>
-        ///     存入栈中，没有特殊情况建议不要使用。
-        ///     因为面板基类的ShowMe和HideMe的默认实现已经对栈元素的进出进行了管理，一般直接调用ShowMe和HideMe即可。
-        /// </summary>
-        /// <param name="basePanel">要存入栈的面板</param>
-        /// <param name="callback">是否先执行栈顶的渐渐隐藏</param>
-        /// /// <example>例如[1]当2被存入后,变成了[1,2],此时callback参数决定1会不会调用CallBack(false)</example>
-        public void PushPanel(IBasePanel basePanel, bool callback = true)
-        {
-            if (basePanel.IsInStack)
-            {
-                Debug.LogWarning("已经存在于栈内，无法再将其存入栈内");
-                return;
-            }
-
-            if (callback && Peek() != null) Peek().CallBack(false);
-
-            _panelStack.Push(basePanel);
-            basePanel.CallBack(true);
-        }
-
-        /// <summary>
         ///     弹出栈顶元素，没有特殊情况建议不要使用。
         ///     因为面板基类的ShowMe和HideMe的默认实现已经对栈元素的进出进行了管理，一般直接调用ShowMe和HideMe即可。
         /// </summary>
@@ -94,6 +73,27 @@ namespace UI
             if (callback && Peek() != null) Peek().CallBack(true);
 
             return res;
+        }
+
+        /// <summary>
+        ///     存入栈中，没有特殊情况建议不要使用。
+        ///     因为面板基类的ShowMe和HideMe的默认实现已经对栈元素的进出进行了管理，一般直接调用ShowMe和HideMe即可。
+        /// </summary>
+        /// <param name="basePanel">要存入栈的面板</param>
+        /// <param name="callback">是否先执行栈顶的渐渐隐藏</param>
+        /// /// <example>例如[1]当2被存入后,变成了[1,2],此时callback参数决定1会不会调用CallBack(false)</example>
+        public void PushPanel(IBasePanel basePanel, bool callback = true)
+        {
+            if (basePanel.IsInStack)
+            {
+                Debug.LogWarning("已经存在于栈内，无法再将其存入栈内");
+                return;
+            }
+
+            if (callback && Peek() != null) Peek().CallBack(false);
+
+            _panelStack.Push(basePanel);
+            basePanel.CallBack(true);
         }
 
         /// <summary>

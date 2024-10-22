@@ -35,9 +35,9 @@ namespace UI.Panel
             switch (index)
             {
                 case 0:
-                    //TODO:休息
+                //TODO:休息
                 case 1:
-                    CreateMenuPanel.Instance.ShowMe();
+                    CreateMenuPanel.Instance.ShowMe(false);
                     break;
                 case 2:
                     //TODO 保存

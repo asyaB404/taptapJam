@@ -81,11 +81,9 @@ namespace UI.Panel
 
         public PlayerInventory inventory;
         [SerializeField] private int selectedSlotId = 0;
-        [SerializeField] private ItemSlot selectedHotSlot;
         [SerializeField] private ItemInfo selectedItemInfo;
         [SerializeField] private ItemSlot[] itemSlots;
         public IReadOnlyList<ItemSlot> ItemSlots => itemSlots;
-        [SerializeField] private ItemSlot[] hotSlots;
         [SerializeField] private Image selectedItemImage;
         [SerializeField] private TextMeshProUGUI selectedItemName;
         [SerializeField] private TextMeshProUGUI selectedItemDescription;
@@ -97,13 +95,6 @@ namespace UI.Panel
                 ItemSlot itemSlot = itemSlots[i];
                 itemSlot.id = i;
                 itemSlot.toggle.onValueChanged.AddListener(value => OnItemSlotToggleChanged(itemSlot, value));
-            }
-
-            for (int i = 0; i < hotSlots.Length; i++)
-            {
-                ItemSlot itemSlot = hotSlots[i];
-                itemSlot.id = i;
-                itemSlot.toggle.onValueChanged.AddListener(value => OnHotSlotToggleChanged(itemSlot, value));
             }
         }
 
@@ -117,21 +108,8 @@ namespace UI.Panel
             if (itemSlot.id < 0 || itemSlot.id >= itemStacks.Count) return;
             ItemInfo nowSelectedItemInfo = itemStacks[itemSlot.id].ItemInfo;
             SetSelectedItem(nowSelectedItemInfo);
-            
-            //如果处于选择快捷栏状态时点击
-            if (!SelectHotItemPanel.Instance.IsInStack || nowSelectedItemInfo.maxCount <= 0) return;
-            selectedHotSlot.UpdateDisplay(nowSelectedItemInfo);
-            inventory.SetHotItem(selectedHotSlot.id,nowSelectedItemInfo);
         }
-
-        private void OnHotSlotToggleChanged(ItemSlot itemSlot, bool value)
-        {
-            if (!value) return;
-            selectedHotSlot = itemSlot;
-            if (!SelectHotItemPanel.Instance.IsInStack && BonfireMenuPanel.Instance.IsInStack)
-                SelectHotItemPanel.Instance.ShowMe();
-        }
-
+        
 
         private void SetSelectedItem(ItemInfo info)
         {

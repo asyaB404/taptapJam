@@ -35,6 +35,16 @@ namespace UI.Panel
             switch (index)
             {
                 case 0:
+                    //TODO:休息
+                case 1:
+                    CreateMenuPanel.Instance.ShowMe();
+                    break;
+                case 2:
+                    //TODO 保存
+                    break;
+                case 3:
+                    HideMe();
+                    break;
                 default:
                     break;
             }

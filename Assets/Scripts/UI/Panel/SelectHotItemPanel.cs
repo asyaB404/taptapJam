@@ -20,17 +20,18 @@ namespace UI.Panel
         {
             gameObject.SetActive(flag);
             var itemStacks = CreateMenuPanel.Instance.Inventory.GetItemsOrderByTime;
+            var itemSlots = CreateMenuPanel.Instance.ItemSlots;
             if (flag)
             {
-                foreach (var itemSlot in CreateMenuPanel.Instance.ItemSlots)
+                for (int i = 0; i < itemStacks.Count; i++)
                 {
-                    var alpha = itemStacks[itemSlot.id].ItemInfo.maxCount == 0 ? 0.5f : 1;
-                    itemSlot.SetAlpha(alpha);
+                    var alpha = itemStacks[i].ItemInfo.maxCount == 0 ? 0.5f : 1;
+                    itemSlots[i].SetAlpha(alpha);
                 }
             }
             else
             {
-                foreach (var itemSlot in CreateMenuPanel.Instance.ItemSlots)
+                foreach (var itemSlot in itemSlots)
                 {
                     itemSlot.SetAlpha(1);
                 }

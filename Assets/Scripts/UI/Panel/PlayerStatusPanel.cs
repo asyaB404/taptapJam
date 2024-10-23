@@ -97,6 +97,12 @@ namespace UI.Panel
                 itemSlot.id = i;
                 itemSlot.toggle.onValueChanged.AddListener(value => OnItemSlotToggleChanged(itemSlot, value));
             }
+            for (int i = 0; i < hotSlots.Length; i++)
+            {
+                ItemSlot itemSlot = hotSlots[i];
+                itemSlot.id = i;
+                itemSlot.toggle.onValueChanged.AddListener(value => OnItemSlotToggleChanged(itemSlot, value));
+            }
         }
 
         private void OnItemSlotToggleChanged(ItemSlot itemSlot, bool value)

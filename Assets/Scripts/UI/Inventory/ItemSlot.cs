@@ -26,10 +26,11 @@ namespace UI.Inventory
             if (inventory == null) return;
             if (id <= -1 || id >= inventory.Count) return;
             ItemStack itemStack = inventory[id];
+            if (!itemStack?.ItemInfo) return;
             image.sprite = itemStack.ItemInfo.icon;
             itemCount.text = itemStack.count.ToString();
         }
-        
+
 
         public void UpdateDisplay(ItemInfo info, int count = 0)
         {

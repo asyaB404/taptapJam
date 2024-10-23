@@ -83,7 +83,8 @@ namespace UI.Panel
         [SerializeField] private int selectedSlotId = 0;
         [SerializeField] private ItemInfo selectedItemInfo;
         [SerializeField] private ItemSlot[] itemSlots;
-        
+        [SerializeField] private ItemSlot[] hotSlots;
+
         [SerializeField] private Image selectedItemImage;
         [SerializeField] private TextMeshProUGUI selectedItemName;
         [SerializeField] private TextMeshProUGUI selectedItemDescription;
@@ -104,12 +105,12 @@ namespace UI.Panel
             selectedSlotId = itemSlot.id;
             var itemStacks = inventory.GetItemsOrderByTime;
             SetSelectedItem(null);
-            
+
             if (itemSlot.id < 0 || itemSlot.id >= itemStacks.Count) return;
             ItemInfo nowSelectedItemInfo = itemStacks[itemSlot.id].ItemInfo;
             SetSelectedItem(nowSelectedItemInfo);
         }
-        
+
 
         private void SetSelectedItem(ItemInfo info)
         {
@@ -137,10 +138,15 @@ namespace UI.Panel
                 slot.UpdateDisplayFromInventory(inventoryGetItemsOrderByTime);
             }
 
-            if (!selectedItemInfo || inventory.Count(selectedItemInfo.id) == 0)
+            var hotItemStacks = inventory.HotItemStacks;
+            foreach (var slot in hotSlots)
             {
-                SetSelectedItem(null);
+                slot.UpdateDisplayFromInventory(hotItemStacks);
             }
+
+            if (!selectedItemInfo || inventory.Count(selectedItemInfo.id) == 0)
+                SetSelectedItem(null);
+            
         }
 
         #endregion

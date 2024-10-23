@@ -12,13 +12,14 @@ namespace Core
     /// </summary>
     public class PlayerInventory : MonoBehaviour, IMyContainer
     {
-
         #region 快捷栏
 
         /// <summary>
         /// 快捷栏上的物品
         /// </summary>
         [SerializeField] private List<ItemStack> hotItemStacks = new(3) { null, null, null };
+
+        public IReadOnlyList<ItemStack> HotItemStacks => hotItemStacks;
 
         public ItemStack GetHotItem(int id)
         {
@@ -30,18 +31,20 @@ namespace Core
             hotItemStacks[id].count = hotItemStacks[id].ItemInfo.maxCount;
         }
 
-        public void SetHotItem(int id, ItemInfo itemInfo)
+        public void SetHotItem(int id, ItemStack itemStack)
         {
-            hotItemStacks[id] = new ItemStack(itemInfo, itemInfo.maxCount);
+            if (itemStack == null)
+                hotItemStacks[id] = null;
+            else
+                hotItemStacks[id] = itemStack;
         }
 
-        public bool UseHotItem(int id, int count)
+        public bool UseHotItem(int id, int count = 1)
         {
-            if (hotItemStacks[id] == null) return false;
-            hotItemStacks[id].count -= 1;
+            TryRemoveItem(hotItemStacks[id]?.ItemInfo.id, count, out var _);
             if (hotItemStacks[id].count == 0)
             {
-                //TODO:移除
+                hotItemStacks[id] = null;
             }
 
             return true;

@@ -29,6 +29,7 @@ namespace UI.Inventory
             image.sprite = itemStack.ItemInfo.icon;
             itemCount.text = itemStack.count.ToString();
         }
+        
 
         public void UpdateDisplay(ItemInfo info, int count = 0)
         {

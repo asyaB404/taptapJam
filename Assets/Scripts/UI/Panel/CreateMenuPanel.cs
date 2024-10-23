@@ -20,7 +20,6 @@ namespace UI.Panel
     {
         public PlayerInventory Inventory => PlayerStatusPanel.Instance.inventory;
         public IReadOnlyList<ItemSlot> ItemSlots => itemSlots;
-        [SerializeField] private int selectedSlotId = 0;
         [SerializeField] private ItemSlot selectedHotSlot;
         [SerializeField] private ItemSlot[] itemSlots;
         [SerializeField] private ItemSlot[] hotSlots;
@@ -61,16 +60,23 @@ namespace UI.Panel
         private void OnItemSlotToggleChanged(ItemSlot itemSlot, bool value)
         {
             if (!value) return;
-            selectedSlotId = itemSlot.id;
+
             var itemStacks = Inventory.GetItemsOrderByTime;
             if (itemSlot.id < 0 || itemSlot.id >= itemStacks.Count) return;
             ItemInfo nowSelectedItemInfo = itemStacks[itemSlot.id].ItemInfo;
             //如果处于选择快捷栏状态时点击
             if (!SelectHotItemPanel.Instance.IsInStack || nowSelectedItemInfo.maxCount <= 0) return;
             SelectHotItemPanel.Instance.HideMe(false);
-            if(nowSelectedItemInfo == Inventory) return;
-            selectedHotSlot.UpdateDisplay(nowSelectedItemInfo);
-            Inventory.SetHotItem(selectedHotSlot.id, nowSelectedItemInfo);
+            if (nowSelectedItemInfo == Inventory.GetHotItem(selectedHotSlot.id)?.ItemInfo)
+            {
+                selectedHotSlot.UpdateDisplay(null);
+                Inventory.SetHotItem(selectedHotSlot.id, null);
+            }
+            else
+            {
+                selectedHotSlot.UpdateDisplay(nowSelectedItemInfo);
+                Inventory.SetHotItem(selectedHotSlot.id, itemStacks[itemSlot.id]);
+            }
         }
 
         private void OnHotSlotToggleChanged(ItemSlot itemSlot, bool value)
@@ -84,9 +90,15 @@ namespace UI.Panel
         public void UpdateInventoryDisplay()
         {
             var inventoryGetItemsOrderByTime = Inventory.GetItemsOrderByTime;
+            var hotItemStacks = Inventory.HotItemStacks;
             foreach (var slot in itemSlots)
             {
                 slot.UpdateDisplayFromInventory(inventoryGetItemsOrderByTime);
+            }
+
+            foreach (var slot in hotSlots)
+            {
+                slot.UpdateDisplayFromInventory(hotItemStacks);
             }
         }
     }

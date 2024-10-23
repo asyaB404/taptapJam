@@ -83,7 +83,7 @@ namespace UI.Panel
         [SerializeField] private int selectedSlotId = 0;
         [SerializeField] private ItemInfo selectedItemInfo;
         [SerializeField] private ItemSlot[] itemSlots;
-        public IReadOnlyList<ItemSlot> ItemSlots => itemSlots;
+        
         [SerializeField] private Image selectedItemImage;
         [SerializeField] private TextMeshProUGUI selectedItemName;
         [SerializeField] private TextMeshProUGUI selectedItemDescription;

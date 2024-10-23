@@ -12,10 +12,23 @@ namespace Core
     /// </summary>
     public class PlayerInventory : MonoBehaviour, IMyContainer
     {
+
+        #region 快捷栏
+
         /// <summary>
         /// 快捷栏上的物品
         /// </summary>
         [SerializeField] private List<ItemStack> hotItemStacks = new(3) { null, null, null };
+
+        public ItemStack GetHotItem(int id)
+        {
+            return hotItemStacks[id];
+        }
+
+        public void ResetHotItem(int id)
+        {
+            hotItemStacks[id].count = hotItemStacks[id].ItemInfo.maxCount;
+        }
 
         public void SetHotItem(int id, ItemInfo itemInfo)
         {
@@ -34,10 +47,7 @@ namespace Core
             return true;
         }
 
-        public void ResetHotItem(int id)
-        {
-            hotItemStacks[id].count = hotItemStacks[id].ItemInfo.maxCount;
-        }
+        #endregion
 
         private readonly Dictionary<string, ItemStack> _itemStacksDict = new();
 

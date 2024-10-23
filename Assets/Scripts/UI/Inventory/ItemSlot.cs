@@ -14,6 +14,11 @@ namespace UI.Inventory
         [SerializeField] private TextMeshProUGUI itemCount;
         public Toggle toggle;
 
+        public void SetAlpha(float alpha)
+        {
+            image.SetAlpha(alpha);
+        }
+
         public void UpdateDisplayFromInventory(IReadOnlyList<ItemStack> inventory)
         {
             image.sprite = null;

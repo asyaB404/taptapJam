@@ -7,10 +7,10 @@
 // //   (___)___)                         @Copyright  Copyright (c) 2024, Basya
 // // ********************************************************************************************
 
+
 using System.Collections.Generic;
 using Core;
 using Core.Items;
-using TMPro;
 using UI.Inventory;
 using UnityEngine;
 
@@ -18,11 +18,17 @@ namespace UI.Panel
 {
     public class CreateMenuPanel : BasePanel<CreateMenuPanel>
     {
-        private PlayerInventory Inventory => PlayerStatusPanel.Instance.inventory;
+        public PlayerInventory Inventory => PlayerStatusPanel.Instance.inventory;
+        public IReadOnlyList<ItemSlot> ItemSlots => itemSlots;
         [SerializeField] private int selectedSlotId = 0;
         [SerializeField] private ItemSlot selectedHotSlot;
         [SerializeField] private ItemSlot[] itemSlots;
         [SerializeField] private ItemSlot[] hotSlots;
+
+        private void OnEnable()
+        {
+            UpdateInventoryDisplay();
+        }
 
         public override void OnPressedEsc()
         {
@@ -61,6 +67,8 @@ namespace UI.Panel
             ItemInfo nowSelectedItemInfo = itemStacks[itemSlot.id].ItemInfo;
             //如果处于选择快捷栏状态时点击
             if (!SelectHotItemPanel.Instance.IsInStack || nowSelectedItemInfo.maxCount <= 0) return;
+            SelectHotItemPanel.Instance.HideMe(false);
+            if(nowSelectedItemInfo == Inventory) return;
             selectedHotSlot.UpdateDisplay(nowSelectedItemInfo);
             Inventory.SetHotItem(selectedHotSlot.id, nowSelectedItemInfo);
         }
@@ -72,7 +80,6 @@ namespace UI.Panel
             if (!SelectHotItemPanel.Instance.IsInStack && BonfireMenuPanel.Instance.IsInStack)
                 SelectHotItemPanel.Instance.ShowMe(false);
         }
-
 
         public void UpdateInventoryDisplay()
         {

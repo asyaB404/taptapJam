@@ -19,6 +19,7 @@ TagManager:
   - Ground
   - DashUnlocker
   - LaserUnlocker
+  - bullet
   layers:
   - Default
   - TransparentFX
@@ -45,7 +46,7 @@ TagManager:
   - Post
   - Hurt
   - DarkObject
-  - saveArea
+  - SaveArea
   - 
   - 
   - 

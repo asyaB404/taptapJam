@@ -1,7 +1,10 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
+using Core;
 using Core.Items;
 using Myd.Platform;
+using Test;
 using UnityEngine;
 
 public class SaveMgr : Singleton<SaveMgr>
@@ -14,7 +17,7 @@ public class SaveMgr : Singleton<SaveMgr>
     public float Stamin=0;//灵力
     public bool laserUnlocked=false;//能力1
     public bool dashUnlocked=false;//能力2
-    public List<ItemStack> inventoryItemStacks;
+    public Dictionary<string,int> inventoryItemStacks;
 
     public Vector2 playerPosition=new(-int.MaxValue,-int.MaxValue);
     /// <summary>
@@ -33,7 +36,11 @@ public class SaveMgr : Singleton<SaveMgr>
         laserUnlocked= (bool)EventMgr.ExecuteEvent("GetlaserUnlocked");
         dashUnlocked= (bool)EventMgr.ExecuteEvent("GetdashUnlocked");
         playerPosition=Game.Player.GetPlayerPosotion();
-        // inventoryItemStacks
+        inventoryItemStacks=new();
+        foreach (var item in TestForInventory.Inventory.GetItems.ToList())
+        {
+            inventoryItemStacks.Add(item.ItemInfo.itemName,item.count);
+        } 
 
         ES3.Save("SettingData",SettingData);
         ES3.Save("FirePosition",FirePosition);
@@ -41,10 +48,13 @@ public class SaveMgr : Singleton<SaveMgr>
         ES3.Save("Health",Health);
         ES3.Save("Stamin",Stamin);
         ES3.Save("GetlaserUnlocked",laserUnlocked);
-        Debug.Log(ES3.Load("GetlaserUnlocked"));
+        // Debug.Log(ES3.Load("GetlaserUnlocked"));
 
         ES3.Save("GetdashUnlocked",dashUnlocked);
         ES3.Save("playerPosition",playerPosition);
+
+        ES3.Save("inventoryItemStacks",inventoryItemStacks);
+
     }
 
     /// <summary>
@@ -64,7 +74,7 @@ public class SaveMgr : Singleton<SaveMgr>
         if(ES3.KeyExists("GetdashUnlocked"))dashUnlocked= ES3.Load<bool>("GetdashUnlocked");
         if(ES3.KeyExists("GetlaserUnlocked"))laserUnlocked=ES3.Load<bool>("GetlaserUnlocked");
         if(ES3.KeyExists("playerPosition"))playerPosition= ES3.Load<Vector2>("playerPosition");
-        Debug.Log(playerPosition);
+        if(ES3.KeyExists("inventoryItemStacks"))inventoryItemStacks= ES3.Load<Dictionary<string,int>>("inventoryItemStacks");
 
          if(FirePosition.z!=-100)BonfireBuild.BuildFire(FirePosition);
         Debug.Log(notRefreshObjs.Count);
@@ -76,6 +86,11 @@ public class SaveMgr : Singleton<SaveMgr>
         if(laserUnlocked)EventMgr.ExecuteEvent(EventTypes.UnlockLaser);
         else EventMgr.ExecuteEvent(EventTypes.LockLaser);
         if(playerPosition.x>-1000000)Game.Player.SetPlayerPosition(playerPosition);
+            TestForInventory.Inventory.Clear();
+        if(inventoryItemStacks!=null)foreach(string str in inventoryItemStacks.Keys){
+            Debug.Log(str);
+            TestForInventory.Inventory.AddItem(new(str,inventoryItemStacks[str]));
+        }
     }
     public void Clear(){
         ES3.DeleteFile("SettingData");
@@ -95,6 +110,9 @@ public class SaveMgr : Singleton<SaveMgr>
         laserUnlocked=false;
         ES3.DeleteFile("playerPosition");
         playerPosition=new(-int.MaxValue,-int.MaxValue);
+        ES3.DeleteFile("inventoryItemStacks");
+        inventoryItemStacks=null;
+
         ES3.Save("SettingData",SettingData);
         ES3.Save("FirePosition",FirePosition);
         ES3.Save("NotRefreshObjs",notRefreshObjs);
@@ -103,6 +121,7 @@ public class SaveMgr : Singleton<SaveMgr>
         ES3.Save("GetlaserUnlocked",laserUnlocked);
         ES3.Save("GetdashUnlocked",dashUnlocked);
         ES3.Save("playerPosition",playerPosition);
+        ES3.Save("inventoryItemStacks",inventoryItemStacks);
         Debug.Log(laserUnlocked);
         Load();        
     }

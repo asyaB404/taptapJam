@@ -21,12 +21,16 @@ public class Bottle : MonoBehaviour
         if(other.tag=="bullet"){
             for(int i=0;i<healthNub;i++){
                 XpPoint xp=Instantiate(experienceGame).GetComponent<XpPoint>();
+                xp.transform.position=this.transform.position;
                 xp.isHealth=true;
                 xp.nub=1;
             }
             for(int i=0;i<staminaNub;i++){
                 XpPoint xp=Instantiate(experienceGame).GetComponent<XpPoint>();
+                xp.transform.position=this.transform.position;
+                
                 xp.isHealth=false;
+
                 xp.nub=1;
             }
             if(anim!=null)anim.SetTrigger(0);

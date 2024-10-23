@@ -9,10 +9,11 @@ public class Interaction : MonoBehaviour
 {
     protected bool canInteraction = false;
     public GameObject canvas;
-    public GameObject ShowButtonOBJ;
-    public GameObject showButtonOBJ;
+    private GameObject ShowButtonOBJ;
+    protected GameObject showButtonOBJ;
     protected bool needShow = true;
-    public float a=100;
+    static GameObject uiParent;
+    private float a=1.5f;
     protected KeyCode keyCode;
     // public GameObject canvasOBJ;
     // public GameObject ShowUI;
@@ -22,7 +23,14 @@ public class Interaction : MonoBehaviour
         //     canvasOBJ=FindObjectOfType<Canvas>().gameObject;
         // }
         ShowButtonOBJ = AssetMgr.LoadAssetSync<GameObject>("Assets/AddressableAssets/prefab/Resource/ShowButton.prefab");
+        
         canvas = GameObject.Find("Canvas").gameObject;
+        if(uiParent==null){
+            uiParent=new GameObject();
+            // uiParent.transform.SetScale(0.035f,0.035f);
+            uiParent.transform.position=Vector2.zero;
+            uiParent.transform.SetParent(canvas.transform);}
+        canvas=uiParent;
     }
     protected virtual void OnTriggerEnter2D(Collider2D other)
     {
@@ -42,7 +50,7 @@ public class Interaction : MonoBehaviour
                 showButtonOBJ.transform.SetParent(canvas.transform);
             }
             showButtonOBJ.SetActive(true);
-            showButtonOBJ.transform.position = Camera.main.WorldToScreenPoint(this.transform.position) + new Vector3(0, a, 0);
+            showButtonOBJ.transform.position = Camera.main.WorldToScreenPoint(this.transform.position) + new Vector3(0, 2, 0);
             showButtonOBJ.transform.GetChild(1).GetComponent<Text>().text=keyCode.ToString();
         }
     }
@@ -73,7 +81,7 @@ public class Interaction : MonoBehaviour
                 _Interaction();
             }
         if(showButtonOBJ!=null&&showButtonOBJ.activeSelf)
-            showButtonOBJ.transform.position = Camera.main.WorldToScreenPoint(this.transform.position) + new Vector3(0, a, 0);
+            showButtonOBJ.transform.position = this.transform.position + new Vector3(0, a, 0);
     }
     protected virtual void _Interaction()
     {

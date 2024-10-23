@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using cfg;
 using UnityEngine;
 using UnityEngine.Tilemaps;
+using BehaviorDesigner.Runtime.Tasks.Unity.UnityCharacterController;
 
 namespace Myd.Platform
 {
@@ -42,6 +43,13 @@ namespace Myd.Platform
             Vector2 origion = position + collider.position;
             return Physics2D.OverlapBox(origion + dir * (dist + DEVIATION), collider.size, 0, GroundMask);
         }
+        //检测是否在安全区
+        public bool isSafe(Vector2 position,Vector2 dir, float dist = 0)
+        {
+            Vector2 origion = position + collider.position;
+            return Physics2D.OverlapBox(origion + dir * (dist + DEVIATION), collider.size, 0, SafeGroundMask)&&onGround;
+        }
+
 
         public bool OverlapPoint(Vector2 position)
         {

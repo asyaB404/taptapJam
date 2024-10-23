@@ -246,6 +246,14 @@ namespace Myd.Platform
                     }
                 }
             }
+            if(ctx.isSafe(ctx.Position,Vector2.zero)){
+                ctx.temporaryResurgencePosition=ctx.Position;
+                if(Input.GetKeyDown(KeyCode.R)&&Game.Player.GetPlayerStamina() >= 10){
+                    Debug.Log("按下了键盘");
+                    Game.Player.SetPlayerStamina(-10);
+                    BonfireBuild.BuildFire(ctx.Position);
+                }
+            }
 
             return state;
         }

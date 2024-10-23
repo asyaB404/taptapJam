@@ -7,7 +7,7 @@ using UnityEngine;
 
 public class CraftGuideMgr : Singleton<CraftGuideMgr>
 {
-    Dictionary<ItemStack,List<ItemStack>> MakeTable=new(){
+    public Dictionary<ItemStack,List<ItemStack>> MakeTable=new(){
         {new ItemStack("laogenSoup"),new(){new ItemStack("laogane")}},
         {new ItemStack("fiddleheadSoup"),new(){new ItemStack("laogane"),new ItemStack("fiddlehead")}},
         {new ItemStack("plumSoup"),new(){new ItemStack("laogane"),new ItemStack("plum")}},
@@ -26,5 +26,18 @@ public class CraftGuideMgr : Singleton<CraftGuideMgr>
             }
         }
         return retDic;
+    }
+    public void MakeItem(ItemStack itemStack){
+        foreach(ItemStack item in MakeTable[itemStack]){
+            if(TestForInventory.Inventory.Count(item.ItemInfo.id)<item.count){
+                Debug.Log("材料不足");
+                return;
+            }
+        }
+        foreach(ItemStack item in MakeTable[itemStack]){
+            ItemStack _=new();
+            TestForInventory.Inventory.TryRemoveItem(item.ItemInfo.id,item.count,out _);
+        }
+            TestForInventory.Inventory.AddItem(itemStack.ItemInfo,itemStack.count);
     }
 }

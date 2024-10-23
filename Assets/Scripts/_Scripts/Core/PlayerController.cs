@@ -19,6 +19,7 @@ namespace Myd.Platform
     public partial class PlayerController
     {
         private readonly int GroundMask;
+        private readonly int SafeGroundMask;
         private readonly int HurtMask;
         
         // Player的最大生命，当前生命和灵力
@@ -34,7 +35,16 @@ namespace Myd.Platform
         // 能力锁定相关
         private bool dashUnlocked = false;
         public bool laserUnlocked = false;
-        
+
+        //临时复活点
+        public Vector2 temporaryResurgencePosition;
+        //堂堂复活
+        public void Resurgence(){
+            // Debug.Log("复活！！");
+            // Debug.Log(temporaryResurgencePosition);
+            Position=temporaryResurgencePosition;
+        }
+
         public float PlayerHealth
         {
             get => playerHealth;
@@ -102,6 +112,7 @@ namespace Myd.Platform
             this.GroundMask = LayerMask.GetMask("Ground");
             // 添加HurtMask
             this.HurtMask = LayerMask.GetMask("Hurt");
+            this.SafeGroundMask=LayerMask.GetMask("SaveArea");
 
             this.Facing  = Facings.Right;
             this.LastAim = Vector2.right;
@@ -517,7 +528,7 @@ namespace Myd.Platform
                 PlayDuck(value);
             }
         }
-
+        
         //检测当前是否可以站立
         public bool CanUnDuck
         {

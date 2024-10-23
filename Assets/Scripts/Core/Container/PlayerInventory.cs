@@ -89,7 +89,7 @@ namespace Core
             }
 
             Size += quantity;
-            if (PlayerStatusPanel.Instance.IsInStack) PlayerStatusPanel.Instance.UpdateInventoryDisplay();
+            UpdateUIDisplay();
         }
 
         /// <summary>
@@ -129,7 +129,7 @@ namespace Core
                 _itemStacksDict.Remove(id);
             }
 
-            if (PlayerStatusPanel.Instance.IsInStack) PlayerStatusPanel.Instance.UpdateInventoryDisplay();
+            UpdateUIDisplay();
             return true;
         }
 
@@ -144,7 +144,7 @@ namespace Core
             Size -= item.count;
             _itemStacksDict.Remove(id);
             _orderedItemStacks.Remove(_itemStacksDict[id]);
-            if (PlayerStatusPanel.Instance.IsInStack) PlayerStatusPanel.Instance.UpdateInventoryDisplay();
+            UpdateUIDisplay();
             return true;
         }
 
@@ -156,7 +156,13 @@ namespace Core
             Size = 0;
             _itemStacksDict.Clear();
             _orderedItemStacks.Clear();
+            UpdateUIDisplay();
+        }
+
+        private void UpdateUIDisplay()
+        {
             if (PlayerStatusPanel.Instance.IsInStack) PlayerStatusPanel.Instance.UpdateInventoryDisplay();
+            if (CreateMenuPanel.Instance.IsInStack) CreateMenuPanel.Instance.UpdateInventoryDisplay();
         }
     }
 }

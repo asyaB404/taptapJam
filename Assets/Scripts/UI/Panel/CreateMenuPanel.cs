@@ -24,6 +24,11 @@ namespace UI.Panel
         [SerializeField] private ItemSlot[] itemSlots;
         [SerializeField] private ItemSlot[] hotSlots;
 
+        public override void OnPressedEsc()
+        {
+            HideMe(false);
+        }
+
         public override void Init()
         {
             base.Init();

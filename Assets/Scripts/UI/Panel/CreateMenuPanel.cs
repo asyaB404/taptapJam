@@ -68,15 +68,10 @@ namespace UI.Panel
             if (!SelectHotItemPanel.Instance.IsInStack || nowSelectedItemInfo.maxCount <= 0) return;
             SelectHotItemPanel.Instance.HideMe(false);
             if (nowSelectedItemInfo == Inventory.GetHotItem(selectedHotSlot.id)?.ItemInfo)
-            {
-                selectedHotSlot.UpdateDisplay(null);
                 Inventory.SetHotItem(selectedHotSlot.id, null);
-            }
             else
-            {
-                selectedHotSlot.UpdateDisplay(nowSelectedItemInfo);
                 Inventory.SetHotItem(selectedHotSlot.id, itemStacks[itemSlot.id]);
-            }
+            UpdateInventoryDisplay();
         }
 
         private void OnHotSlotToggleChanged(ItemSlot itemSlot, bool value)

@@ -60,17 +60,33 @@ namespace UI.Panel
         private void OnItemSlotToggleChanged(ItemSlot itemSlot, bool value)
         {
             if (!value) return;
-
+            int itemSlotId = itemSlot.id;
             var itemStacks = Inventory.GetItemsOrderByTime;
-            if (itemSlot.id < 0 || itemSlot.id >= itemStacks.Count) return;
-            ItemInfo nowSelectedItemInfo = itemStacks[itemSlot.id].ItemInfo;
+            if (itemSlotId < 0 || itemSlotId >= itemStacks.Count) return;
+            ItemStack selectedItemStack = itemStacks[itemSlotId];
+            ItemInfo nowSelectedItemInfo = selectedItemStack.ItemInfo;
             //如果处于选择快捷栏状态时点击
             if (!SelectHotItemPanel.Instance.IsInStack || nowSelectedItemInfo.maxCount <= 0) return;
             SelectHotItemPanel.Instance.HideMe(false);
-            if (nowSelectedItemInfo == Inventory.GetHotItem(selectedHotSlot.id)?.ItemInfo)
-                Inventory.SetHotItem(selectedHotSlot.id, null);
+            int hotSlotId = selectedHotSlot.id;
+            if (nowSelectedItemInfo == Inventory.GetHotItem(hotSlotId)?.ItemInfo)
+            {
+                Inventory.AddItem(Inventory.GetHotItem(hotSlotId));
+                Inventory.SetHotItem(hotSlotId, null);
+            }
             else
-                Inventory.SetHotItem(selectedHotSlot.id, itemStacks[itemSlot.id]);
+            {
+                if (Inventory.TryRemoveItem(nowSelectedItemInfo.id, nowSelectedItemInfo.maxCount, out var itemStack))
+                {
+                    Inventory.SetHotItem(hotSlotId, itemStack);
+                }
+                else
+                {
+                    Inventory.SetHotItem(hotSlotId, selectedItemStack);
+                    Inventory.Clear(nowSelectedItemInfo.id);
+                }
+            }
+
             UpdateInventoryDisplay();
         }
 

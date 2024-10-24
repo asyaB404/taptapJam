@@ -12,6 +12,7 @@ namespace Core.Items
         public ItemInfo ItemInfo => itemInfo;
 
         public int count;
+        public string name;
 
         public ItemStack()
         {
@@ -22,12 +23,14 @@ namespace Core.Items
             string path = "Assets/AddressableAssets/ScriptableObject/Items/" + itemInfoName + ".asset";
             ItemInfo item = AssetMgr.LoadAssetSync<ItemInfo>(path);
             this.itemInfo = item;
+            name = itemInfoName;
             this.count = count;
         }
 
         public ItemStack(ItemInfo itemInfo, int count)
         {
             this.itemInfo = itemInfo;
+            name = itemInfo.name;
             this.count = count;
         }
 

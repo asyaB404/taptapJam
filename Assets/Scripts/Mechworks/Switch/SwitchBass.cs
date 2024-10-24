@@ -13,6 +13,10 @@ public class SwitchBass : Interaction
     public virtual void Unlock(){
         if(mechworks)mechworks.Activate();
     }
+    public virtual void Unlock(bool flag){
+        if(mechworks)mechworks.Activate(flag);
+    }
+    
     protected override void _Interaction()
     {
         base._Interaction();

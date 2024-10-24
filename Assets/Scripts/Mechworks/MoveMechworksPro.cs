@@ -14,4 +14,9 @@ public class MoveMechworksPro : MoveMechworks
         base.Activate();
         flag=!flag;
     }
+    public override void Activate(bool flag)
+    {
+        base.Activate(flag);
+        this.flag=flag;
+    }
 }

@@ -18,7 +18,6 @@ public class BigBonfire : Bonfire
 
         EventMgr.ExecuteEvent(skillType);
         base._Interaction();
-        showButtonOBJ2.transform.GetChild(0).gameObject.SetActive(true);
 
     }
 }

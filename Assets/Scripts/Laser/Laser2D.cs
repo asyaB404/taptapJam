@@ -96,6 +96,10 @@ namespace Laser
                             hitDarkObjects.Add(hit2D.collider, spriteRenderer);
                         }
                     }
+                    if(hit2D.collider.CompareTag("LaserSwitch")){
+                        hit2D.collider.GetComponent<LaserSwitch>().LaserCharge();
+                        Debug.Log("射击到了");
+                    }
                 }
                 else
                 {

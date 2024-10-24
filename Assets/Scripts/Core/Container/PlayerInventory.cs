@@ -34,9 +34,13 @@ namespace Core
         public void SetHotItem(int id, ItemStack itemStack)
         {
             if (itemStack == null)
+            {
                 hotItemStacks[id] = null;
+            }
             else
+            {
                 hotItemStacks[id] = itemStack;
+            }
         }
 
         public bool UseHotItem(int id, int count = 1)

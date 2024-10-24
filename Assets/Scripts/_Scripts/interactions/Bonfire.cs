@@ -19,28 +19,12 @@ public class Bonfire : Interaction
     {
         
         base._Interaction();
-        showButtonOBJ.SetActive(false);
-        if (showButtonOBJ2 == null)
-            {
-                showButtonOBJ2 = Instantiate(ShowBottonOBJ2);
-                showButtonOBJ2.transform.SetParent(canvas.transform);
-            }
-        showButtonOBJ2.transform.GetChild(0).GetComponent<Button>().onClick.AddListener(()=>Game.Player.SetPlayerHealth(1000));//回血
-        showButtonOBJ2.transform.GetChild(1).GetComponent<Button>().onClick.AddListener(()=>Game.Player.SetPlayerHealth(1000));//制作
-        showButtonOBJ2.transform.GetChild(2).GetComponent<Button>().onClick.AddListener(()=>SaveMgr.Instance.Save());
-        showButtonOBJ2.transform.GetChild(3).GetComponent<Button>().onClick.AddListener(()=>showButtonOBJ2.SetActive(false));
-        showButtonOBJ2.SetActive(true);
-
+        // showButtonOBJ.SetActive(false);
         // SaveMgr.Instance.Save();
-
-        
     }
     protected override void Update()
     {
         base.Update();
-        if(showButtonOBJ2!=null&&showButtonOBJ2.activeSelf)
-            showButtonOBJ2.transform.position = Camera.main.WorldToScreenPoint(this.transform.position) + new Vector3(-100, 0, 0);
-        
         if(Input.GetKey(KeyCode.P)){
             print("清除存档");
             SaveMgr.Instance.Clear();
@@ -48,6 +32,7 @@ public class Bonfire : Interaction
         if(Input.GetKey(KeyCode.L)){
             SaveMgr.Instance.Load();
         }
+        if(Input.GetKeyDown(KeyCode.I))SaveMgr.Instance.Save();
         if(Input.GetKey(KeyCode.O)){
             var hub=CraftGuideMgr.Instance.GetCraftGuide();
             foreach(var a in hub.Keys){
@@ -68,6 +53,5 @@ public class Bonfire : Interaction
     protected override void onExit(Collider2D other)
     {
         base.onExit(other);
-        if(showButtonOBJ2)showButtonOBJ2.SetActive(false);
     }
 }

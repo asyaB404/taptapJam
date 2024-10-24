@@ -15,7 +15,7 @@ MonoBehaviour:
   m_GroupName: Assets-AddressableAssets-ScriptableObject-Items
   m_Data:
     m_SerializedData: []
-  m_GUID: 1a399b8a9022880419ca82ec2f971283
+  m_GUID: c8659a08d62ada64d834d625584c0cc1
   m_SerializeEntries:
   - m_GUID: 0ba2f66aa13e1cb4dafbbbb07f4157ab
     m_Address: Assets/AddressableAssets/ScriptableObject/Items/fiddlehead.asset
@@ -36,7 +36,7 @@ MonoBehaviour:
     - Assets-AddressableAssets-ScriptableObject-Items
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: bbac8c298a54b1e42b35ee11b69b21de
-    m_Address: iptableObject/Items/laogenSoup.assetbject/Items/laogenSoup.asset
+    m_Address: Assets/AddressableAssets/ScriptableObject/Items/laogenSoup.asset
     m_ReadOnly: 0
     m_SerializedLabels:
     - Assets-AddressableAssets-ScriptableObject-Items

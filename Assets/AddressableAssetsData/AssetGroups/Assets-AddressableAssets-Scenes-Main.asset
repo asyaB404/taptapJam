@@ -15,7 +15,7 @@ MonoBehaviour:
   m_GroupName: Assets-AddressableAssets-Scenes-Main
   m_Data:
     m_SerializedData: []
-  m_GUID: b7d432e682f89ea4a98015d065808a1c
+  m_GUID: 4568eeb11a205e34191907132ea69968
   m_SerializeEntries:
   - m_GUID: 359a4d7aa91267a4fa22df57dbe79be6
     m_Address: Assets/AddressableAssets/Scenes/Main/Global Volume Profile.asset

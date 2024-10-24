@@ -15,8 +15,14 @@ MonoBehaviour:
   m_GroupName: Assets-AddressableAssets-prefab-Resource
   m_Data:
     m_SerializedData: []
-  m_GUID: d963ff9240fe7ae4b9277ec7982bc981
+  m_GUID: 5d03c88a2aa4e084d8ed6f978047cd11
   m_SerializeEntries:
+  - m_GUID: 5df9f00b671d5cc4f9c16244be5c3aa7
+    m_Address: Assets/AddressableAssets/prefab/Resource/Bigfire.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Assets-AddressableAssets-prefab-Resource
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: bc2ada3a2c65c414493abf04dbf7263a
     m_Address: Assets/AddressableAssets/prefab/Resource/bottle.prefab
     m_ReadOnly: 0

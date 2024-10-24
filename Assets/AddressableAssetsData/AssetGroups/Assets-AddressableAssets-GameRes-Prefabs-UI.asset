@@ -15,8 +15,14 @@ MonoBehaviour:
   m_GroupName: Assets-AddressableAssets-GameRes-Prefabs-UI
   m_Data:
     m_SerializedData: []
-  m_GUID: dbdce62e976875c4bbd7899837a619f8
+  m_GUID: 5a3dac38326845049b5a9e45268eeeaa
   m_SerializeEntries:
+  - m_GUID: d102201b1283e8341b98b8fec77f89b7
+    m_Address: Assets/AddressableAssets/GameRes/Prefabs/UI/CreateSlot.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Assets-AddressableAssets-GameRes-Prefabs-UI
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 44c778034ce596346b9348c5e20a1804
     m_Address: Assets/AddressableAssets/GameRes/Prefabs/UI/ItemSlot.prefab
     m_ReadOnly: 0

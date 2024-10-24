@@ -23,19 +23,23 @@ namespace UI.Inventory
         public void Init(KeyValuePair<List<ItemStack>, ItemStack> pair)
         {
             button.onClick.RemoveAllListeners();
-            button.onClick.AddListener(() =>
-            {
-                CraftGuideMgr.Instance.MakeItem(pair.Value);
-            });
+            button.onClick.AddListener(() => { CraftGuideMgr.Instance.MakeItem(pair.Value); });
             itemSlots[0].UpdateDisplay(pair.Value);
-            for (int i = 1;i<itemSlots.Length;i++)
+            int i = 1;
+            foreach (var itemStack in pair.Key)
             {
-                var itemSlot = itemSlots[i];
-                foreach (var itemStack in pair.Key)
-                {
-                    itemSlot.UpdateDisplay(itemStack);
-                }
+                itemSlots[i].UpdateDisplay(itemStack);
+                i++;
             }
+
+            // for (int i = 1;i<itemSlots.Length;i++)
+            // {
+            //     var itemSlot = itemSlots[i];
+            //     foreach (var itemStack in pair.Key)
+            //     {
+            //         itemSlot.UpdateDisplay(itemStack);
+            //     }
+            // }
         }
     }
 }

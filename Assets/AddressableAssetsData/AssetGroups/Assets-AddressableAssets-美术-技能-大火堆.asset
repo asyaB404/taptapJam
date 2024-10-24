@@ -1,0 +1,91 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bbb281ee3bf0b054c82ac2347e9e782c, type: 3}
+  m_Name: "Assets-AddressableAssets-\u7F8E\u672F-\u6280\u80FD-\u5927\u706B\u5806"
+  m_EditorClassIdentifier: 
+  m_GroupName: "Assets-AddressableAssets-\u7F8E\u672F-\u6280\u80FD-\u5927\u706B\u5806"
+  m_Data:
+    m_SerializedData: []
+  m_GUID: 99e7b520d4b05414399f77d2bb5de112
+  m_SerializeEntries:
+  - m_GUID: 4976e6409f48df64298694b47efe4774
+    m_Address: "Assets/AddressableAssets/\u7F8E\u672F/\u6280\u80FD/\u5927\u706B\u5806/Bigfire.controller"
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - "Assets-AddressableAssets-\u7F8E\u672F-\u6280\u80FD-\u5927\u706B\u5806"
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 1783a217bd75b5148ad3ba9b26808683
+    m_Address: "Assets/AddressableAssets/\u7F8E\u672F/\u6280\u80FD/\u5927\u706B\u5806/flow.anim"
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - "Assets-AddressableAssets-\u7F8E\u672F-\u6280\u80FD-\u5927\u706B\u5806"
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 4aede65bf6280ea43ac35e210fbd05d0
+    m_Address: "Assets/AddressableAssets/\u7F8E\u672F/\u6280\u80FD/\u5927\u706B\u5806/ignite.anim"
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - "Assets-AddressableAssets-\u7F8E\u672F-\u6280\u80FD-\u5927\u706B\u5806"
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 7fe782904b4a28443ad1789ff1bb736e
+    m_Address: "Assets/AddressableAssets/\u7F8E\u672F/\u6280\u80FD/\u5927\u706B\u5806/jinenghugef1.png"
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - "Assets-AddressableAssets-\u7F8E\u672F-\u6280\u80FD-\u5927\u706B\u5806"
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 8722e6e985d8f6a4fb8e969b47c18ded
+    m_Address: "Assets/AddressableAssets/\u7F8E\u672F/\u6280\u80FD/\u5927\u706B\u5806/jinenghugef2.png"
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - "Assets-AddressableAssets-\u7F8E\u672F-\u6280\u80FD-\u5927\u706B\u5806"
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: b9d16606838a79245afddc961a12ca89
+    m_Address: "Assets/AddressableAssets/\u7F8E\u672F/\u6280\u80FD/\u5927\u706B\u5806/jinenghugef3.png"
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - "Assets-AddressableAssets-\u7F8E\u672F-\u6280\u80FD-\u5927\u706B\u5806"
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: ee06ffaf5f665f7469d73efb3fdc0c7a
+    m_Address: "Assets/AddressableAssets/\u7F8E\u672F/\u6280\u80FD/\u5927\u706B\u5806/jinenghugef4.png"
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - "Assets-AddressableAssets-\u7F8E\u672F-\u6280\u80FD-\u5927\u706B\u5806"
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: df23796a95ac8b04bb8f2956cd687cdd
+    m_Address: "Assets/AddressableAssets/\u7F8E\u672F/\u6280\u80FD/\u5927\u706B\u5806/jinenghugef5.png"
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - "Assets-AddressableAssets-\u7F8E\u672F-\u6280\u80FD-\u5927\u706B\u5806"
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 1b373371936931e45b3f463204aac798
+    m_Address: "Assets/AddressableAssets/\u7F8E\u672F/\u6280\u80FD/\u5927\u706B\u5806/jinenghugef6.png"
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - "Assets-AddressableAssets-\u7F8E\u672F-\u6280\u80FD-\u5927\u706B\u5806"
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: cb3388a54073f3f4c9c9cfababca6fea
+    m_Address: "Assets/AddressableAssets/\u7F8E\u672F/\u6280\u80FD/\u5927\u706B\u5806/jinenghugef7.png"
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - "Assets-AddressableAssets-\u7F8E\u672F-\u6280\u80FD-\u5927\u706B\u5806"
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 7a3dd8bbcd56a1b4a95bd99f207c130c
+    m_Address: "Assets/AddressableAssets/\u7F8E\u672F/\u6280\u80FD/\u5927\u706B\u5806/jinenghugef8.png"
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - "Assets-AddressableAssets-\u7F8E\u672F-\u6280\u80FD-\u5927\u706B\u5806"
+    FlaggedDuringContentUpdateRestriction: 0
+  m_ReadOnly: 0
+  m_Settings: {fileID: 11400000, guid: ad10e3e3d61658a438828e6ebf91fd51, type: 2}
+  m_SchemaSet:
+    m_Schemas:
+    - {fileID: 11400000, guid: 0025a69e5e2c76242b4ef5e278a07d25, type: 2}
+    - {fileID: 11400000, guid: e2f564cd803b7fc41a0babc9bdaba4bd, type: 2}

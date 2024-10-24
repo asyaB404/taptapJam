@@ -15,7 +15,7 @@ MonoBehaviour:
   m_GroupName: "Assets-AddressableAssets-GameRes-Player-\u8DD1\u6B65"
   m_Data:
     m_SerializedData: []
-  m_GUID: af047ab6ad637484aa40475829a8f6ac
+  m_GUID: 2948d66a61f5b214daeee8607787e897
   m_SerializeEntries:
   - m_GUID: 83238a7d2a115d14f9157694aecaa0af
     m_Address: "Assets/AddressableAssets/GameRes/Player/\u8DD1\u6B65/Player-run1.png"

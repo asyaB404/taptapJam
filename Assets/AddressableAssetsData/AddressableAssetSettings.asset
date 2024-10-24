@@ -12,10 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 468a46d0ae32c3544b7d98094e6448a9, type: 3}
   m_Name: AddressableAssetSettings
   m_EditorClassIdentifier: 
-  m_DefaultGroup: 1d165d6ded0d73d42ab9d81907990d3d
+  m_DefaultGroup: 2d6c80b5cac91ac47bb9928fe1589a83
   m_currentHash:
     serializedVersion: 2
-    Hash: 7bb0ef41364e8692e66186a0b029cd6b
+    Hash: a8bb00712999f8c5ad1787db2b1b30ac
   m_OptimizeCatalogSize: 0
   m_BuildRemoteCatalog: 0
   m_BundleLocalCatalog: 0
@@ -70,11 +70,15 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 8a6f907885bbe7d4fbf9939f23cc2b14, type: 2}
   - {fileID: 11400000, guid: df22c42da227eb84b8cb6c5a8acec9f1, type: 2}
   - {fileID: 11400000, guid: 4a36f6b5213170d4b9fcb4e119cfc7ba, type: 2}
+  - {fileID: 11400000, guid: fd6d7e549775c9d4ea862cb20323820f, type: 2}
   - {fileID: 11400000, guid: bacfd6732624ab24d9cd461b23b03828, type: 2}
   - {fileID: 11400000, guid: dab214b4107f45e46947f29dfb8a139b, type: 2}
   - {fileID: 11400000, guid: 34155b79d91b4e14eae68ccfe97edf06, type: 2}
   - {fileID: 11400000, guid: 907de26d94f75f2429ea6daad1ac05a7, type: 2}
   - {fileID: 11400000, guid: b3900e03fe9b209428d89ede3b5f1db2, type: 2}
+  - {fileID: 11400000, guid: 30a621f2b3b676f42b3402ba6eb64309, type: 2}
+  - {fileID: 11400000, guid: 694f5701f58a4b348925b958cd827217, type: 2}
+  - {fileID: 11400000, guid: bb10342a821e13d4aa6551ab45496a4b, type: 2}
   m_BuildSettings:
     m_CompileScriptsInVirtualMode: 0
     m_CleanupStreamingAssetsAfterBuilds: 1
@@ -162,6 +166,10 @@ MonoBehaviour:
     - "Assets-AddressableAssets-GameRes-Player-\u8DD1\u6B65"
     - "Assets-AddressableAssets-GameRes-Player-\u8DF3\u8DC3"
     - Assets-AddressableAssets-ScriptableObject-Items
+    - Assets-AddressableAssets-GameRes-Prefabs-Mechworks
+    - "Assets-AddressableAssets-\u7F8E\u672F-\u6280\u80FD-\u5927\u706B\u5806"
+    - "Assets-AddressableAssets-\u7F8E\u672F-\u6280\u80FD-\u5C0F\u706B\u5806"
+    - "Assets-AddressableAssets-\u7F8E\u672F-\u6280\u80FD-\u9B54\u6CD5\u5F39"
   m_SchemaTemplates: []
   m_GroupTemplateObjects:
   - {fileID: 11400000, guid: 251eb2a991560704fa667cc898137b23, type: 2}

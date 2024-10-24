@@ -15,7 +15,7 @@ MonoBehaviour:
   m_GroupName: Assets-AddressableAssets-GameRes-Arts-Textures-Items
   m_Data:
     m_SerializedData: []
-  m_GUID: c3e59ddad24a35047b519bfc9eb88555
+  m_GUID: e8f1443ab63d71248afda1d4bc14d673
   m_SerializeEntries:
   - m_GUID: f545e749e49dc954dae27c4a82d15fff
     m_Address: "Assets/AddressableAssets/GameRes/Arts/Textures/Items/\u4E00\u6346\u8568\u83DC.png"

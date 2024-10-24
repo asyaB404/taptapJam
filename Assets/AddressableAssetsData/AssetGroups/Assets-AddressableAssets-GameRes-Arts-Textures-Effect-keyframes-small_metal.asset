@@ -15,7 +15,7 @@ MonoBehaviour:
   m_GroupName: Assets-AddressableAssets-GameRes-Arts-Textures-Effect-keyframes-small_metal
   m_Data:
     m_SerializedData: []
-  m_GUID: 53b29ac3e9edcb044b44da81071b1df0
+  m_GUID: fa7b37e90abf7af4d9ebf67f6ad7c6cd
   m_SerializeEntries:
   - m_GUID: 05b0d4097596daf4d82b3c0f890f8a0e
     m_Address: Assets/AddressableAssets/GameRes/Arts/Textures/Effect/keyframes/small_metal/small_metal_spike_01.png

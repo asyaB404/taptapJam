@@ -1,0 +1,85 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bbb281ee3bf0b054c82ac2347e9e782c, type: 3}
+  m_Name: "Assets-AddressableAssets-\u7F8E\u672F-\u6280\u80FD-\u5C0F\u706B\u5806"
+  m_EditorClassIdentifier: 
+  m_GroupName: "Assets-AddressableAssets-\u7F8E\u672F-\u6280\u80FD-\u5C0F\u706B\u5806"
+  m_Data:
+    m_SerializedData: []
+  m_GUID: 71ecd306b3e59154c9d3b563ecbdd3d9
+  m_SerializeEntries:
+  - m_GUID: de6e2956dd2b42f49b03ceb4b061d663
+    m_Address: "Assets/AddressableAssets/\u7F8E\u672F/\u6280\u80FD/\u5C0F\u706B\u5806/fire.controller"
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - "Assets-AddressableAssets-\u7F8E\u672F-\u6280\u80FD-\u5C0F\u706B\u5806"
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 66aeeb4a1df9c944c98a49a0fa4fa9e3
+    m_Address: "Assets/AddressableAssets/\u7F8E\u672F/\u6280\u80FD/\u5C0F\u706B\u5806/flow.anim"
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - "Assets-AddressableAssets-\u7F8E\u672F-\u6280\u80FD-\u5C0F\u706B\u5806"
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 30d7ceeaa956ff34292a2af835d94fa3
+    m_Address: "Assets/AddressableAssets/\u7F8E\u672F/\u6280\u80FD/\u5C0F\u706B\u5806/ignite.anim"
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - "Assets-AddressableAssets-\u7F8E\u672F-\u6280\u80FD-\u5C0F\u706B\u5806"
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: fd58b84c364bad14dab55a860949f5c5
+    m_Address: "Assets/AddressableAssets/\u7F8E\u672F/\u6280\u80FD/\u5C0F\u706B\u5806/\u6280\u80FD\u5C0F\u706B\u58061.png"
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - "Assets-AddressableAssets-\u7F8E\u672F-\u6280\u80FD-\u5C0F\u706B\u5806"
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 3f1c11abc3914e343a9c638d9c4fadef
+    m_Address: "Assets/AddressableAssets/\u7F8E\u672F/\u6280\u80FD/\u5C0F\u706B\u5806/\u6280\u80FD\u5C0F\u706B\u58062.png"
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - "Assets-AddressableAssets-\u7F8E\u672F-\u6280\u80FD-\u5C0F\u706B\u5806"
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 5baf8ba0d2c45cd419ec1f12d45c436b
+    m_Address: "Assets/AddressableAssets/\u7F8E\u672F/\u6280\u80FD/\u5C0F\u706B\u5806/\u6280\u80FD\u5C0F\u706B\u58063.png"
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - "Assets-AddressableAssets-\u7F8E\u672F-\u6280\u80FD-\u5C0F\u706B\u5806"
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 9649f67ae8867e046ae9d36e9f4da3ee
+    m_Address: "Assets/AddressableAssets/\u7F8E\u672F/\u6280\u80FD/\u5C0F\u706B\u5806/\u6280\u80FD\u5C0F\u706B\u58064.png"
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - "Assets-AddressableAssets-\u7F8E\u672F-\u6280\u80FD-\u5C0F\u706B\u5806"
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 80304b39537429a4f8c5cf3b82b9bae2
+    m_Address: "Assets/AddressableAssets/\u7F8E\u672F/\u6280\u80FD/\u5C0F\u706B\u5806/\u6280\u80FD\u5C0F\u706B\u58065.png"
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - "Assets-AddressableAssets-\u7F8E\u672F-\u6280\u80FD-\u5C0F\u706B\u5806"
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 2c3b775e2b24dea46965abadbded85d9
+    m_Address: "Assets/AddressableAssets/\u7F8E\u672F/\u6280\u80FD/\u5C0F\u706B\u5806/\u6280\u80FD\u5C0F\u706B\u58066.png"
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - "Assets-AddressableAssets-\u7F8E\u672F-\u6280\u80FD-\u5C0F\u706B\u5806"
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 94aa3984b2dc7364cba667ea7bda3c78
+    m_Address: "Assets/AddressableAssets/\u7F8E\u672F/\u6280\u80FD/\u5C0F\u706B\u5806/\u6280\u80FD\u5C0F\u706B\u58067.png"
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - "Assets-AddressableAssets-\u7F8E\u672F-\u6280\u80FD-\u5C0F\u706B\u5806"
+    FlaggedDuringContentUpdateRestriction: 0
+  m_ReadOnly: 0
+  m_Settings: {fileID: 11400000, guid: ad10e3e3d61658a438828e6ebf91fd51, type: 2}
+  m_SchemaSet:
+    m_Schemas:
+    - {fileID: 11400000, guid: 581ef4321fd394647948cd35f656890f, type: 2}
+    - {fileID: 11400000, guid: 2c2139c7482159547aa67aec7f69d6a7, type: 2}

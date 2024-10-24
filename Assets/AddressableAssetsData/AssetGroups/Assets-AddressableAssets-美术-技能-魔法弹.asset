@@ -1,0 +1,49 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bbb281ee3bf0b054c82ac2347e9e782c, type: 3}
+  m_Name: "Assets-AddressableAssets-\u7F8E\u672F-\u6280\u80FD-\u9B54\u6CD5\u5F39"
+  m_EditorClassIdentifier: 
+  m_GroupName: "Assets-AddressableAssets-\u7F8E\u672F-\u6280\u80FD-\u9B54\u6CD5\u5F39"
+  m_Data:
+    m_SerializedData: []
+  m_GUID: 15eed8505f4c92b478b908ad2333332c
+  m_SerializeEntries:
+  - m_GUID: 05490dbb680d9dd4891bb027aa3609ba
+    m_Address: "Assets/AddressableAssets/\u7F8E\u672F/\u6280\u80FD/\u9B54\u6CD5\u5F39/jinengmagic1.png"
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - "Assets-AddressableAssets-\u7F8E\u672F-\u6280\u80FD-\u9B54\u6CD5\u5F39"
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: b1963703626f33243a6af5bc7c4d758b
+    m_Address: "Assets/AddressableAssets/\u7F8E\u672F/\u6280\u80FD/\u9B54\u6CD5\u5F39/jinengmagic2.png"
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - "Assets-AddressableAssets-\u7F8E\u672F-\u6280\u80FD-\u9B54\u6CD5\u5F39"
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 5a7f7c45266c6fb49a2c8afed5fbbef2
+    m_Address: "Assets/AddressableAssets/\u7F8E\u672F/\u6280\u80FD/\u9B54\u6CD5\u5F39/jinengmagic3.png"
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - "Assets-AddressableAssets-\u7F8E\u672F-\u6280\u80FD-\u9B54\u6CD5\u5F39"
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 33465c631f6b285498e007dbde98b056
+    m_Address: "Assets/AddressableAssets/\u7F8E\u672F/\u6280\u80FD/\u9B54\u6CD5\u5F39/jinengmagic4.png"
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - "Assets-AddressableAssets-\u7F8E\u672F-\u6280\u80FD-\u9B54\u6CD5\u5F39"
+    FlaggedDuringContentUpdateRestriction: 0
+  m_ReadOnly: 0
+  m_Settings: {fileID: 11400000, guid: ad10e3e3d61658a438828e6ebf91fd51, type: 2}
+  m_SchemaSet:
+    m_Schemas:
+    - {fileID: 11400000, guid: 5d6553c1d5ed17a4c9b00f3830653a09, type: 2}
+    - {fileID: 11400000, guid: 99b5a9bab43d0f3479d4ea0cef55b0de, type: 2}

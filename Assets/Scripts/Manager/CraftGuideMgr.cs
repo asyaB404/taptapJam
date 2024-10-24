@@ -52,6 +52,6 @@ public class CraftGuideMgr : Singleton<CraftGuideMgr>
         }
 
         TestForInventory.Inventory.AddItem(itemStack.ItemInfo, itemStack.count);
-        CreateMenuPanel.Instance.UpdateInventoryDisplay();
+        CreateMenuPanel.Instance.UpdateDisplay();
     }
 }

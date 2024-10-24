@@ -159,8 +159,8 @@ namespace Core
         {
             if (!_itemStacksDict.TryGetValue(id, out ItemStack item)) return false;
             Size -= item.count;
-            _itemStacksDict.Remove(id);
             _orderedItemStacks.Remove(_itemStacksDict[id]);
+            _itemStacksDict.Remove(id);
             UpdateUIDisplay();
             return true;
         }
@@ -179,7 +179,7 @@ namespace Core
         private void UpdateUIDisplay()
         {
             if (PlayerStatusPanel.Instance.IsInStack) PlayerStatusPanel.Instance.UpdateInventoryDisplay();
-            if (CreateMenuPanel.Instance.IsInStack) CreateMenuPanel.Instance.UpdateInventoryDisplay();
+            if (CreateMenuPanel.Instance.IsInStack) CreateMenuPanel.Instance.UpdateDisplay();
         }
     }
 }

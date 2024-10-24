@@ -20,13 +20,14 @@ namespace UI.Panel
     {
         public PlayerInventory Inventory => PlayerStatusPanel.Instance.inventory;
         public IReadOnlyList<ItemSlot> ItemSlots => itemSlots;
+        [SerializeField] private GameObject createSlotPrefab;
         [SerializeField] private ItemSlot selectedHotSlot;
         [SerializeField] private ItemSlot[] itemSlots;
         [SerializeField] private ItemSlot[] hotSlots;
 
         private void OnEnable()
         {
-            UpdateInventoryDisplay();
+            UpdateDisplay();
         }
 
         public override void OnPressedEsc()
@@ -87,7 +88,7 @@ namespace UI.Panel
                 }
             }
 
-            UpdateInventoryDisplay();
+            UpdateDisplay();
         }
 
         private void OnHotSlotToggleChanged(ItemSlot itemSlot, bool value)
@@ -98,10 +99,11 @@ namespace UI.Panel
                 SelectHotItemPanel.Instance.ShowMe(false);
         }
 
-        public void UpdateInventoryDisplay()
+        public void UpdateDisplay()
         {
             var inventoryGetItemsOrderByTime = Inventory.GetItemsOrderByTime;
             var hotItemStacks = Inventory.HotItemStacks;
+            var craftGuide = CraftGuideMgr.Instance.GetCraftGuide();
             foreach (var slot in itemSlots)
             {
                 slot.UpdateDisplayFromInventory(inventoryGetItemsOrderByTime);

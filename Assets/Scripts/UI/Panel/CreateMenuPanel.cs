@@ -20,10 +20,12 @@ namespace UI.Panel
     {
         public PlayerInventory Inventory => PlayerStatusPanel.Instance.inventory;
         public IReadOnlyList<ItemSlot> ItemSlots => itemSlots;
-        [SerializeField] private GameObject createSlotPrefab;
         [SerializeField] private ItemSlot selectedHotSlot;
         [SerializeField] private ItemSlot[] itemSlots;
         [SerializeField] private ItemSlot[] hotSlots;
+        
+        [SerializeField] private GameObject createSlotPrefab;
+        [SerializeField] private Transform createSlotParent;
 
         private void OnEnable()
         {
@@ -112,6 +114,13 @@ namespace UI.Panel
             foreach (var slot in hotSlots)
             {
                 slot.UpdateDisplayFromInventory(hotItemStacks);
+            }
+
+            createSlotParent.DestroyAllChildren();
+            foreach (var pair in craftGuide)
+            {
+                GameObject createSlot = Instantiate(createSlotPrefab,createSlotParent);
+                createSlot.GetComponent<CreateSlot>().Init(pair);
             }
         }
     }

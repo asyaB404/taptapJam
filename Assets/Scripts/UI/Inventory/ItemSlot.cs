@@ -32,13 +32,13 @@ namespace UI.Inventory
         }
 
 
-        public void UpdateDisplay(ItemInfo info, int count = 0)
+        public void UpdateDisplay(ItemStack itemStack)
         {
             image.sprite = null;
             itemCount.text = "";
-            if (info == null) return;
-            image.sprite = info.icon;
-            itemCount.text = count.ToString();
+            if (!itemStack?.ItemInfo) return;
+            image.sprite = itemStack.ItemInfo.icon;
+            itemCount.text = itemStack.count.ToString();
         }
     }
 }

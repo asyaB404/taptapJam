@@ -1,3 +1,5 @@
+using System;
+using System.Collections.Generic;
 using UnityEngine;
 
 namespace Core.Items
@@ -46,5 +48,24 @@ namespace Core.Items
                 itemInfo = this.itemInfo
             };
         }
+
+        private sealed class ItemInfoCountNameEqualityComparer : IEqualityComparer<ItemStack>
+        {
+            public bool Equals(ItemStack x, ItemStack y)
+            {
+                if (ReferenceEquals(x, y)) return true;
+                if (ReferenceEquals(x, null)) return false;
+                if (ReferenceEquals(y, null)) return false;
+                if (x.GetType() != y.GetType()) return false;
+                return Equals(x.itemInfo, y.itemInfo) && x.count == y.count && x.name == y.name;
+            }
+
+            public int GetHashCode(ItemStack obj)
+            {
+                return HashCode.Combine(obj.itemInfo, obj.count, obj.name);
+            }
+        }
+
+        public static IEqualityComparer<ItemStack> ItemInfoCountNameComparer { get; } = new ItemInfoCountNameEqualityComparer();
     }
 }

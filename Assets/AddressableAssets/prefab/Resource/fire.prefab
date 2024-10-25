@@ -101,7 +101,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
+  - {fileID: 2100000, guid: 2d7b7a4df4861e54393aa408e34a9ed2, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -145,10 +145,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9a8414777077d664287a930ecba437ad, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  canvas: {fileID: 0}
-  a: 50
+  canInteraction: 0
+  resoureName: 
   ShowBottonOBJ2: {fileID: 4120722826017373967, guid: b06ef3b17916c09408d86c5f0c057c44, type: 3}
-  b: -100
 --- !u!50 &-800832909788664465
 Rigidbody2D:
   serializedVersion: 4

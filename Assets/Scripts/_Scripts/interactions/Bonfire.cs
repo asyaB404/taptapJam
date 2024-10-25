@@ -4,7 +4,7 @@ using Myd.Platform;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class Bonfire : Interaction
+public class Bonfire : ResourceBass
 {
     public GameObject ShowBottonOBJ2;
     protected GameObject showButtonOBJ2;

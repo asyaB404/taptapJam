@@ -32,6 +32,8 @@ namespace Core
             {
                 ResetHotItem(i);
             }
+
+            GamePanel.Instance.UpdateHotItemDisPlay();
         }
 
         private bool ResetHotItem(int id)
@@ -54,16 +56,13 @@ namespace Core
             {
                 hotItemStacks[id] = itemStack;
             }
+            GamePanel.Instance.UpdateHotItemDisPlay();
         }
 
         public bool UseHotItem(int id, int count = 1)
         {
-            TryRemoveItem(hotItemStacks[id]?.ItemInfo.id, count, out var _);
-            if (hotItemStacks[id].count == 0)
-            {
-                hotItemStacks[id] = null;
-            }
-
+            //TODO:写史山
+            GamePanel.Instance.UpdateHotItemDisPlay();
             return true;
         }
 

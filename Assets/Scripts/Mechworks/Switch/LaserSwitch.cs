@@ -1,7 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+//激光充能启动
 public class LaserSwitch : SwitchBass
 {
     public float charge=0;
@@ -13,7 +13,6 @@ public class LaserSwitch : SwitchBass
     protected override void Awake()
     {
         base.Awake();
-        needShow=false;
     }
     protected override void _Interaction(){}
     /// <summary>

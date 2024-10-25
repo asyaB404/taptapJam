@@ -1,11 +1,19 @@
+using Myd.Platform;
 using UI.Inventory;
 using UnityEngine;
+using UnityEngine.UI;
 
 namespace UI.Panel
 {
     public class GamePanel : BasePanel<GamePanel>
     {
         [SerializeField] private ItemSlot[] hotItemSlots;
+        [SerializeField] private Image staminaAmount;
+        [SerializeField] private Image hpImage;
+        private float Hp => Game.Player.GetPlayerHealth();
+        private float Stamina => Game.Player.GetPlayerStamina();
+
+        private float MaxStamina => Constants.playerMaxStamina;
 
         public override void Init()
         {
@@ -16,7 +24,7 @@ namespace UI.Panel
                 itemSlot.id = i;
             }
         }
-        
+
 
         public override void OnPressedEsc()
         {
@@ -26,10 +34,13 @@ namespace UI.Panel
 
         public void UpdateStaminaDisPlay()
         {
+            staminaAmount.fillAmount = Stamina / MaxStamina;
         }
 
         public void UpdateHealthDisPlay()
         {
+            float height = hpImage.rectTransform.sizeDelta.y;
+            hpImage.rectTransform.sizeDelta = new Vector2(100 * Hp, height);
         }
 
         public void UpdateHotItemDisPlay()

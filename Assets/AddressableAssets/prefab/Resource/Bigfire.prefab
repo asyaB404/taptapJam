@@ -101,7 +101,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
+  - {fileID: 2100000, guid: 2d7b7a4df4861e54393aa408e34a9ed2, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -172,8 +172,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 18fa1ac86fbca5143bb4572adfa7ea42, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  canvas: {fileID: 0}
-  a: 100
+  canInteraction: 0
+  resoureName: 
   ShowBottonOBJ2: {fileID: 4120722826017373967, guid: b06ef3b17916c09408d86c5f0c057c44, type: 3}
   skillType: UnlockLaser
 --- !u!95 &7200011227111146494

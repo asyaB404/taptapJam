@@ -2,6 +2,7 @@
 using Myd.Platform.Core;
 using System;
 using cfg;
+using UI.Panel;
 using UnityEngine;
 using Object = UnityEngine.Object;
 
@@ -48,15 +49,22 @@ namespace Myd.Platform
         public float PlayerHealth
         {
             get => playerHealth;
-            set => playerHealth = Mathf.Clamp(value, 0, this.playerMaxHealth);
+            set
+            {
+                playerHealth = Mathf.Clamp(value, 0, this.playerMaxHealth);
+                if(GamePanel.Instance && GamePanel.Instance.IsInStack) GamePanel.Instance.UpdateHealthDisPlay();
+            }
         }
-        
+
         public float PlayerStamina
         {
             get => playerStamina;
-            set => playerStamina = Mathf.Clamp(value, 0, Constants.playerMaxStamina);
-        } 
-        
+            set
+            {
+                playerStamina = Mathf.Clamp(value, 0, Constants.playerMaxStamina);
+                if(GamePanel.Instance && GamePanel.Instance.IsInStack) GamePanel.Instance.UpdateStaminaDisPlay();
+            }
+        }
 
 
         float varJumpTimer;

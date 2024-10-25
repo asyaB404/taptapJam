@@ -26,9 +26,22 @@ namespace Core
             return hotItemStacks[id];
         }
 
-        public void ResetHotItem(int id)
+        public void ResetAllHotItem()
         {
-            hotItemStacks[id].count = hotItemStacks[id].ItemInfo.maxCount;
+            for (int i = 0; i < hotItemStacks.Count; i++)
+            {
+                ResetHotItem(i);
+            }
+        }
+
+        private bool ResetHotItem(int id)
+        {
+            ItemStack hotItemStack = hotItemStacks[id];
+            if (!hotItemStack?.ItemInfo) return false;
+            ItemInfo itemInfo = hotItemStack.ItemInfo;
+            if (!TryRemoveItem(itemInfo.id, itemInfo.maxCount - hotItemStack.count, out _)) return false;
+            hotItemStack.count = itemInfo.maxCount;
+            return true;
         }
 
         public void SetHotItem(int id, ItemStack itemStack)

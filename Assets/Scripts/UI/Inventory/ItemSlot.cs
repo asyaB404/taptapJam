@@ -11,6 +11,7 @@ namespace UI.Inventory
     {
         public int id = -1;
         [SerializeField] private Image image;
+        [SerializeField] private Sprite nullSprite;
         [SerializeField] private TextMeshProUGUI itemCount;
         public Toggle toggle;
 
@@ -21,7 +22,7 @@ namespace UI.Inventory
 
         public void UpdateDisplayFromInventory(IReadOnlyList<ItemStack> inventory)
         {
-            image.sprite = null;
+            image.sprite = nullSprite;
             itemCount.text = "";
             if (inventory == null) return;
             if (id <= -1 || id >= inventory.Count) return;

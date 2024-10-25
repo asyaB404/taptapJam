@@ -30,6 +30,7 @@ namespace UI.Panel
         private void OnEnable()
         {
             UpdateDisplay();
+            Inventory.ResetAllHotItem();
         }
 
         public override void OnPressedEsc()

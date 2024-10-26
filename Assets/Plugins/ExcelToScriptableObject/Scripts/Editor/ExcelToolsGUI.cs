@@ -168,8 +168,8 @@ namespace Basya
 
             strBuilder.Clear();
             strBuilder.AppendLine("using UnityEngine;");
-            strBuilder.AppendLine("using System.Data;");
             strBuilder.AppendLine("#if UNITY_EDITOR");
+            strBuilder.AppendLine("using System.Data;");
             strBuilder.AppendLine("using UnityEditor;");
             strBuilder.AppendLine("#endif");
             strBuilder.AppendLine();

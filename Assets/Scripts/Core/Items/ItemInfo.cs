@@ -1,6 +1,8 @@
-using System.Data;
 using UnityEngine;
+#if UNITY_EDITOR
+using System.Data;
 using UnityEditor;
+#endif
 
 namespace Core.Items
 {
@@ -35,7 +37,7 @@ namespace Core.Items
         /// </summary>
         [Tooltip("在快捷栏中的最大数量，不可使用的物品请忽略")] public int maxCount;
 
-
+#if UNITY_EDITOR
         public override void Init(DataRow row)
         {
             id = row[0].ToString();
@@ -44,5 +46,6 @@ namespace Core.Items
             maxCount = int.Parse(row[3].ToString());
             icon = AssetDatabase.LoadAssetAtPath<Sprite>(row[4].ToString().Trim());
         }
+#endif
     }
 }

@@ -150,9 +150,10 @@ namespace Basya
                 tableConllection = excelReader.AsDataSet().Tables;
                 fs.Close();
                 excelReader.Close();
+                string fileName = Path.GetFileNameWithoutExtension(file.Name);
                 foreach (DataTable table in tableConllection)
                 {
-                    GenerateSObjClass(table, sobjPath, file.Name[..^5]);
+                    GenerateSObjClass(table, sobjPath, fileName);
                 }
             }
 
@@ -385,10 +386,11 @@ namespace Basya
                 tableConllection = excelReader.AsDataSet().Tables;
                 fs.Close();
                 excelReader.Close();
+                string fileName = Path.GetFileNameWithoutExtension(file.Name);
                 foreach (DataTable table in tableConllection)
                 {
-                    GenerateSObjClass1(table, sobjPath, file.Name[..^5]);
-                    GenerateSObjInfoClass(table, infoclassPath, file.Name[..^5]);
+                    GenerateSObjClass1(table, sobjPath, fileName);
+                    GenerateSObjInfoClass(table, infoclassPath, fileName);
                 }
             }
 

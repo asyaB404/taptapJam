@@ -118,7 +118,7 @@ namespace Basya
             GUILayout.Space(20);
             if (GUILayout.Button("创建SOBJ"))
             {
-                SpawnSOBJ();
+                SpawnSObj();
             }
 
             GUILayout.Space(10);
@@ -131,7 +131,7 @@ namespace Basya
             }
         }
 
-        private void SpawnSOBJ()
+        private void SpawnSObj()
         {
             DirectoryInfo dInfo = Directory.CreateDirectory(
                 Application.dataPath + "/" + localExcelPath
@@ -174,14 +174,15 @@ namespace Basya
             strBuilder.AppendLine("using UnityEditor;");
             strBuilder.AppendLine("#endif");
             strBuilder.AppendLine();
-            strBuilder.AppendLine($"namespace {fileName} {{");
+            strBuilder.AppendLine($"namespace {fileName} ");
+            strBuilder.AppendLine("{");
             strBuilder.AppendLine(
                 $"\t[CreateAssetMenu(fileName = \"{table.TableName}\", menuName = \"ScriptableObject/{table.TableName}\")]");
             strBuilder.AppendLine($"\tpublic class {table.TableName} : ExcelableScriptableObject");
             strBuilder.AppendLine("\t{");
 
             GenerateField(table, rowName, rowType);
-            GenerateInitMethod(table, rowName, rowType);
+            GenerateInitMethod(table, rowName, rowType, true);
 
             strBuilder.AppendLine("\t}");
             strBuilder.AppendLine("}");
@@ -204,11 +205,13 @@ namespace Basya
             }
         }
 
-        private void GenerateInitMethod(DataTable table, DataRow rowName, DataRow rowType)
+        private void GenerateInitMethod(DataTable table, DataRow rowName, DataRow rowType, bool isOverride)
         {
             strBuilder.AppendLine();
             strBuilder.AppendLine("#if UNITY_EDITOR");
-            strBuilder.AppendLine("\t\tpublic override void Init(DataRow row)");
+            strBuilder.AppendLine(isOverride
+                ? "\t\tpublic override void Init(DataRow row)"
+                : "\t\tpublic void Init(DataRow row)");
             strBuilder.AppendLine("\t\t{");
             for (int j = 0; j < table.Columns.Count; j++)
             {
@@ -353,7 +356,7 @@ namespace Basya
             GUILayout.Space(20);
             if (GUILayout.Button("创建SOBJ和自定义信息类"))
             {
-                SpawnSOBJAndInfoClass();
+                SpawnSObjAndInfoClass();
             }
 
             GUILayout.Space(10);
@@ -366,7 +369,7 @@ namespace Basya
             }
         }
 
-        private void SpawnSOBJAndInfoClass()
+        private void SpawnSObjAndInfoClass()
         {
             DirectoryInfo dInfo = Directory.CreateDirectory(
                 Application.dataPath + "/" + localExcelPath1
@@ -386,7 +389,7 @@ namespace Basya
                 tableConllection = excelReader.AsDataSet().Tables;
                 fs.Close();
                 excelReader.Close();
-                string fileName = Path.GetFileNameWithoutExtension(file.Name);
+                string fileName = Path.GetFileNameWithoutExtension(file.Name + "List");
                 foreach (DataTable table in tableConllection)
                 {
                     GenerateSObjClass1(table, sobjPath, fileName);
@@ -401,7 +404,7 @@ namespace Basya
         {
             if (!Directory.Exists(sobjPath))
                 Directory.CreateDirectory(sobjPath);
-
+            string className = table.TableName + "List";
             strBuilder.Clear();
             strBuilder.AppendLine("using System.Collections.Generic;");
             strBuilder.AppendLine("using UnityEngine;");
@@ -409,22 +412,22 @@ namespace Basya
             strBuilder.AppendLine($"namespace {namespaceName}");
             strBuilder.AppendLine("{");
             strBuilder.AppendLine(
-                $"\t[CreateAssetMenu(fileName = \"{table.TableName}\", menuName = \"ScriptableObject/{table.TableName}\")]");
-            strBuilder.AppendLine($"\tpublic class {table.TableName}List : ExcelableScriptableObject");
+                $"\t[CreateAssetMenu(fileName = \"{className}\", menuName = \"ScriptableObject/{table.TableName}\")]");
+            strBuilder.AppendLine($"\tpublic class {className} : ExcelableScriptableObject");
             strBuilder.AppendLine("\t{");
-            strBuilder.AppendLine($"\t\tpublic List<{table.TableName}InfoClass> list = new();");
+            strBuilder.AppendLine($"\t\tpublic List<{className}InfoClass> list = new();");
             strBuilder.AppendLine();
             strBuilder.AppendLine("\t\tpublic override void Init(object[] objects)");
             strBuilder.AppendLine("\t\t{");
             strBuilder.AppendLine("\t\t\tforeach (var obj in objects)");
             strBuilder.AppendLine("\t\t\t{");
-            strBuilder.AppendLine($"\t\t\t\tvar obj1 = obj as {table.TableName}InfoClass;");
+            strBuilder.AppendLine($"\t\t\t\tvar obj1 = obj as {className}InfoClass;");
             strBuilder.AppendLine("\t\t\t\tlist.Add(obj1);");
             strBuilder.AppendLine("\t\t\t}");
             strBuilder.AppendLine("\t\t}");
             strBuilder.AppendLine("\t}");
             strBuilder.AppendLine("}"); // 关闭命名空间
-            File.WriteAllText(Path.Combine(sobjPath, $"{table.TableName}.cs"), strBuilder.ToString());
+            File.WriteAllText(Path.Combine(sobjPath, $"{className}.cs"), strBuilder.ToString());
             AssetDatabase.Refresh();
         }
 
@@ -432,7 +435,7 @@ namespace Basya
         {
             DataRow rowName = table.Rows[0];
             DataRow rowType = table.Rows[1];
-            string className = table.TableName + "InfoClass";
+            string className = table.TableName + "ListInfoClass";
 
             if (!Directory.Exists(infoClassPath))
                 Directory.CreateDirectory(infoClassPath);
@@ -451,9 +454,8 @@ namespace Basya
             strBuilder.AppendLine("\t{");
 
             GenerateField(table, rowName, rowType);
-            GenerateInitMethod(table, rowName, rowType);
+            GenerateInitMethod(table, rowName, rowType, false);
 
-            strBuilder.AppendLine("\t\t}");
             strBuilder.AppendLine("\t}");
             strBuilder.AppendLine("}"); // 关闭命名空间
             File.WriteAllText(Path.Combine(infoClassPath, $"{className}.cs"), strBuilder.ToString());
@@ -469,31 +471,33 @@ namespace Basya
             DataTableCollection tableConllection;
             for (int i = 0; i < files.Length; i++)
             {
-                if (files[i].Extension != ".xlsx" && files[i].Extension != ".xls")
+                var file = files[i];
+                if (file.Extension != ".xlsx" && file.Extension != ".xls")
                     continue;
-                using FileStream fs = files[i].Open(FileMode.Open, FileAccess.Read);
+                using FileStream fs = file.Open(FileMode.Open, FileAccess.Read);
                 IExcelDataReader excelReader = ExcelReaderFactory.CreateOpenXmlReader(fs);
                 tableConllection = excelReader.AsDataSet().Tables;
                 fs.Close();
                 excelReader.Close();
                 foreach (DataTable table in tableConllection)
                 {
-                    GenerateAsset1(table);
+                    GenerateAsset1(table, Path.GetFileNameWithoutExtension(file.Name));
                 }
             }
 
             AssetDatabase.Refresh();
         }
 
-        private void GenerateAsset1(DataTable table)
+        private void GenerateAsset1(DataTable table, string nameSpace)
         {
             string assetPath = Application.dataPath + "/" + localAssetsPath1;
             if (!Directory.Exists(assetPath))
                 Directory.CreateDirectory(assetPath);
 
-            ScriptableObject obj = ScriptableObject.CreateInstance(table.TableName);
+            var listClassName = table.TableName + "List";
+            ScriptableObject obj = ScriptableObject.CreateInstance(listClassName);
 
-            string className = table.TableName + "InfoClass";
+            string className = nameSpace + "." + listClassName + "InfoClass";
             Type type = Type.GetType(className + ", Assembly-CSharp");
             DataRow row;
             object infoObj;
@@ -510,7 +514,7 @@ namespace Basya
             asset.Init(objects);
             AssetDatabase.CreateAsset(
                 asset,
-                "Assets/" + localAssetsPath1 + "/" + table.TableName + ".asset"
+                "Assets/" + localAssetsPath1 + "/" + listClassName + ".asset"
             );
             AssetDatabase.Refresh();
         }

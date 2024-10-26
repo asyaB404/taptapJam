@@ -83,28 +83,28 @@ namespace Myd.Platform
            
             
             //Climb
-            if (GameInput.Grab.Checked() && !ctx.Ducking)
-            {
-                //Climbing
-                if (ctx.Speed.y <= 0 && Math.Sign(ctx.Speed.x) != -(int)ctx.Facing)
-                {
-                    if (ctx.ClimbCheck((int)ctx.Facing))
-                    {
-                        ctx.Ducking = false;
-                        return EActionState.Climb;
-                    }
-                    //非下坠情况，需要考虑向上攀爬吸附
-                    if (ctx.MoveY > -1)
-                    {
-                        bool snapped = ctx.ClimbUpSnap();
-                        if (snapped)
-                        {
-                            ctx.Ducking = false;
-                            return EActionState.Climb;
-                        }
-                    }
-                }
-            }
+            // if (GameInput.Grab.Checked() && !ctx.Ducking)
+            // {
+            //     //Climbing
+            //     if (ctx.Speed.y <= 0 && Math.Sign(ctx.Speed.x) != -(int)ctx.Facing)
+            //     {
+            //         if (ctx.ClimbCheck((int)ctx.Facing))
+            //         {
+            //             ctx.Ducking = false;
+            //             return EActionState.Climb;
+            //         }
+            //         //非下坠情况，需要考虑向上攀爬吸附
+            //         if (ctx.MoveY > -1)
+            //         {
+            //             bool snapped = ctx.ClimbUpSnap();
+            //             if (snapped)
+            //             {
+            //                 ctx.Ducking = false;
+            //                 return EActionState.Climb;
+            //             }
+            //         }
+            //     }
+            // }
 
             //Dashing
             if (this.ctx.CanDash)

@@ -10,6 +10,7 @@ public class SwitchBass : Interaction
         base.Awake();
     }
     public virtual void Unlock(){
+        Debug.Log("解锁成功");
         if(mechworks)mechworks.Activate();
     }
     public virtual void Unlock(bool flag){

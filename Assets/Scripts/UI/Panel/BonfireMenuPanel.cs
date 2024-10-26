@@ -36,11 +36,13 @@ namespace UI.Panel
             {
                 case 0:
                 //TODO:休息
+                    AudioMgr.PlaySound(cfg.EnumAudioClip.主角受击);
+                    break;
                 case 1:
                     CreateMenuPanel.Instance.ShowMe(false);
                     break;
                 case 2:
-                    //TODO 保存
+                    SaveMgr.Instance.Save();
                     break;
                 case 3:
                     HideMe();

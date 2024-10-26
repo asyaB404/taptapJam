@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class MoveMechworksPro : MoveMechworks
 {
-    bool flag=false;
+    public bool flag=false;
     public override void Update()
     {if(flag){
         base.Update();}

@@ -21,6 +21,7 @@ TagManager:
   - LaserUnlocker
   - bullet
   - LaserSwitch
+  - Move Plate
   layers:
   - Default
   - TransparentFX
@@ -49,7 +50,7 @@ TagManager:
   - DarkObject
   - SaveArea
   - LaserSwitch
-  - 
+  - Bullet
   - 
   - 
   - 

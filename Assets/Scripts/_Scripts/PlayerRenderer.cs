@@ -46,7 +46,6 @@ namespace Myd.Platform
         private void Start()
         {
             _animator = GetComponentInChildren<Animator>();
-            Debug.Log("获取动画状态机： " + _animator!=null);
             
             EventMgr.RegisterEvent(EventTypes.PlayJumpAni, PlayJumpAni);
             EventMgr.RegisterEvent(EventTypes.PlayDashAni, PlayDashAni);
@@ -181,14 +180,12 @@ namespace Myd.Platform
         
         private object PlayJumpAni(object[] arg)
         {
-            Debug.Log("Jump");
             SetAnimator("PlayerJump");
             return null;
         }
         
         private object PlayRunAni(object[] arg)
         {
-            Debug.Log("Run");
             SetAnimator("PlayerRun");
             return null;
         }
@@ -201,7 +198,6 @@ namespace Myd.Platform
 
         private object PlayDashAni(object[] arg)
         {
-            Debug.Log("Dash");
             SetAnimator("PlayerDash");
             return null;
         }

@@ -72,9 +72,12 @@ namespace Laser
             int remainReflect = 3; // 剩余的反射次数
             float remainRange = _range; // 剩余的射程
             RaycastHit2D hit2D;
+            
+            // RaycastHit2D swithHit;
             Vector2 shootPos = startPos; // 当前射击点
             while (remainReflect >= 0 && remainRange > 0)
             {
+                // swithHit=Physics2D.Raycast(shootPos, direction, remainRange, LayerMask.GetMask("LaserSwitch"));
                 hit2D = Physics2D.Raycast(shootPos, direction, remainRange, LayerMask.GetMask("Ground", "DarkObject"));
                 if (hit2D.collider != null)
                 {

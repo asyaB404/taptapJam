@@ -629,7 +629,6 @@ namespace Myd.Platform
         // Dash锁定相关
         private object LockDash(object[] args)
         {
-            Debug.Log("Dash Locked");
             dashUnlocked = false;
             return null;
         }
@@ -638,14 +637,12 @@ namespace Myd.Platform
         
         private object UnlockLaser(object[] args)
         {
-            Debug.Log("Laser Unlocked");
             laserUnlocked = true;
             return null;
         }
         // 右键激光锁定相关
         private object LockLaser(object[] args)
         {
-            Debug.Log("Laser Locked");
             laserUnlocked = false;
             return null;
         }

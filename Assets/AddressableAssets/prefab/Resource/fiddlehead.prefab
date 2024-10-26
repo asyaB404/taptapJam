@@ -146,6 +146,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   canInteraction: 0
   resoureName: fiddlehead
+  colliderStr: 
 --- !u!50 &4475827204023231747
 Rigidbody2D:
   serializedVersion: 4

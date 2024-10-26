@@ -15,16 +15,88 @@ MonoBehaviour:
   m_GroupName: Assets-AddressableAssets-GameRes-Audios-Sounds
   m_Data:
     m_SerializedData: []
-  m_GUID: 6b9987368e361514e9874a3ff107c6e7
+  m_GUID: 9832a6579401acb4da7af15aa6a0678e
   m_SerializeEntries:
-  - m_GUID: c4fa8a7a7409ffd4eb2526f806522f22
-    m_Address: "Assets/AddressableAssets/GameRes/Audios/Sounds/\u4E3B\u89D2\u53D7\u51FB.wav"
+  - m_GUID: 1c0cec1d69522a644b3f6657da82a758
+    m_Address: "Assets/AddressableAssets/GameRes/Audios/Sounds/\u4F11\u606F.wav"
     m_ReadOnly: 0
     m_SerializedLabels:
     - Assets-AddressableAssets-GameRes-Audios-Sounds
     FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: 0ad172f9a5e459f4482ee7eb4ef9a49c
-    m_Address: "Assets/AddressableAssets/GameRes/Audios/Sounds/\u4E3B\u89D2\u79FB\u52A8.wav"
+  - m_GUID: 73bcdbe2ffa65f84ab9723be77c5a79d
+    m_Address: "Assets/AddressableAssets/GameRes/Audios/Sounds/\u4F7F\u7528\u7269\u54C1.wav"
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Assets-AddressableAssets-GameRes-Audios-Sounds
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 98ddbdd70fce52845b9b5595f5847f55
+    m_Address: "Assets/AddressableAssets/GameRes/Audios/Sounds/\u5173\u95EDEsc\u754C\u9762.wav"
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Assets-AddressableAssets-GameRes-Audios-Sounds
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 6a60c24a99a00864b92268a6f1ec64b8
+    m_Address: "Assets/AddressableAssets/GameRes/Audios/Sounds/\u5207\u6362Esc\u754C\u9762\u680F.wav"
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Assets-AddressableAssets-GameRes-Audios-Sounds
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: ca28e22913cee8b49939f2f46168c2cd
+    m_Address: "Assets/AddressableAssets/GameRes/Audios/Sounds/\u5207\u6362\u7269\u54C1\u4F4D\u7F6E.wav"
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Assets-AddressableAssets-GameRes-Audios-Sounds
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 6b7da93fbc0954845be9ecdb1dc2bb57
+    m_Address: "Assets/AddressableAssets/GameRes/Audios/Sounds/\u53D7\u51FB.wav"
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Assets-AddressableAssets-GameRes-Audios-Sounds
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 0a47fab5a87937b44846ae6aa618eaaf
+    m_Address: "Assets/AddressableAssets/GameRes/Audios/Sounds/\u5B58\u6863\u6210\u529F.wav"
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Assets-AddressableAssets-GameRes-Audios-Sounds
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 810e2240d9c18324a99b18ff73ab0eca
+    m_Address: "Assets/AddressableAssets/GameRes/Audios/Sounds/\u5F00\u95E8.wav"
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Assets-AddressableAssets-GameRes-Audios-Sounds
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: c6f9051a1ab0a8041ab59a0c975bd6f1
+    m_Address: "Assets/AddressableAssets/GameRes/Audios/Sounds/\u6253\u5F00Esc\u754C\u9762.wav"
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Assets-AddressableAssets-GameRes-Audios-Sounds
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 778d0884a2206bf449a6e92c22648b29
+    m_Address: "Assets/AddressableAssets/GameRes/Audios/Sounds/\u666E\u901A\u70B9\u51FB.wav"
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Assets-AddressableAssets-GameRes-Audios-Sounds
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 6641ac2896cc33a479faefabe6d7827f
+    m_Address: "Assets/AddressableAssets/GameRes/Audios/Sounds/\u706B\u5806\u754C\u9762.wav"
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Assets-AddressableAssets-GameRes-Audios-Sounds
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 98bafc0c49bb91d4dacdc330fca64ed9
+    m_Address: "Assets/AddressableAssets/GameRes/Audios/Sounds/\u884C\u8D70.wav"
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Assets-AddressableAssets-GameRes-Audios-Sounds
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 8742c7afc1c732b4c9a5b10c556fd722
+    m_Address: "Assets/AddressableAssets/GameRes/Audios/Sounds/\u8DF3\u8DC3.wav"
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Assets-AddressableAssets-GameRes-Audios-Sounds
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 305827691144bc740b98664902e18546
+    m_Address: "Assets/AddressableAssets/GameRes/Audios/Sounds/\u91C7\u6458.wav"
     m_ReadOnly: 0
     m_SerializedLabels:
     - Assets-AddressableAssets-GameRes-Audios-Sounds

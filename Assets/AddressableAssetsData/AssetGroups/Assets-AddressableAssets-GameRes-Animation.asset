@@ -15,7 +15,7 @@ MonoBehaviour:
   m_GroupName: Assets-AddressableAssets-GameRes-Animation
   m_Data:
     m_SerializedData: []
-  m_GUID: 01ba382fbd1beef409e6300db071c915
+  m_GUID: 0bf3224c55845f94898b020ca453f0f2
   m_SerializeEntries:
   - m_GUID: 19eabdc5659ef8548974a1e7ed609b7a
     m_Address: Assets/AddressableAssets/GameRes/Animation/PlayerDash.anim

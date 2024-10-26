@@ -26,14 +26,14 @@ public class SaveMgr : Singleton<SaveMgr>
     /// </summary>
     public void Save()
     {
-        Debug.Log("save");
         ResourceMgr.Instance.Resource();
         ResourceMgr.Instance.QuickResource(); //刷新
 
         FirePosition = BonfireBuild.littleFire != null
             ? BonfireBuild.littleFire.transform.position
             : new(0, 0, -100); //获取具体信息
-        notRefreshObjs = ResourceMgr.Instance.NotRefreshObjsSave();
+
+
         Health = Game.Player.GetPlayerHealth();
         Stamin = Game.Player.GetPlayerStamina();
         laserUnlocked = (bool)EventMgr.ExecuteEvent("GetlaserUnlocked");
@@ -47,16 +47,21 @@ public class SaveMgr : Singleton<SaveMgr>
 
         ES3.Save("SettingData", SettingData);
         ES3.Save("FirePosition", FirePosition);
-        ES3.Save("NotRefreshObjs", notRefreshObjs);
         ES3.Save("Health", Health);
         ES3.Save("Stamin", Stamin);
         ES3.Save("GetlaserUnlocked", laserUnlocked);
-        // Debug.Log(ES3.Load("GetlaserUnlocked"));
 
         ES3.Save("GetdashUnlocked", dashUnlocked);
         ES3.Save("playerPosition", playerPosition);
 
         ES3.Save("inventoryItemStacks", inventoryItemStacks);
+            AudioMgr.PlaySound(cfg.EnumAudioClip.主角受击);
+
+    }
+    public void Save(int id){
+        notRefreshObjs = ResourceMgr.Instance.NotRefreshObjsSave();
+        ES3.Save("NotRefreshObjs"+id, notRefreshObjs);
+
     }
 
     /// <summary>
@@ -68,27 +73,37 @@ public class SaveMgr : Singleton<SaveMgr>
         ResourceMgr.Instance.Resource();
         ResourceMgr.Instance.QuickResource();
         // BonfireBuild.BuildFire();
-        if (ES3.KeyExists("SettingData")) SettingData = ES3.Load<SettingData>("SettingData");
+        LoadPlayer();
         if (FirePosition.z != -100 && ES3.KeyExists("FirePosition")) FirePosition = ES3.Load<Vector3>("FirePosition");
-        if (ES3.KeyExists("NotRefreshObjs")) notRefreshObjs = ES3.Load<List<bool>>("NotRefreshObjs");
+        
+       
+        if (ES3.KeyExists("playerPosition")) playerPosition = ES3.Load<Vector2>("playerPosition");
+        
+
+        if (FirePosition.z != -100) BonfireBuild.BuildFire(FirePosition);
+        
+        
+        if (playerPosition.x > -1000000) Game.Player.SetPlayerPosition(playerPosition);
+        
+    }
+    public void Load(int id){
+        if (ES3.KeyExists("NotRefreshObjs"+id)) notRefreshObjs = ES3.Load<List<bool>>("NotRefreshObjs"+id);
+        ResourceMgr.Instance.NotRefreshObjsResource(notRefreshObjs);
+    }
+    public void LoadPlayer(){
+        if (ES3.KeyExists("SettingData")) SettingData = ES3.Load<SettingData>("SettingData");
         if (ES3.KeyExists("Health")) Health = ES3.Load<float>("Health");
         if (ES3.KeyExists("Stamin")) Stamin = ES3.Load<float>("Stamin");
         if (ES3.KeyExists("GetdashUnlocked")) dashUnlocked = ES3.Load<bool>("GetdashUnlocked");
         if (ES3.KeyExists("GetlaserUnlocked")) laserUnlocked = ES3.Load<bool>("GetlaserUnlocked");
-        if (ES3.KeyExists("playerPosition")) playerPosition = ES3.Load<Vector2>("playerPosition");
         if (ES3.KeyExists("inventoryItemStacks"))
             inventoryItemStacks = ES3.Load<Dictionary<string, int>>("inventoryItemStacks");
-
-        if (FirePosition.z != -100) BonfireBuild.BuildFire(FirePosition);
-        Debug.Log(notRefreshObjs.Count);
-        ResourceMgr.Instance.NotRefreshObjsResource(notRefreshObjs);
         Game.Player.SetPlayerHealth(Health);
         Game.Player.SetPlayerStamina(Stamin);
         if (dashUnlocked) EventMgr.ExecuteEvent(EventTypes.UnlockDash);
         else EventMgr.ExecuteEvent(EventTypes.LockDash);
         if (laserUnlocked) EventMgr.ExecuteEvent(EventTypes.UnlockLaser);
         else EventMgr.ExecuteEvent(EventTypes.LockLaser);
-        if (playerPosition.x > -1000000) Game.Player.SetPlayerPosition(playerPosition);
         TestForInventory.Inventory.Clear();
         if (inventoryItemStacks != null)
             foreach (string str in inventoryItemStacks.Keys)
@@ -96,15 +111,24 @@ public class SaveMgr : Singleton<SaveMgr>
                 Debug.Log(str);
                 TestForInventory.Inventory.AddItem(new(str, inventoryItemStacks[str]));
             }
-    }
 
+    }
+    public void SceneChangeClear(){
+        ES3.DeleteFile("playerPosition");
+        playerPosition = new(-int.MaxValue, -int.MaxValue);
+        ES3.Save("playerPosition", playerPosition);
+
+        ES3.DeleteFile("FirePosition");
+        FirePosition = new(0, 0, -100);
+        ES3.Save("FirePosition", FirePosition);
+
+    }
     public void Clear()
     {
         ES3.DeleteFile("SettingData");
         SettingData = new() { Current = new SettingData.Data() };
         ES3.Save("SettingData", SettingData);
-        ES3.DeleteFile("FirePosition");
-        FirePosition = new(0, 0, -100);
+        
         ES3.DeleteFile("NotRefreshObjs");
         notRefreshObjs = new();
         ES3.DeleteFile("Health");
@@ -115,19 +139,16 @@ public class SaveMgr : Singleton<SaveMgr>
         dashUnlocked = false;
         ES3.DeleteFile("GetlaserUnlocked");
         laserUnlocked = false;
-        ES3.DeleteFile("playerPosition");
-        playerPosition = new(-int.MaxValue, -int.MaxValue);
+        
         ES3.DeleteFile("inventoryItemStacks");
         inventoryItemStacks = null;
 
         ES3.Save("SettingData", SettingData);
-        ES3.Save("FirePosition", FirePosition);
         ES3.Save("NotRefreshObjs", notRefreshObjs);
         ES3.Save("Health", Health);
         ES3.Save("Stamin", Stamin);
         ES3.Save("GetlaserUnlocked", laserUnlocked);
         ES3.Save("GetdashUnlocked", dashUnlocked);
-        ES3.Save("playerPosition", playerPosition);
         ES3.Save("inventoryItemStacks", inventoryItemStacks);
         Debug.Log(laserUnlocked);
         Load();

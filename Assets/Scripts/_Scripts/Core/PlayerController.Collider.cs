@@ -166,7 +166,7 @@ namespace Myd.Platform
         {
             Vector2 origion = this.Position + collider.position + offset;
             RaycastHit2D hit = Physics2D.BoxCast(origion, collider.size, 0, Vector2.down, DEVIATION, GroundMask);
-            if (hit && hit.normal == Vector2.up)
+            if (hit && hit.normal == Vector2.up || hit &&  hit.transform.CompareTag("Move Plate"))
             {
                 return true;
             }

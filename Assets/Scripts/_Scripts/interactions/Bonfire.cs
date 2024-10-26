@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using Myd.Platform;
+using UI.Panel;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -8,6 +9,7 @@ public class Bonfire : ResourceBass
 {
     public GameObject ShowBottonOBJ2;
     protected GameObject showButtonOBJ2;
+    // KeyCode keyCode;
    
     // public float b;
     protected override void Awake()
@@ -17,10 +19,7 @@ public class Bonfire : ResourceBass
     }
     protected override void _Interaction()
     {
-        
-        base._Interaction();
-        // showButtonOBJ.SetActive(false);
-        // SaveMgr.Instance.Save();
+        BonfireMenuPanel.Instance.ShowMe();
     }
     protected override void Update()
     {

@@ -3,12 +3,90 @@
     "EnumName": 2,
     "Volume": 1,
     "CD": 0.35,
-    "Path": "Assets/AddressableAssets/GameRes/Audios/Sounds/主角移动.wav"
+    "Path": "Assets/AddressableAssets/GameRes/Audios/Sounds/行走.wav"
   },
   {
     "EnumName": 3,
     "Volume": 1,
     "CD": 0,
-    "Path": "Assets/AddressableAssets/GameRes/Audios/Sounds/主角受击.wav"
+    "Path": "Assets/AddressableAssets/GameRes/Audios/Sounds/受击.wav"
+  },
+  {
+    "EnumName": 4,
+    "Volume": 1,
+    "CD": 0,
+    "Path": "Assets/AddressableAssets/GameRes/Audios/Sounds/休息.wav"
+  },
+  {
+    "EnumName": 5,
+    "Volume": 1,
+    "CD": 0.1,
+    "Path": "Assets/AddressableAssets/GameRes/Audios/Sounds/使用物品.wav"
+  },
+  {
+    "EnumName": 6,
+    "Volume": 1,
+    "CD": 0.1,
+    "Path": "Assets/AddressableAssets/GameRes/Audios/Sounds/关闭Esc界面.wav"
+  },
+  {
+    "EnumName": 7,
+    "Volume": 1,
+    "CD": 0.1,
+    "Path": "Assets/AddressableAssets/GameRes/Audios/Sounds/切换Esc界面栏.wav"
+  },
+  {
+    "EnumName": 8,
+    "Volume": 1,
+    "CD": 0.1,
+    "Path": "Assets/AddressableAssets/GameRes/Audios/Sounds/切换物品位置.wav"
+  },
+  {
+    "EnumName": 9,
+    "Volume": 1,
+    "CD": 0,
+    "Path": "Assets/AddressableAssets/GameRes/Audios/Sounds/存档成功.wav"
+  },
+  {
+    "EnumName": 10,
+    "Volume": 1,
+    "CD": 0,
+    "Path": "Assets/AddressableAssets/GameRes/Audios/Sounds/开门.wav"
+  },
+  {
+    "EnumName": 11,
+    "Volume": 1,
+    "CD": 0.1,
+    "Path": "Assets/AddressableAssets/GameRes/Audios/Sounds/打开Esc界面.wav"
+  },
+  {
+    "EnumName": 12,
+    "Volume": 1,
+    "CD": 0.1,
+    "Path": "Assets/AddressableAssets/GameRes/Audios/Sounds/普通点击.wav"
+  },
+  {
+    "EnumName": 13,
+    "Volume": 1,
+    "CD": 0.1,
+    "Path": "Assets/AddressableAssets/GameRes/Audios/Sounds/火堆界面.wav"
+  },
+  {
+    "EnumName": 14,
+    "Volume": 1,
+    "CD": 0.1,
+    "Path": "Assets/AddressableAssets/GameRes/Audios/Sounds/行走.wav"
+  },
+  {
+    "EnumName": 15,
+    "Volume": 1,
+    "CD": 0.1,
+    "Path": "Assets/AddressableAssets/GameRes/Audios/Sounds/跳跃.wav"
+  },
+  {
+    "EnumName": 16,
+    "Volume": 1,
+    "CD": 0.1,
+    "Path": "Assets/AddressableAssets/GameRes/Audios/Sounds/采摘.wav"
   }
 ]

@@ -15,14 +15,8 @@ MonoBehaviour:
   m_GroupName: Assets
   m_Data:
     m_SerializedData: []
-  m_GUID: 643c7a683c7a48b499df104ebace3f3d
+  m_GUID: be926dd61d2dcbb4786d539cb311f965
   m_SerializeEntries:
-  - m_GUID: a51f3499792d73c40aa538c9912b4c1e
-    m_Address: Assets/Main_0.unity
-    m_ReadOnly: 0
-    m_SerializedLabels:
-    - Assets
-    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 93b439a37f63240aca3dd4e01d978a9f
     m_Address: Assets/UniversalRenderPipelineGlobalSettings.asset
     m_ReadOnly: 0

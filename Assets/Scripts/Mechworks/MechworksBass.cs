@@ -6,7 +6,10 @@ public class MechworksBass : MonoBehaviour
 {
     protected bool isActivate;
     public virtual void Activate(){}
-    public virtual void Activate(bool flag){}
+    public virtual void Activate(bool flag){
+        Debug.Log(gameObject.name+flag);
+        Activate();
+    }
     public virtual void Update(){}
     public virtual void Awake(){}
 

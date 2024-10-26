@@ -16,7 +16,6 @@ public class MoveMechworks : MechworksBass
     public override void Awake()
     {
         base.Awake();
-        Activate();
         if(transforms==null || transforms.Count==0){
             transforms=new();
             for(int i=0;i<transform.parent.GetChild(0).childCount;i++){

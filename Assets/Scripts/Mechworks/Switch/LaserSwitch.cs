@@ -5,10 +5,12 @@ using UnityEngine;
 public class LaserSwitch : SwitchBass
 {
     public float charge=0;
-    public float backTime=1;
-    public float A=1;
+    private float backTime=1f;
+    private float A=0.2f;
     private float maxCharge=5;
-    private float addCharge=0.1f;
+    private float addCharge=1f;
+    public Color startColor=Color.black;
+    bool over=false;
     Color myColor=Color.red;
     protected override void Awake()
     {
@@ -20,16 +22,21 @@ public class LaserSwitch : SwitchBass
     /// </summary>
     protected override void Update()
     {
+        if(over)return;
         base.Update();;
-        this.GetComponent<SpriteRenderer>().color=myColor*charge/maxCharge;
-        if(backTime>0)backTime-=addCharge;
+        this.GetComponent<SpriteRenderer>().color=Color.Lerp(startColor,myColor,charge/maxCharge);
+        if(backTime>0)backTime-=addCharge*Time.deltaTime;
         if(backTime<0){
-            charge-=addCharge*Time.deltaTime;
+            if(charge>0)charge-=addCharge*Time.deltaTime;
         }
     }
     public void LaserCharge(){
+        Debug.Log("射中了");
         if(charge<=maxCharge)charge+=A*addCharge;
-        if(charge>maxCharge)Unlock(true);
+        if(charge>maxCharge){
+            Unlock(true);
+            over=1==1;
+            }
         backTime=1;
     }
 }

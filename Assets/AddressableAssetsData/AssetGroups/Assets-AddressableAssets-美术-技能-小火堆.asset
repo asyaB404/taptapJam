@@ -15,7 +15,7 @@ MonoBehaviour:
   m_GroupName: "Assets-AddressableAssets-\u7F8E\u672F-\u6280\u80FD-\u5C0F\u706B\u5806"
   m_Data:
     m_SerializedData: []
-  m_GUID: 71ecd306b3e59154c9d3b563ecbdd3d9
+  m_GUID: 6d86d943939e5af468e9bd7e6deeedd7
   m_SerializeEntries:
   - m_GUID: de6e2956dd2b42f49b03ceb4b061d663
     m_Address: "Assets/AddressableAssets/\u7F8E\u672F/\u6280\u80FD/\u5C0F\u706B\u5806/fire.controller"

@@ -15,7 +15,7 @@ MonoBehaviour:
   m_GroupName: Assets-AddressableAssets-GameRes-Prefabs-Mechworks
   m_Data:
     m_SerializedData: []
-  m_GUID: 09240275471ae3149836478462dc78a3
+  m_GUID: b6b0d79d797377c44890fc97ed81e9e8
   m_SerializeEntries:
   - m_GUID: d169bbab85a8b7540847feb2bb72c5a6
     m_Address: Assets/AddressableAssets/GameRes/Prefabs/Mechworks/MoveMechworks.prefab

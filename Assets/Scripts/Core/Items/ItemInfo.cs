@@ -1,6 +1,6 @@
 using System.Data;
-using UnityEditor;
 using UnityEngine;
+using UnityEditor;
 
 namespace Core.Items
 {
@@ -34,7 +34,8 @@ namespace Core.Items
         /// 在快捷栏中的最大数量，不可使用的物品请忽略
         /// </summary>
         [Tooltip("在快捷栏中的最大数量，不可使用的物品请忽略")] public int maxCount;
-        
+
+
         public override void Init(DataRow row)
         {
             id = row[0].ToString();

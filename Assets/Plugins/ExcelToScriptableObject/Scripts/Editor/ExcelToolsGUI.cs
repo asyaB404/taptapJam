@@ -5,7 +5,6 @@ using System.Text;
 using Excel;
 using UnityEditor;
 using UnityEngine;
-using UnityEngine.Events;
 
 namespace Basya
 {
@@ -169,8 +168,10 @@ namespace Basya
 
             strBuilder.Clear();
             strBuilder.AppendLine("using UnityEngine;");
-            strBuilder.AppendLine("using UnityEditor;");
             strBuilder.AppendLine("using System.Data;");
+            strBuilder.AppendLine("#if UNITY_EDITOR");
+            strBuilder.AppendLine("using UnityEditor;");
+            strBuilder.AppendLine("#endif");
             strBuilder.AppendLine();
             strBuilder.AppendLine($"namespace {fileName} {{");
             strBuilder.AppendLine(
@@ -205,6 +206,7 @@ namespace Basya
         private void GenerateInitMethod(DataTable table, DataRow rowName, DataRow rowType)
         {
             strBuilder.AppendLine();
+            strBuilder.AppendLine("#if UNITY_EDITOR");
             strBuilder.AppendLine("\t\tpublic override void Init(DataRow row)");
             strBuilder.AppendLine("\t\t{");
             for (int j = 0; j < table.Columns.Count; j++)
@@ -229,8 +231,9 @@ namespace Basya
                         break;
                 }
             }
-
+        
             strBuilder.AppendLine("\t\t}");
+            strBuilder.AppendLine("#endif");
         }
 
         private void SpawnAsset()
@@ -433,7 +436,9 @@ namespace Basya
 
             strBuilder.Clear();
             strBuilder.AppendLine("using System.Data;");
+            strBuilder.AppendLine("#if UNITY_EDITOR");
             strBuilder.AppendLine("using UnityEditor;");
+            strBuilder.AppendLine("#endif");
             strBuilder.AppendLine();
             strBuilder.AppendLine($"namespace {namespaceName} {{");
             strBuilder.AppendLine("\t[System.Serializable]");

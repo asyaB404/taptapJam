@@ -64,8 +64,8 @@ namespace Core
         public bool UseHotItem(int id)
         {
             var hotItemStack = hotItemStacks[id];
-            if (hotItemStack == null) return false;
             var itemInfo = hotItemStack.ItemInfo;
+            if (itemInfo == null) return false;
             hotItemStack.count -= 1;
             AudioMgr.PlaySound(cfg.EnumAudioClip.使用物品);
             //TODO:堆史山

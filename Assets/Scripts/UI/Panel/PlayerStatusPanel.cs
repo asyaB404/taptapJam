@@ -23,11 +23,6 @@ namespace UI.Panel
             InitializeItemSlots();
         }
 
-        public override void OnPressedEsc()
-        {
-            base.OnPressedEsc();
-        }
-
         public override void CallBack(bool flag)
         {
             transform.DOKill(true);
@@ -55,10 +50,12 @@ namespace UI.Panel
             {
                 panels[index].SetActive(value);
             }
+            if(value) AudioMgr.PlaySound(cfg.EnumAudioClip.切换Esc界面栏);
         }
 
         private void ShowPanel()
         {
+            AudioMgr.PlaySound(cfg.EnumAudioClip.打开Esc界面);
             UpdateInventoryDisplay();
             CanvasGroupInstance.interactable = true;
             gameObject.SetActive(true);
@@ -70,6 +67,7 @@ namespace UI.Panel
 
         private void HidePanel()
         {
+            AudioMgr.PlaySound(cfg.EnumAudioClip.关闭Esc界面);
             CanvasGroupInstance.interactable = false;
             transform.DOLocalMoveX(-Screen.width * 3, UIConst.UIDuration)
                 .OnComplete(() => { gameObject.SetActive(false); });
@@ -101,7 +99,6 @@ namespace UI.Panel
             {
                 ItemSlot itemSlot = hotSlots[i];
                 itemSlot.id = i;
-                itemSlot.toggle.onValueChanged.AddListener(value => OnItemSlotToggleChanged(itemSlot, value));
             }
         }
 
@@ -111,7 +108,7 @@ namespace UI.Panel
             selectedSlotId = itemSlot.id;
             var itemStacks = inventory.GetItemsOrderByTime;
             SetSelectedItem(null);
-
+            AudioMgr.PlaySound(cfg.EnumAudioClip.切换物品位置);
             if (itemSlot.id < 0 || itemSlot.id >= itemStacks.Count) return;
             ItemInfo nowSelectedItemInfo = itemStacks[itemSlot.id].ItemInfo;
             SetSelectedItem(nowSelectedItemInfo);

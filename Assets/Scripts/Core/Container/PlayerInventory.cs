@@ -2,6 +2,7 @@ using System.Collections.Generic;
 using System.Linq;
 using Core.Container;
 using Core.Items;
+using Myd.Platform;
 using UI.Panel;
 using UnityEngine;
 
@@ -56,12 +57,40 @@ namespace Core
             {
                 hotItemStacks[id] = itemStack;
             }
+
             GamePanel.Instance.UpdateHotItemDisPlay();
         }
 
-        public bool UseHotItem(int id, int count = 1)
+        public bool UseHotItem(int id)
         {
-            //TODO:写史山
+            var hotItemStack = hotItemStacks[id];
+            if (hotItemStack == null) return false;
+            var itemInfo = hotItemStack.ItemInfo;
+            hotItemStack.count -= 1;
+            //TODO:堆史山
+            switch (itemInfo.id)
+            {
+                case "PR10001":
+                    Game.Player.SetPlayerHealth(1);
+                    break;
+                case "PR10002":
+                    Game.Player.SetPlayerStamina(1);
+                    break;
+                case "UR10001":
+                    Game.Player.SetPlayerHealth(2);
+                    break;
+                case "UR10002":
+                    Game.Player.SetPlayerStamina(2);
+                    break;
+                case "UR10003":
+                    Game.Player.SetPlayerStamina(-1);
+                    Game.Player.SetPlayerHealth(2);
+                    break;
+                default:
+                    Debug.Log(itemInfo.id + "是什么");
+                    break;
+            }
+
             GamePanel.Instance.UpdateHotItemDisPlay();
             return true;
         }

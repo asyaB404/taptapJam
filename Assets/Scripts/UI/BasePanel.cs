@@ -176,6 +176,7 @@ namespace UI
         /// <param name="btnName">这个按钮的GameObject的名称</param>
         protected virtual void OnClick(string btnName)
         {
+            AudioMgr.PlaySound(cfg.EnumAudioClip.普通点击);
         }
 
         /// <summary>

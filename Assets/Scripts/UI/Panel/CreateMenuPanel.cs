@@ -64,6 +64,7 @@ namespace UI.Panel
         private void OnItemSlotToggleChanged(ItemSlot itemSlot, bool value)
         {
             if (!value) return;
+            AudioMgr.PlaySound(cfg.EnumAudioClip.普通点击);
             int itemSlotId = itemSlot.id;
             var itemStacks = Inventory.GetItemsOrderByTime;
             if (itemSlotId < 0 || itemSlotId >= itemStacks.Count) return;
@@ -97,6 +98,7 @@ namespace UI.Panel
         private void OnHotSlotToggleChanged(ItemSlot itemSlot, bool value)
         {
             if (!value) return;
+            AudioMgr.PlaySound(cfg.EnumAudioClip.切换物品位置);
             selectedHotSlot = itemSlot;
             if (!SelectHotItemPanel.Instance.IsInStack && BonfireMenuPanel.Instance.IsInStack)
                 SelectHotItemPanel.Instance.ShowMe(false);

@@ -108,7 +108,7 @@ namespace UI.Panel
             selectedSlotId = itemSlot.id;
             var itemStacks = inventory.GetItemsOrderByTime;
             SetSelectedItem(null);
-            AudioMgr.PlaySound(cfg.EnumAudioClip.切换物品位置);
+            AudioMgr.PlaySound(cfg.EnumAudioClip.普通点击);
             if (itemSlot.id < 0 || itemSlot.id >= itemStacks.Count) return;
             ItemInfo nowSelectedItemInfo = itemStacks[itemSlot.id].ItemInfo;
             SetSelectedItem(nowSelectedItemInfo);

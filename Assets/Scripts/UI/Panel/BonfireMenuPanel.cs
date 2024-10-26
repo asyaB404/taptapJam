@@ -7,6 +7,7 @@
 // //   (___)___)                        @Copyright  Copyright (c) 2024, Basya
 // // ********************************************************************************************
 
+using System;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -28,15 +29,20 @@ namespace UI.Panel
             }
         }
 
+        private void OnEnable()
+        {
+            AudioMgr.PlaySound(cfg.EnumAudioClip.火堆界面);
+        }
+
         private void OnToggleChanged(int index, bool value)
         {
             if (!value) return;
             Debug.Log("点击了" + index);
+            AudioMgr.PlaySound(cfg.EnumAudioClip.普通点击);
             switch (index)
             {
                 case 0:
-                //TODO:休息
-                    AudioMgr.PlaySound(cfg.EnumAudioClip.主角受击);
+                    AudioMgr.PlaySound(cfg.EnumAudioClip.主角休息);
                     break;
                 case 1:
                     CreateMenuPanel.Instance.ShowMe(false);

@@ -67,6 +67,7 @@ namespace Core
             if (hotItemStack == null) return false;
             var itemInfo = hotItemStack.ItemInfo;
             hotItemStack.count -= 1;
+            AudioMgr.PlaySound(cfg.EnumAudioClip.使用物品);
             //TODO:堆史山
             switch (itemInfo.id)
             {

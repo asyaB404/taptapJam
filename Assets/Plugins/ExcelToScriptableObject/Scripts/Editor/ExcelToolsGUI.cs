@@ -232,7 +232,7 @@ namespace Basya
                         break;
                 }
             }
-        
+
             strBuilder.AppendLine("\t\t}");
             strBuilder.AppendLine("#endif");
         }
@@ -406,10 +406,11 @@ namespace Basya
             strBuilder.AppendLine("using System.Collections.Generic;");
             strBuilder.AppendLine("using UnityEngine;");
             strBuilder.AppendLine();
-            strBuilder.AppendLine($"namespace {namespaceName} {{");
+            strBuilder.AppendLine($"namespace {namespaceName}");
+            strBuilder.AppendLine("{");
             strBuilder.AppendLine(
                 $"\t[CreateAssetMenu(fileName = \"{table.TableName}\", menuName = \"ScriptableObject/{table.TableName}\")]");
-            strBuilder.AppendLine($"\tpublic class {table.TableName} : ExcelableScriptableObject");
+            strBuilder.AppendLine($"\tpublic class {table.TableName}List : ExcelableScriptableObject");
             strBuilder.AppendLine("\t{");
             strBuilder.AppendLine($"\t\tpublic List<{table.TableName}InfoClass> list = new();");
             strBuilder.AppendLine();
@@ -437,12 +438,14 @@ namespace Basya
                 Directory.CreateDirectory(infoClassPath);
 
             strBuilder.Clear();
-            strBuilder.AppendLine("using System.Data;");
+            strBuilder.AppendLine("using UnityEngine;");
             strBuilder.AppendLine("#if UNITY_EDITOR");
+            strBuilder.AppendLine("using System.Data;");
             strBuilder.AppendLine("using UnityEditor;");
             strBuilder.AppendLine("#endif");
             strBuilder.AppendLine();
-            strBuilder.AppendLine($"namespace {namespaceName} {{");
+            strBuilder.AppendLine($"namespace {namespaceName}");
+            strBuilder.AppendLine("{");
             strBuilder.AppendLine("\t[System.Serializable]");
             strBuilder.AppendLine($"\tpublic class {className}");
             strBuilder.AppendLine("\t{");

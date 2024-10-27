@@ -1,6 +1,7 @@
 using System.Collections.Generic;
 using UI.Panel;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 namespace UI
 {
@@ -12,7 +13,18 @@ namespace UI
 
         private void Start()
         {
-            GamePanel.Instance.ShowMe();
+            string sceneName = SceneManager.GetActiveScene().name;
+            switch (sceneName)
+            {
+                case "Start":
+                    StartGamePanel.Instance.ShowMe();
+                    break;
+                case "Main":
+                    GamePanel.Instance.ShowMe();
+                    break;
+                default:
+                    break;
+            }
         }
 
         /// <summary>

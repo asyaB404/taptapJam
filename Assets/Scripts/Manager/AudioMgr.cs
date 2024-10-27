@@ -200,6 +200,7 @@ public class AudioMgr : MonoBehaviour
         //     m_MusicAudio.Play();
         // });
         
+        // TODO：改成数据表
         AssetMgr.LoadAssetAsync<AudioClip>("Assets/AddressableAssets/GameRes/Audios/Sounds/主角受击.wav", (clip) =>
         {
             //设置音频 音量 静音状态   然后播放

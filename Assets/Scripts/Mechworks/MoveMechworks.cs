@@ -5,6 +5,7 @@ using System.Linq;
 using BehaviorDesigner.Runtime.Tasks.Unity.UnityTransform;
 using Cinemachine.Utility;
 using DG.Tweening;
+using Myd.Platform;
 using Unity.VisualScripting;
 using UnityEngine;
 
@@ -26,10 +27,7 @@ public class MoveMechworks : MechworksBass
     public override void Update()
     {
         base.Update();
-        transform.position+=(transforms[i].position-transform.position).normalized*speed*Time.deltaTime;
-        if(Vector2.Distance(transform.position,transforms[i].position)<0.1){
-            i=(i+1)%transforms.Count();
-        }
+        GetComponent<Ground>().Move(transforms[i].position,speed,()=>i=(i+1)%transforms.Count());
     }
     public override void Activate()
     {

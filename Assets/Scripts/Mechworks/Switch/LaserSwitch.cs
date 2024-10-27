@@ -31,6 +31,7 @@ public class LaserSwitch : SwitchBass
         }
     }
     public void LaserCharge(){
+        if(over)return;
         Debug.Log("射中了");
         if(charge<=maxCharge)charge+=A*addCharge;
         if(charge>maxCharge){

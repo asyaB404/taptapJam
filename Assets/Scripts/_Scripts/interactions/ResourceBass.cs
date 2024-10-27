@@ -32,9 +32,8 @@ public class ResourceBass : Interaction
     {
         canInteraction=false;
         ResourceAdd(nub,resoureName);
-        if(!this is Bonfire){//我知道这很草率，不管了，时间紧任务重
-                    AudioMgr.PlaySound(cfg.EnumAudioClip.采摘);
-        }
+        AudioMgr.PlaySound(cfg.EnumAudioClip.采摘);
+        
         gameObject.SetActive(false);
         base._Interaction();
     }

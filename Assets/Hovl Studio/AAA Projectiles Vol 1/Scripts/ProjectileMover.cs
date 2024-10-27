@@ -66,21 +66,21 @@ public class ProjectileMover : MonoBehaviour
 
         if (hit != null)
         {
-            var hitInstance = Instantiate(hit, pos, rot);
-            if (UseFirePointRotation) { hitInstance.transform.rotation = gameObject.transform.rotation * Quaternion.Euler(0, 180f, 0); }
-            else if (rotationOffset != Vector3.zero) { hitInstance.transform.rotation = Quaternion.Euler(rotationOffset); }
-            else { hitInstance.transform.LookAt(contact.point + contact.normal); }
-
-            var hitPs = hitInstance.GetComponent<ParticleSystem>();
-            if (hitPs != null)
-            {
-                Destroy(hitInstance, hitPs.main.duration);
-            }
-            else
-            {
-                var hitPsParts = hitInstance.transform.GetChild(0).GetComponent<ParticleSystem>();
-                Destroy(hitInstance, hitPsParts.main.duration);
-            }
+            //var hitInstance = Instantiate(hit, pos, rot);
+            // if (UseFirePointRotation) { hitInstance.transform.rotation = gameObject.transform.rotation * Quaternion.Euler(0, 180f, 0); }
+            // else if (rotationOffset != Vector3.zero) { hitInstance.transform.rotation = Quaternion.Euler(rotationOffset); }
+            // else { hitInstance.transform.LookAt(contact.point + contact.normal); }
+            //
+            // var hitPs = hitInstance.GetComponent<ParticleSystem>();
+            // if (hitPs != null)
+            // {
+            //     Destroy(hitInstance, hitPs.main.duration);
+            // }
+            // else
+            // {
+            //     var hitPsParts = hitInstance.transform.GetChild(0).GetComponent<ParticleSystem>();
+            //     Destroy(hitInstance, hitPsParts.main.duration);
+            // }
         }
         foreach (var detachedPrefab in Detached)
         {

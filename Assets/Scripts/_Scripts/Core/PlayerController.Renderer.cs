@@ -66,7 +66,8 @@ namespace Myd.Platform
             Color color = Color.white;
             if (hit && hit.collider)
             {
-                color = hit.collider.GetComponent<Ground>().GroundColor;
+                //color = hit.collider.GetComponent<Ground>().GroundColor;
+                color = Color.white;
                 SpriteControl.WallSlide(color, dir);
             }
         }
@@ -87,8 +88,8 @@ namespace Myd.Platform
             RaycastHit2D hit = Physics2D.BoxCast(position, collider.size*0.8f, 0, -forward, 0.5f, GroundMask);
             if (hit && hit.collider)
             {
-                color = hit.collider.GetComponent<Ground>().GroundColor;
-                //color = Color.white;
+                // color = hit.collider.GetComponent<Ground>().GroundColor;
+                color = Color.white;
                 EffectControl.JumpDust(position, color, forward);
             }
         }
@@ -122,8 +123,8 @@ namespace Myd.Platform
             Color color = Color.white;
             if (hit && hit.collider)
             {
-                color = hit.collider.GetComponent<Ground>().GroundColor;
-                //color = Color.white;
+                // color = hit.collider.GetComponent<Ground>().GroundColor;
+                color = Color.white;
                 EffectControl.LandDust(position, color);
             }
         }

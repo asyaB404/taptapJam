@@ -8,13 +8,15 @@ public class DarkObject : MonoBehaviour
 {
     private void Awake()
     {
-        this.gameObject.transform.GetComponent<SpriteRenderer>().DOFade(0, 0);
+        this.gameObject.layer = LayerMask.NameToLayer("DarkObject");
+        this.gameObject.transform.GetComponent<SpriteRenderer>().DOFade(0.3f, 0);
     }
 
     private void OnTriggerEnter2D(Collider2D other)
     {
         if (other.CompareTag("Light"))
         {
+            this.gameObject.layer = LayerMask.NameToLayer("Ground");
             this.gameObject.transform.GetComponent<SpriteRenderer>().DOFade(1, 1);
         }
     }
@@ -23,7 +25,8 @@ public class DarkObject : MonoBehaviour
     {
         if (other.CompareTag("Light"))
         {
-            this.gameObject.transform.GetComponent<SpriteRenderer>().DOFade(0, 1);
+            this.gameObject.layer = LayerMask.NameToLayer("DarkObject");
+            this.gameObject.transform.GetComponent<SpriteRenderer>().DOFade(0.3f, 1);
         }
     }
 }

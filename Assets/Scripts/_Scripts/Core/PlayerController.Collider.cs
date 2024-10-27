@@ -1,4 +1,4 @@
-﻿using Myd.Common;
+using Myd.Common;
 using System;
 using System.Collections.Generic;
 using cfg;
@@ -157,19 +157,22 @@ namespace Myd.Platform
         /// 检测地面碰撞
         /// </summary>
         /// <returns></returns>
-        private bool CheckGround()
+        public bool CheckGround()
         {
             return CheckGround(Vector2.zero);
         }
         //针对横向,进行碰撞检测.如果发生碰撞,
+        public Collider2D nowGround=null;
         private bool CheckGround(Vector2 offset)
         {
             Vector2 origion = this.Position + collider.position + offset;
             RaycastHit2D hit = Physics2D.BoxCast(origion, collider.size, 0, Vector2.down, DEVIATION, GroundMask);
             if (hit && hit.normal == Vector2.up || hit &&  hit.transform.CompareTag("Move Plate"))
             {
+                nowGround=hit.collider;
                 return true;
             }
+            nowGround=null;
             return false;
         }
 
@@ -421,7 +424,7 @@ namespace Myd.Platform
             // 如果触碰到Hurt 建立normalHurtbox大小的检测区
             Vector2 origin = this.Position + collider.position;
             // 判断玩家是否蹲下，来决定使用哪个HurtBox
-            Rect hurtBox = Ducking ? duckHurtbox : normalHurtbox;
+            Rect hurtBox = normalHurtbox;
             return Physics2D.OverlapBox(origin + dir * (dist + DEVIATION), hurtBox.size, 0, HurtMask);
         }
     }

@@ -140,9 +140,17 @@ namespace Myd.Platform
             }
             else
             {
+                ctx.CheckGround();
                 float mult = ctx.OnGround ? 1 : Constants.AirMult;
                 //计算水平速度
                 float max = ctx.Holding == null ? Constants.MaxRun : Constants.HoldingMaxRun;
+                //计算平台速度
+                Vector3 groundSpeed=Vector3.zero;
+                // Physics2D.BoxCast(position, collider.size * 0.8f, 0, Vector3.down, 0.5f, ctx.GroundMask);
+                if(ctx.nowGround&&ctx.nowGround.GetComponent<Ground>()){
+                    Vector3 a=ctx.nowGround.GetComponent<Ground>().GetMoveDirection();
+                    if(a.z!=-100)groundSpeed=a;
+                }
                 if (Math.Abs(ctx.Speed.x) > max && Math.Sign(ctx.Speed.x) == this.ctx.MoveX)
                 {
                     //同方向加速
@@ -153,6 +161,11 @@ namespace Myd.Platform
                     //反方向减速
                     ctx.Speed.x = Mathf.MoveTowards(ctx.Speed.x, max * this.ctx.MoveX, Constants.RunAccel * mult * Time.deltaTime);
                 }
+                if(groundSpeed.z!=-100&&ctx.Speed.x==0)ctx.SetPosition(groundSpeed+(Vector3)ctx.Position);
+                // RaycastHit2D hit = Physics2D.BoxCast(origion, collider.size, 0, Vector2.down, DEVIATION, GroundMask);
+                //TODO
+                
+                
             }
             //计算竖直速度
             {

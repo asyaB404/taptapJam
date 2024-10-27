@@ -72,15 +72,14 @@ namespace Laser
             int remainReflect = 3; // 剩余的反射次数
             float remainRange = _range; // 剩余的射程
             RaycastHit2D hit2D;
-            
-            // RaycastHit2D swithHit;
             Vector2 shootPos = startPos; // 当前射击点
             while (remainReflect >= 0 && remainRange > 0)
             {
-                // swithHit=Physics2D.Raycast(shootPos, direction, remainRange, LayerMask.GetMask("LaserSwitch"));
                 hit2D = Physics2D.Raycast(shootPos, direction, remainRange, LayerMask.GetMask("Ground", "DarkObject"));
                 if (hit2D.collider != null)
                 {
+                    Debug.Log(hit2D.collider.name);
+                    
                     direction = Vector2.Reflect(direction, hit2D.normal);
                     remainRange -= (hit2D.point - startPos).magnitude; // magnitude向量的模长
                     startPos = hit2D.point;
@@ -89,8 +88,9 @@ namespace Laser
                     // TODO:检测是否碰撞到特殊物体
                     if (hit2D.collider.CompareTag("DarkObject"))
                     {
+                        Debug.Log("碰撞到了");
                         var spriteRenderer = hit2D.collider.transform.GetComponent<SpriteRenderer>();
-                        spriteRenderer.DOFade(1, .5f).OnComplete(() =>
+                        spriteRenderer.DOFade(1, .2f).OnComplete(() =>
                         {
                             spriteRenderer.DOFade(0, 1);
                         });

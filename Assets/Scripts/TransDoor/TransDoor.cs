@@ -12,6 +12,7 @@ public class TransDoor : MonoBehaviour
         if (other.CompareTag("Player"))
         {
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+            SaveMgr.Instance.SceneChangeClear();
         }
     }
 }

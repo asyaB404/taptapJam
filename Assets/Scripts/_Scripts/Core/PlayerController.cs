@@ -22,6 +22,7 @@ namespace Myd.Platform
         private readonly int GroundMask;
         private readonly int SafeGroundMask;
         private readonly int HurtMask;
+        private readonly int HurtMaskPro;
         
         // Player的最大生命，当前生命和灵力
         private float playerMaxHealth;
@@ -38,10 +39,11 @@ namespace Myd.Platform
         public bool laserUnlocked = false;
 
         //临时复活点
-        public Vector2 temporaryResurgencePosition;
+        public Vector3 temporaryResurgencePosition=new(0,0,-100);
         //堂堂复活
         public void Resurgence(){
             // Debug.Log("复活！！");
+            if(temporaryResurgencePosition.z==-100)temporaryResurgencePosition=Game.Instance.level.StartPosition; 
             // Debug.Log(temporaryResurgencePosition);
             Position=temporaryResurgencePosition;
         }
@@ -120,7 +122,8 @@ namespace Myd.Platform
             this.GroundMask = LayerMask.GetMask("Ground");
             // 添加HurtMask
             this.HurtMask = LayerMask.GetMask("Hurt");
-            this.SafeGroundMask=LayerMask.GetMask("SaveArea");
+            this.HurtMaskPro= LayerMask.GetMask("HurtPro");
+            this.SafeGroundMask=LayerMask.GetMask("SafeArea");
 
             this.Facing  = Facings.Right;
             this.LastAim = Vector2.right;

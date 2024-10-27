@@ -47,6 +47,11 @@ namespace Myd.Platform
             {
                 return EActionState.BeHurt;
             }
+            if (ctx.BeHurtCheck(ctx.Position, Vector2.zero) && ctx.CanBeHurt)
+            {
+                ctx.Resurgence();
+                return state;
+            }
             
             
             // 检测到射击

@@ -24,7 +24,6 @@ public class HurtState : BaseActionState
     {
         ctx.HurtCooldownTimer = Constants.HurtCoolDown;
         ctx.PlayerHealth -= 10;
-        ctx.Resurgence();
         ctx.Speed = Vector2.zero;
         ctx.Speed = new Vector2(-(int)ctx.Facing * Constants.HurtSpeedX, Constants.HurtSpeedY);//和复活冲突了
         //TODO: 后续替换为与血量UI对接的事件

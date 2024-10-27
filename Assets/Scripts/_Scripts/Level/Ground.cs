@@ -27,6 +27,7 @@ namespace Myd.Platform
                 endPosition=new(0,0,-100);
                 speed=0;
                 action=null;
+                moveDirection=Vector2.zero;
                  }
         }
         public void Move(Vector2 endPosition,float speed,Action action){

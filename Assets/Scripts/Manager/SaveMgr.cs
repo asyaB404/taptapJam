@@ -58,11 +58,10 @@ public class SaveMgr : Singleton<SaveMgr>
             AudioMgr.PlaySound(cfg.EnumAudioClip.主角受击);
 
     }
-    public void Save(int id){
-        notRefreshObjs = ResourceMgr.Instance.NotRefreshObjsSave();
-        ES3.Save("NotRefreshObjs"+id, notRefreshObjs);
-
-    }
+    // public void Save(int id){
+    //     notRefreshObjs = ResourceMgr.Instance.NotRefreshObjsSave();
+    //     ES3.Save("NotRefreshObjs"+id, notRefreshObjs);
+    // }
 
     /// <summary>
     /// 读档
@@ -83,13 +82,13 @@ public class SaveMgr : Singleton<SaveMgr>
         if (FirePosition.z != -100) BonfireBuild.BuildFire(FirePosition);
         
         
-        if (playerPosition.x > -1000000) Game.Player.SetPlayerPosition(playerPosition);
-        
+        if (playerPosition.x > -1000000) {Game.Player.SetPlayerPosition(playerPosition);Debug.Log(playerPosition);}
+        else Game.Player.SetPlayerPosition(Game.Instance.level.StartPosition);
     }
-    public void Load(int id){
-        if (ES3.KeyExists("NotRefreshObjs"+id)) notRefreshObjs = ES3.Load<List<bool>>("NotRefreshObjs"+id);
-        ResourceMgr.Instance.NotRefreshObjsResource(notRefreshObjs);
-    }
+    // public void Load(int id){
+    //     if (ES3.KeyExists("NotRefreshObjs"+id)) notRefreshObjs = ES3.Load<List<bool>>("NotRefreshObjs"+id);
+    //     ResourceMgr.Instance.NotRefreshObjsResource(notRefreshObjs);
+    // }
     public void LoadPlayer(){
         if (ES3.KeyExists("SettingData")) SettingData = ES3.Load<SettingData>("SettingData");
         if (ES3.KeyExists("Health")) Health = ES3.Load<float>("Health");
@@ -151,6 +150,7 @@ public class SaveMgr : Singleton<SaveMgr>
         ES3.Save("GetdashUnlocked", dashUnlocked);
         ES3.Save("inventoryItemStacks", inventoryItemStacks);
         Debug.Log(laserUnlocked);
+        SceneChangeClear();
         Load();
     }
 }

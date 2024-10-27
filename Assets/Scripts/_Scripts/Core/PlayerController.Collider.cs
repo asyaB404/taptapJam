@@ -231,7 +231,7 @@ namespace Myd.Platform
             Vector2 direct = Math.Sign(distY) > 0 ? Vector2.up : Vector2.down;
             Vector2 origion = this.Position + collider.position;
             RaycastHit2D hit = Physics2D.BoxCast(origion, collider.size, 0, direct, Mathf.Abs(distY) + DEVIATION, GroundMask);
-            if (hit && hit.normal == -direct)
+            if (hit && hit.normal == -direct || hit && hit.transform.CompareTag("Move Plate"))
             {
                 //如果发生碰撞,则移动距离
                 moved += direct * Mathf.Max((hit.distance - DEVIATION), 0);
@@ -426,6 +426,14 @@ namespace Myd.Platform
             // 判断玩家是否蹲下，来决定使用哪个HurtBox
             Rect hurtBox = normalHurtbox;
             return Physics2D.OverlapBox(origin + dir * (dist + DEVIATION), hurtBox.size, 0, HurtMask);
+        }
+        public bool BeHurtProCheck(Vector2 position, Vector2 dir, float dist = 0)
+        {
+            // 如果触碰到Hurt 建立normalHurtbox大小的检测区
+            Vector2 origin = this.Position + collider.position;
+            // 判断玩家是否蹲下，来决定使用哪个HurtBox
+            Rect hurtBox = normalHurtbox;
+            return Physics2D.OverlapBox(origin + dir * (dist + DEVIATION), hurtBox.size, 0, HurtMaskPro);
         }
     }
 }

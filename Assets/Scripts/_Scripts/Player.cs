@@ -97,9 +97,6 @@ namespace Myd.Platform
         {
             playerController.PlayerHealth += health;
             Debug.Log(health);
-            if(health<0){
-                playerController.Resurgence();
-            }
         }
         
         public float GetPlayerHealth()

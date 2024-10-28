@@ -47,6 +47,11 @@ namespace Core
             return true;
         }
 
+        public void SetHotItemList(List<ItemStack> list)
+        {
+            hotItemStacks = list;
+        }
+
         public void SetHotItem(int id, ItemStack itemStack)
         {
             if (itemStack == null)

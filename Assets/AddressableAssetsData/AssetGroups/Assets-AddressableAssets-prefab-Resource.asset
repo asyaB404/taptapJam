@@ -15,7 +15,7 @@ MonoBehaviour:
   m_GroupName: Assets-AddressableAssets-prefab-Resource
   m_Data:
     m_SerializedData: []
-  m_GUID: cf8b89ef67c229240b2219ff41421020
+  m_GUID: bd167663116d00143910428faa6c1c7f
   m_SerializeEntries:
   - m_GUID: 5df9f00b671d5cc4f9c16244be5c3aa7
     m_Address: Assets/AddressableAssets/prefab/Resource/Bigfire.prefab
@@ -25,6 +25,36 @@ MonoBehaviour:
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: bc2ada3a2c65c414493abf04dbf7263a
     m_Address: Assets/AddressableAssets/prefab/Resource/bottle.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Assets-AddressableAssets-prefab-Resource
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 078f78259d25dd543840bbc0ea86540d
+    m_Address: Assets/AddressableAssets/prefab/Resource/Circle (1).prefab
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Assets-AddressableAssets-prefab-Resource
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: b472483429125ee45b35b1c533825b82
+    m_Address: Assets/AddressableAssets/prefab/Resource/Circle.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Assets-AddressableAssets-prefab-Resource
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 3874dcab515a7344fb2fb5f157f07021
+    m_Address: Assets/AddressableAssets/prefab/Resource/DarkMoveMechworks 3 (1) 1.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Assets-AddressableAssets-prefab-Resource
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 5697be2fe97f8394c92d339e0beefe8c
+    m_Address: Assets/AddressableAssets/prefab/Resource/DarkMoveMechworks 3 (1).prefab
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Assets-AddressableAssets-prefab-Resource
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 189a9f331eb1b3e4788de988f26c322f
+    m_Address: Assets/AddressableAssets/prefab/Resource/E.prefab
     m_ReadOnly: 0
     m_SerializedLabels:
     - Assets-AddressableAssets-prefab-Resource
@@ -53,6 +83,24 @@ MonoBehaviour:
     m_SerializedLabels:
     - Assets-AddressableAssets-prefab-Resource
     FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 84d07a343531f4f46a03fb0f6c8641a3
+    m_Address: Assets/AddressableAssets/prefab/Resource/MoveMechworks 2.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Assets-AddressableAssets-prefab-Resource
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: e24ae43368fa310479a21a25b0f11967
+    m_Address: Assets/AddressableAssets/prefab/Resource/MoveMechworks 3.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Assets-AddressableAssets-prefab-Resource
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 23e3a144267002a4e856e6763839caf6
+    m_Address: Assets/AddressableAssets/prefab/Resource/MoveMechworks 4.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Assets-AddressableAssets-prefab-Resource
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: cb4b38da320623244bcd2bae5a299345
     m_Address: Assets/AddressableAssets/prefab/Resource/notRefreshObjs.prefab
     m_ReadOnly: 0
@@ -71,8 +119,38 @@ MonoBehaviour:
     m_SerializedLabels:
     - Assets-AddressableAssets-prefab-Resource
     FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 6a0a2fcdda20fcb42a5f74363be9b9e4
+    m_Address: Assets/AddressableAssets/prefab/Resource/R.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Assets-AddressableAssets-prefab-Resource
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: af7b2cacea6787142848e3729f6ccd4c
     m_Address: Assets/AddressableAssets/prefab/Resource/rapidRefreshObjs.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Assets-AddressableAssets-prefab-Resource
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 4a9e4f6864a0e994db1b445230f53756
+    m_Address: Assets/AddressableAssets/prefab/Resource/slice35 1.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Assets-AddressableAssets-prefab-Resource
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: e277ab45e717c914590e5e945a107e1d
+    m_Address: Assets/AddressableAssets/prefab/Resource/slice35 2.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Assets-AddressableAssets-prefab-Resource
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 897549524eb652c4daa0e300fe8de70b
+    m_Address: Assets/AddressableAssets/prefab/Resource/slice35 3.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Assets-AddressableAssets-prefab-Resource
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 7004c4b5afc5ea54d81bca28eb59299b
+    m_Address: Assets/AddressableAssets/prefab/Resource/slice35.prefab
     m_ReadOnly: 0
     m_SerializedLabels:
     - Assets-AddressableAssets-prefab-Resource

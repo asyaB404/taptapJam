@@ -1,0 +1,43 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bbb281ee3bf0b054c82ac2347e9e782c, type: 3}
+  m_Name: Assets-AddressableAssets-GameRes-Prefabs-Mechworks-Switch
+  m_EditorClassIdentifier: 
+  m_GroupName: Assets-AddressableAssets-GameRes-Prefabs-Mechworks-Switch
+  m_Data:
+    m_SerializedData: []
+  m_GUID: 1b0a1ccb411aa2443b426745fda39ef6
+  m_SerializeEntries:
+  - m_GUID: f618d3ff442535a40949d4b03eec489e
+    m_Address: Assets/AddressableAssets/GameRes/Prefabs/Mechworks/Switch/bulletCrustal.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Assets-AddressableAssets-GameRes-Prefabs-Mechworks-Switch
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: bb7a10200b2d62a4fb0cbeec1d7aec9b
+    m_Address: Assets/AddressableAssets/GameRes/Prefabs/Mechworks/Switch/LaserCrustal.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Assets-AddressableAssets-GameRes-Prefabs-Mechworks-Switch
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 9a750db8ad77c8f41b368f5f25b649d7
+    m_Address: Assets/AddressableAssets/GameRes/Prefabs/Mechworks/Switch/PullRod.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Assets-AddressableAssets-GameRes-Prefabs-Mechworks-Switch
+    FlaggedDuringContentUpdateRestriction: 0
+  m_ReadOnly: 0
+  m_Settings: {fileID: 11400000, guid: ad10e3e3d61658a438828e6ebf91fd51, type: 2}
+  m_SchemaSet:
+    m_Schemas:
+    - {fileID: 11400000, guid: 0c60d94ff9a2ed54abc12c51c3c26234, type: 2}
+    - {fileID: 11400000, guid: 15c32fb6290887748b40737e4a293ee4, type: 2}

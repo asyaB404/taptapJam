@@ -384,29 +384,29 @@ namespace Myd.Platform
         //在墙边情况下的，跳跃。主要需要考虑当前跳跃朝向
         public void WallJump(int dir)
         {
-            GameInput.Jump.ConsumeBuffer();
-            Ducking = false;
-            this.JumpCheck?.ResetTime();
-            varJumpTimer = Constants.VarJumpTime;
-            this.WallSlideTimer = Constants.WallSlideTime;
-            this.WallBoost?.ResetTime();
-            if (moveX != 0)
-            {
-                this.ForceMoveX = dir;
-                this.ForceMoveXTimer = Constants.WallJumpForceTime;
-            }
-
-            Speed.x = Constants.WallJumpHSpeed * dir;
-            Speed.y = Constants.JumpSpeed;
-            //TODO 考虑电梯对速度的加成
-            //Speed += LiftBoost;
-            varJumpSpeed = Speed.y;
-
-            //墙壁粒子效果。
-            if (dir == -1)
-                this.PlayJumpEffect(this.RightPosition, Vector2.left);
-            else
-                this.PlayJumpEffect(this.LeftPosition, Vector2.right);
+            // GameInput.Jump.ConsumeBuffer();
+            // Ducking = false;
+            // this.JumpCheck?.ResetTime();
+            // varJumpTimer = Constants.VarJumpTime;
+            // this.WallSlideTimer = Constants.WallSlideTime;
+            // this.WallBoost?.ResetTime();
+            // if (moveX != 0)
+            // {
+            //     this.ForceMoveX = dir;
+            //     this.ForceMoveXTimer = Constants.WallJumpForceTime;
+            // }
+            //
+            // Speed.x = Constants.WallJumpHSpeed * dir;
+            // Speed.y = Constants.JumpSpeed;
+            // //TODO 考虑电梯对速度的加成
+            // //Speed += LiftBoost;
+            // varJumpSpeed = Speed.y;
+            //
+            // //墙壁粒子效果。
+            // if (dir == -1)
+            //     this.PlayJumpEffect(this.RightPosition, Vector2.left);
+            // else
+            //     this.PlayJumpEffect(this.LeftPosition, Vector2.right);
             
         }
 

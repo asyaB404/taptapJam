@@ -24,30 +24,30 @@ public class Bonfire : ResourceBass
     protected override void Update()
     {
         base.Update();
-        if(Input.GetKey(KeyCode.P)){
-            print("清除存档");
-            SaveMgr.Instance.Clear();
-        }
-        if(Input.GetKey(KeyCode.L)){
-            SaveMgr.Instance.Load();
-        }
-        if(Input.GetKeyDown(KeyCode.I))SaveMgr.Instance.Save();
-        if(Input.GetKey(KeyCode.O)){
-            var hub=CraftGuideMgr.Instance.GetCraftGuide();
-            foreach(var a in hub.Keys){
-                string b=hub[a].ItemInfo.name;
-                foreach(var c in a){
-                    b+=c.ItemInfo.name;
-                }
-                Debug.Log(b);
-            }
-        }
-        if(Input.GetKeyDown(KeyCode.Z)){
-            foreach(var i in CraftGuideMgr.Instance.MakeTable.Keys){
-            CraftGuideMgr.Instance.MakeItem(i);
-            return;
-            }
-        }
+        // if(Input.GetKey(KeyCode.P)){
+        //     print("清除存档");
+        //     SaveMgr.Instance.Clear();
+        // }
+        // if(Input.GetKey(KeyCode.L)){
+        //     SaveMgr.Instance.Load();
+        // }
+        // if(Input.GetKeyDown(KeyCode.I))SaveMgr.Instance.Save();
+        // if(Input.GetKey(KeyCode.O)){
+        //     var hub=CraftGuideMgr.Instance.GetCraftGuide();
+        //     foreach(var a in hub.Keys){
+        //         string b=hub[a].ItemInfo.name;
+        //         foreach(var c in a){
+        //             b+=c.ItemInfo.name;
+        //         }
+        //         Debug.Log(b);
+        //     }
+        // }
+        // if(Input.GetKeyDown(KeyCode.Z)){
+        //     foreach(var i in CraftGuideMgr.Instance.MakeTable.Keys){
+        //     CraftGuideMgr.Instance.MakeItem(i);
+        //     return;
+        //     }
+        // }
     }
     protected override void onExit(Collider2D other)
     {

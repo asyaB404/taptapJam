@@ -14,6 +14,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   icon: {fileID: 21300000, guid: f545e749e49dc954dae27c4a82d15fff, type: 3}
   id: PR10002
-  itemName: fiddlehead
-  description: "\u91C7\u4E0B\u7684\u8568\u83DC"
-  maxCount: 0
+  itemName: "\u8568\u83DC"
+  description: "\u91C7\u4E0B\u7684\u8568\u83DC\uFF0C\u751F\u5403\u4E5F\u53EF\u4EE5\u56DE\u590D\u7075\u529B"
+  maxCount: 3

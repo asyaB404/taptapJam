@@ -28,6 +28,9 @@ public class SaveMgr : Singleton<SaveMgr>
     /// </summary>
     public void Save()
     {
+
+        if(TestForInventory.Inventory!=null)ES3.Save("hotItemStacks",TestForInventory.Inventory.HotItemStacks.ToList());
+
         ResourceMgr.Instance.Resource();
         ResourceMgr.Instance.QuickResource(); //刷新
 
@@ -35,9 +38,11 @@ public class SaveMgr : Singleton<SaveMgr>
             ? BonfireBuild.littleFire.transform.position
             : new(0, 0, -100); //获取具体信息
 
-
+        // if(Game.Player!=null){
         Health = Game.Player.GetPlayerHealth();
         Stamin = Game.Player.GetPlayerStamina();
+        // }
+        
         if(Stamin>17)Stamin=17;
         laserUnlocked = (bool)EventMgr.ExecuteEvent("GetlaserUnlocked");
         dashUnlocked = (bool)EventMgr.ExecuteEvent("GetdashUnlocked");
@@ -117,7 +122,7 @@ public class SaveMgr : Singleton<SaveMgr>
                 Debug.Log(str);
                 TestForInventory.Inventory.AddItem(new(str, inventoryItemStacks[str]));
             }
-
+        if(ES3.KeyExists("hotItemStacks"))TestForInventory.Inventory.SetHotItemList(ES3.Load<List<ItemStack>>("hotItemStacks"));
     }
     public void SceneChangeClear(){
         ES3.DeleteFile("playerPosition");

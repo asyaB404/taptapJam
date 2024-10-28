@@ -1,0 +1,43 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bbb281ee3bf0b054c82ac2347e9e782c, type: 3}
+  m_Name: Assets-AddressableAssets-GameRes-Prefabs-Locker
+  m_EditorClassIdentifier: 
+  m_GroupName: Assets-AddressableAssets-GameRes-Prefabs-Locker
+  m_Data:
+    m_SerializedData: []
+  m_GUID: 46458ec774decd54db9374a07f145f64
+  m_SerializeEntries:
+  - m_GUID: f2a76db6caf7c4e49b5e33e4074263c5
+    m_Address: Assets/AddressableAssets/GameRes/Prefabs/Locker/UnlockDash.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Assets-AddressableAssets-GameRes-Prefabs-Locker
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: ccd75fcc9bbd80f48922545529a5c782
+    m_Address: Assets/AddressableAssets/GameRes/Prefabs/Locker/UnlockLaser.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Assets-AddressableAssets-GameRes-Prefabs-Locker
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: d2c7ad31c2c977e46b4c23d9cf10cfa6
+    m_Address: Assets/AddressableAssets/GameRes/Prefabs/Locker/UnlockLight.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Assets-AddressableAssets-GameRes-Prefabs-Locker
+    FlaggedDuringContentUpdateRestriction: 0
+  m_ReadOnly: 0
+  m_Settings: {fileID: 11400000, guid: ad10e3e3d61658a438828e6ebf91fd51, type: 2}
+  m_SchemaSet:
+    m_Schemas:
+    - {fileID: 11400000, guid: f3bdc3d1ad016824cadbd75d970efa74, type: 2}
+    - {fileID: 11400000, guid: 9bd583a4c10c6b84b903a9542b0924ee, type: 2}

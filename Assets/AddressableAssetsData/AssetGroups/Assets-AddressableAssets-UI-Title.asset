@@ -1,0 +1,67 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bbb281ee3bf0b054c82ac2347e9e782c, type: 3}
+  m_Name: Assets-AddressableAssets-UI-Title
+  m_EditorClassIdentifier: 
+  m_GroupName: Assets-AddressableAssets-UI-Title
+  m_Data:
+    m_SerializedData: []
+  m_GUID: f9b8883dc8b1f6349b74f67023ab6aaa
+  m_SerializeEntries:
+  - m_GUID: 2e88c8ccf25048a418f040d410c2ce2b
+    m_Address: Assets/AddressableAssets/UI/Title/UI-title.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Assets-AddressableAssets-UI-Title
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 94dcf86676d1b4d4a8543d4e084aa06d
+    m_Address: Assets/AddressableAssets/UI/Title/UI-title1.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Assets-AddressableAssets-UI-Title
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: e4cbccfcf3e5f544083e392ee02dc7ab
+    m_Address: Assets/AddressableAssets/UI/Title/UI-title2.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Assets-AddressableAssets-UI-Title
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: af2b44b69c5f7d944a5a97d549d0d187
+    m_Address: Assets/AddressableAssets/UI/Title/UI-title3.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Assets-AddressableAssets-UI-Title
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 6f5c6982201487f468a5e1a386f9d62c
+    m_Address: Assets/AddressableAssets/UI/Title/UI-title4-1.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Assets-AddressableAssets-UI-Title
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 6200a8bf46728304ea4dbb6a8ec61c5a
+    m_Address: Assets/AddressableAssets/UI/Title/UI-title4-2.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Assets-AddressableAssets-UI-Title
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: f0d767cab4962ce43aecc96fc8b2331d
+    m_Address: Assets/AddressableAssets/UI/Title/UI-title4-3.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Assets-AddressableAssets-UI-Title
+    FlaggedDuringContentUpdateRestriction: 0
+  m_ReadOnly: 0
+  m_Settings: {fileID: 11400000, guid: ad10e3e3d61658a438828e6ebf91fd51, type: 2}
+  m_SchemaSet:
+    m_Schemas:
+    - {fileID: 11400000, guid: d2f14c48ca0170e4ba4548eb977d9ce4, type: 2}
+    - {fileID: 11400000, guid: 09bef293e2a0b8c4ca123cdbf98cdabc, type: 2}

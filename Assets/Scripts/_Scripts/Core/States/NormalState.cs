@@ -13,7 +13,7 @@ namespace Myd.Platform
     {
         private bool isEnableLaser = false;
         
-        
+        private GameObject showButton;
         public NormalState(PlayerController controller):base(EActionState.Normal, controller)
         {
         }
@@ -42,6 +42,7 @@ namespace Myd.Platform
 
         public override EActionState Update(float deltaTime)
         {
+            if(showButton)showButton.SetActive(false);
             // 检测到受伤
             if (ctx.BeHurtCheck(ctx.Position, Vector2.zero) && ctx.CanBeHurt)
             {
@@ -274,6 +275,12 @@ namespace Myd.Platform
                     Debug.Log("按下了键盘");
                     Game.Player.SetPlayerStamina(-10);
                     BonfireBuild.BuildFire(ctx.Position);
+                }
+                if(ctx.Speed.x==0&&ctx.Speed.y==0)
+                {
+                    if(showButton==null)showButton=GameObject.Instantiate(AssetMgr.LoadAssetSync<GameObject>("Assets/AddressableAssets/prefab/Resource/"+"R"+".prefab"));
+                    showButton.transform.position=ctx.Position+new Vector2(0,2);
+                    showButton.SetActive(true);
                 }
             }
 

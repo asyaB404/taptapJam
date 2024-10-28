@@ -1,0 +1,31 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bbb281ee3bf0b054c82ac2347e9e782c, type: 3}
+  m_Name: "Assets-AddressableAssets-\u7F8E\u672F"
+  m_EditorClassIdentifier: 
+  m_GroupName: "Assets-AddressableAssets-\u7F8E\u672F"
+  m_Data:
+    m_SerializedData: []
+  m_GUID: aa3ba8fea3d42de4caa587af02756b8c
+  m_SerializeEntries:
+  - m_GUID: b3ca10be3bb416c48bde36c944cd27c1
+    m_Address: "Assets/AddressableAssets/\u7F8E\u672F/1.png"
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - "Assets-AddressableAssets-\u7F8E\u672F"
+    FlaggedDuringContentUpdateRestriction: 0
+  m_ReadOnly: 0
+  m_Settings: {fileID: 11400000, guid: ad10e3e3d61658a438828e6ebf91fd51, type: 2}
+  m_SchemaSet:
+    m_Schemas:
+    - {fileID: 11400000, guid: fd0e87485236f7e408b571823a76378a, type: 2}
+    - {fileID: 11400000, guid: 735bbd279c5d27546ac5a460fa699830, type: 2}

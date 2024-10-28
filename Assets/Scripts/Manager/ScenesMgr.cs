@@ -11,17 +11,17 @@ public class ScenesMgr : MonoSingleton<ScenesMgr>
     }
     public void ChangeScenes(int enter,int exit){
         SaveMgr.Instance.level=exit;
-        SaveMgr.Instance.Save();
+        if(enter!=0)SaveMgr.Instance.Save();
         SaveMgr.Instance.SceneChangeClear();
         SceneManager.LoadScene(exit);
-        StartCoroutine(DelayedAction(0.2f,enter));  
+        StartCoroutine(DelayedAction(0.5f,enter));  
     }
     IEnumerator DelayedAction(float delay,int enter)  
     {  
         // 等待指定的延迟时间  
         yield return new WaitForSeconds(delay);  
         GameObject a=GameObject.Find("Enter"+enter);
-        if(a){
+        if(a!=null){
             Game.Player.SetPlayerPosition(a.transform.position);
         }
         SaveMgr.Instance.LoadPlayer();

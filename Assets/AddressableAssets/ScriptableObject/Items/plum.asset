@@ -14,6 +14,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   icon: {fileID: 21300000, guid: 3da9adf7813beeb408e8ecb0c22a1801, type: 3}
   id: PR10001
-  itemName: plum
-  description: "\u91C7\u6458\u4E0B\u6765\u7684\u5C71\u6885\u679C\u5B50"
+  itemName: "\u8393\u679C"
+  description: "\u91C7\u6458\u4E0B\u6765\u7684\u5C71\u6885\u679C\u5B50\uFF0C\u751F\u5403\u53EF\u56DE\u590D\u751F\u547D\u503C"
   maxCount: 3

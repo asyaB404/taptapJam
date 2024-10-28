@@ -15,10 +15,28 @@ MonoBehaviour:
   m_GroupName: Assets-AddressableAssets-Scenes
   m_Data:
     m_SerializedData: []
-  m_GUID: 3f2210bd405137c4f84cd92cc974ffaa
+  m_GUID: 7c39b46d8d495cf4dac20948af72e06d
   m_SerializeEntries:
+  - m_GUID: 3bd914cd4249c8648a1f8dd7124ce6d5
+    m_Address: Assets/AddressableAssets/Scenes/Main.unity
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Assets-AddressableAssets-Scenes
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 7b353c1576be3f94081ef7b4ee3d39e5
     m_Address: Assets/AddressableAssets/Scenes/MainProfile.asset
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Assets-AddressableAssets-Scenes
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 6c15075d64237c543882667d6b91a434
+    m_Address: Assets/AddressableAssets/Scenes/Start.asset
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Assets-AddressableAssets-Scenes
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 7fedd5ac72338254c8a7da4f9e77addc
+    m_Address: Assets/AddressableAssets/Scenes/Start.unity
     m_ReadOnly: 0
     m_SerializedLabels:
     - Assets-AddressableAssets-Scenes

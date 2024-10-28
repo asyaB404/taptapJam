@@ -15,7 +15,7 @@ MonoBehaviour:
   m_GroupName: "Assets-AddressableAssets-GameRes-Player-\u8DF3\u8DC3"
   m_Data:
     m_SerializedData: []
-  m_GUID: 29106c8168dee574da6b77fa2b07ceff
+  m_GUID: 03393234d8224fc46aa257ac7bc63ef5
   m_SerializeEntries:
   - m_GUID: 16cdb4074159c244da533da8fd32b8f3
     m_Address: "Assets/AddressableAssets/GameRes/Player/\u8DF3\u8DC3/Player-jumpd1.png"

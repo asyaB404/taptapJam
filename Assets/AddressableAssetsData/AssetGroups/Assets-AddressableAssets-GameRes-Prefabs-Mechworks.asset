@@ -15,10 +15,55 @@ MonoBehaviour:
   m_GroupName: Assets-AddressableAssets-GameRes-Prefabs-Mechworks
   m_Data:
     m_SerializedData: []
-  m_GUID: b6b0d79d797377c44890fc97ed81e9e8
+  m_GUID: 944deb0149b77304a8fac96220eec310
   m_SerializeEntries:
+  - m_GUID: 0b042055741e576489faaa73a3b7899d
+    m_Address: Assets/AddressableAssets/GameRes/Prefabs/Mechworks/DarkMoveMechworks
+      2.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Assets-AddressableAssets-GameRes-Prefabs-Mechworks
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: b291fc37a5c021c41a5c40687a023126
+    m_Address: Assets/AddressableAssets/GameRes/Prefabs/Mechworks/DarkMoveMechworks
+      3.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Assets-AddressableAssets-GameRes-Prefabs-Mechworks
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 28a23de9d37e45d48a0839434cb9a8ab
+    m_Address: Assets/AddressableAssets/GameRes/Prefabs/Mechworks/Door.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Assets-AddressableAssets-GameRes-Prefabs-Mechworks
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: b5f27dd0e95611248afa63044db86877
+    m_Address: Assets/AddressableAssets/GameRes/Prefabs/Mechworks/doorwall.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Assets-AddressableAssets-GameRes-Prefabs-Mechworks
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: ca5cb911ac49e6945a395b36f2456d6d
+    m_Address: Assets/AddressableAssets/GameRes/Prefabs/Mechworks/MoveMechworks 1.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Assets-AddressableAssets-GameRes-Prefabs-Mechworks
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 247fa5e8743bed141b4061f72c342d1f
+    m_Address: Assets/AddressableAssets/GameRes/Prefabs/Mechworks/MoveMechworks 2.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Assets-AddressableAssets-GameRes-Prefabs-Mechworks
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: d169bbab85a8b7540847feb2bb72c5a6
     m_Address: Assets/AddressableAssets/GameRes/Prefabs/Mechworks/MoveMechworks.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Assets-AddressableAssets-GameRes-Prefabs-Mechworks
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 1b9d422d714e3c945b9c68311e2c6f76
+    m_Address: Assets/AddressableAssets/GameRes/Prefabs/Mechworks/MoveMechworksPro
+      1.prefab
     m_ReadOnly: 0
     m_SerializedLabels:
     - Assets-AddressableAssets-GameRes-Prefabs-Mechworks

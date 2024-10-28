@@ -7,9 +7,8 @@ using UnityEngine.UI;
 
 public class Interaction : MonoBehaviour
 {    protected bool needShow = true;
-    static GameObject uiParent;
     protected string colliderStr;
-
+    
     protected virtual void Awake()
     {
     }
@@ -24,9 +23,7 @@ public class Interaction : MonoBehaviour
     }
     protected virtual void ShowButton()
     {
-        if (needShow)
-        {
-        }
+        
     }
     protected virtual void OnTriggerExit2D(Collider2D other)
     {

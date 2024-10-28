@@ -50,6 +50,7 @@ namespace Core
         public void SetHotItemList(List<ItemStack> list)
         {
             hotItemStacks = list;
+            GamePanel.Instance.UpdateHotItemDisPlay();
         }
 
         public void SetHotItem(int id, ItemStack itemStack)
@@ -80,17 +81,17 @@ namespace Core
                     Game.Player.SetPlayerHealth(1);
                     break;
                 case "PR10002":
-                    Game.Player.SetPlayerStamina(1);
+                    Game.Player.SetPlayerStamina(20);
                     break;
                 case "UR10001":
                     Game.Player.SetPlayerHealth(2);
                     break;
                 case "UR10002":
-                    Game.Player.SetPlayerStamina(2);
+                    Game.Player.SetPlayerStamina(30);
                     break;
                 case "UR10003":
-                    Game.Player.SetPlayerStamina(-1);
-                    Game.Player.SetPlayerHealth(2);
+                    Game.Player.SetPlayerStamina(-20);
+                    Game.Player.SetPlayerHealth(3);
                     break;
                 default:
                     Debug.Log(itemInfo.id + "是什么");

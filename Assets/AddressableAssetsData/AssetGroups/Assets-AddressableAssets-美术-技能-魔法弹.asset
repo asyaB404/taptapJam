@@ -15,7 +15,7 @@ MonoBehaviour:
   m_GroupName: "Assets-AddressableAssets-\u7F8E\u672F-\u6280\u80FD-\u9B54\u6CD5\u5F39"
   m_Data:
     m_SerializedData: []
-  m_GUID: 43281715f1023a24e903fd9619905f5b
+  m_GUID: db0389cd696b54b4b9fc8e78083fa067
   m_SerializeEntries: []
   m_ReadOnly: 0
   m_Settings: {fileID: 11400000, guid: ad10e3e3d61658a438828e6ebf91fd51, type: 2}

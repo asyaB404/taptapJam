@@ -18,7 +18,7 @@ MonoBehaviour:
   MaxRun: 9
   RunAccel: 100
   RunReduce: 40
-  Gravity: 90
+  Gravity: 60
   HalfGravThreshold: 4
   MaxFall: -16
   FastMaxFall: -24

@@ -17,12 +17,6 @@ MonoBehaviour:
     m_SerializedData: []
   m_GUID: 3f2210bd405137c4f84cd92cc974ffaa
   m_SerializeEntries:
-  - m_GUID: 3bd914cd4249c8648a1f8dd7124ce6d5
-    m_Address: Assets/AddressableAssets/Scenes/Main.unity
-    m_ReadOnly: 0
-    m_SerializedLabels:
-    - Assets-AddressableAssets-Scenes
-    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 7b353c1576be3f94081ef7b4ee3d39e5
     m_Address: Assets/AddressableAssets/Scenes/MainProfile.asset
     m_ReadOnly: 0

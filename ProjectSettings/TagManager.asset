@@ -48,10 +48,10 @@ TagManager:
   - Post
   - Hurt
   - DarkObject
-  - SaveArea
+  - SafeArea
   - LaserSwitch
   - Bullet
-  - 
+  - HurtPro
   - 
   - 
   - 

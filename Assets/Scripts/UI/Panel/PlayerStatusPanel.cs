@@ -2,9 +2,11 @@ using System.Collections.Generic;
 using Core;
 using Core.Items;
 using DG.Tweening;
+using Test;
 using TMPro;
 using UI.Inventory;
 using UnityEngine;
+using UnityEngine.Serialization;
 using UnityEngine.UI;
 
 namespace UI.Panel
@@ -77,7 +79,7 @@ namespace UI.Panel
 
         #region Inventory
 
-        public PlayerInventory inventory;
+        public PlayerInventory Inventory => TestForInventory.Inventory;
         [SerializeField] private int selectedSlotId = 0;
         [SerializeField] private ItemInfo selectedItemInfo;
         [SerializeField] private ItemSlot[] itemSlots;
@@ -106,7 +108,7 @@ namespace UI.Panel
         {
             if (!value) return;
             selectedSlotId = itemSlot.id;
-            var itemStacks = inventory.GetItemsOrderByTime;
+            var itemStacks = Inventory.GetItemsOrderByTime;
             SetSelectedItem(null);
             AudioMgr.PlaySound(cfg.EnumAudioClip.普通点击);
             if (itemSlot.id < 0 || itemSlot.id >= itemStacks.Count) return;
@@ -135,19 +137,19 @@ namespace UI.Panel
 
         public void UpdateInventoryDisplay()
         {
-            var inventoryGetItemsOrderByTime = inventory.GetItemsOrderByTime;
+            var inventoryGetItemsOrderByTime = Inventory.GetItemsOrderByTime;
             foreach (var slot in itemSlots)
             {
                 slot.UpdateDisplayFromInventory(inventoryGetItemsOrderByTime);
             }
 
-            var hotItemStacks = inventory.HotItemStacks;
+            var hotItemStacks = Inventory.HotItemStacks;
             foreach (var slot in hotSlots)
             {
                 slot.UpdateDisplayFromInventory(hotItemStacks);
             }
 
-            if (!selectedItemInfo || inventory.Count(selectedItemInfo.id) == 0)
+            if (!selectedItemInfo || Inventory.Count(selectedItemInfo.id) == 0)
                 SetSelectedItem(null);
             
         }

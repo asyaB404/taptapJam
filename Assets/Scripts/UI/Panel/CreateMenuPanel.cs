@@ -18,7 +18,7 @@ namespace UI.Panel
 {
     public class CreateMenuPanel : BasePanel<CreateMenuPanel>
     {
-        public PlayerInventory Inventory => PlayerStatusPanel.Instance.inventory;
+        public PlayerInventory Inventory => PlayerStatusPanel.Instance.Inventory;
         public IReadOnlyList<ItemSlot> ItemSlots => itemSlots;
         [SerializeField] private ItemSlot selectedHotSlot;
         [SerializeField] private ItemSlot[] itemSlots;

@@ -47,7 +47,7 @@ namespace Myd.Platform
             {
                 return EActionState.BeHurt;
             }
-            if (ctx.BeHurtCheck(ctx.Position, Vector2.zero) && ctx.CanBeHurt)
+            if (ctx.BeHurtProCheck(ctx.Position, Vector2.zero) && ctx.CanBeHurt)
             {
                 ctx.Resurgence();
                 return state;
@@ -166,7 +166,10 @@ namespace Myd.Platform
                     //反方向减速
                     ctx.Speed.x = Mathf.MoveTowards(ctx.Speed.x, max * this.ctx.MoveX, Constants.RunAccel * mult * Time.deltaTime);
                 }
-                if(groundSpeed.z!=-100&&ctx.Speed.x==0)ctx.SetPosition(groundSpeed+(Vector3)ctx.Position);
+                if(groundSpeed.z!=-100){
+                    if(ctx.Speed.x==0)ctx.SetPosition(groundSpeed+(Vector3)ctx.Position);
+                    else ctx.Speed+=(Vector2)groundSpeed;
+                    }
                 // RaycastHit2D hit = Physics2D.BoxCast(origion, collider.size, 0, Vector2.down, DEVIATION, GroundMask);
                 //TODO
                 

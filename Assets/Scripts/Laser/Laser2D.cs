@@ -64,12 +64,17 @@ namespace Laser
         }
         
         // 射程
-        private float _range= 20f;
+        [Header("激光射程")]
+        [Tooltip("激光射程")]
+        public float _range= 20f;
+        [Header("激光反射次数")]
+        [Tooltip("激光反射次数")]
+        public int _reflectCount = 3;
         private void BetterCastLaser(Vector2 startPos, Vector2 direction)
         {
             List<Vector3> points = new List<Vector3>();
             points.Add(startPos);
-            int remainReflect = 3; // 剩余的反射次数
+            int remainReflect = _reflectCount; // 剩余的反射次数
             float remainRange = _range; // 剩余的射程
             RaycastHit2D hit2D;
             Vector2 shootPos = startPos; // 当前射击点

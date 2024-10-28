@@ -17,5 +17,35 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/LTM0_2.unity
     guid: 58f53ba06e98f4945820dafa1cf76d8b
+  - enabled: 1
+    path: Assets/Scenes/LTM0_3.unity
+    guid: bf37a93e2c6daae4380e80c95f36c379
+  - enabled: 1
+    path: Assets/Scenes/LTM0_4.unity
+    guid: ae79e77c0c872ee4fa5ba8aa14209f57
+  - enabled: 1
+    path: Assets/Scenes/LTM0_5.unity
+    guid: ede5a67f1d86a574e8f142361b272300
+  - enabled: 1
+    path: Assets/Scenes/LTM1_1.unity
+    guid: 95b3fe07041d1f349aa51e55938d0df6
+  - enabled: 1
+    path: Assets/Scenes/LTM1_2.unity
+    guid: c01d68ab5e11eeb408a95468ff8b8532
+  - enabled: 1
+    path: Assets/Scenes/LTM2_1.unity
+    guid: 4d45a60098be2e04588af932453d0b1f
+  - enabled: 1
+    path: Assets/Scenes/LTM2_2.unity
+    guid: 5e6ad676962ed1b4d8962bc40dda0649
+  - enabled: 1
+    path: Assets/Scenes/LTM3_1.unity
+    guid: 2b796cef15404a64b98d5019e7d7851a
+  - enabled: 1
+    path: Assets/Scenes/LTM3_2.unity
+    guid: 81fb1469b4e2e094e9e5b44183187c41
+  - enabled: 1
+    path: Assets/Scenes/LTM2_1.5.unity
+    guid: 3aa72bf698cf51b4bb27052bc19a271e
   m_configObjects:
     com.unity.addressableassets: {fileID: 11400000, guid: 4de19d3f207ac3c4cb3660164ad35c4e, type: 2}

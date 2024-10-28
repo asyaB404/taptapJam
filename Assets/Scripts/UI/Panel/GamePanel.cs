@@ -45,7 +45,7 @@ namespace UI.Panel
 
         public void UpdateHotItemDisPlay()
         {
-            var hotItemStacks = PlayerStatusPanel.Instance.inventory.HotItemStacks;
+            var hotItemStacks = PlayerStatusPanel.Instance.Inventory.HotItemStacks;
             foreach (var slot in hotItemSlots)
             {
                 slot.UpdateDisplayFromInventory(hotItemStacks);

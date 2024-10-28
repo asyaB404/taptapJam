@@ -13,18 +13,7 @@ namespace UI
 
         private void Start()
         {
-            string sceneName = SceneManager.GetActiveScene().name;
-            switch (sceneName)
-            {
-                case "Start":
-                    StartGamePanel.Instance.ShowMe();
-                    break;
-                case "Main":
-                    GamePanel.Instance.ShowMe();
-                    break;
-                default:
-                    break;
-            }
+            GamePanel.Instance.ShowMe();
         }
 
         /// <summary>

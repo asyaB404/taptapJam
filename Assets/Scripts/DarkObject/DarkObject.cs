@@ -6,17 +6,20 @@ using UnityEngine;
 
 public class DarkObject : MonoBehaviour
 {
+    int layerMask;
     private void Awake()
     {
+        layerMask=gameObject.layer;
+
         this.gameObject.layer = LayerMask.NameToLayer("DarkObject");
-        this.gameObject.transform.GetComponent<SpriteRenderer>().DOFade(0.3f, 0);
+        this.gameObject.transform.GetComponent<SpriteRenderer>().DOFade(0.01f, 0);
     }
 
     private void OnTriggerEnter2D(Collider2D other)
     {
         if (other.CompareTag("Light"))
         {
-            this.gameObject.layer = LayerMask.NameToLayer("Ground");
+            this.gameObject.layer = layerMask;
             this.gameObject.transform.GetComponent<SpriteRenderer>().DOFade(1, 1);
         }
     }
@@ -26,7 +29,7 @@ public class DarkObject : MonoBehaviour
         if (other.CompareTag("Light"))
         {
             this.gameObject.layer = LayerMask.NameToLayer("DarkObject");
-            this.gameObject.transform.GetComponent<SpriteRenderer>().DOFade(0.3f, 1);
+            this.gameObject.transform.GetComponent<SpriteRenderer>().DOFade(0.01f, 1);
         }
     }
 }

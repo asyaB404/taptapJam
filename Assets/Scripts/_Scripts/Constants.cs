@@ -114,7 +114,7 @@ namespace Myd.Platform
         #endregion
 
         #region Player属性
-        public static float playerMaxHealth = 100; // 最大生命值
+        public static float playerMaxHealth = 6; // 最大生命值
         public static float playerMaxStamina = 100; // 最大灵力值
         #endregion
     }

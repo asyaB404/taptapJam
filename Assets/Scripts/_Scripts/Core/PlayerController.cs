@@ -46,6 +46,7 @@ namespace Myd.Platform
             if(temporaryResurgencePosition.z==-100)temporaryResurgencePosition=Game.Instance.level.StartPosition; 
             // Debug.Log(temporaryResurgencePosition);
             Position=temporaryResurgencePosition;
+            PlayerHealth=playerMaxHealth;
         }
 
         public float PlayerHealth
@@ -55,6 +56,9 @@ namespace Myd.Platform
             {
                 playerHealth = Mathf.Clamp(value, 0, this.playerMaxHealth);
                 if(GamePanel.Instance && GamePanel.Instance.IsInStack) GamePanel.Instance.UpdateHealthDisPlay();
+                if(playerHealth==0){
+                    Resurgence();
+                }
             }
         }
 

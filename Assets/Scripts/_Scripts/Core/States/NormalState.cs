@@ -170,6 +170,7 @@ namespace Myd.Platform
                     if(ctx.Speed.x==0)ctx.SetPosition(groundSpeed+(Vector3)ctx.Position);
                     else ctx.Speed+=(Vector2)groundSpeed;
                     }
+                
                 // RaycastHit2D hit = Physics2D.BoxCast(origion, collider.size, 0, Vector2.down, DEVIATION, GroundMask);
                 //TODO
                 

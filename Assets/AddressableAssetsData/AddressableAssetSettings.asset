@@ -12,10 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 468a46d0ae32c3544b7d98094e6448a9, type: 3}
   m_Name: AddressableAssetSettings
   m_EditorClassIdentifier: 
-  m_DefaultGroup: 3657eb0fbb54e044abfe8cacd432daa8
+  m_DefaultGroup: 24daae6289f6b5746966395befc58b1f
   m_currentHash:
     serializedVersion: 2
-    Hash: 00000000000000000000000000000000
+    Hash: cac9f7f9ea03f39e0b693f721ed264a9
   m_OptimizeCatalogSize: 0
   m_BuildRemoteCatalog: 0
   m_BundleLocalCatalog: 0
@@ -65,6 +65,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 3ee454fb56c4e2a49b293e43a37d8dba, type: 2}
   - {fileID: 11400000, guid: 3c379644e42d7804682eaea5267f2c0d, type: 2}
   - {fileID: 11400000, guid: c34c8ade66fa011429b1997a130acb8b, type: 2}
+  - {fileID: 11400000, guid: 5f5ffc7bee5d5374591965d6ccd140a2, type: 2}
   - {fileID: 11400000, guid: 598b0534339d207459dd827bd464f88c, type: 2}
   - {fileID: 11400000, guid: 17fb0f87c6f42aa4cb9441d020578596, type: 2}
   - {fileID: 11400000, guid: e6094758defea4746aded307406b61f6, type: 2}
@@ -84,6 +85,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: b70b3b1e414561142aee51e2666aa752, type: 2}
   - {fileID: 11400000, guid: 30a621f2b3b676f42b3402ba6eb64309, type: 2}
   - {fileID: 11400000, guid: 694f5701f58a4b348925b958cd827217, type: 2}
+  - {fileID: 11400000, guid: bb10342a821e13d4aa6551ab45496a4b, type: 2}
   m_BuildSettings:
     m_CompileScriptsInVirtualMode: 0
     m_CleanupStreamingAssetsAfterBuilds: 1
@@ -181,6 +183,7 @@ MonoBehaviour:
     - Assets-AddressableAssets-UI-GameUI
     - Assets-AddressableAssets-UI-Title
     - "Assets-AddressableAssets-\u7F8E\u672F-\u673A\u5173"
+    - Assets-AddressableAssets-GameRes-Audios-Bgms
   m_SchemaTemplates: []
   m_GroupTemplateObjects:
   - {fileID: 11400000, guid: 251eb2a991560704fa667cc898137b23, type: 2}

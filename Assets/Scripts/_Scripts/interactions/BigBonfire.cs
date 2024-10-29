@@ -15,7 +15,6 @@ public class BigBonfire : Bonfire
     }
     protected override void _Interaction()
     {
-
         EventMgr.ExecuteEvent(skillType);
         base._Interaction();
 

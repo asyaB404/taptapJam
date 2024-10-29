@@ -19,6 +19,8 @@ public class Bonfire : ResourceBass
     }
     protected override void _Interaction()
     {
+        // Debug.Log(gameObject.name+transform.position);
+
         BonfireMenuPanel.Instance.ShowMe();
     }
     protected override void Update()
@@ -48,6 +50,11 @@ public class Bonfire : ResourceBass
         //     return;
         //     }
         // }
+    }
+    protected override void onEnter(Collider2D other)
+    {
+        base.onEnter(other);
+        Debug.Log(canInteraction);
     }
     protected override void onExit(Collider2D other)
     {

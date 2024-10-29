@@ -15,7 +15,7 @@ MonoBehaviour:
   m_GroupName: "Assets-AddressableAssets-\u7F8E\u672F-\u6280\u80FD-\u5927\u706B\u5806"
   m_Data:
     m_SerializedData: []
-  m_GUID: 5327cd116604faf4ab9dbfff32be89f6
+  m_GUID: bc6a46c75be909a43b69a5668ae9815f
   m_SerializeEntries:
   - m_GUID: 4976e6409f48df64298694b47efe4774
     m_Address: "Assets/AddressableAssets/\u7F8E\u672F/\u6280\u80FD/\u5927\u706B\u5806/Bigfire.controller"

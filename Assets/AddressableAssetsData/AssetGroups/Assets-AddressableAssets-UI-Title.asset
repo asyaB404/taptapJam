@@ -15,7 +15,7 @@ MonoBehaviour:
   m_GroupName: Assets-AddressableAssets-UI-Title
   m_Data:
     m_SerializedData: []
-  m_GUID: f9b8883dc8b1f6349b74f67023ab6aaa
+  m_GUID: 97e24b2f34316a2409e29d3fc57ac1af
   m_SerializeEntries:
   - m_GUID: 2e88c8ccf25048a418f040d410c2ce2b
     m_Address: Assets/AddressableAssets/UI/Title/UI-title.png

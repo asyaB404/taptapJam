@@ -15,7 +15,7 @@ MonoBehaviour:
   m_GroupName: Assets-AddressableAssets-GameRes-Prefabs
   m_Data:
     m_SerializedData: []
-  m_GUID: 2e9010744a4c6944dadf14fb8756ca38
+  m_GUID: e68288f908e74974a87d5d72f1f76998
   m_SerializeEntries:
   - m_GUID: 156e33ae35655dd44bb56424e58b337f
     m_Address: Assets/AddressableAssets/GameRes/Prefabs/Bullet.prefab

@@ -50,7 +50,6 @@ namespace Core
         public void SetHotItemList(List<ItemStack> list)
         {
             hotItemStacks = list;
-            GamePanel.Instance.UpdateHotItemDisPlay();
         }
 
         public void SetHotItem(int id, ItemStack itemStack)

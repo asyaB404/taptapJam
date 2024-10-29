@@ -15,7 +15,7 @@ MonoBehaviour:
   m_GroupName: Assets-AddressableAssets-GameRes-Prefabs-Mechworks
   m_Data:
     m_SerializedData: []
-  m_GUID: 944deb0149b77304a8fac96220eec310
+  m_GUID: e3bb92014fff5e244bd2444ac87fe5ef
   m_SerializeEntries:
   - m_GUID: 0b042055741e576489faaa73a3b7899d
     m_Address: Assets/AddressableAssets/GameRes/Prefabs/Mechworks/DarkMoveMechworks

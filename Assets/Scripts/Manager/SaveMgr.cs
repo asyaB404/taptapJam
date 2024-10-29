@@ -5,6 +5,7 @@ using Core;
 using Core.Items;
 using Myd.Platform;
 using Test;
+using UI.Panel;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -12,7 +13,7 @@ public class SaveMgr : Singleton<SaveMgr>
 {
     // 设置的数据
     public SettingData SettingData = new();
-    public Vector3 FirePosition = new(0, 0, -100); //火堆位置
+    // public Vector3 FirePosition = new(0, 0, -100); //火堆位置
     public List<bool> notRefreshObjs = new(); //不刷新物品是否还存在
     public float Health = 0; //生命
     public float Stamin = 0; //灵力
@@ -28,22 +29,22 @@ public class SaveMgr : Singleton<SaveMgr>
     /// </summary>
     public void Save()
     {
-
-        if(TestForInventory.Inventory!=null)ES3.Save("hotItemStacks",TestForInventory.Inventory.HotItemStacks.ToList());
+        if (TestForInventory.Inventory != null)
+            ES3.Save("hotItemStacks", TestForInventory.Inventory.HotItemStacks.ToList());
 
         ResourceMgr.Instance.Resource();
         ResourceMgr.Instance.QuickResource(); //刷新
 
-        FirePosition = BonfireBuild.littleFire != null
-            ? BonfireBuild.littleFire.transform.position
-            : new(0, 0, -100); //获取具体信息
+        // FirePosition = BonfireBuild.littleFire != null
+            // ? BonfireBuild.littleFire.transform.position
+            // : new(0, 0, -100); //获取具体信息
 
         // if(Game.Player!=null){
         Health = Game.Player.GetPlayerHealth();
         Stamin = Game.Player.GetPlayerStamina();
         // }
-        
-        if(Stamin>17)Stamin=17;
+
+        if (Stamin > 17) Stamin = 17;
         laserUnlocked = (bool)EventMgr.ExecuteEvent("GetlaserUnlocked");
         dashUnlocked = (bool)EventMgr.ExecuteEvent("GetdashUnlocked");
         // playerPosition = Game.Player.GetPlayerPosotion();
@@ -54,7 +55,7 @@ public class SaveMgr : Singleton<SaveMgr>
         }
 
         ES3.Save("SettingData", SettingData);
-        ES3.Save("FirePosition", FirePosition);
+        // ES3.Save("FirePosition", FirePosition);
         ES3.Save("Health", Health);
         ES3.Save("Stamin", Stamin);
         ES3.Save("GetlaserUnlocked", laserUnlocked);
@@ -63,10 +64,9 @@ public class SaveMgr : Singleton<SaveMgr>
         // ES3.Save("playerPosition", playerPosition);
 
         ES3.Save("inventoryItemStacks", inventoryItemStacks);
-        if(level!=-1)ES3.Save("Level",level);
+        if (level != -1) ES3.Save("Level", level);
 
-            AudioMgr.PlaySound(cfg.EnumAudioClip.主角受击);
-
+        AudioMgr.PlaySound(cfg.EnumAudioClip.主角受击);
     }
     // public void Save(int id){
     //     notRefreshObjs = ResourceMgr.Instance.NotRefreshObjsSave();
@@ -83,24 +83,25 @@ public class SaveMgr : Singleton<SaveMgr>
         ResourceMgr.Instance.QuickResource();
         // BonfireBuild.BuildFire();
         LoadPlayer();
-        if (FirePosition.z != -100 && ES3.KeyExists("FirePosition")) FirePosition = ES3.Load<Vector3>("FirePosition");
-        
+        // if (FirePosition.z != -100 && ES3.KeyExists("FirePosition")) FirePosition = ES3.Load<Vector3>("FirePosition");
+
         // if (ES3.KeyExists("Level"))level=ES3.Load<int>("Level");
         // if (ES3.KeyExists("playerPosition")) playerPosition = ES3.Load<Vector2>("playerPosition");
-        
 
-        if (FirePosition.z != -100) BonfireBuild.BuildFire(FirePosition);
-        
-        
+
+        // if (FirePosition.z != -100) BonfireBuild.BuildFire(FirePosition);
+
         // if (playerPosition.x > -1000000&&SceneManager.GetActiveScene().buildIndex==level) {Game.Player.SetPlayerPosition(playerPosition);Debug.Log(playerPosition);}
-        else Game.Player.SetPlayerPosition(Game.Instance.level.StartPosition);
+        // else Game.Player.SetPlayerPosition(Game.Instance.level.StartPosition);
         // if(level!=-1)SceneManager.LoadScene(level);
     }
+
     // public void Load(int id){
     //     if (ES3.KeyExists("NotRefreshObjs"+id)) notRefreshObjs = ES3.Load<List<bool>>("NotRefreshObjs"+id);
     //     ResourceMgr.Instance.NotRefreshObjsResource(notRefreshObjs);
     // }
-    public void LoadPlayer(){
+    public void LoadPlayer()
+    {
         if (ES3.KeyExists("SettingData")) SettingData = ES3.Load<SettingData>("SettingData");
         if (ES3.KeyExists("Health")) Health = ES3.Load<float>("Health");
         if (ES3.KeyExists("Stamin")) Stamin = ES3.Load<float>("Stamin");
@@ -108,7 +109,7 @@ public class SaveMgr : Singleton<SaveMgr>
         if (ES3.KeyExists("GetlaserUnlocked")) laserUnlocked = ES3.Load<bool>("GetlaserUnlocked");
         if (ES3.KeyExists("inventoryItemStacks"))
             inventoryItemStacks = ES3.Load<Dictionary<string, int>>("inventoryItemStacks");
-        if(ES3.KeyExists("Level"))level=ES3.Load<int>("Level");
+        if (ES3.KeyExists("Level")) level = ES3.Load<int>("Level");
         Game.Player.SetPlayerHealth(Health);
         Game.Player.SetPlayerStamina(Stamin);
         if (dashUnlocked) EventMgr.ExecuteEvent(EventTypes.UnlockDash);
@@ -122,21 +123,36 @@ public class SaveMgr : Singleton<SaveMgr>
                 Debug.Log(str);
                 TestForInventory.Inventory.AddItem(new(str, inventoryItemStacks[str]));
             }
-        if(ES3.KeyExists("hotItemStacks"))TestForInventory.Inventory.SetHotItemList(ES3.Load<List<ItemStack>>("hotItemStacks"));
+
+        if (ES3.KeyExists("hotItemStacks"))
+        {
+            TestForInventory.Inventory.SetHotItemList(ES3.Load<List<ItemStack>>("hotItemStacks"));
+            for (int i = 0; i < 3; i++)
+            {
+                var itemStack = TestForInventory.Inventory.GetHotItem(i);
+                if (string.IsNullOrEmpty(itemStack.name)) continue;
+                string path = "Assets/AddressableAssets/ScriptableObject/Items/" + itemStack.name + ".asset";
+                ItemInfo info = AssetMgr.LoadAssetSync<ItemInfo>(path);
+                itemStack.itemInfo = info;
+            }
+            GamePanel.Instance.UpdateHotItemDisPlay();
+        }
     }
-    public void SceneChangeClear(){
+
+    public void SceneChangeClear()
+    {
         ES3.DeleteFile("playerPosition");
         // playerPosition = new(-int.MaxValue, -int.MaxValue);
         // ES3.Save("playerPosition", playerPosition);
 
         ES3.DeleteFile("FirePosition");
-        FirePosition = new(0, 0, -100);
-        ES3.Save("FirePosition", FirePosition);
-
+        // FirePosition = new(0, 0, -100);
+        // ES3.Save("FirePosition", FirePosition);
     }
 
     public void Clear()
     {
+        ES3.Save("Level",2);
         ES3.DeleteFile("SettingData");
         SettingData = new() { Current = new SettingData.Data() };
         ES3.Save("SettingData", SettingData);

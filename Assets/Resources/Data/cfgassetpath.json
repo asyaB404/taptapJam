@@ -88,5 +88,11 @@
     "Volume": 1,
     "CD": 0.1,
     "Path": "Assets/AddressableAssets/GameRes/Audios/Sounds/采摘.wav"
+  },
+  {
+    "EnumName": 17,
+    "Volume": 0.5,
+    "CD": 0,
+    "Path": "Assets/AddressableAssets/GameRes/Audios/Bgms/config2.mp3"
   }
 ]

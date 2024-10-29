@@ -15,7 +15,7 @@ MonoBehaviour:
   m_GroupName: Assets-AddressableAssets-prefab-Resource
   m_Data:
     m_SerializedData: []
-  m_GUID: bd167663116d00143910428faa6c1c7f
+  m_GUID: eb95e178e41af6f4eafd0e5eb019cef7
   m_SerializeEntries:
   - m_GUID: 5df9f00b671d5cc4f9c16244be5c3aa7
     m_Address: Assets/AddressableAssets/prefab/Resource/Bigfire.prefab

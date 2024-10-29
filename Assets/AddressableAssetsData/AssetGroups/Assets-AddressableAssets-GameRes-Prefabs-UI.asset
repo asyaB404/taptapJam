@@ -15,7 +15,7 @@ MonoBehaviour:
   m_GroupName: Assets-AddressableAssets-GameRes-Prefabs-UI
   m_Data:
     m_SerializedData: []
-  m_GUID: 0c62d1c6fcc7a9741888fe121896239b
+  m_GUID: 1642ac220a4ec2044996010a593821c9
   m_SerializeEntries:
   - m_GUID: d102201b1283e8341b98b8fec77f89b7
     m_Address: Assets/AddressableAssets/GameRes/Prefabs/UI/CreateSlot.prefab

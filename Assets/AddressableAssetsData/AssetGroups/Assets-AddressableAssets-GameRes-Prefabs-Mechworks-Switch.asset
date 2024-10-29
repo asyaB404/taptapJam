@@ -15,7 +15,7 @@ MonoBehaviour:
   m_GroupName: Assets-AddressableAssets-GameRes-Prefabs-Mechworks-Switch
   m_Data:
     m_SerializedData: []
-  m_GUID: 1b0a1ccb411aa2443b426745fda39ef6
+  m_GUID: 9d2568adc7efd3f42be4dba98ba91c92
   m_SerializeEntries:
   - m_GUID: f618d3ff442535a40949d4b03eec489e
     m_Address: Assets/AddressableAssets/GameRes/Prefabs/Mechworks/Switch/bulletCrustal.prefab

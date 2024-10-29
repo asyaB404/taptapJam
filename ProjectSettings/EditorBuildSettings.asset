@@ -47,5 +47,8 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/LTM2_1.5.unity
     guid: 3aa72bf698cf51b4bb27052bc19a271e
+  - enabled: 1
+    path: Assets/Scenes/LTM3_3.unity
+    guid: bdd3343cf13b34a4db77ecc15ca9768f
   m_configObjects:
     com.unity.addressableassets: {fileID: 11400000, guid: 4de19d3f207ac3c4cb3660164ad35c4e, type: 2}

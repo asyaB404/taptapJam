@@ -13,8 +13,15 @@ public class ScenesMgr : MonoSingleton<ScenesMgr>
         SaveMgr.Instance.level=exit;
         if(enter!=0)SaveMgr.Instance.Save();
         SaveMgr.Instance.SceneChangeClear();
-        SceneManager.LoadScene(exit);
+        if(exit!=-1)SceneManager.LoadScene(exit);
+        else SceneManager.LoadScene(2);
         StartCoroutine(DelayedAction(0.5f,enter));  
+    }
+    public void ChangeScenes(int exit){
+        SaveMgr.Instance.level=exit;
+        SaveMgr.Instance.SceneChangeClear();
+        if(exit!=-1)SceneManager.LoadScene(exit);
+        else SceneManager.LoadScene(2); 
     }
     IEnumerator DelayedAction(float delay,int enter)  
     {  

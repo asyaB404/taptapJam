@@ -15,7 +15,7 @@ MonoBehaviour:
   m_GroupName: Assets-AddressableAssets-Scenes
   m_Data:
     m_SerializedData: []
-  m_GUID: 7c39b46d8d495cf4dac20948af72e06d
+  m_GUID: 06f3bd1f1ff19c34aa4af36f9d9ec8a6
   m_SerializeEntries:
   - m_GUID: 3bd914cd4249c8648a1f8dd7124ce6d5
     m_Address: Assets/AddressableAssets/Scenes/Main.unity

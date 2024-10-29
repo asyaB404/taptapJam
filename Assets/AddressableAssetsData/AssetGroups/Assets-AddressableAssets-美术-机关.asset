@@ -15,7 +15,7 @@ MonoBehaviour:
   m_GroupName: "Assets-AddressableAssets-\u7F8E\u672F-\u673A\u5173"
   m_Data:
     m_SerializedData: []
-  m_GUID: 8cb3b049d8e04bd47a9c26a77d1eb659
+  m_GUID: 8b411ce8fcb640b469c561bb3f566b6c
   m_SerializeEntries:
   - m_GUID: ebb9fe89ef70c1e4dbca3a332722b503
     m_Address: "Assets/AddressableAssets/\u7F8E\u672F/\u673A\u5173/01.png"

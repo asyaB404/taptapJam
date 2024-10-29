@@ -15,7 +15,7 @@ MonoBehaviour:
   m_GroupName: Assets-AddressableAssets-UI-GameUI
   m_Data:
     m_SerializedData: []
-  m_GUID: aa2bc55f8b5a938438fb7ce9f72b733e
+  m_GUID: e7a30c57da4b2cb4eb3d79214a7c1370
   m_SerializeEntries:
   - m_GUID: 2c630e1d5753d3f448b290c54fd8ec3e
     m_Address: Assets/AddressableAssets/UI/GameUI/UI-fire.png

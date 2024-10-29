@@ -15,7 +15,7 @@ MonoBehaviour:
   m_GroupName: Assets-AddressableAssets-ScriptableObject-Items
   m_Data:
     m_SerializedData: []
-  m_GUID: 927617649ca750941a05dadae240b724
+  m_GUID: b413614bfa8e93248bf4c710844d79d4
   m_SerializeEntries:
   - m_GUID: 0ba2f66aa13e1cb4dafbbbb07f4157ab
     m_Address: Assets/AddressableAssets/ScriptableObject/Items/fiddlehead.asset
